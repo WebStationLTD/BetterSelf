@@ -37,9 +37,6 @@ export function CriticalCSS() {
               display: block !important;
               visibility: visible !important;
             }
-            #hero-mobile-lcp {
-              display: none !important;
-            }
           }
           
           /* Оптимизация за изображения с приоритетно зареждане */

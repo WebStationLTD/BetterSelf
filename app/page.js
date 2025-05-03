@@ -2,7 +2,9 @@ import HeroSection from "../components/hero";
 import { WebVitals } from "./web-vitals";
 import dynamic from "next/dynamic";
 
-// Динамично зареждане на компоненти с lazy loading
+const PricingSection = dynamic(() => import("../components/pricingSection"), {
+  ssr: true,
+});
 const Incentives = dynamic(() => import("../components/incentives"), {
   ssr: true,
 });
@@ -60,6 +62,7 @@ export default function Home() {
     <>
       <WebVitals />
       <HeroSection />
+      <PricingSection />
       <Incentives />
       <Team />
       <CTA />

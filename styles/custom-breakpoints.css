@@ -1,0 +1,60 @@
+/* Директно задаване на стилове без медия запити, за да сме сигурни че ще се приложат */
+.custom-3xl-right-46 {
+  right: -11.5rem !important; /* Съответства на -right-46 в Tailwind */
+}
+
+.custom-2xl-right-30 {
+  right: 8.5rem !important; /* Съответства на -right-30 в Tailwind */
+}
+
+/* Прилагаме само подходящите правила според резолюцията */
+@media screen and (min-width: 1480px) {
+  .custom-3xl-right-46 {
+    right: -11.5rem !important;
+  }
+
+  /* Отменяме 2xl класа при 3xl резолюция */
+  .custom-2xl-right-30 {
+    /* right: auto !important; */
+  }
+
+  /* Дебъг индикатор */
+  .debug-indicator::after {
+    content: "3XL Active (1680px+)" !important;
+    position: fixed !important;
+    top: 10px !important;
+    right: 10px !important;
+    background: rgba(255, 0, 0, 0.8) !important;
+    color: white !important;
+    padding: 5px !important;
+    z-index: 9999 !important;
+    font-size: 12px !important;
+  }
+}
+
+@media screen and (min-width: 1480px) and (max-width: 1680px) {
+  .custom-3xl-right-46 {
+    right: -4.5rem !important;
+  }
+}
+@media screen and (min-width: 1280px) and (max-width: 1479px) {
+  .custom-3xl-right-46 {
+    right: 2.5rem !important;
+  }
+}
+
+/* За екрани от 1536px до 1679px */
+@media screen and (min-width: 1536px) and (max-width: 1679px) {
+  /* Дебъг индикатор */
+  .debug-indicator::after {
+    content: "2XL Active (1536-1679px)" !important;
+    position: fixed !important;
+    top: 10px !important;
+    right: 10px !important;
+    background: rgba(0, 128, 0, 0.8) !important;
+    color: white !important;
+    padding: 5px !important;
+    z-index: 9999 !important;
+    font-size: 12px !important;
+  }
+}
