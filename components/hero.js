@@ -20,19 +20,20 @@ export default function Hero() {
       <div className="bg-white">
         {/* Мобилен Hero с изображение най-отгоре - ще бъде LCP елемент за мобилни */}
         <div className="lg:hidden relative">
-          <div className="w-full">
+          <div className="w-full overflow-hidden">
             {/* Директно използване на HTML img за максимална производителност на LCP */}
             <img
               src="/hero-image-mobile.jpg"
               width={640}
               height={400}
               alt="Hero image"
-              className="w-full h-auto object-cover aspect-[4/3]"
+              className="w-full h-[150px] xs:h-[180px] sm:h-[200px] md:h-[240px] object-cover"
               loading="eager"
               decoding="sync"
               fetchPriority="high"
               style={{
                 objectFit: "cover",
+                objectPosition: "center 30%",
                 contentVisibility: "auto",
                 containIntrinsicSize: "640px 400px",
               }}
