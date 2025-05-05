@@ -87,20 +87,20 @@ export default function Footer() {
         >
           <path
             d="M80 0 C160 150, 340 250, 420 400 S480 600, 350 800"
-            stroke="#129160"
+            stroke="#ff8d00"
             strokeWidth="1.5"
             fill="none"
           />
           <path
             d="M140 0 C180 170, 320 270, 440 420 S500 650, 320 800"
-            stroke="#129160"
+            stroke="#ff8d00"
             strokeWidth="1.2"
             opacity="0.8"
             fill="none"
           />
           <path
             d="M200 0 C200 190, 300 290, 460 440 S520 700, 290 800"
-            stroke="#129160"
+            stroke="#ff8d00"
             strokeWidth="1"
             opacity="0.6"
             fill="none"
@@ -110,7 +110,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 pt-16 pb-8 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div>
-            <img alt="" src="/next-level-logo.png" width={180} height={40} />
+            <img alt="" src="/better-self-logo.png" width={180} height={40} />
           </div>
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
@@ -197,7 +197,7 @@ export default function Footer() {
           </div>
           {loading && (
             <div className="absolute inset-0 flex items-center justify-center bg-opacity-50 z-10 pointer-events-none">
-              <div className="w-12 h-12 border-4 border-gray-400 border-t-[#129160] rounded-full animate-spin"></div>
+              <div className="w-12 h-12 border-4 border-gray-400 border-t-[#ff8d00] rounded-full animate-spin"></div>
             </div>
           )}
           <form
@@ -223,7 +223,7 @@ export default function Footer() {
             <div className="mt-4 sm:mt-0 sm:ml-4 sm:shrink-0">
               <button
                 type="submit"
-                className="flex w-full items-center justify-center rounded-md bg-[#129160] hover:bg-gray-300 cursor-pointer hover:text-[#000000] px-3 py-2 text-sm font-semibold text-black shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="flex w-full items-center justify-center rounded-md bg-[#ff8d00] hover:bg-gray-300 cursor-pointer hover:text-[#000000] px-3 py-2 text-sm font-semibold text-black shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Абонирайте се
               </button>

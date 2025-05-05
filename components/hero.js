@@ -57,7 +57,7 @@ export default function Hero() {
             <div className="mt-8 flex items-center gap-x-4">
               <Link
                 href="/services"
-                className="rounded-md bg-[#129160] hover:bg-gray-300 hover:text-[#000000] px-3 py-2 text-sm font-semibold text-black shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="rounded-md bg-[#ff8d00] hover:bg-gray-300 hover:text-[#000000] px-3 py-2 text-sm font-semibold text-black shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Услуги
               </Link>
@@ -109,7 +109,7 @@ export default function Hero() {
                   <div className="mt-10 flex justify-start xl:justify-center items-center gap-x-6">
                     <Link
                       href="/services"
-                      className="rounded-md text-[#000000] bg-[#129160] hover:bg-gray-300 hover:text-[#000000] px-3.5 py-2.5 text-sm font-semibold text-black shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                      className="rounded-md text-[#000000] bg-[#ff8d00] hover:bg-gray-300 hover:text-[#000000] px-3.5 py-2.5 text-sm font-semibold text-black shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                     >
                       Услуги
                     </Link>
@@ -122,10 +122,12 @@ export default function Hero() {
                   </div>
                   <div className="mt-2 mb-10 flex justify-start xl:justify-center">
                     <div className="relative rounded-full mt-8 px-3 py-1 text-lg font-medium text-gray-500 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                      <span className="text-xl font-bold">02.11.2025</span>{" "}
+                      <span className="text-xl font-bold mr-4">
+                        02.11.2025 - Гранд Хотел Астория
+                      </span>{" "}
                       <Link
                         href="/blog"
-                        className="font-semibold whitespace-nowrap text-[#129160]"
+                        className="font-semibold whitespace-nowrap text-[#ff8d00]"
                       >
                         <span aria-hidden="true" className="absolute inset-0" />
                         Купете билети <span aria-hidden="true">&rarr;</span>

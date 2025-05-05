@@ -63,8 +63,8 @@ export default function Home() {
       <WebVitals />
       <HeroSection />
       <PricingSection />
-      <Incentives />
       <Team />
+      <Incentives />
       <CTA />
       <Clients />
       <Newsletter />

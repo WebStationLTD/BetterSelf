@@ -21,22 +21,15 @@ const growthFeatures = [
 export default function Example() {
   return (
     <div className="bg-gray-900">
-      <div className="px-6 pt-12 lg:px-8 lg:pt-20">
+      <div className="px-6 pt-10 lg:px-8">
         <div className="text-center">
-          <h2 className="text-xl/6 font-semibold text-gray-300">Pricing</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
-            The right price for you, whoever you are
-          </p>
-          <p className="mx-auto mt-3 max-w-4xl text-xl text-gray-300 sm:mt-5 sm:text-2xl">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
-            numquam eligendi quos odit doloribus molestiae voluptatum.
-          </p>
+          <h2 className="text-5xl font-semibold text-gray-300">Цени</h2>
         </div>
       </div>
 
-      <div className="mt-16 bg-white pb-12 lg:mt-20 lg:pb-20">
+      <div className="mt-16 bg-white lg:mt-20">
         <div className="relative z-0">
-          <div className="absolute inset-0 h-5/6 bg-gray-900 lg:h-2/3" />
+          <div className="absolute inset-0 bg-gray-900" />
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="relative lg:grid lg:grid-cols-7">
               <div className="mx-auto max-w-md lg:col-start-1 lg:col-end-3 lg:row-start-2 lg:row-end-3 lg:mx-0 lg:max-w-none">
@@ -70,7 +63,7 @@ export default function Example() {
                             <div className="shrink-0">
                               <CheckIcon
                                 aria-hidden="true"
-                                className="size-6 shrink-0 text-green-500"
+                                className="size-6 shrink-0 text-[#ff8d00]"
                               />
                             </div>
                             <p className="ml-3 text-base font-medium text-gray-500">
@@ -98,11 +91,11 @@ export default function Example() {
                 <div className="relative z-10 rounded-lg shadow-xl">
                   <div
                     aria-hidden="true"
-                    className="pointer-events-none absolute inset-0 rounded-lg border-2 border-indigo-600"
+                    className="pointer-events-none absolute inset-0 rounded-lg border-2 border-[#ff8d00]"
                   />
                   <div className="absolute inset-x-0 top-0 translate-y-px transform">
                     <div className="flex -translate-y-1/2 transform justify-center">
-                      <span className="inline-flex rounded-full bg-indigo-600 px-4 py-1 text-base font-semibold text-white">
+                      <span className="inline-flex rounded-full bg-[#ff8d00] px-4 py-1 text-base font-semibold text-white">
                         Most popular
                       </span>
                     </div>
@@ -135,7 +128,7 @@ export default function Example() {
                           <div className="shrink-0">
                             <CheckIcon
                               aria-hidden="true"
-                              className="size-6 shrink-0 text-green-500"
+                              className="size-6 shrink-0 text-[#ff8d00]"
                             />
                           </div>
                           <p className="ml-3 text-base font-medium text-gray-500">
@@ -149,7 +142,7 @@ export default function Example() {
                         <a
                           href="#"
                           aria-describedby="tier-growth"
-                          className="block w-full rounded-lg border border-transparent bg-indigo-600 px-6 py-4 text-center text-xl/6 font-medium text-white hover:bg-indigo-700"
+                          className="block w-full text-[#000000] bg-[#ff8d00] hover:bg-gray-300 hover:text-[#000000] rounded-lg border border-transparent px-6 py-4 text-center text-xl/6 font-medium text-white"
                         >
                           Start your trial
                         </a>
@@ -189,7 +182,7 @@ export default function Example() {
                             <div className="shrink-0">
                               <CheckIcon
                                 aria-hidden="true"
-                                className="size-6 shrink-0 text-green-500"
+                                className="size-6 shrink-0 text-[#ff8d00]"
                               />
                             </div>
                             <p className="ml-3 text-base font-medium text-gray-500">
