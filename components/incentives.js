@@ -1,21 +1,86 @@
+import {
+  BeakerIcon,
+  UserIcon,
+  HeartIcon,
+  FaceSmileIcon,
+  TrophyIcon,
+  SparklesIcon,
+  ComputerDesktopIcon,
+  MicrophoneIcon,
+  AcademicCapIcon,
+  ScaleIcon,
+} from "@heroicons/react/24/outline";
+
 const incentives = [
   {
-    name: "Lorem ipsum 1",
-    imageSrc: "/icons/cta-icon-1.svg",
+    name: "Защо BioHacking",
+    lecturer: "Д-р Жасмина Маджид",
+    icon: BeakerIcon,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Въведение в света на биохакинга и как да подобрим здравето си чрез научни подходи.",
   },
   {
-    name: "Lorem ipsum 2",
-    imageSrc: "/icons/cta-icon-2.svg",
+    name: "Аутизъм: Вътреутробни сигнали и превенция",
+    lecturer: "Д-р Иван Сигридов",
+    icon: UserIcon,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Какво можем да променим преди зачеване и през бременността за превенция на аутизма.",
   },
   {
-    name: "Lorem ipsum 3",
-    imageSrc: "/icons/cta-icon-3.svg",
+    name: "Longevity Nutrition",
+    lecturer: "Д-р Енджи Касабие",
+    icon: HeartIcon,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Хранителни стратегии за дълголетие и оптимално здраве през целия живот.",
+  },
+  {
+    name: "Емоционална интелигентност",
+    lecturer: "Десислава Дамянова",
+    icon: FaceSmileIcon,
+    description:
+      "Как да разпознаваме, разбираме и управляваме емоциите за по-добри взаимоотношения.",
+  },
+  {
+    name: "Mindset за шампиони",
+    lecturer: "Моузес Налока",
+    icon: TrophyIcon,
+    description:
+      "Психологически стратегии за постигане на върхови резултати и преодоляване на ограниченията.",
+  },
+  {
+    name: "Beauty Biohacking",
+    lecturer: "Д-р Присадашка",
+    icon: SparklesIcon,
+    description: "Съвременни научни подходи за красота отвътре и отвън.",
+  },
+  {
+    name: "Betterself & AI",
+    lecturer:
+      "Александър Иванов, Александър Йорданов, Йоан Аспарухов, Димитър Гочев",
+    icon: ComputerDesktopIcon,
+    description:
+      "Как да използваме изкуствения интелект за лично и професионално развитие.",
+  },
+  {
+    name: "Voice design и Харизма",
+    lecturer: "Иван Головацкий",
+    icon: MicrophoneIcon,
+    description:
+      "Как да говорим красиво и въздействащо, така че да ни слушат и чуват.",
+  },
+  {
+    name: "Neurology: Млад мозък в здраво тяло",
+    lecturer: "Проф. д-р Николай Габровски",
+    icon: AcademicCapIcon,
+    description:
+      "Стратегии за поддържане на мозъчното здраве и когнитивните функции.",
+  },
+  {
+    name: "Оптимизирани хормони",
+    lecturer: "Д-р Константин Маламов",
+    icon: ScaleIcon,
+    description:
+      "Диригенти на поведението и успеха ни - как да балансираме хормоните за оптимално здраве.",
   },
 ];
 
@@ -24,46 +89,60 @@ export default function Incentives() {
     <div className="bg-gray-900">
       <div className="mx-auto max-w-7xl py-24 sm:px-2 lg:px-4">
         <div className="mx-auto max-w-2xl px-4 lg:max-w-none">
-          <div className="grid grid-cols-1 items-center gap-x-16 gap-y-10 lg:grid-cols-2">
-            <div>
+          <div className="grid grid-cols-1 items-center gap-x-16 gap-y-10 lg:grid-cols-1">
+            <div className="text-center">
               <h2 className="text-4xl font-bold tracking-tight text-white">
-                Lorem ipsum
+                Темите
               </h2>
-              <p className="mt-4 text-white">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
             </div>
-            <img
-              alt=""
-              src="/menu-hero-image.jpg"
-              className="aspect-3/2 w-full rounded-lg bg-gray-100 object-cover"
-            />
           </div>
-          <div className="mt-16 grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3">
-            {incentives.map((incentive) => (
-              <div key={incentive.name} className="sm:flex lg:block">
-                <div className="sm:shrink-0">
-                  <div className="h-14 w-14 flex items-center justify-center rounded-full bg-[#ff8d00]">
-                    <img
-                      alt=""
-                      src={incentive.imageSrc}
-                      className="h-10 w-10"
-                      style={{ filter: "brightness(0) invert(1)" }}
-                    />
+          <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {incentives.slice(0, 9).map((incentive) => (
+              <div
+                key={incentive.name}
+                className="flex flex-col items-center text-center p-6 rounded-lg border border-white bg-gray-800/30 hover:bg-gray-800/50 transition-all duration-300"
+              >
+                <div className="shrink-0">
+                  <div className="h-16 w-16 flex items-center justify-center rounded-full bg-[#ff8d00]">
+                    <incentive.icon className="h-10 w-10 text-white" />
                   </div>
                 </div>
-                <div className="mt-4 sm:mt-0 sm:ml-6 lg:mt-6 lg:ml-0">
-                  <h3 className="text-sm font-medium text-white">
+                <div className="mt-4">
+                  <h3 className="text-lg font-medium text-white">
                     {incentive.name}
                   </h3>
-                  <p className="mt-2 text-sm text-white">
+                  <p className="mt-1 text-sm font-medium text-orange-400">
                     {incentive.description}
+                  </p>
+                  <p className="mt-2 text-sm text-white">
+                    {incentive.lecturer}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Последната тема, центрирана */}
+          <div className="mt-8 flex justify-center">
+            {incentives.slice(9, 10).map((incentive) => (
+              <div
+                key={incentive.name}
+                className="flex flex-col items-center text-center max-w-sm p-6 rounded-lg border border-white bg-gray-800/30 hover:bg-gray-800/50 transition-all duration-300"
+              >
+                <div className="shrink-0">
+                  <div className="h-16 w-16 flex items-center justify-center rounded-full bg-[#ff8d00]">
+                    <incentive.icon className="h-10 w-10 text-white" />
+                  </div>
+                </div>
+                <div className="mt-4">
+                  <h3 className="text-lg font-medium text-white">
+                    {incentive.name}
+                  </h3>
+                  <p className="mt-1 text-sm font-medium text-orange-400">
+                    {incentive.description}
+                  </p>
+                  <p className="mt-2 text-sm text-white">
+                    {incentive.lecturer}
                   </p>
                 </div>
               </div>

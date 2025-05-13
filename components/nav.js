@@ -42,7 +42,7 @@ export default function Navigation() {
     ],
     pages: [
       { name: "Начало", href: "/" },
-      { name: "Екип", href: "/team" },
+      { name: "Лектори", href: "/team" },
       { name: "Блог", href: "/blog" },
       { name: "Контакти", href: "/contact" },
     ],
@@ -67,7 +67,7 @@ export default function Navigation() {
           categories: [
             {
               id: "categories",
-              name: "Услуги",
+              name: "Събития",
               featured: featured.map((service) => ({
                 name: service.title.rendered,
                 href: `/services/${service.slug}`,

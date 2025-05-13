@@ -65,7 +65,7 @@ export default function Home() {
       <PricingSection />
       <Team />
       <Incentives />
-      <CTA />
+      {/* <CTA /> */}
       <Clients />
       <Newsletter />
       <Testimonial />

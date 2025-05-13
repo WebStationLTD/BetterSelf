@@ -111,13 +111,13 @@ export default function Hero() {
                       href="/services"
                       className="rounded-md text-[#000000] bg-[#ff8d00] hover:bg-gray-300 hover:text-[#000000] px-3.5 py-2.5 text-sm font-semibold text-black shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                     >
-                      Услуги
+                      Купи билети
                     </Link>
                     <Link
                       href="/contact"
                       className="text-sm/6 font-semibold text-gray-900"
                     >
-                      Контакти <span aria-hidden="true">→</span>
+                      Стани партньор <span aria-hidden="true">→</span>
                     </Link>
                   </div>
                   <div className="mt-2 mb-10 flex justify-start xl:justify-center">
@@ -130,7 +130,7 @@ export default function Hero() {
                         className="font-semibold whitespace-nowrap text-[#ff8d00]"
                       >
                         <span aria-hidden="true" className="absolute inset-0" />
-                        Купете билети <span aria-hidden="true">&rarr;</span>
+                        Купи билети <span aria-hidden="true">&rarr;</span>
                       </Link>
                     </div>
                   </div>

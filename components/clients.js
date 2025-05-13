@@ -7,7 +7,7 @@ export default function Clients() {
         <div className="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2">
           <div className="mx-auto w-full max-w-xl lg:mx-0">
             <h2 className="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
-              Lorem ipsum
+              Партньори
             </h2>
             <p className="mt-6 text-lg/8 text-gray-600">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
