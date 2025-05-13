@@ -42,7 +42,7 @@ export default function Hero() {
           </div>
 
           <div className="px-6 py-10">
-            <h1 className="font-semibold tracking-tight text-pretty text-gray-900 font-display sm:text-5xl xl:text-7xl text-left xl:text-center">
+            <h1 className="text-4xl font-semibold tracking-tight text-pretty text-gray-900 font-display sm:text-5xl xl:text-7xl text-left xl:text-center">
               Biohacking & Longevity
             </h1>
             <h2 className="text-3xl font-semibold mt-8 tracking-tight text-pretty text-gray-900 sm:text-4xl xl:text-5xl font-display text-left xl:text-center">
@@ -94,7 +94,7 @@ export default function Hero() {
               <div className="relative px-6 py-12 lg:px-8 lg:py-14 lg:pr-0">
                 {/* <div className="ml-0 mr-auto max-w-2xl lg:mx-0 lg:max-w-xl"> */}
                 <div className="ml-0 mr-auto lg:mx-0 w-full">
-                  <h1 className="font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl xl:text-7xl font-display text-left xl:text-center">
+                  <h1 className="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl xl:text-7xl font-display text-left xl:text-center">
                     Biohacking & Longevity
                   </h1>
                   <h2 className="text-3xl font-semibold mt-8 tracking-tight text-pretty text-gray-900 sm:text-4xl xl:text-5xl font-display text-left xl:text-center">
