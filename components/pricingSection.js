@@ -20,7 +20,7 @@ const growthFeatures = [
 
 export default function Example() {
   return (
-    <div className="bg-gray-900">
+    <div className="bg-gray-900 pb-14">
       <div className="px-6 pt-10 lg:px-8">
         <div className="text-center">
           <h2 className="text-5xl font-semibold text-gray-300">Цени</h2>

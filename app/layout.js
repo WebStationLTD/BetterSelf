@@ -7,12 +7,31 @@ import ImagePreloader from "../components/ImagePreloader";
 import { CriticalCSS } from "./critical-css";
 
 import "../styles/globals.css";
-import { Roboto } from "next/font/google";
+import {
+  Roboto,
+  Open_Sans,
+  Raleway,
+  Montserrat,
+  Nunito,
+  Ubuntu,
+  Inter,
+  Noto_Sans,
+  Rubik,
+} from "next/font/google";
 
-const roboto = Roboto({
+const inter = Inter({
   subsets: ["latin", "cyrillic"],
-  weight: ["400", "700"],
-  style: ["normal", "italic"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal"],
+  display: "swap",
+  preload: true,
+  fallback: ["system-ui", "sans-serif"],
+  adjustFontFallback: true,
+});
+const montserrat = Montserrat({
+  subsets: ["latin", "cyrillic"],
+  weight: ["400", "500", "700"],
+  style: ["normal"],
   display: "swap",
   preload: true,
   fallback: ["system-ui", "sans-serif"],
@@ -97,7 +116,7 @@ export default function RootLayout({ children }) {
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
-      <body className={roboto.className}>
+      <body className={montserrat.className}>
         <ImagePreloader />
         <Navigation />
         <main>{children}</main>

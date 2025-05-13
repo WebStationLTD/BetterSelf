@@ -100,23 +100,26 @@ export default function Incentives() {
             {incentives.slice(0, 9).map((incentive) => (
               <div
                 key={incentive.name}
-                className="flex flex-col items-center text-center p-6 rounded-lg border border-white bg-gray-800/30 hover:bg-gray-800/50 transition-all duration-300"
+                className="flex flex-col items-center text-center p-6 pb-4 rounded-lg border border-white bg-gray-800/30 hover:bg-gray-800/50 transition-all duration-300 h-full justify-between"
               >
-                <div className="shrink-0">
-                  <div className="h-16 w-16 flex items-center justify-center rounded-full bg-[#ff8d00]">
-                    <incentive.icon className="h-10 w-10 text-white" />
+                <div className="flex flex-col items-center w-full">
+                  <div className="shrink-0 mt-6">
+                    <div className="h-20 w-20 flex items-center justify-center rounded-full bg-[#ff8d00]">
+                      <incentive.icon className="h-12 w-12 text-white" />
+                    </div>
+                  </div>
+                  <div className="mt-4">
+                    <h3 className="text-xl font-medium text-white">
+                      {incentive.name}
+                    </h3>
+                    <p className="mt-1 text-base font-medium text-orange-400">
+                      {incentive.description}
+                    </p>
                   </div>
                 </div>
-                <div className="mt-4">
-                  <h3 className="text-lg font-medium text-white">
-                    {incentive.name}
-                  </h3>
-                  <p className="mt-1 text-sm font-medium text-orange-400">
-                    {incentive.description}
-                  </p>
-                  <p className="mt-2 text-sm text-white">
-                    {incentive.lecturer}
-                  </p>
+
+                <div className="mt-6 mb-6">
+                  <p className="text-base text-white">{incentive.lecturer}</p>
                 </div>
               </div>
             ))}
@@ -127,23 +130,26 @@ export default function Incentives() {
             {incentives.slice(9, 10).map((incentive) => (
               <div
                 key={incentive.name}
-                className="flex flex-col items-center text-center max-w-sm p-6 rounded-lg border border-white bg-gray-800/30 hover:bg-gray-800/50 transition-all duration-300"
+                className="flex flex-col items-center text-center max-w-sm p-6 pb-4 rounded-lg border border-white bg-gray-800/30 hover:bg-gray-800/50 transition-all duration-300 h-full justify-between"
               >
-                <div className="shrink-0">
-                  <div className="h-16 w-16 flex items-center justify-center rounded-full bg-[#ff8d00]">
-                    <incentive.icon className="h-10 w-10 text-white" />
+                <div className="flex flex-col items-center w-full">
+                  <div className="shrink-0 mt-6">
+                    <div className="h-20 w-20 flex items-center justify-center rounded-full bg-[#ff8d00]">
+                      <incentive.icon className="h-12 w-12 text-white" />
+                    </div>
+                  </div>
+                  <div className="mt-4">
+                    <h3 className="text-xl font-medium text-white">
+                      {incentive.name}
+                    </h3>
+                    <p className="mt-1 text-base font-medium text-orange-400">
+                      {incentive.description}
+                    </p>
                   </div>
                 </div>
-                <div className="mt-4">
-                  <h3 className="text-lg font-medium text-white">
-                    {incentive.name}
-                  </h3>
-                  <p className="mt-1 text-sm font-medium text-orange-400">
-                    {incentive.description}
-                  </p>
-                  <p className="mt-2 text-sm text-white">
-                    {incentive.lecturer}
-                  </p>
+
+                <div className="mt-6 mb-6">
+                  <p className="text-base text-white">{incentive.lecturer}</p>
                 </div>
               </div>
             ))}
