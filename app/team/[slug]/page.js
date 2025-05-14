@@ -59,8 +59,8 @@ export default async function MemberDetails({ params }) {
       <div className="mx-auto grid max-w-7xl gap-20 px-6 py-24 lg:px-8 xl:grid-cols-3">
         <div className="w-full xl:col-span-1 xl:w-full">
           <Image
-            width={250}
-            height={375}
+            width={384}
+            height={384}
             priority
             alt={member.name || "Член на екипа"}
             src={member.profilepicture || "/placeholder.webp"}

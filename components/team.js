@@ -39,10 +39,10 @@ export default function Team() {
               {member.slug && (
                 <Link href={`/team/${member.slug}`} prefetch={true}>
                   <Image
-                    width={250}
-                    height={375}
+                    width={384}
+                    height={384}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    quality={90}
+                    quality={100}
                     priority={index < 3} // Приоритетно зареждане на първите 3 члена
                     loading={index < 3 ? "eager" : "lazy"}
                     alt={member.name || "Член на екипа"}
