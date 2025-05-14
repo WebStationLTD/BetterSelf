@@ -43,11 +43,7 @@ export function CriticalCSS() {
           img#hero-mobile-lcp, img#hero-desktop-lcp {
             content-visibility: auto;
           }
-          
-          /* Оптимизация за пространството на изображенията преди зареждане */
-          .lg\\:hidden .w-full {
-            min-height: 400px;
-          }
+        
         `,
       }}
     />

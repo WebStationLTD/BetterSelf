@@ -30,6 +30,7 @@ export default function Navigation() {
   const [searchResults, setSearchResults] = useState([]);
   const [isSearching, setIsSearching] = useState(false);
   const [showResults, setShowResults] = useState(false);
+  const [showMobileSearch, setShowMobileSearch] = useState(false);
   const searchRef = useRef(null);
   const [navigation, setNavigation] = useState({
     categories: [
@@ -243,7 +244,7 @@ export default function Navigation() {
               </button>
 
               {/* Секция 1: Лого */}
-              <div className="w-1/4 lg:w-1/5 flex items-center justify-start">
+              <div className="w-3/4 lg:w-1/5 flex items-center justify-start">
                 <Link href="/" className="block">
                   <span className="sr-only">NextLevel Theme</span>
                   <Image
@@ -251,7 +252,7 @@ export default function Navigation() {
                     height={60}
                     alt=""
                     src="/better-self-logo.png"
-                    className="w-auto h-[60px] object-contain"
+                    className="w-auto h-[50px] lg:h-[60px] object-contain"
                   />
                 </Link>
               </div>
@@ -348,10 +349,20 @@ export default function Navigation() {
                 </PopoverGroup>
               </div>
 
-              {/* Секция 3: Търсачка */}
+              {/* Секция 3: Търсачка - за мобилни само икона, за десктоп - цяло поле */}
+              <div className="lg:hidden">
+                <button
+                  type="button"
+                  onClick={() => setShowMobileSearch(!showMobileSearch)}
+                  className="p-2 text-gray-500 rounded-md hover:bg-gray-100 transition-colors"
+                >
+                  <MagnifyingGlassIcon className="h-6 w-6" />
+                </button>
+              </div>
+
               <div
                 ref={searchRef}
-                className="flex justify-end w-40 sm:w-44 lg:w-1/6"
+                className="hidden lg:flex justify-end w-40 sm:w-44 lg:w-1/6"
               >
                 <div className="relative w-full lg:w-72">
                   <input
@@ -371,7 +382,7 @@ export default function Navigation() {
                   />
                   <MagnifyingGlassIcon className="absolute right-2 top-1/2 text-gray-500 -translate-y-1/2 h-5 w-5" />
                 </div>
-                {showResults && (
+                {showResults && searchQuery.length >= 3 && (
                   <div className="absolute right-0 w-44 sm:w-48 lg:w-72 mt-2 bg-white shadow-lg rounded-md max-h-48 sm:max-h-56 lg:max-h-60 overflow-y-auto border border-gray-200">
                     {isSearching ? (
                       <div className="p-2 text-gray-500 text-sm text-center">
@@ -411,6 +422,77 @@ export default function Navigation() {
           </div>
         </nav>
       </header>
+
+      {/* Поле за търсене за мобилни устройства - появява се при кликване на иконата */}
+      <div
+        className={`lg:hidden w-full border-t border-gray-200 overflow-hidden transition-all duration-300 ease-in-out search-container ${
+          showMobileSearch
+            ? "max-h-52 opacity-100 py-1 px-3"
+            : "max-h-0 opacity-0 py-0 px-0"
+        }`}
+        style={{
+          minHeight: showMobileSearch ? "auto" : "0",
+          maxHeight: showMobileSearch ? "52px" : "0",
+        }}
+      >
+        <div className="relative w-full">
+          <input
+            type="text"
+            placeholder="Търсене..."
+            value={searchQuery}
+            onChange={(e) => {
+              setSearchQuery(e.target.value);
+              if (e.target.value.length >= 3) {
+                setShowResults(true);
+              } else {
+                setShowResults(false);
+              }
+            }}
+            autoFocus={showMobileSearch}
+            className="block w-full px-3 pr-8 text-gray-900 placeholder:text-gray-400 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#ff8d00] py-1 text-xs h-8"
+          />
+          <MagnifyingGlassIcon className="absolute right-2 top-1/2 text-gray-500 -translate-y-1/2 h-3.5 w-3.5" />
+        </div>
+        {searchQuery.length >= 3 && showResults && (
+          <div
+            className="w-full mt-1 bg-white shadow-lg rounded-md max-h-40 overflow-y-auto border border-gray-200"
+            style={{ minHeight: "auto" }}
+          >
+            {isSearching ? (
+              <div className="p-1.5 text-gray-500 text-center text-xs">
+                Зареждане...
+              </div>
+            ) : searchResults.length > 0 ? (
+              <ul className="divide-y divide-gray-200">
+                {searchResults.map((result) => (
+                  <li
+                    key={result.id}
+                    className="p-1.5 hover:bg-gray-100"
+                    onClick={() => {
+                      setSearchQuery("");
+                      setSearchResults([]);
+                      setShowResults(false);
+                      setShowMobileSearch(false);
+                    }}
+                  >
+                    <Link
+                      href={`/${result.type}/${result.slug}`}
+                      className="block w-full h-full text-gray-900 hover:text-[#ff8d00] text-xs"
+                      prefetch={true}
+                    >
+                      {result.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <div className="p-1.5 text-gray-500 text-center text-xs">
+                Няма намерени резултати
+              </div>
+            )}
+          </div>
+        )}
+      </div>
     </div>
   );
 }
