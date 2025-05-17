@@ -4,6 +4,7 @@ import { getServices } from "../../services/services";
 import { Suspense } from "react";
 import dynamic from "next/dynamic";
 import Script from "next/script";
+import he from "he";
 
 // Динамично зареждане на компонента със списъка с услуги
 const ServicesList = dynamic(() => import("../../components/ServicesList"), {
@@ -37,15 +38,33 @@ export const metadata = {
 
 export default async function Services() {
   try {
-    const services = await getServices();
+    const rawServices = await getServices();
 
-    if (!services || services.length === 0) {
+    if (!rawServices || rawServices.length === 0) {
       return (
         <p className="text-gray-600 text-center mt-10">
           В момента няма налични услуги!
         </p>
       );
     }
+
+    // Декодираме заглавията
+    const services = rawServices.map((service) => ({
+      ...service,
+      title: {
+        ...service.title,
+        rendered:
+          service.title && service.title.rendered
+            ? he.decode(service.title.rendered)
+            : "",
+      },
+      // Ако и други полета може да съдържат HTML ентитита, може да ги декодирате тук
+      // Например, ако service.content.rendered също трябва да се декодира за JSON-LD описанието:
+      // content: {
+      //   ...service.content,
+      //   rendered: service.content && service.content.rendered ? he.decode(service.content.rendered) : ''
+      // }
+    }));
 
     // Подготвяме структурирани данни за Schema.org
     const servicesSchemaData = {

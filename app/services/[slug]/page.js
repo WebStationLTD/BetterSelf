@@ -2,6 +2,7 @@ import { getServiceBySlug } from "../../../services/services";
 import { Suspense } from "react";
 import dynamic from "next/dynamic";
 import Script from "next/script";
+import he from "he";
 
 // Динамично зареждане на компоненти за по-добро разделяне на кода
 const ServiceContent = dynamic(
@@ -19,18 +20,24 @@ export const revalidate = 3600;
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  const service = await getServiceBySlug(slug);
+  const serviceData = await getServiceBySlug(slug);
 
-  if (!service || service.length === 0) {
+  if (!serviceData || serviceData.length === 0) {
     throw new Error("Service not found");
   }
 
-  const meta = service[0].yoast_head_json;
+  const serviceForMeta = serviceData[0];
+  const decodedYoastTitle =
+    serviceForMeta.yoast_head_json && serviceForMeta.yoast_head_json.title
+      ? he.decode(serviceForMeta.yoast_head_json.title)
+      : "Услуга";
+
+  const meta = serviceForMeta.yoast_head_json;
   const ogImage =
     meta.og_image && meta.og_image.length > 0 ? meta.og_image[0].url : "";
 
   return {
-    title: meta.title,
+    title: decodedYoastTitle,
     description: meta.description,
     keywords: meta.keywords || [
       "услуги",
@@ -61,23 +68,33 @@ export async function generateMetadata({ params }) {
 export default async function ServicePage({ params }) {
   try {
     const { slug } = await params;
-    const service = await getServiceBySlug(slug);
+    const rawServiceData = await getServiceBySlug(slug);
 
-    if (!service || service.length === 0) {
+    if (!rawServiceData || rawServiceData.length === 0) {
       throw new Error("Service not found");
     }
 
-    const meta = service[0].yoast_head_json;
+    const service = {
+      ...rawServiceData[0],
+      title: {
+        ...rawServiceData[0].title,
+        rendered:
+          rawServiceData[0].title && rawServiceData[0].title.rendered
+            ? he.decode(rawServiceData[0].title.rendered)
+            : "",
+      },
+    };
+
+    const meta = service.yoast_head_json;
     const ogImage =
       meta.og_image && meta.og_image.length > 0 ? meta.og_image[0].url : "";
 
-    // Подготвяме структурирани данни за Schema.org
     const serviceSchemaData = {
       "@context": "https://schema.org",
       "@type": "Service",
-      name: service[0].title.rendered,
+      name: service.title.rendered,
       description:
-        service[0].content.rendered.replace(/<[^>]+>/g, "").substring(0, 200) +
+        service.content.rendered.replace(/<[^>]+>/g, "").substring(0, 200) +
         "...",
       url: meta.canonical || `https://example.bg/services/${slug}`,
       provider: {
@@ -108,7 +125,7 @@ export default async function ServicePage({ params }) {
           <div className="mx-auto max-w-10/10 py-0 sm:px-6 sm:py-0 lg:px-0">
             <div className="relative isolate overflow-hidden bg-gray-900 px-6 py-23 text-center shadow-2xl sm:px-23">
               <h1 className="text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">
-                {service[0].title.rendered}
+                {service.title.rendered}
               </h1>
               <svg
                 viewBox="0 0 1024 1024"
@@ -139,7 +156,7 @@ export default async function ServicePage({ params }) {
                 <div className="animate-pulse h-96 bg-gray-100 rounded-md"></div>
               }
             >
-              <ServiceContent content={service[0].content.rendered} />
+              <ServiceContent content={service.content.rendered} />
             </Suspense>
           </div>
         </div>

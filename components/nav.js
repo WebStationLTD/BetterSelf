@@ -22,6 +22,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { getServicesNav } from "../services/services";
 import { searchContent } from "../services/search";
+import he from "he";
 
 export default function Navigation() {
   const [open, setOpen] = useState(false);
@@ -70,16 +71,25 @@ export default function Navigation() {
               id: "categories",
               name: "Събития",
               featured: featured.map((service) => ({
-                name: service.title.rendered,
+                name:
+                  service.title && service.title.rendered
+                    ? he.decode(service.title.rendered)
+                    : "",
                 href: `/services/${service.slug}`,
                 imageSrc:
                   service.yoast_head_json?.og_image?.[0]?.url ||
                   "/placeholder.webp",
-                imageAlt: service.title.rendered,
+                imageAlt:
+                  service.title && service.title.rendered
+                    ? he.decode(service.title.rendered)
+                    : "",
               })),
               services: remainingServices.map((service) => ({
                 id: service.id,
-                name: service.title.rendered,
+                name:
+                  service.title && service.title.rendered
+                    ? he.decode(service.title.rendered)
+                    : "",
                 href: `/services/${service.slug}`,
               })),
             },
