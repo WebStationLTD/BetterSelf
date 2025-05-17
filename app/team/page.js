@@ -55,7 +55,7 @@ export default async function Team() {
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-20 px-6 lg:px-8 xl:grid-cols-5">
           <div className="w-full xl:max-w-2xl xl:col-span-2 order-last xl:order-first">
             <h2 className="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
-              За екипа
+              За лекторите
             </h2>
             <p className="mt-6 text-lg/8 text-gray-600">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -77,14 +77,21 @@ export default async function Team() {
                 key={member.id}
                 className="flex flex-col gap-10 py-12 first:pt-0 last:pb-0 sm:flex-row"
               >
-                <Link href={`/team/${member.slug}`} prefetch={true}>
-                  <Image
-                    width={250}
-                    height={375}
-                    alt={member.name || "Член на екипа"}
-                    src={member.profilepicture || "/placeholder.webp"}
-                    className="rounded-2xl object-cover"
-                  />
+                <Link
+                  href={`/team/${member.slug}`}
+                  prefetch={true}
+                  className="block w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0"
+                >
+                  <div className="relative aspect-square w-full overflow-hidden rounded-2xl">
+                    <Image
+                      fill
+                      alt={member.name || "Член на екипа"}
+                      src={member.profilepicture || "/placeholder.webp"}
+                      className="object-cover"
+                      sizes="(max-width: 639px) 8rem, (max-width: 767px) 9rem, (max-width: 1023px) 10rem, 11rem"
+                      quality={100}
+                    />
+                  </div>
                 </Link>
                 <div className="max-w-xl flex-auto">
                   <Link href={`/team/${member.slug}`} prefetch={true}>
@@ -95,7 +102,7 @@ export default async function Team() {
                       {member.position || ""}
                     </p>
                     <div
-                      className="mt-6 text-base/7 text-gray-600 prose"
+                      className="mt-2 text-base/7 text-gray-600 prose"
                       dangerouslySetInnerHTML={{
                         __html:
                           member.description && member.description.length > 100

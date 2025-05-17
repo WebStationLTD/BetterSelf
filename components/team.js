@@ -32,24 +32,32 @@ export default function Team() {
         </div>
         <ul
           role="list"
-          className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3"
+          className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-12 gap-y-20 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3"
         >
           {members.map((member, index) => (
-            <li key={member.id} className="flex flex-col items-center">
+            <li
+              key={member.id}
+              className="flex flex-col items-center text-center"
+            >
               {member.slug && (
-                <Link href={`/team/${member.slug}`} prefetch={true}>
-                  <Image
-                    width={384}
-                    height={384}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    quality={100}
-                    priority={index < 3} // Приоритетно зареждане на първите 3 члена
-                    loading={index < 3 ? "eager" : "lazy"}
-                    alt={member.name || "Член на екипа"}
-                    src={member.profilepicture || "/placeholder.webp"}
-                    className="rounded-2xl object-cover"
-                    format="webp"
-                  />
+                <Link
+                  href={`/team/${member.slug}`}
+                  prefetch={true}
+                  className="group"
+                >
+                  <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 mx-auto overflow-hidden rounded-2xl group-hover:opacity-75">
+                    <Image
+                      fill
+                      sizes="(max-width: 640px) 16rem, (max-width: 768px) 18rem, (max-width: 1024px) 20rem, 24rem"
+                      quality={100}
+                      priority={index < 3} // Приоритетно зареждане на първите 3 члена
+                      loading={index < 3 ? "eager" : "lazy"}
+                      alt={member.name || "Член на екипа"}
+                      src={member.profilepicture || "/placeholder.webp"}
+                      className="object-cover" // Запазваме object-cover, за да запълни div-a
+                      format="webp"
+                    />
+                  </div>
                   <h3 className="mt-6 text-lg/8 font-semibold tracking-tight text-gray-900">
                     {member.name || "Член на екипа"}
                   </h3>
