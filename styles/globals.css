@@ -1,6 +1,8 @@
 /* Ensure Gutenberg styles are applied */
 @import url("https://betterself.admin-panels.com/wp-includes/css/dist/block-library/style.min.css");
 
+/* @import "./wordpress-blocks.css"; */
+@import "./wordpress-generated.css";
 @import "tailwindcss";
 /* @tailwindcss/typography се зарежда директно в конфигурацията */
 
