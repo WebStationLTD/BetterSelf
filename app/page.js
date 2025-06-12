@@ -1,28 +1,5 @@
-import HeroSection from "../components/hero";
 import { WebVitals } from "./web-vitals";
-import dynamic from "next/dynamic";
-
-const Schedule = dynamic(() => import("../components/schedule"), {
-  ssr: true,
-});
-const PricingSection = dynamic(() => import("../components/pricingSection"), {
-  ssr: true,
-});
-const Incentives = dynamic(() => import("../components/incentives"), {
-  ssr: true,
-});
-const Team = dynamic(() => import("../components/team"), { ssr: true });
-const CTA = dynamic(() => import("../components/cta"), { ssr: true });
-const Clients = dynamic(() => import("../components/clients"), { ssr: true });
-const Newsletter = dynamic(() => import("../components/newsletter"), {
-  ssr: true,
-});
-const Testimonial = dynamic(() => import("../components/testimonial"), {
-  ssr: true,
-});
-const Lastestposts = dynamic(() => import("../components/latestposts"), {
-  ssr: true,
-});
+import HomePageWrapper from "../components/HomePageWrapper";
 
 // Добавяне на ISR ревалидиране на всеки час
 export const revalidate = 3600;
@@ -69,19 +46,7 @@ export default function Home() {
   return (
     <>
       <WebVitals />
-      <HeroSection />
-
-      <Incentives />
-      <Schedule />
-      <Team />
-
-      <PricingSection />
-
-      {/* <CTA /> */}
-      <Clients />
-      <Newsletter />
-      <Testimonial />
-      <Lastestposts />
+      <HomePageWrapper />
     </>
   );
 }

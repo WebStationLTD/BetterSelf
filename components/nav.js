@@ -180,25 +180,30 @@ export default function Navigation() {
                       className="-m-2 block p-2 font-medium text-gray-900 text-lg"
                       onClick={(e) => {
                         setOpen(false);
-                        // Ако е котва линк, добавяме плавна анимация
+                        // Ако е котва линк, проверяваме дали сме на homepage
                         if (page.href.startsWith("/#")) {
-                          e.preventDefault();
-                          setTimeout(() => {
-                            const targetId = page.href.substring(2);
-                            const targetElement =
-                              document.getElementById(targetId);
-                            if (targetElement) {
-                              const elementPosition =
-                                targetElement.getBoundingClientRect().top;
-                              const offsetPosition =
-                                elementPosition + window.pageYOffset - 65;
+                          const targetId = page.href.substring(2);
 
-                              window.scrollTo({
-                                top: offsetPosition,
-                                behavior: "smooth",
-                              });
-                            }
-                          }, 100); // Малко забавяне за да се затвори менюто
+                          // Ако сме на homepage, scroll към секцията
+                          if (window.location.pathname === "/") {
+                            e.preventDefault();
+                            setTimeout(() => {
+                              const targetElement =
+                                document.getElementById(targetId);
+                              if (targetElement) {
+                                const elementPosition =
+                                  targetElement.getBoundingClientRect().top;
+                                const offsetPosition =
+                                  elementPosition + window.pageYOffset - 65;
+
+                                window.scrollTo({
+                                  top: offsetPosition,
+                                  behavior: "smooth",
+                                });
+                              }
+                            }, 100); // Малко забавяне за да се затвори менюто
+                          }
+                          // Ако не сме на homepage, отиваме там и URL-ът ще направи scroll автоматично
                         }
                       }}
                       prefetch={true}
@@ -300,23 +305,28 @@ export default function Navigation() {
                         className="flex items-center font-medium text-white hover:text-gray-400 text-lg"
                         prefetch={true}
                         onClick={(e) => {
-                          // Ако е котва линк, добавяме плавна анимация
+                          // Ако е котва линк, проверяваме дали сме на homepage
                           if (page.href.startsWith("/#")) {
-                            e.preventDefault();
                             const targetId = page.href.substring(2);
-                            const targetElement =
-                              document.getElementById(targetId);
-                            if (targetElement) {
-                              const elementPosition =
-                                targetElement.getBoundingClientRect().top;
-                              const offsetPosition =
-                                elementPosition + window.pageYOffset - 65;
 
-                              window.scrollTo({
-                                top: offsetPosition,
-                                behavior: "smooth",
-                              });
+                            // Ако сме на homepage, scroll към секцията
+                            if (window.location.pathname === "/") {
+                              e.preventDefault();
+                              const targetElement =
+                                document.getElementById(targetId);
+                              if (targetElement) {
+                                const elementPosition =
+                                  targetElement.getBoundingClientRect().top;
+                                const offsetPosition =
+                                  elementPosition + window.pageYOffset - 65;
+
+                                window.scrollTo({
+                                  top: offsetPosition,
+                                  behavior: "smooth",
+                                });
+                              }
                             }
+                            // Ако не сме на homepage, отиваме там и URL-ът ще направи scroll автоматично
                           }
                         }}
                       >
