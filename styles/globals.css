@@ -9,6 +9,11 @@
 /* Импортиране на специфични медия запити за високи резолюции */
 @import "./custom-breakpoints.css";
 
+/* Плавна анимация за scroll към котви */
+html {
+  scroll-behavior: smooth;
+}
+
 /* @theme {
   --breakpoint-under-1680: 92rem;
 } */

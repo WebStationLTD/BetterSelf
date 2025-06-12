@@ -45,8 +45,8 @@ export default function Navigation() {
     pages: [
       { name: "Лектори", href: "/team" },
       { name: "Програма", href: "/schedule" },
-      { name: "Спонсори", href: "/sponsors" },
-      { name: "Блиети", href: "/tickets" },
+      { name: "Спонсори", href: "/#sponsors" },
+      { name: "Билети", href: "/tickets" },
     ],
   });
 
@@ -178,7 +178,29 @@ export default function Navigation() {
                     <Link
                       href={page.href}
                       className="-m-2 block p-2 font-medium text-gray-900 text-lg"
-                      onClick={() => setOpen(false)}
+                      onClick={(e) => {
+                        setOpen(false);
+                        // Ако е котва линк, добавяме плавна анимация
+                        if (page.href.startsWith("/#")) {
+                          e.preventDefault();
+                          setTimeout(() => {
+                            const targetId = page.href.substring(2);
+                            const targetElement =
+                              document.getElementById(targetId);
+                            if (targetElement) {
+                              const elementPosition =
+                                targetElement.getBoundingClientRect().top;
+                              const offsetPosition =
+                                elementPosition + window.pageYOffset - 65;
+
+                              window.scrollTo({
+                                top: offsetPosition,
+                                behavior: "smooth",
+                              });
+                            }
+                          }, 100); // Малко забавяне за да се затвори менюто
+                        }
+                      }}
                       prefetch={true}
                     >
                       {page.name}
@@ -277,6 +299,26 @@ export default function Navigation() {
                         href={page.href}
                         className="flex items-center font-medium text-white hover:text-gray-400 text-lg"
                         prefetch={true}
+                        onClick={(e) => {
+                          // Ако е котва линк, добавяме плавна анимация
+                          if (page.href.startsWith("/#")) {
+                            e.preventDefault();
+                            const targetId = page.href.substring(2);
+                            const targetElement =
+                              document.getElementById(targetId);
+                            if (targetElement) {
+                              const elementPosition =
+                                targetElement.getBoundingClientRect().top;
+                              const offsetPosition =
+                                elementPosition + window.pageYOffset - 65;
+
+                              window.scrollTo({
+                                top: offsetPosition,
+                                behavior: "smooth",
+                              });
+                            }
+                          }
+                        }}
                       >
                         {page.name}
                       </Link>
