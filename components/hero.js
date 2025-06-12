@@ -17,145 +17,79 @@ export default function Hero() {
   return (
     <>
       <LazyImageObserver />
-      <div className="bg-white">
-        {/* Мобилен Hero с изображение най-отгоре - ще бъде LCP елемент за мобилни */}
-        <div className="lg:hidden relative">
-          <div className="w-full overflow-hidden">
-            {/* Директно използване на HTML img за максимална производителност на LCP */}
-            <img
-              src="/hero-image-mobile.jpg"
-              width={640}
-              height={400}
-              alt="Hero image"
-              className="w-full h-[150px] xs:h-[180px] sm:h-[200px] md:h-[240px] object-cover"
-              loading="eager"
-              decoding="sync"
-              fetchPriority="high"
-              style={{
-                objectFit: "cover",
-                objectPosition: "center 30%",
-                contentVisibility: "auto",
-                containIntrinsicSize: "640px 400px",
-              }}
-              id="hero-mobile-lcp"
-            />
-          </div>
+      <div className="relative w-full h-[600px]">
+        {/* Hero Background Image */}
+        <div className="absolute inset-0 w-full h-full">
+          <img
+            src="/betterself-hero-image.jpg"
+            alt="Biohacking & Longevity Conference 2025"
+            className="w-full h-full object-cover"
+            loading="eager"
+            decoding="sync"
+            fetchPriority="high"
+            style={{
+              objectFit: "cover",
+              objectPosition: "center",
+              contentVisibility: "auto",
+            }}
+          />
+        </div>
 
-          <div className="px-6 py-10">
-            <h1 className="text-4xl font-semibold tracking-tight text-pretty text-gray-900 font-display sm:text-5xl xl:text-7xl text-left xl:text-center">
+        {/* Dark Overlay for Better Text Readability */}
+        <div className="absolute inset-0 bg-opacity-40"></div>
+
+        {/* Hero Content - Centered */}
+        <div className="relative z-10 flex items-center justify-center h-[600px] px-6">
+          <div className="text-center max-w-6xl mx-auto">
+            {/* Main Heading */}
+            <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold tracking-tight text-white font-display mb-4">
               Biohacking & Longevity
             </h1>
-            <h2 className="text-3xl font-semibold mt-8 tracking-tight text-pretty text-gray-900 sm:text-4xl xl:text-5xl font-display text-left xl:text-center">
+
+            {/* Secondary Heading */}
+            <h2 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold tracking-tight text-white font-display mb-6">
               Conference 2025
             </h2>
-            <p className="mt-4 text-2xl font-medium font-display text-left xl:text-center">
+
+            {/* Quote */}
+            <p className="text-2xl md:text-3xl lg:text-4xl font-medium text-white font-display mb-8">
               "Очи в очи"
             </p>
-            <p className="mt-6 text-sm font-medium text-pretty text-gray-500 font-display text-left xl:text-center">
-              Let's start the journey to you BETTERSELF
+
+            {/* Subtitle */}
+            <p className="text-lg md:text-xl lg:text-2xl font-medium text-white font-display mb-12 opacity-90">
+              Let's start the journey to your BETTERSELF
             </p>
-            <div className="mt-8 flex items-center gap-x-4">
+
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-10">
               <Link
                 href="/services"
-                className="rounded-md bg-[#ff8d00] hover:bg-gray-300 hover:text-[#000000] px-3 py-2 text-sm font-semibold text-black shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="rounded-md bg-[#ff8d00] hover:bg-orange-600 px-6 py-3 text-lg font-semibold text-black shadow-lg transition-all duration-300 transform hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600"
               >
-                Услуги
+                Купи билети
               </Link>
               <Link
                 href="/contact"
-                className="text-sm font-semibold text-gray-900"
+                className="text-lg font-semibold text-white hover:text-[#ff8d00] transition-colors duration-300"
               >
-                Контакти <span aria-hidden="true">→</span>
+                Стани партньор <span aria-hidden="true">→</span>
               </Link>
             </div>
-          </div>
-        </div>
 
-        {/* Десктоп Hero с текст вляво и изображение вдясно */}
-        <div className="hidden lg:block relative">
-          <div className="mx-auto max-w-full">
-            {/* <div className="relative z-10 pt-0 lg:w-full lg:max-w-3xl 2xl:max-w-4xl"> */}
-            {/* <div className="relative z-10 pt-0 lg:w-full lg:max-w-3xl 2xl:max-w-8xl"> */}
-            <div className="relative z-10 pt-0 lg:w-full lg:max-w-3xl 2xl:max-w-8xl">
-              <svg
-                viewBox="0 0 100 100"
-                preserveAspectRatio="none"
-                aria-hidden="true"
-                className="absolute inset-y-0 right-0 custom-2xl-right-30 custom-3xl-right-46 h-full w-80 translate-x-1/2 transform fill-white"
-                style={{
-                  // Добавяме inline стил като резервен метод
-                  position: "absolute",
-                  top: 0,
-                  bottom: 0,
-                }}
+            {/* Event Details */}
+            <div className="relative rounded-full px-6 py-3 text-lg font-medium text-white ring-2 ring-white ring-opacity-30 hover:ring-opacity-50 transition-all duration-300 inline-block">
+              <span className="text-xl font-bold mr-4">
+                02.11.2025 - Гранд Хотел Астория
+              </span>
+              <Link
+                href="/blog"
+                className="font-semibold whitespace-nowrap text-[#ff8d00] hover:text-orange-300 transition-colors duration-300"
               >
-                <polygon points="0,0 90,0 50,100 0,100" />
-              </svg>
-              <div className="relative px-6 py-12 lg:px-8 lg:py-14 lg:pr-0">
-                {/* <div className="ml-0 mr-auto max-w-2xl lg:mx-0 lg:max-w-xl"> */}
-                <div className="ml-0 mr-auto lg:mx-0 w-full">
-                  <h1 className="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl xl:text-7xl font-display text-left xl:text-center">
-                    Biohacking & Longevity
-                  </h1>
-                  <h2 className="text-3xl font-semibold mt-8 tracking-tight text-pretty text-gray-900 sm:text-4xl xl:text-5xl font-display text-left xl:text-center">
-                    Conference 2025
-                  </h2>
-                  <p className="mt-8 text-4xl text-left xl:text-center font-medium font-display">
-                    "Очи в очи"
-                  </p>
-                  <p className="mt-8 text-lg text-left xl:text-center font-medium text-pretty text-gray-500 sm:text-xl/8 font-display">
-                    Let's start the journey to you BETTERSELF
-                  </p>
-                  <div className="mt-10 flex justify-start xl:justify-center items-center gap-x-6">
-                    <Link
-                      href="/services"
-                      className="rounded-md text-[#000000] bg-[#ff8d00] hover:bg-gray-300 hover:text-[#000000] px-3.5 py-2.5 text-sm font-semibold text-black shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                    >
-                      Купи билети
-                    </Link>
-                    <Link
-                      href="/contact"
-                      className="text-sm/6 font-semibold text-gray-900"
-                    >
-                      Стани партньор <span aria-hidden="true">→</span>
-                    </Link>
-                  </div>
-                  <div className="mt-2 mb-10 flex justify-start xl:justify-center">
-                    <div className="relative rounded-full mt-8 px-3 py-1 text-lg font-medium text-gray-500 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                      <span className="text-xl font-bold mr-4">
-                        02.11.2025 - Гранд Хотел Астория
-                      </span>{" "}
-                      <Link
-                        href="/blog"
-                        className="font-semibold whitespace-nowrap text-[#ff8d00]"
-                      >
-                        <span aria-hidden="true" className="absolute inset-0" />
-                        Купи билети <span aria-hidden="true">&rarr;</span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                <span aria-hidden="true" className="absolute inset-0" />
+                Купи билети <span aria-hidden="true">&rarr;</span>
+              </Link>
             </div>
-          </div>
-          <div className="bg-gray-50 absolute inset-y-0 right-0 w-1/2">
-            {/* Директно използване на HTML img за десктоп версията */}
-            <img
-              src="/hero-image-desktop.jpg"
-              width={955}
-              height={776}
-              alt="Hero image"
-              className="h-full w-full object-cover"
-              loading="eager"
-              decoding="sync"
-              fetchPriority="high"
-              style={{
-                objectFit: "cover",
-                contentVisibility: "auto",
-                containIntrinsicSize: "955px 776px",
-              }}
-              id="hero-desktop-lcp"
-            />
           </div>
         </div>
       </div>

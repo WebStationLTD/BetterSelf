@@ -43,10 +43,10 @@ export default function Navigation() {
       },
     ],
     pages: [
-      { name: "Начало", href: "/" },
       { name: "Лектори", href: "/team" },
-      { name: "Блог", href: "/blog" },
-      { name: "Контакти", href: "/contact" },
+      { name: "Програма", href: "/schedule" },
+      { name: "Спонсори", href: "/sponsors" },
+      { name: "Блиети", href: "/tickets" },
     ],
   });
 
@@ -138,7 +138,7 @@ export default function Navigation() {
   }, []);
 
   return (
-    <div className="bg-white sticky shadow-md top-0 block w-full z-50">
+    <div className="bg-gray-800 sticky shadow-md top-0 block w-full z-50">
       {/* Mobile menu */}
       <Dialog open={open} onClose={setOpen} className="relative z-40 lg:hidden">
         <DialogBackdrop
@@ -177,7 +177,7 @@ export default function Navigation() {
                   <div key={page.name} className="flow-root">
                     <Link
                       href={page.href}
-                      className="-m-2 block p-2 font-medium text-gray-900"
+                      className="-m-2 block p-2 font-medium text-gray-900 text-lg"
                       onClick={() => setOpen(false)}
                       prefetch={true}
                     >
@@ -191,7 +191,7 @@ export default function Navigation() {
                   {navigation.categories.map((category) => (
                     <Tab
                       key={category.name}
-                      className="flex-1 border-b-2 border-transparent px-1 py-4 text-xl font-bold text-center text-gray-900 hover:text-[#ff8d00] data-headlessui-state-selected:border-[#ff8d00] data-headlessui-state-selected:text-[#ff8d00]"
+                      className="flex-1 border-b-2 border-transparent px-1 py-4 text-2xl font-bold text-center text-gray-900 hover:text-[#ff8d00] data-headlessui-state-selected:border-[#ff8d00] data-headlessui-state-selected:text-[#ff8d00]"
                     >
                       {category.name}
                     </Tab>
@@ -220,7 +220,7 @@ export default function Navigation() {
                             >
                               <Link
                                 href={service.href}
-                                className="-m-2 block p-2 font-medium text-gray-900"
+                                className="-m-2 block p-2 font-medium text-gray-900 text-lg"
                                 onClick={() => setOpen(false)}
                                 prefetch={true}
                               >
@@ -238,9 +238,9 @@ export default function Navigation() {
           </DialogPanel>
         </div>
       </Dialog>
-      <header className="relative bg-white">
+      <header className="relative bg-gray-800">
         <nav aria-label="Top" className="mx-auto w-full px-4 sm:px-6 lg:px-8">
-          <div className="border-b border-gray-200">
+          <div className="">
             <div className="flex items-center justify-between h-16 lg:h-16">
               {/* Mobile menu button - запазваме мобилната версия непроменена */}
               <button
@@ -275,7 +275,7 @@ export default function Navigation() {
                       <Link
                         key={page.name}
                         href={page.href}
-                        className="flex items-center font-medium text-gray-700 hover:text-gray-800 text-base"
+                        className="flex items-center font-medium text-white hover:text-gray-400 text-lg"
                         prefetch={true}
                       >
                         {page.name}
@@ -286,7 +286,7 @@ export default function Navigation() {
                         {({ open, close }) => (
                           <>
                             <div className="relative flex">
-                              <PopoverButton className="relative z-10 -mb-px flex items-center border-b-2 border-transparent pt-px font-medium text-gray-700 transition-colors duration-200 ease-out hover:text-gray-800 data-open:border-[#ff8d00] data-open:text-[#ff8d00] cursor-pointer focus-visible:outline-none transition-all text-base">
+                              <PopoverButton className="relative z-10 -mb-px flex items-center border-b-2 border-transparent pt-px font-medium text-white transition-colors duration-200 ease-out hover:text-gray-400 data-open:border-[#ff8d00] data-open:text-[#ff8d00] cursor-pointer focus-visible:outline-none transition-all text-lg">
                                 {category.name}
                                 <ChevronDownIcon
                                   className={`ml-2 h-5 w-5 text-gray-500 transition-transform duration-200 ease-in-out ${
@@ -339,7 +339,7 @@ export default function Navigation() {
                                               prefetch={true}
                                               onClick={close}
                                             >
-                                              <p className="text-lg font-semibold text-gray-900 transition-colors duration-300 hover:text-[#ff8d00]">
+                                              <p className="text-xl font-semibold text-gray-900 transition-colors duration-300 hover:text-[#ff8d00]">
                                                 {service.name}
                                               </p>
                                             </Link>

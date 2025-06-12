@@ -2,6 +2,9 @@ import HeroSection from "../components/hero";
 import { WebVitals } from "./web-vitals";
 import dynamic from "next/dynamic";
 
+const Schedule = dynamic(() => import("../components/schedule"), {
+  ssr: true,
+});
 const PricingSection = dynamic(() => import("../components/pricingSection"), {
   ssr: true,
 });
@@ -26,24 +29,28 @@ export const revalidate = 3600;
 
 // Добавяне на метаданни за главната страница
 export const metadata = {
-  title: "NextLevel Services - Професионални бизнес услуги",
+  title: "BetterSelf - Biohacking & Longevity Conference 2025",
   description:
-    "Открийте нашите висококачествени бизнес услуги, които ще изведат вашия бизнес на следващо ниво. Консултирайте се с нашите експерти днес.",
+    "Присъединете се към водещата конференция за биохакинг и дълголетие в България. Научете от експерти как да оптимизирате здравето и живота си.",
   keywords: [
-    "бизнес услуги",
-    "консултации",
-    "професионални услуги",
-    "NextLevel",
+    "биохакинг",
+    "дълголетие",
+    "конференция",
+    "здраве",
+    "betterself",
+    "longevity",
+    "biohacking",
   ],
   openGraph: {
-    title: "NextLevel Services - Професионални бизнес услуги",
-    description: "Открийте нашите висококачествени бизнес услуги",
+    title: "BetterSelf - Biohacking & Longevity Conference 2025",
+    description:
+      "Еднодневна конференция за биохакинг и дълголетие на 02.11.2025",
     images: [
       {
-        url: "/hero-image-desktop.jpg",
+        url: "/betterself-hero-image.jpg",
         width: 1200,
         height: 630,
-        alt: "NextLevel Services",
+        alt: "BetterSelf Conference 2025",
       },
     ],
     locale: "bg_BG",
@@ -51,9 +58,10 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "NextLevel Services - Професионални бизнес услуги",
-    description: "Открийте нашите висококачествени бизнес услуги",
-    images: ["/hero-image-desktop.jpg"],
+    title: "BetterSelf - Biohacking & Longevity Conference 2025",
+    description:
+      "Еднодневна конференция за биохакинг и дълголетие на 02.11.2025",
+    images: ["/betterself-hero-image.jpg"],
   },
 };
 
@@ -62,9 +70,13 @@ export default function Home() {
     <>
       <WebVitals />
       <HeroSection />
-      <PricingSection />
-      <Team />
+
       <Incentives />
+      <Schedule />
+      <Team />
+
+      <PricingSection />
+
       {/* <CTA /> */}
       <Clients />
       <Newsletter />
