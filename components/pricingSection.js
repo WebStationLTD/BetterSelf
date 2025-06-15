@@ -1,21 +1,24 @@
 import { CheckIcon } from "@heroicons/react/24/outline";
 
-const hobbyFeatures = [
-  "Pariatur quod similique",
-  "Sapiente libero doloribus",
-  "Vel ipsa esse repudiandae",
+const onlineFeatures = [
+  "Онлайн достъп до всички презентации",
+  "Записи от събитието за 30 дни",
+  "Достъп до ексклузивни материали",
 ];
-const scaleFeatures = [
-  "Pariatur quod similique",
-  "Sapiente libero doloribus",
-  "Vel ipsa esse repudiandae",
+const vipFeatures = [
+  "Всичко от бизнес билета включено",
+  "VIP места най-отпред в залата",
+  "Ексклузивни разговори с лекторите",
 ];
-const growthFeatures = [
-  "Quia rem est sed impedit magnam",
-  "Dolorem vero ratione voluptates",
-  "Qui sed ab doloribus voluptatem dolore",
-  "Laborum commodi molestiae id et fugiat",
-  "Nam ut ipsa nesciunt culpa modi dolor",
+const businessFeatures = [
+  "Присъствие на живо в конференцията",
+  "Онлайн достъп до всички презентации",
+  "Записи от събитието за 30 дни",
+  "Networking сесии с участници",
+  "Кафе пауза и обяд включени",
+  "Достъп до ексклузивни материали",
+  "Сертификат за участие",
+  "Приоритетна поддръжка",
 ];
 
 export default function Example() {
@@ -38,27 +41,21 @@ export default function Example() {
                     <div className="bg-white px-6 py-10">
                       <div>
                         <h3
-                          id="tier-hobby"
+                          id="tier-online"
                           className="text-center text-2xl font-medium text-gray-900"
                         >
-                          Hobby
+                          Онлайн
                         </h3>
                         <div className="mt-4 flex items-center justify-center">
                           <span className="flex items-start px-3 text-6xl tracking-tight text-gray-900">
-                            <span className="mt-2 mr-2 text-4xl font-medium tracking-tight">
-                              $
-                            </span>
-                            <span className="font-bold">79</span>
-                          </span>
-                          <span className="text-xl font-medium text-gray-500">
-                            /month
+                            <span className="font-bold">49 лв.</span>
                           </span>
                         </div>
                       </div>
                     </div>
                     <div className="flex flex-1 flex-col justify-between border-t-2 border-gray-100 bg-gray-50 p-6 sm:p-10 lg:p-6 xl:p-10">
                       <ul role="list" className="space-y-4">
-                        {hobbyFeatures.map((feature) => (
+                        {onlineFeatures.map((feature) => (
                           <li key={feature} className="flex items-start">
                             <div className="shrink-0">
                               <CheckIcon
@@ -76,10 +73,10 @@ export default function Example() {
                         <div className="rounded-lg shadow-md">
                           <a
                             href="#"
-                            aria-describedby="tier-hobby"
+                            aria-describedby="tier-online"
                             className="block w-full rounded-lg border border-transparent bg-white px-6 py-3 text-center text-base font-medium text-indigo-600 hover:bg-gray-50"
                           >
-                            Start your trial
+                            Купи
                           </a>
                         </div>
                       </div>
@@ -96,34 +93,28 @@ export default function Example() {
                   <div className="absolute inset-x-0 top-0 translate-y-px transform">
                     <div className="flex -translate-y-1/2 transform justify-center">
                       <span className="inline-flex rounded-full bg-[#ff8d00] px-4 py-1 text-base font-semibold text-white">
-                        Most popular
+                        Най-популярен{" "}
                       </span>
                     </div>
                   </div>
                   <div className="rounded-t-lg bg-white px-6 pt-12 pb-10">
                     <div>
                       <h3
-                        id="tier-growth"
+                        id="tier-business"
                         className="text-center text-3xl font-semibold tracking-tight text-gray-900 sm:-mx-6"
                       >
-                        Growth
+                        Бизнес
                       </h3>
                       <div className="mt-4 flex items-center justify-center">
                         <span className="flex items-start px-3 text-6xl tracking-tight text-gray-900 sm:text-6xl">
-                          <span className="mt-2 mr-2 text-4xl font-medium tracking-tight">
-                            $
-                          </span>
-                          <span className="font-bold">149</span>
-                        </span>
-                        <span className="text-2xl font-medium text-gray-500">
-                          /month
+                          <span className="font-bold">99 лв.</span>
                         </span>
                       </div>
                     </div>
                   </div>
                   <div className="rounded-b-lg border-t-2 border-gray-100 bg-gray-50 px-6 pt-10 pb-8 sm:px-10 sm:py-10">
                     <ul role="list" className="space-y-4">
-                      {growthFeatures.map((feature) => (
+                      {businessFeatures.map((feature) => (
                         <li key={feature} className="flex items-start">
                           <div className="shrink-0">
                             <CheckIcon
@@ -141,10 +132,10 @@ export default function Example() {
                       <div className="rounded-lg shadow-md">
                         <a
                           href="#"
-                          aria-describedby="tier-growth"
+                          aria-describedby="tier-business"
                           className="block w-full text-[#000000] bg-[#ff8d00] hover:bg-gray-300 hover:text-[#000000] rounded-lg border border-transparent px-6 py-4 text-center text-xl/6 font-medium text-white"
                         >
-                          Start your trial
+                          Купи{" "}
                         </a>
                       </div>
                     </div>
@@ -157,27 +148,21 @@ export default function Example() {
                     <div className="bg-white px-6 py-10">
                       <div>
                         <h3
-                          id="tier-scale"
+                          id="tier-vip"
                           className="text-center text-2xl font-medium text-gray-900"
                         >
-                          Scale
+                          VIP
                         </h3>
                         <div className="mt-4 flex items-center justify-center">
                           <span className="flex items-start px-3 text-6xl tracking-tight text-gray-900">
-                            <span className="mt-2 mr-2 text-4xl font-medium tracking-tight">
-                              $
-                            </span>
-                            <span className="font-bold">349</span>
-                          </span>
-                          <span className="text-xl font-medium text-gray-500">
-                            /month
+                            <span className="font-bold">249 лв.</span>
                           </span>
                         </div>
                       </div>
                     </div>
                     <div className="flex flex-1 flex-col justify-between border-t-2 border-gray-100 bg-gray-50 p-6 sm:p-10 lg:p-6 xl:p-10">
                       <ul role="list" className="space-y-4">
-                        {scaleFeatures.map((feature) => (
+                        {vipFeatures.map((feature) => (
                           <li key={feature} className="flex items-start">
                             <div className="shrink-0">
                               <CheckIcon
@@ -195,10 +180,10 @@ export default function Example() {
                         <div className="rounded-lg shadow-md">
                           <a
                             href="#"
-                            aria-describedby="tier-scale"
+                            aria-describedby="tier-vip"
                             className="block w-full rounded-lg border border-transparent bg-white px-6 py-3 text-center text-base font-medium text-indigo-600 hover:bg-gray-50"
                           >
-                            Start your trial
+                            Купи
                           </a>
                         </div>
                       </div>
