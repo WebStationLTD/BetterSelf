@@ -24,22 +24,22 @@ export default function Clients() {
           </div>
           <div className="mx-auto grid w-full max-w-xl grid-cols-2 items-center gap-y-12 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:pl-8">
             <Image
-              alt="Tuple"
-              src="https://tailwindui.com/plus-assets/img/logos/tuple-logo-gray-900.svg"
+              alt="Webstation"
+              src="/webstation-logo.png"
               width={105}
               height={48}
               quality={80}
               loading="lazy"
-              className="max-h-12 w-full object-contain object-left"
+              className="max-h-16 w-full object-contain object-left"
             />
             <Image
-              alt="Reform"
-              src="https://tailwindui.com/plus-assets/img/logos/reform-logo-gray-900.svg"
+              alt="Офсет График"
+              src="/офсет-график-Logo.png"
               width={104}
               height={48}
               quality={80}
               loading="lazy"
-              className="max-h-12 w-full object-contain object-left"
+              className="max-h-16 w-full object-contain object-left"
             />
             <Image
               alt="SavvyCal"
@@ -48,7 +48,7 @@ export default function Clients() {
               height={48}
               quality={80}
               loading="lazy"
-              className="max-h-12 w-full object-contain object-left"
+              className="max-h-16 w-full object-contain object-left"
             />
             <Image
               alt="Laravel"
@@ -57,7 +57,7 @@ export default function Clients() {
               height={48}
               quality={80}
               loading="lazy"
-              className="max-h-12 w-full object-contain object-left"
+              className="max-h-16 w-full object-contain object-left"
             />
             <Image
               alt="Transistor"
@@ -66,7 +66,7 @@ export default function Clients() {
               height={48}
               quality={80}
               loading="lazy"
-              className="max-h-12 w-full object-contain object-left"
+              className="max-h-16 w-full object-contain object-left"
             />
             <Image
               alt="Statamic"
@@ -75,7 +75,7 @@ export default function Clients() {
               height={48}
               quality={80}
               loading="lazy"
-              className="max-h-12 w-full object-contain object-left"
+              className="max-h-16 w-full object-contain object-left"
             />
           </div>
         </div>
