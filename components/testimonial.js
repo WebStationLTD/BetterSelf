@@ -6,7 +6,7 @@ export default function Testimonial() {
       <div className="mx-auto max-w-2xl lg:max-w-4xl">
         <figure>
           <blockquote className="text-center text-xl/8 font-semibold text-gray-900 sm:text-2xl/9">
-            <p>“Let's start the journey to you BETTERSELF”</p>
+            <p>“Let's start the journey to your BETTERSELF”</p>
           </blockquote>
         </figure>
       </div>
