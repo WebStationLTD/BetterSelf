@@ -3,9 +3,9 @@ import Link from "next/link";
 import { getMembers } from "../../services/members";
 
 export const metadata = {
-  title: "Екип - NextLevel Theme",
+  title: "Лектори - BetterSelf",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "Запознайте се с водещите експерти в областта на биохакинга, здравето и личното развитие на BetterSelf събитието. Тщательно подбрани лектори с богат опит и научна експертиза.",
 };
 
 export default async function Team() {
@@ -22,11 +22,12 @@ export default async function Team() {
           <div className="relative isolate overflow-hidden bg-gray-900 px-6 py-12 text-center shadow-2xl sm:px-12">
             <div className="mx-auto max-w-2xl text-center">
               <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-                Lorem ipsum dolor sit amet
+                Нашите лектори
               </h1>
               <p className="mt-6  text-lg/8 text-white">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Запознайте се с водещите експерти в областта на биохакинга,
+                здравето и личното развитие, които ще споделят своите знания на
+                BetterSelf събитието.
               </p>
             </div>
             <svg
@@ -58,17 +59,21 @@ export default async function Team() {
               За лекторите
             </h2>
             <p className="mt-6 text-lg/8 text-gray-600">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Нашите лектори са тщателно подбрани експерти с дълбоки познания в
+              областта на биохакинга, медицината, психологията и личното
+              развитие. Всеки от тях притежава уникален практически опит и
+              научна експертиза, която ще ви помогне да откриете нови начини за
+              оптимизиране на здравето и потенциала си.
             </p>
             <p className="mt-6 text-lg/8 text-gray-600">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua.
+              От водещи лекари и професори до признати специалисти в областта на
+              храненето, неврологията и емоционалната интелигентност - всеки
+              лектор донася ценни практически знания и научно обосновани методи.
+              Техните презентации ще ви вдъхновят и ще ви дадат конкретни
+              инструменти за подобряване на качеството на живота ви.
             </p>
             <p className="mt-6 text-lg/8 text-gray-600">
-              Lorem ipsum dolor sit amet!
+              Подготвили сме за вас срещи с истински лидери в своите области!
             </p>
           </div>
           <ul role="list" className="divide-y divide-gray-200 xl:col-span-3">
