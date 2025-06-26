@@ -13,13 +13,6 @@ import {
 
 const incentives = [
   {
-    name: "Защо BioHacking",
-    lecturer: "Д-р Жасмина Маджид",
-    icon: BeakerIcon,
-    description:
-      "Въведение в света на биохакинга и как да подобрим здравето си чрез научни подходи.",
-  },
-  {
     name: "Аутизъм: Вътреутробни сигнали и превенция",
     lecturer: "Д-р Иван Сигридов",
     icon: UserIcon,
@@ -34,11 +27,11 @@ const incentives = [
       "Хранителни стратегии за дълголетие и оптимално здраве през целия живот.",
   },
   {
-    name: "Емоционална интелигентност",
-    lecturer: "Десислава Дамянова",
-    icon: FaceSmileIcon,
+    name: "Оптимизирани хормони",
+    lecturer: "Д-р Константин Маламов",
+    icon: ScaleIcon,
     description:
-      "Как да разпознаваме, разбираме и управляваме емоциите за по-добри взаимоотношения.",
+      "Диригенти на поведението и успеха ни - как да балансираме хормоните за оптимално здраве.",
   },
   {
     name: "Mindset за шампиони",
@@ -54,14 +47,6 @@ const incentives = [
     description: "Съвременни научни подходи за красота отвътре и отвън.",
   },
   {
-    name: "Betterself & AI",
-    lecturer:
-      "Александър Иванов, Александър Йорданов, Йоан Аспарухов, Димитър Гочев",
-    icon: ComputerDesktopIcon,
-    description:
-      "Как да използваме изкуствения интелект за лично и професионално развитие.",
-  },
-  {
     name: "Voice design и Харизма",
     lecturer: "Иван Головацкий",
     icon: MicrophoneIcon,
@@ -69,18 +54,18 @@ const incentives = [
       "Как да говорим красиво и въздействащо, така че да ни слушат и чуват.",
   },
   {
-    name: "Neurology: Млад мозък в здраво тяло",
-    lecturer: "Проф. д-р Николай Габровски",
-    icon: AcademicCapIcon,
+    name: "Защо BioHacking",
+    lecturer: "Д-р Жасмина Маджид",
+    icon: BeakerIcon,
     description:
-      "Стратегии за поддържане на мозъчното здраве и когнитивните функции.",
+      "Въведение в света на биохакинга и как да подобрим здравето си чрез научни подходи.",
   },
   {
-    name: "Оптимизирани хормони",
-    lecturer: "Д-р Константин Маламов",
-    icon: ScaleIcon,
+    name: "Емоционална интелигентност",
+    lecturer: "Десислава Дамянова",
+    icon: FaceSmileIcon,
     description:
-      "Диригенти на поведението и успеха ни - как да балансираме хормоните за оптимално здраве.",
+      "Как да разпознаваме, разбираме и управляваме емоциите за по-добри взаимоотношения.",
   },
 ];
 
@@ -97,7 +82,7 @@ export default function Incentives() {
             </div>
           </div>
           <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {incentives.slice(0, 9).map((incentive) => (
+            {incentives.slice(0, 6).map((incentive) => (
               <div
                 key={incentive.name}
                 className="flex flex-col items-center text-center p-6 pb-4 rounded-lg border border-white bg-gray-800/30 hover:bg-gray-800/50 transition-all duration-300 h-full justify-between"
@@ -125,34 +110,36 @@ export default function Incentives() {
             ))}
           </div>
 
-          {/* Последната тема, центрирана */}
+          {/* Последните две лекции, центрирани */}
           <div className="mt-8 flex justify-center">
-            {incentives.slice(9, 10).map((incentive) => (
-              <div
-                key={incentive.name}
-                className="flex flex-col items-center text-center max-w-sm p-6 pb-4 rounded-lg border border-white bg-gray-800/30 hover:bg-gray-800/50 transition-all duration-300 h-full justify-between"
-              >
-                <div className="flex flex-col items-center w-full">
-                  <div className="shrink-0 mt-6">
-                    <div className="h-20 w-20 flex items-center justify-center rounded-full bg-[#ff8d00]">
-                      <incentive.icon className="h-12 w-12 text-white" />
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-2">
+              {incentives.slice(6, 8).map((incentive) => (
+                <div
+                  key={incentive.name}
+                  className="flex flex-col items-center text-center p-6 pb-4 rounded-lg border border-white bg-gray-800/30 hover:bg-gray-800/50 transition-all duration-300 h-full justify-between"
+                >
+                  <div className="flex flex-col items-center w-full">
+                    <div className="shrink-0 mt-6">
+                      <div className="h-20 w-20 flex items-center justify-center rounded-full bg-[#ff8d00]">
+                        <incentive.icon className="h-12 w-12 text-white" />
+                      </div>
+                    </div>
+                    <div className="mt-4">
+                      <h3 className="text-xl font-medium text-white">
+                        {incentive.name}
+                      </h3>
+                      <p className="mt-1 text-base font-medium text-orange-400">
+                        {incentive.description}
+                      </p>
                     </div>
                   </div>
-                  <div className="mt-4">
-                    <h3 className="text-xl font-medium text-white">
-                      {incentive.name}
-                    </h3>
-                    <p className="mt-1 text-base font-medium text-orange-400">
-                      {incentive.description}
-                    </p>
+
+                  <div className="mt-6 mb-6">
+                    <p className="text-base text-white">{incentive.lecturer}</p>
                   </div>
                 </div>
-
-                <div className="mt-6 mb-6">
-                  <p className="text-base text-white">{incentive.lecturer}</p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>

@@ -143,9 +143,20 @@ export default function Schedule() {
                         <div
                           className={`flex-1 ${styles.cardBg} border-2 ${styles.borderColor} rounded-xl p-5 ${styles.shadowColor} shadow-lg hover:shadow-xl transition-all duration-300`}
                         >
-                          <div className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-sm font-semibold text-gray-900 shadow-sm border border-gray-200 mb-3">
-                            <ClockIcon className="h-4 w-4 text-[#ff8d00]" />
-                            {item.time}
+                          {/* Time Badge and Type Badge for Panels - Mobile */}
+                          <div className="flex items-center justify-between mb-3">
+                            <div className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-sm font-semibold text-gray-900 shadow-sm border border-gray-200">
+                              <ClockIcon className="h-4 w-4 text-[#ff8d00]" />
+                              {item.time}
+                            </div>
+                            {/* Type Badge - Only for panels on the same row */}
+                            {item.type === "panel" && (
+                              <span
+                                className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium ${styles.badge}`}
+                              >
+                                {styles.label}
+                              </span>
+                            )}
                           </div>
 
                           <h3 className="text-lg font-bold text-gray-900 mb-2 leading-tight">
@@ -172,11 +183,14 @@ export default function Schedule() {
                             {item.description}
                           </p>
 
-                          <span
-                            className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium ${styles.badge}`}
-                          >
-                            {styles.label}
-                          </span>
+                          {/* Type Badge - Only for non-panels at bottom */}
+                          {item.type !== "panel" && (
+                            <span
+                              className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium ${styles.badge}`}
+                            >
+                              {styles.label}
+                            </span>
+                          )}
                         </div>
                       </div>
 
@@ -184,10 +198,20 @@ export default function Schedule() {
                       <div
                         className={`hidden md:block relative ${styles.cardBg} border-2 ${styles.borderColor} rounded-2xl p-5 ${styles.shadowColor} shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] group-hover:z-20 h-full flex flex-col`}
                       >
-                        {/* Time Badge */}
-                        <div className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-sm font-semibold text-gray-900 shadow-md border border-gray-200 mb-3 w-fit">
-                          <ClockIcon className="h-4 w-4 text-[#ff8d00]" />
-                          {item.time}
+                        {/* Time Badge and Type Badge for Panels */}
+                        <div className="flex items-center justify-between mb-3">
+                          <div className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-sm font-semibold text-gray-900 shadow-md border border-gray-200 w-fit">
+                            <ClockIcon className="h-4 w-4 text-[#ff8d00]" />
+                            {item.time}
+                          </div>
+                          {/* Type Badge - Only for panels on the same row */}
+                          {item.type === "panel" && (
+                            <span
+                              className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium ${styles.badge}`}
+                            >
+                              {styles.label}
+                            </span>
+                          )}
                         </div>
 
                         {/* Title */}
@@ -199,7 +223,11 @@ export default function Schedule() {
                         {item.speaker && (
                           <div className="flex items-center gap-2 mb-2">
                             <UserIcon className="h-4 w-4 text-[#ff8d00] flex-shrink-0" />
-                            <span className="text-sm font-semibold text-gray-700 line-clamp-1">
+                            <span
+                              className={`text-sm font-semibold text-gray-700 ${
+                                item.type === "panel" ? "" : "line-clamp-1"
+                              }`}
+                            >
                               {item.speaker}
                             </span>
                           </div>
@@ -218,14 +246,16 @@ export default function Schedule() {
                           {item.description}
                         </p>
 
-                        {/* Type Badge */}
-                        <div className="mt-auto">
-                          <span
-                            className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium ${styles.badge}`}
-                          >
-                            {styles.label}
-                          </span>
-                        </div>
+                        {/* Type Badge - Only for non-panels at bottom */}
+                        {item.type !== "panel" && (
+                          <div className="mt-auto">
+                            <span
+                              className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium ${styles.badge}`}
+                            >
+                              {styles.label}
+                            </span>
+                          </div>
+                        )}
                       </div>
                     </div>
                   );
@@ -252,7 +282,7 @@ export default function Schedule() {
                   Купи билети
                 </a>
                 <a
-                  href="/sponsors"
+                  href="/contact"
                   className="inline-flex items-center justify-center rounded-xl bg-white px-8 py-3 text-base font-semibold text-gray-900 border-2 border-gray-300 hover:border-[#ff8d00] hover:text-[#ff8d00] transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   Стани спонсор

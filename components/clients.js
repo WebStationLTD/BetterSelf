@@ -29,7 +29,8 @@ export default function Clients() {
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
-              <div className="h-16 flex items-center justify-center relative">
+
+              {/* <div className="h-16 flex items-center justify-center relative">
                 <Image
                   alt="SavvyCal"
                   src="https://tailwindui.com/plus-assets/img/logos/savvycal-logo-gray-900.svg"
@@ -78,7 +79,7 @@ export default function Clients() {
                   loading="lazy"
                   className="max-h-full max-w-full object-contain"
                 />
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -95,57 +96,17 @@ export default function Clients() {
                   alt="Webstation"
                   src="/webstation-ltd-logo.svg"
                   fill
-                  quality={80}
+                  quality={100}
                   loading="lazy"
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
               <div className="h-16 flex items-center justify-center relative">
                 <Image
-                  alt="SavvyCal"
-                  src="https://tailwindui.com/plus-assets/img/logos/savvycal-logo-gray-900.svg"
+                  alt="Createx"
+                  src="/createx-logo.png"
                   fill
-                  quality={80}
-                  loading="lazy"
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-              <div className="h-16 flex items-center justify-center relative">
-                <Image
-                  alt="Statamic"
-                  src="https://tailwindui.com/plus-assets/img/logos/statamic-logo-gray-900.svg"
-                  fill
-                  quality={80}
-                  loading="lazy"
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-              <div className="h-16 flex items-center justify-center relative">
-                <Image
-                  alt="Laravel"
-                  src="https://tailwindui.com/plus-assets/img/logos/laravel-logo-gray-900.svg"
-                  fill
-                  quality={80}
-                  loading="lazy"
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-              <div className="h-16 flex items-center justify-center relative">
-                <Image
-                  alt="Transistor"
-                  src="https://tailwindui.com/plus-assets/img/logos/transistor-logo-gray-900.svg"
-                  fill
-                  quality={80}
-                  loading="lazy"
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-              <div className="h-16 flex items-center justify-center relative">
-                <Image
-                  alt="Reform"
-                  src="https://tailwindui.com/plus-assets/img/logos/reform-logo-gray-900.svg"
-                  fill
-                  quality={80}
+                  quality={100}
                   loading="lazy"
                   className="max-h-full max-w-full object-contain"
                 />

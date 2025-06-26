@@ -64,7 +64,7 @@ export default function Hero() {
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-10">
               <Link
-                href="/services"
+                href="/tickets"
                 className="rounded-md bg-[#ff8d00] hover:bg-orange-600 px-6 py-3 text-lg font-semibold text-black shadow-lg transition-all duration-300 transform hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600"
               >
                 Купи билети
@@ -83,7 +83,7 @@ export default function Hero() {
                 02.11.2025 - Гранд Хотел Астория
               </span>
               <Link
-                href="/blog"
+                href="/tickets"
                 className="font-semibold whitespace-nowrap text-[#ff8d00] hover:text-orange-300 transition-colors duration-300"
               >
                 <span aria-hidden="true" className="absolute inset-0" />
