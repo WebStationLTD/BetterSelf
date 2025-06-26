@@ -1,7 +1,101 @@
 "use client";
 
-import { ClockIcon, MapPinIcon, UserIcon } from "@heroicons/react/24/outline";
+import { ClockIcon, MapPinIcon, UserIcon, CalendarIcon } from "@heroicons/react/24/outline";
 import { scheduleData, getTypeStyles } from "../data/scheduleData";
+import { useEffect, useState } from "react";
+
+// Импортираме add-to-calendar-button компонента
+import 'add-to-calendar-button';
+
+// Отделен компонент за calendar button който се рендира само на клиента
+function AddToCalendarButton() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+    
+    // Добавяме CSS стилове за add-to-calendar-button
+    const style = document.createElement('style');
+    style.textContent = `
+      .atcb-button {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        z-index: 10 !important;
+        cursor: pointer !important;
+      }
+      
+      .atcb-button:hover {
+        background: transparent !important;
+        transform: none !important;
+      }
+      
+      .atcb-list {
+        border-radius: 12px !important;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+        border: 2px solid #ff8d00 !important;
+      }
+      
+      .atcb-list-item {
+        padding: 12px 16px !important;
+        transition: all 0.2s ease !important;
+      }
+      
+      .atcb-list-item:hover {
+        background-color: #ff8d00 !important;
+        color: white !important;
+      }
+      
+      .atcb-list-item:first-child {
+        border-top-left-radius: 10px !important;
+        border-top-right-radius: 10px !important;
+      }
+      
+      .atcb-list-item:last-child {
+        border-bottom-left-radius: 10px !important;
+        border-bottom-right-radius: 10px !important;
+      }
+    `;
+    document.head.appendChild(style);
+    
+    return () => {
+      if (document.head.contains(style)) {
+        document.head.removeChild(style);
+      }
+    };
+  }, []);
+
+  if (!isClient) {
+    return null;
+  }
+
+  return (
+    <add-to-calendar-button
+      name="BetterSelf - Biohacking & Longevity Conference 2025"
+      description="Let's start the journey to your BETTERSELF"
+      startDate="2025-11-02"
+      endDate="2025-11-02"
+      startTime="09:00"
+      endTime="18:00"
+      location="Grand Hotel Astoria, Sofia"
+      options="['Apple','Google','iCal','Microsoft365','Outlook.com','Yahoo']"
+      timeZone="Europe/Sofia"
+      trigger="click"
+      inline
+      listStyle="modal"
+      iCalFileName="BetterSelf-Conference-2025"
+      style={{ position: 'absolute', inset: '0', opacity: '0', cursor: 'pointer' }}
+    />
+  );
+}
 
 // Данните сега се импортират от data/scheduleData.js
 
@@ -27,6 +121,27 @@ export default function Schedule() {
               <div className="flex items-center gap-2">
                 <MapPinIcon className="h-5 w-5 text-[#ff8d00]" />
                 <span>Гранд Хотел Астория</span>
+              </div>
+            </div>
+            
+            {/* Add to Calendar Button */}
+            <div className="mt-8 flex justify-center">
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-r from-[#ff8d00] to-orange-600 rounded-xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
+                <div className="relative bg-white border-2 border-[#ff8d00] rounded-xl px-6 py-4 hover:bg-gradient-to-r hover:from-[#ff8d00] hover:to-orange-600 hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl">
+                  <div className="flex items-center gap-3">
+                    <CalendarIcon className="h-6 w-6 text-[#ff8d00] group-hover:text-white transition-colors duration-300" />
+                    <div className="text-left">
+                      <div className="font-semibold text-gray-900 group-hover:text-white transition-colors duration-300">
+                        Добави в календара
+                      </div>
+                      <div className="text-sm text-gray-600 group-hover:text-white transition-colors duration-300">
+                        Не пропускай събитието!
+                      </div>
+                    </div>
+                  </div>
+                  <AddToCalendarButton />
+                </div>
               </div>
             </div>
           </div>
