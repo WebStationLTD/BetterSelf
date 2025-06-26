@@ -83,7 +83,7 @@ export const scheduleData = [
     id: 9,
     time: "14:00 - 14:30",
     title: "Beauty Biohacking",
-    speaker: "Д-р Присадашка",
+    speaker: "Д-р Камелия Присадашка",
     location: "Главна зала",
     description: "Съвременни научни подходи за красота отвътре и отвън.",
     type: "presentation",

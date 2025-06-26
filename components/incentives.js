@@ -42,7 +42,7 @@ const incentives = [
   },
   {
     name: "Beauty Biohacking",
-    lecturer: "Д-р Присадашка",
+    lecturer: "Д-р Камелия Присадашка",
     icon: SparklesIcon,
     description: "Съвременни научни подходи за красота отвътре и отвън.",
   },
