@@ -283,7 +283,7 @@ export default function Navigation() {
               {/* Секция 1: Лого */}
               <div className="w-3/4 lg:w-1/5 flex items-center justify-start">
                 <Link href="/" className="block">
-                  <span className="sr-only">NextLevel Theme</span>
+                  <span className="sr-only">Betterself</span>
                   <Image
                     width={197}
                     height={60}

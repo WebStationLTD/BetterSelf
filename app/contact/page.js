@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export async function generateMetadata() {
   return {
-    title: "Контакти - NextLevel Theme",
+    title: "Контакти - Betterself",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   };

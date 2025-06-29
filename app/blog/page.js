@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Блог - NextLevel Theme",
+  title: "Блог - Betterself",
   description:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 };

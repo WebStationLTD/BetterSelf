@@ -92,9 +92,7 @@ export default function Footer() {
           </div>
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div>
-              <h3 className="text-sm/6 font-semibold text-gray-900">
-                Събитие
-              </h3>
+              <h3 className="text-sm/6 font-semibold text-gray-900">Събитие</h3>
               <ul role="list" className="mt-6 space-y-4">
                 {navigation.event.map((item) => (
                   <li key={item.name}>
@@ -109,9 +107,7 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h3 className="text-sm/6 font-semibold text-gray-900">
-                Ресурси
-              </h3>
+              <h3 className="text-sm/6 font-semibold text-gray-900">Ресурси</h3>
               <ul role="list" className="mt-6 space-y-4">
                 {navigation.resources.map((item) => (
                   <li key={item.name}>
@@ -143,7 +139,7 @@ export default function Footer() {
             ))}
           </div>
           <p className="mt-8 text-sm/6 text-gray-600 md:order-1 md:mt-0">
-            &copy; {year} NextLevel Theme, Inc. All rights reserved.
+            &copy; {year} Betterself, Inc. All rights reserved.
           </p>
         </div>
       </div>

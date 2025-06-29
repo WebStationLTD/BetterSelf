@@ -18,7 +18,7 @@ const ServicesList = dynamic(() => import("../../components/ServicesList"), {
 export const revalidate = 3600;
 
 export const metadata = {
-  title: "Услуги - NextLevel Theme",
+  title: "Услуги - Betterself",
   description:
     "Разгледайте всички наши професионални услуги, които предлагаме за бизнеса. Открийте как можем да помогнем на вашия бизнес да расте и да се развива.",
   keywords: ["услуги", "бизнес услуги", "професионални услуги", "NextLevel"],
