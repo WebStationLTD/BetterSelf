@@ -42,7 +42,7 @@ export default function Clients() {
               <div className="h-16 flex items-center justify-center relative">
                 <Image
                   alt="Nad Clinic"
-                  src="/nad-clinic-logo.png"
+                  src="/nad-clinic-logo.jpg"
                   fill
                   quality={80}
                   loading="lazy"
