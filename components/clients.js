@@ -21,8 +21,28 @@ export default function Clients() {
             <div className="grid grid-cols-2 gap-8 items-center">
               <div className="h-16 flex items-center justify-center relative">
                 <Image
-                  alt="Офсет График"
+                  alt="Grand Hotel Astoria"
                   src="/grand-hotel-astoria-logo.png"
+                  fill
+                  quality={80}
+                  loading="lazy"
+                  className="max-h-full max-w-full object-contain"
+                />
+              </div>
+              <div className="h-16 flex items-center justify-center relative">
+                <Image
+                  alt="Derma Act"
+                  src="/derma-act-logo.png"
+                  fill
+                  quality={80}
+                  loading="lazy"
+                  className="max-h-full max-w-full object-contain"
+                />
+              </div>
+              <div className="h-16 flex items-center justify-center relative">
+                <Image
+                  alt="Nad Clinic"
+                  src="/nad-clinic-logo.png"
                   fill
                   quality={80}
                   loading="lazy"
