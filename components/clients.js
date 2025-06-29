@@ -22,7 +22,7 @@ export default function Clients() {
               <div className="h-16 flex items-center justify-center relative">
                 <Image
                   alt="Офсет График"
-                  src="/офсет-график-Logo.png"
+                  src="/grand-hotel-astoria-logo.png"
                   fill
                   quality={80}
                   loading="lazy"
@@ -97,6 +97,16 @@ export default function Clients() {
                   src="/webstation-ltd-logo.svg"
                   fill
                   quality={100}
+                  loading="lazy"
+                  className="max-h-full max-w-full object-contain"
+                />
+              </div>
+              <div className="h-16 flex items-center justify-center relative">
+                <Image
+                  alt="Офсет График"
+                  src="/офсет-график-Logo.png"
+                  fill
+                  quality={80}
                   loading="lazy"
                   className="max-h-full max-w-full object-contain"
                 />
