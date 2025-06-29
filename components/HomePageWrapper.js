@@ -4,6 +4,9 @@ import { useEffect } from "react";
 import HeroSection from "./hero";
 import dynamic from "next/dynamic";
 
+const EventCountdown = dynamic(() => import("./EventCountdown"), {
+  ssr: true,
+});
 const Schedule = dynamic(() => import("./schedule"), {
   ssr: true,
 });
@@ -51,6 +54,7 @@ export default function HomePageWrapper() {
   return (
     <>
       <HeroSection />
+      <EventCountdown />
       <Incentives />
       <Schedule />
       <Team />
