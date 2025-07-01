@@ -141,6 +141,16 @@ export default function Clients() {
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
+              <div className="h-16 flex items-center justify-center relative">
+                <Image
+                  alt="Ecom"
+                  src="/ecom-logo.png"
+                  fill
+                  quality={100}
+                  loading="lazy"
+                  className="max-h-full max-w-full object-contain"
+                />
+              </div>
             </div>
           </div>
         </div>
