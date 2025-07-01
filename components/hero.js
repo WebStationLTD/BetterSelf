@@ -2,12 +2,28 @@
 
 import Link from "next/link";
 import LazyImageObserver from "./LazyImageObserver";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 export default function Hero() {
+  const videoRef = useRef(null);
+
   // Добавяме дебъг клас към body
   useEffect(() => {
     document.body.classList.add("debug-indicator");
+
+    // Дебъг за видеото
+    const video = videoRef.current;
+    if (video) {
+      video.addEventListener("loadstart", () =>
+        console.log("Video: Started loading")
+      );
+      video.addEventListener("loadeddata", () =>
+        console.log("Video: Data loaded")
+      );
+      video.addEventListener("canplay", () => console.log("Video: Can play"));
+      video.addEventListener("playing", () => console.log("Video: Playing"));
+      video.addEventListener("error", (e) => console.error("Video error:", e));
+    }
 
     return () => {
       document.body.classList.remove("debug-indicator");
@@ -18,25 +34,40 @@ export default function Hero() {
     <>
       <LazyImageObserver />
       <div className="relative w-full h-[600px]">
-        {/* Hero Background Image */}
+        {/* Hero Background Video */}
         <div className="absolute inset-0 w-full h-full">
-          <img
-            src="/betterself-hero-image.jpg"
-            alt="Biohacking & Longevity Conference 2025"
+          <video
+            ref={videoRef}
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="/betterself-hero-image.jpg"
             className="w-full h-full object-cover"
-            loading="eager"
-            decoding="sync"
-            fetchPriority="high"
             style={{
               objectFit: "cover",
-              objectPosition: "center",
-              contentVisibility: "auto",
+              objectPosition: "center top",
             }}
-          />
+            onError={(e) => {
+              console.error("Video failed to load:", e);
+            }}
+            onLoadStart={() => console.log("Video load start")}
+            onCanPlay={() => console.log("Video can play")}
+          >
+            {/* MP4 формат за максимална съвместимост */}
+            <source src="/betterself-hero-video.mp4" type="video/mp4" />
+            {/* Fallback за браузери, които не поддържат видео */}
+            Вашият браузър не поддържа видео тагове.
+          </video>
         </div>
 
         {/* Dark Overlay for Better Text Readability */}
-        <div className="absolute inset-0 bg-opacity-40"></div>
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundColor: "rgba(0, 0, 0, 0.65)",
+          }}
+        ></div>
 
         {/* Hero Content - Centered */}
         <div className="relative z-10 flex items-center justify-center h-[600px] px-6">
