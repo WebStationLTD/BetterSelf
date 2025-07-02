@@ -138,9 +138,22 @@ export default function Footer() {
               </Link>
             ))}
           </div>
-          <p className="mt-8 text-sm/6 text-gray-600 md:order-1 md:mt-0">
-            &copy; {year} Betterself, Inc. All rights reserved.
-          </p>
+          <div className="mt-8 md:order-1 md:mt-0">
+            <p className="text-sm/6 text-gray-600">
+              &copy; {year} Betterself, Inc. All rights reserved.
+            </p>
+            <p className="text-sm/6 text-gray-500 mt-2">
+              Powered by{" "}
+              <Link
+                href="https://webstation.bg/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-gray-800 font-medium"
+              >
+                WebStation™
+              </Link>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
