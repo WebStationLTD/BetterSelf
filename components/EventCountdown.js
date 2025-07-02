@@ -16,11 +16,8 @@ export default function EventCountdown() {
     setMounted(true);
 
     // Събитието е на 02 ноември 2025 в 09:00 в София, България
-    // Използваме българската часова зона за точно време
-    const targetDate = new Date("2025-11-02T09:00:00").toLocaleString("en-US", {
-      timeZone: "Europe/Sofia",
-    });
-    const eventDate = new Date(targetDate).getTime();
+    // Създаваме датата директно като българско местно време
+    const targetDate = new Date(2025, 10, 2, 9, 0, 0).getTime(); // месец 10 = ноември (0-indexed)
 
     const updateCountdown = () => {
       const now = new Date().getTime();
