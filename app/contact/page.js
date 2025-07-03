@@ -104,7 +104,6 @@ export default async function ContactPage() {
             </div>
 
             <div className="text-lg leading-8 text-gray-700">
-              <div className="mb-4 text-2xl">🌿</div>
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-6">
                 Станете партньор на Better Self - Biohacking & Longevity
                 Conference 2025
