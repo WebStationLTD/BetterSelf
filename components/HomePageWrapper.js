@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import HeroSection from "./hero";
 import dynamic from "next/dynamic";
+import TicketIframeController from "./TicketIframeController";
 
 const EventCountdown = dynamic(() => import("./EventCountdown"), {
   ssr: true,
@@ -55,6 +56,10 @@ export default function HomePageWrapper() {
     <>
       <HeroSection />
       <EventCountdown />
+
+      {/* Контролиран iframe за билети - временно за тестване */}
+      {/* <TicketIframeController /> */}
+
       <Incentives />
       <Schedule />
       <Team />
