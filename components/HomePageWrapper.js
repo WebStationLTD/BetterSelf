@@ -29,6 +29,9 @@ const Testimonial = dynamic(() => import("./testimonial"), {
 const Lastestposts = dynamic(() => import("./latestposts"), {
   ssr: true,
 });
+const VideoCarousel = dynamic(() => import("./VideoCarousel"), {
+  ssr: true,
+});
 
 export default function HomePageWrapper() {
   useEffect(() => {
@@ -63,6 +66,7 @@ export default function HomePageWrapper() {
       <Incentives />
       <Schedule />
       <Team />
+      <VideoCarousel />
       <PricingSection />
       {/* <CTA /> */}
       <Clients />
