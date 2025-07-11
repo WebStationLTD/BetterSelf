@@ -45,7 +45,7 @@ export default function Team() {
                   prefetch={true}
                   className="group"
                 >
-                  <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 mx-auto overflow-hidden rounded-2xl group-hover:opacity-75">
+                  <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 mx-auto overflow-hidden rounded-2xl group-hover:opacity-75 transition-all duration-300">
                     <Image
                       fill
                       sizes="(max-width: 640px) 16rem, (max-width: 768px) 18rem, (max-width: 1024px) 20rem, 24rem"
@@ -54,11 +54,31 @@ export default function Team() {
                       loading={index < 3 ? "eager" : "lazy"}
                       alt={member.name || "Член на екипа"}
                       src={member.profilepicture || "/placeholder.webp"}
-                      className="object-cover" // Запазваме object-cover, за да запълни div-a
+                      className="object-cover transition-transform duration-300 group-hover:scale-105" // Запазваме object-cover, за да запълни div-a
                       format="webp"
                     />
+                    
+                    {/* Mobile-only clickable indicator */}
+                    <div className="absolute bottom-3 right-3 md:hidden">
+                      <div className="bg-[#ff8d00] text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg border-2 border-white">
+                        Вижте повече
+                      </div>
+                    </div>
+                    
+                    {/* Desktop-only hover overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">
+                      <div className="absolute bottom-4 left-4 right-4">
+                        <div className="text-white text-sm font-medium flex items-center justify-center gap-2">
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                          </svg>
+                          Вижте повече за лектора
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <h3 className="mt-6 text-lg/8 font-semibold tracking-tight text-gray-900">
+                  <h3 className="mt-6 text-lg/8 font-semibold tracking-tight text-gray-900 group-hover:text-[#ff8d00] transition-colors duration-300">
                     {member.name || "Член на екипа"}
                   </h3>
                   <p className="text-base/7 text-gray-600">
