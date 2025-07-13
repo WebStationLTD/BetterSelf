@@ -161,6 +161,46 @@ export default function Clients() {
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
+              <div className="h-16 flex items-center justify-center relative">
+                <Image
+                  alt="Очи в очи"
+                  src="/ochi-v-ochi-logo.jpg"
+                  fill
+                  quality={100}
+                  loading="lazy"
+                  className="max-h-full max-w-full object-contain"
+                />
+              </div>
+              <div className="h-16 flex items-center justify-center relative">
+                <Image
+                  alt="FindStaff"
+                  src="/findstaff-logo.jpg"
+                  fill
+                  quality={100}
+                  loading="lazy"
+                  className="max-h-full max-w-full object-contain"
+                />
+              </div>
+              <div className="h-16 flex items-center justify-center relative">
+                <Image
+                  alt="Даник добро"
+                  src="/danyk-dobro-logo.jpg"
+                  fill
+                  quality={100}
+                  loading="lazy"
+                  className="max-h-full max-w-full object-contain"
+                />
+              </div>
+              <div className="h-16 flex items-center justify-center relative">
+                <Image
+                  alt="Suga Buba"
+                  src="/suga-buba-logo.jpg"
+                  fill
+                  quality={100}
+                  loading="lazy"
+                  className="max-h-full max-w-full object-contain"
+                />
+              </div>
             </div>
           </div>
         </div>
