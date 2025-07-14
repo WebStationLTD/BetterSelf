@@ -32,6 +32,9 @@ const Lastestposts = dynamic(() => import("./latestposts"), {
 const VideoCarousel = dynamic(() => import("./VideoCarousel"), {
   ssr: true,
 });
+const Location = dynamic(() => import("./Location"), {
+  ssr: true,
+});
 
 export default function HomePageWrapper() {
   useEffect(() => {
@@ -66,6 +69,7 @@ export default function HomePageWrapper() {
       <Incentives />
       <Schedule />
       <Team />
+      <Location />
       <VideoCarousel />
       <PricingSection />
       {/* <CTA /> */}
