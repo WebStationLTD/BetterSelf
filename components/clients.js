@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Clients() {
   return (
@@ -20,86 +21,56 @@ export default function Clients() {
             <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent mb-8"></div>
             <div className="grid grid-cols-2 gap-8 items-center">
               <div className="h-16 flex items-center justify-center relative">
-                <Image
-                  alt="Grand Hotel Astoria"
-                  src="/grand-hotel-astoria-logo.png"
-                  fill
-                  quality={80}
-                  loading="lazy"
-                  className="max-h-full max-w-full object-contain"
-                />
+                <Link
+                  href="https://www.astoriagrandhotel.bg/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300"
+                >
+                  <Image
+                    alt="Grand Hotel Astoria"
+                    src="/grand-hotel-astoria-logo.png"
+                    fill
+                    quality={80}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </Link>
               </div>
               <div className="h-16 flex items-center justify-center relative">
-                <Image
-                  alt="Derma Act"
-                  src="/derma-act-logo.png"
-                  fill
-                  quality={80}
-                  loading="lazy"
-                  className="max-h-full max-w-full object-contain"
-                />
+                <Link
+                  href="https://derma-act.bg/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300"
+                >
+                  <Image
+                    alt="Derma Act"
+                    src="/derma-act-logo.png"
+                    fill
+                    quality={80}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </Link>
               </div>
               <div className="h-16 flex items-center justify-center relative">
-                <Image
-                  alt="Nad Clinic"
-                  src="/nad-clinic-logo.jpg"
-                  fill
-                  quality={80}
-                  loading="lazy"
-                  className="max-h-full max-w-full object-contain"
-                />
+                <Link
+                  href="https://nad.bg/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300"
+                >
+                  <Image
+                    alt="Nad Clinic"
+                    src="/nad-clinic-logo.jpg"
+                    fill
+                    quality={80}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </Link>
               </div>
-
-              {/* <div className="h-16 flex items-center justify-center relative">
-                <Image
-                  alt="SavvyCal"
-                  src="https://tailwindui.com/plus-assets/img/logos/savvycal-logo-gray-900.svg"
-                  fill
-                  quality={80}
-                  loading="lazy"
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-              <div className="h-16 flex items-center justify-center relative">
-                <Image
-                  alt="Laravel"
-                  src="https://tailwindui.com/plus-assets/img/logos/laravel-logo-gray-900.svg"
-                  fill
-                  quality={80}
-                  loading="lazy"
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-              <div className="h-16 flex items-center justify-center relative">
-                <Image
-                  alt="Transistor"
-                  src="https://tailwindui.com/plus-assets/img/logos/transistor-logo-gray-900.svg"
-                  fill
-                  quality={80}
-                  loading="lazy"
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-              <div className="h-16 flex items-center justify-center relative">
-                <Image
-                  alt="Statamic"
-                  src="https://tailwindui.com/plus-assets/img/logos/statamic-logo-gray-900.svg"
-                  fill
-                  quality={80}
-                  loading="lazy"
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-              <div className="h-16 flex items-center justify-center relative">
-                <Image
-                  alt="Tuple"
-                  src="https://tailwindui.com/plus-assets/img/logos/tuple-logo-gray-900.svg"
-                  fill
-                  quality={80}
-                  loading="lazy"
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div> */}
             </div>
           </div>
 
@@ -112,14 +83,21 @@ export default function Clients() {
             <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent mb-8"></div>
             <div className="grid grid-cols-2 gap-8 items-center">
               <div className="h-16 flex items-center justify-center relative">
-                <Image
-                  alt="Webstation"
-                  src="/webstation-ltd-logo.svg"
-                  fill
-                  quality={100}
-                  loading="lazy"
-                  className="max-h-full max-w-full object-contain"
-                />
+                <Link
+                  href="https://webstation.bg/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300"
+                >
+                  <Image
+                    alt="Webstation"
+                    src="/webstation-ltd-logo.svg"
+                    fill
+                    quality={100}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </Link>
               </div>
               <div className="h-16 flex items-center justify-center relative">
                 <Image
@@ -132,14 +110,21 @@ export default function Clients() {
                 />
               </div>
               <div className="h-16 flex items-center justify-center relative">
-                <Image
-                  alt="Createx"
-                  src="/createx-logo.png"
-                  fill
-                  quality={100}
-                  loading="lazy"
-                  className="max-h-full max-w-full object-contain"
-                />
+                <Link
+                  href="https://createx.bg/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300"
+                >
+                  <Image
+                    alt="Createx"
+                    src="/createx-logo.png"
+                    fill
+                    quality={100}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </Link>
               </div>
               <div className="h-16 flex items-center justify-center relative">
                 <Image
@@ -152,34 +137,55 @@ export default function Clients() {
                 />
               </div>
               <div className="h-16 flex items-center justify-center relative">
-                <Image
-                  alt="Max Group Events"
-                  src="/max-group-events-logo.png"
-                  fill
-                  quality={100}
-                  loading="lazy"
-                  className="max-h-full max-w-full object-contain"
-                />
+                <Link
+                  href="https://maxgroupevents.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300"
+                >
+                  <Image
+                    alt="Max Group Events"
+                    src="/max-group-events-logo.png"
+                    fill
+                    quality={100}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </Link>
               </div>
               <div className="h-16 flex items-center justify-center relative">
-                <Image
-                  alt="Очи в очи"
-                  src="/ochi-v-ochi-logo.jpg"
-                  fill
-                  quality={100}
-                  loading="lazy"
-                  className="max-h-full max-w-full object-contain"
-                />
+                <Link
+                  href="https://www.youtube.com/@jasminnemajid"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300"
+                >
+                  <Image
+                    alt="Очи в очи"
+                    src="/ochi-v-ochi-logo.jpg"
+                    fill
+                    quality={100}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </Link>
               </div>
               <div className="h-16 flex items-center justify-center relative">
-                <Image
-                  alt="FindStaff"
-                  src="/findstaff-logo.jpg"
-                  fill
-                  quality={100}
-                  loading="lazy"
-                  className="max-h-full max-w-full object-contain"
-                />
+                <Link
+                  href="https://www.findstaff.bg/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300"
+                >
+                  <Image
+                    alt="FindStaff"
+                    src="/findstaff-logo.jpg"
+                    fill
+                    quality={100}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </Link>
               </div>
               <div className="h-16 flex items-center justify-center relative">
                 <Image
@@ -192,14 +198,38 @@ export default function Clients() {
                 />
               </div>
               <div className="h-16 flex items-center justify-center relative">
-                <Image
-                  alt="Suga Buba"
-                  src="/suga-buba-logo.jpg"
-                  fill
-                  quality={100}
-                  loading="lazy"
-                  className="max-h-full max-w-full object-contain"
-                />
+                <Link
+                  href="https://sugabuba.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300"
+                >
+                  <Image
+                    alt="Suga Buba"
+                    src="/suga-buba-logo.jpg"
+                    fill
+                    quality={100}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </Link>
+              </div>
+              <div className="h-16 flex items-center justify-center relative">
+                <Link
+                  href="https://preciva.eu/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300"
+                >
+                  <Image
+                    alt="Preciva"
+                    src="/preciva-logo.jpg"
+                    fill
+                    quality={100}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </Link>
               </div>
             </div>
           </div>
