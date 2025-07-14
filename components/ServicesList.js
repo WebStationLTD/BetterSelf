@@ -4,6 +4,36 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState, useRef } from "react";
 import LazyImageObserver from "./LazyImageObserver";
+import he from "he";
+
+// Helper функция за правилно декодиране на HTML entities
+const cleanDecodeText = (text) => {
+  if (!text) return "";
+
+  // Декодираме HTML entities няколко пъти за случаи с двойно кодиране
+  let decoded = text;
+  for (let i = 0; i < 3; i++) {
+    const newDecoded = he.decode(decoded);
+    if (newDecoded === decoded) break; // Спираме ако няма повече промени
+    decoded = newDecoded;
+  }
+
+  // Почистваме възможни останали HTML entity фрагменти
+  decoded = decoded
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"');
+
+  // Премахваме излишни & символи в края и множествени & & последователности
+  decoded = decoded
+    .replace(/\s*&\s*&\s*$/, "") // Премахваме " & &" в края
+    .replace(/\s*&\s*$/, "") // Премахваме " &" в края
+    .replace(/&\s*&/g, "&") // Заменяме "& &" с "&"
+    .trim(); // Премахваме излишни интервали
+
+  return decoded;
+};
 
 /**
  * Компонент за рендиране на списъка с услуги
@@ -84,7 +114,7 @@ export default function ServicesList({ services }) {
                     quality={85}
                     priority={index === 0}
                     loading={index === 0 ? "eager" : "lazy"}
-                    alt={service.title.rendered}
+                    alt={cleanDecodeText(service.title.rendered)}
                     src={
                       service.yoast_head_json?.og_image?.[0]?.url ||
                       "/placeholder.webp"
@@ -105,7 +135,7 @@ export default function ServicesList({ services }) {
                   <div className="group relative max-w-[100%]">
                     <h3 className="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
                       <span className="absolute inset-0" />
-                      {service.title.rendered}
+                      {cleanDecodeText(service.title.rendered)}
                     </h3>
                     <p className="mt-5 text-md/6 text-gray-600">
                       {service.content.rendered

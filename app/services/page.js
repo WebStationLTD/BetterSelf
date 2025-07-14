@@ -6,6 +6,35 @@ import dynamic from "next/dynamic";
 import Script from "next/script";
 import he from "he";
 
+// Helper функция за правилно декодиране на HTML entities
+const cleanDecodeText = (text) => {
+  if (!text) return "";
+
+  // Декодираме HTML entities няколко пъти за случаи с двойно кодиране
+  let decoded = text;
+  for (let i = 0; i < 3; i++) {
+    const newDecoded = he.decode(decoded);
+    if (newDecoded === decoded) break; // Спираме ако няма повече промени
+    decoded = newDecoded;
+  }
+
+  // Почистваме възможни останали HTML entity фрагменти
+  decoded = decoded
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"');
+
+  // Премахваме излишни & символи в края и множествени & & последователности
+  decoded = decoded
+    .replace(/\s*&\s*&\s*$/, "") // Премахваме " & &" в края
+    .replace(/\s*&\s*$/, "") // Премахваме " &" в края
+    .replace(/&\s*&/g, "&") // Заменяме "& &" с "&"
+    .trim(); // Премахваме излишни интервали
+
+  return decoded;
+};
+
 // Динамично зареждане на компонента със списъка с услуги
 const ServicesList = dynamic(() => import("../../components/ServicesList"), {
   ssr: true,
@@ -17,6 +46,7 @@ const ServicesList = dynamic(() => import("../../components/ServicesList"), {
 // Добавяне на ISR ревалидиране на всеки час
 export const revalidate = 3600;
 
+// Метаданни за страницата
 export const metadata = {
   title: "Услуги - Betterself",
   description:
@@ -55,7 +85,7 @@ export default async function Services() {
         ...service.title,
         rendered:
           service.title && service.title.rendered
-            ? he.decode(service.title.rendered)
+            ? cleanDecodeText(service.title.rendered)
             : "",
       },
       // Ако и други полета може да съдържат HTML ентитита, може да ги декодирате тук
@@ -75,7 +105,7 @@ export default async function Services() {
         position: index + 1,
         item: {
           "@type": "Service",
-          name: service.title.rendered,
+          name: cleanDecodeText(service.title.rendered),
           url: `https://example.bg/services/${service.slug}`,
           description:
             service.content.rendered.replace(/<[^>]+>/g, "").substring(0, 150) +

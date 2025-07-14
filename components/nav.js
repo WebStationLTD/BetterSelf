@@ -24,6 +24,35 @@ import { getServicesNav } from "../services/services";
 import { searchContent } from "../services/search";
 import he from "he";
 
+// Helper функция за правилно декодиране на HTML entities
+const cleanDecodeText = (text) => {
+  if (!text) return "";
+
+  // Декодираме HTML entities няколко пъти за случаи с двойно кодиране
+  let decoded = text;
+  for (let i = 0; i < 3; i++) {
+    const newDecoded = he.decode(decoded);
+    if (newDecoded === decoded) break; // Спираме ако няма повече промени
+    decoded = newDecoded;
+  }
+
+  // Почистваме възможни останали HTML entity фрагменти
+  decoded = decoded
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"');
+
+  // Премахваме излишни & символи в края и множествени & & последователности
+  decoded = decoded
+    .replace(/\s*&\s*&\s*$/, "") // Премахваме " & &" в края
+    .replace(/\s*&\s*$/, "") // Премахваме " &" в края
+    .replace(/&\s*&/g, "&") // Заменяме "& &" с "&"
+    .trim(); // Премахваме излишни интервали
+
+  return decoded;
+};
+
 export default function Navigation() {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -61,6 +90,14 @@ export default function Navigation() {
           return;
         }
 
+        // Debug: Логваме първия service за да видим какви данни идват
+        console.log("First service from API:", services[0]);
+        console.log("Title before decode:", services[0]?.title?.rendered);
+        console.log(
+          "Title after decode:",
+          cleanDecodeText(services[0]?.title?.rendered)
+        );
+
         const featured = services.slice(0, 2);
         const remainingServices = services.slice(2);
 
@@ -73,7 +110,7 @@ export default function Navigation() {
               featured: featured.map((service) => ({
                 name:
                   service.title && service.title.rendered
-                    ? he.decode(service.title.rendered)
+                    ? cleanDecodeText(service.title.rendered)
                     : "",
                 href: `/services/${service.slug}`,
                 imageSrc:
@@ -81,14 +118,14 @@ export default function Navigation() {
                   "/placeholder.webp",
                 imageAlt:
                   service.title && service.title.rendered
-                    ? he.decode(service.title.rendered)
+                    ? cleanDecodeText(service.title.rendered)
                     : "",
               })),
               services: remainingServices.map((service) => ({
                 id: service.id,
                 name:
                   service.title && service.title.rendered
-                    ? he.decode(service.title.rendered)
+                    ? cleanDecodeText(service.title.rendered)
                     : "",
                 href: `/services/${service.slug}`,
               })),
@@ -282,7 +319,7 @@ export default function Navigation() {
 
               {/* Секция 1: Лого */}
               <div className="w-3/4 lg:w-1/5 flex items-center justify-start">
-                <Link href="/" className="block">
+                <Link href="/" className="block ml-5 lg:ml-0">
                   <span className="sr-only">Betterself</span>
                   <Image
                     width={197}
