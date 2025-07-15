@@ -17,19 +17,6 @@
   .custom-2xl-right-30 {
     /* right: auto !important; */
   }
-
-  /* Дебъг индикатор */
-  .debug-indicator::after {
-    content: "3XL Active (1680px+)" !important;
-    position: fixed !important;
-    top: 10px !important;
-    right: 10px !important;
-    background: rgba(255, 0, 0, 0.8) !important;
-    color: white !important;
-    padding: 5px !important;
-    z-index: 9999 !important;
-    font-size: 12px !important;
-  }
 }
 
 @media screen and (min-width: 1480px) and (max-width: 1680px) {
@@ -40,21 +27,5 @@
 @media screen and (min-width: 1280px) and (max-width: 1479px) {
   .custom-3xl-right-46 {
     right: 2.5rem !important;
-  }
-}
-
-/* За екрани от 1536px до 1679px */
-@media screen and (min-width: 1536px) and (max-width: 1679px) {
-  /* Дебъг индикатор */
-  .debug-indicator::after {
-    content: "2XL Active (1536-1679px)" !important;
-    position: fixed !important;
-    top: 10px !important;
-    right: 10px !important;
-    background: rgba(0, 128, 0, 0.8) !important;
-    color: white !important;
-    padding: 5px !important;
-    z-index: 9999 !important;
-    font-size: 12px !important;
   }
 }
