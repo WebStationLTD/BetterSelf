@@ -100,12 +100,13 @@ export default function Hero() {
               >
                 Купи билети
               </Link>
-              <Link
-                href="/contact"
+              <a
+                href="/Betterself%20Proposal%20.pdf"
+                download="Betterself Proposal.pdf"
                 className="text-lg font-semibold text-white hover:text-[#ff8d00] transition-colors duration-300"
               >
                 Стани партньор <span aria-hidden="true">→</span>
-              </Link>
+              </a>
             </div>
 
             {/* Event Details */}
