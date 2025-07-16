@@ -72,9 +72,11 @@ export default function Example() {
                       <div className="mt-8">
                         <div className="rounded-lg shadow-md">
                           <a
-                            href="#"
+                            href="https://buy.stripe.com/14A14najr84j0Vk9DN2kw00"
                             aria-describedby="tier-online"
                             className="block w-full rounded-lg border border-transparent bg-white px-6 py-3 text-center text-base font-medium text-indigo-600 hover:bg-gray-50"
+                            target="_blank"
+                            rel="noopener noreferrer"
                           >
                             Купи
                           </a>
@@ -131,9 +133,11 @@ export default function Example() {
                     <div className="mt-10">
                       <div className="rounded-lg shadow-md">
                         <a
-                          href="#"
+                          href="https://buy.stripe.com/aFabJ1fDL2JZcE25nx2kw01"
                           aria-describedby="tier-business"
                           className="block w-full text-[#000000] bg-[#ff8d00] hover:bg-gray-300 hover:text-[#000000] rounded-lg border border-transparent px-6 py-4 text-center text-xl/6 font-medium text-white"
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
                           Купи{" "}
                         </a>
@@ -179,9 +183,11 @@ export default function Example() {
                       <div className="mt-8">
                         <div className="rounded-lg shadow-md">
                           <a
-                            href="#"
+                            href="https://buy.stripe.com/3cI00jdvD4S7bzY5nx2kw02"
                             aria-describedby="tier-vip"
                             className="block w-full rounded-lg border border-transparent bg-white px-6 py-3 text-center text-base font-medium text-indigo-600 hover:bg-gray-50"
+                            target="_blank"
+                            rel="noopener noreferrer"
                           >
                             Купи
                           </a>
@@ -193,6 +199,23 @@ export default function Example() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Алтернативен метод за плащане */}
+      <div className="bg-gray-900 px-6 pt-8 pb-10 lg:px-8 mt-8">
+        <div className="mx-auto max-w-7xl text-center">
+          <p className="text-lg text-gray-300">
+            Искате да купите билети с различен метод? {" "}
+            <a
+              href="https://bilet.bg/bg/cart/better-self-biohacking-summit-2025-6457"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-[#ff8d00] hover:text-orange-300 transition-colors duration-300"
+            >
+              Следвайте този линк
+            </a>
+          </p>
         </div>
       </div>
     </div>
