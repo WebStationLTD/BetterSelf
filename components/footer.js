@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Pacifico } from "next/font/google";
-import { FaFacebook, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 import Link from "next/link";
 
 const pacifico = Pacifico({
@@ -24,15 +24,15 @@ const navigation = {
   social: [
     {
       name: "Facebook",
-      href: "https://www.facebook.com/example",
+      href: "https://www.facebook.com/people/Betterselfbg/61578688370513/",
       icon: FaFacebook,
       target: "_blank",
       rel: "noopener noreferrer",
     },
     {
-      name: "LinkedIn",
-      href: "https://www.linkedin.com/example",
-      icon: FaLinkedin,
+      name: "Instagram",
+      href: "https://www.instagram.com/betterself.bg/",
+      icon: FaInstagram,
       target: "_blank",
       rel: "noopener noreferrer",
     },

@@ -101,8 +101,7 @@ export default function Hero() {
                 Купи билети
               </Link>
               <a
-                href="/Betterself%20Proposal%20.pdf"
-                download="Betterself Proposal.pdf"
+                href="/sponsors"
                 className="text-lg font-semibold text-white hover:text-[#ff8d00] transition-colors duration-300"
               >
                 Стани партньор <span aria-hidden="true">→</span>
