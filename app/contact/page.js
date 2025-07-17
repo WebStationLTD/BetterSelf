@@ -7,6 +7,7 @@ import { getContactInfo } from "../../services/contacts";
 import ContactForm from "../../components/contactForm"; // Вкарваме клиентската форма
 import Link from "next/link";
 
+// Added a comment to force Next.js to regenerate the page
 export async function generateMetadata() {
   return {
     title: "Контакти - Betterself",
