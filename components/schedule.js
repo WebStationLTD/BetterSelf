@@ -1,11 +1,16 @@
 "use client";
 
-import { ClockIcon, MapPinIcon, UserIcon, CalendarIcon } from "@heroicons/react/24/outline";
+import {
+  ClockIcon,
+  MapPinIcon,
+  UserIcon,
+  CalendarIcon,
+} from "@heroicons/react/24/outline";
 import { scheduleData, getTypeStyles } from "../data/scheduleData";
 import { useEffect, useState } from "react";
 
 // Импортираме add-to-calendar-button компонента
-import 'add-to-calendar-button';
+import "add-to-calendar-button";
 
 // Отделен компонент за calendar button който се рендира само на клиента
 function AddToCalendarButton() {
@@ -13,9 +18,9 @@ function AddToCalendarButton() {
 
   useEffect(() => {
     setIsClient(true);
-    
+
     // Добавяме CSS стилове за add-to-calendar-button
-    const style = document.createElement('style');
+    const style = document.createElement("style");
     style.textContent = `
       .atcb-button {
         background: transparent !important;
@@ -65,7 +70,7 @@ function AddToCalendarButton() {
       }
     `;
     document.head.appendChild(style);
-    
+
     return () => {
       if (document.head.contains(style)) {
         document.head.removeChild(style);
@@ -92,7 +97,12 @@ function AddToCalendarButton() {
       inline
       listStyle="modal"
       iCalFileName="BetterSelf-Conference-2025"
-      style={{ position: 'absolute', inset: '0', opacity: '0', cursor: 'pointer' }}
+      style={{
+        position: "absolute",
+        inset: "0",
+        opacity: "0",
+        cursor: "pointer",
+      }}
     />
   );
 }
@@ -123,7 +133,7 @@ export default function Schedule() {
                 <span>Гранд Хотел Астория</span>
               </div>
             </div>
-            
+
             {/* Add to Calendar Button */}
             <div className="mt-8 flex justify-center">
               <div className="relative group">
@@ -397,7 +407,7 @@ export default function Schedule() {
                   Купи билети
                 </a>
                 <a
-                  href="/contact"
+                  href="/sponsors"
                   className="inline-flex items-center justify-center rounded-xl bg-white px-8 py-3 text-base font-semibold text-gray-900 border-2 border-gray-300 hover:border-[#ff8d00] hover:text-[#ff8d00] transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   Стани спонсор
