@@ -109,8 +109,8 @@ function AddToCalendarButton() {
 
   return (
     <add-to-calendar-button
-      name="BetterSelf - Biohacking & Longevity Conference 2025"
-      description="Let's start the journey to your BETTERSELF"
+      name="BetterSelf - Биохакинг и дълголетие Конференция 2025"
+      description="Направете следващата голяма крачка по пътя към своето ПО-ДОБРО АЗ"
       startDate="2025-11-02"
       endDate="2025-11-02"
       startTime="09:00"

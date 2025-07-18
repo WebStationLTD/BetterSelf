@@ -72,7 +72,7 @@ export default function HomePageWrapper() {
       <Location />
       <VideoCarousel />
       <PricingSection />
-      <CTA />
+      {/* <CTA /> */}
       <Clients />
       <Newsletter />
       <Testimonial />

@@ -104,7 +104,7 @@ export default function Hero() {
                 href="/sponsors"
                 className="text-lg font-semibold text-white hover:text-[#ff8d00] transition-colors duration-300"
               >
-                Стани партньор <span aria-hidden="true">→</span>
+                Стани спонсор <span aria-hidden="true">→</span>
               </a>
             </div>
 

@@ -1,24 +1,20 @@
 import { CheckIcon } from "@heroicons/react/24/outline";
 
 const onlineFeatures = [
-  "Онлайн достъп до всички презентации",
-  "Записи от събитието за 30 дни",
-  "Достъп до ексклузивни материали",
+  "Онлайн достъп до конференцията в реално време",
+  "Достъп до записа от събитието",
 ];
 const vipFeatures = [
-  "Всичко от бизнес билета включено",
-  "VIP места най-отпред в залата",
-  "Ексклузивни разговори с лекторите",
+  "Присъствие на живо на конференцията",
+  "Достъп до записа от събитието",
+  "Пропуск за кафе паузата",
 ];
 const businessFeatures = [
-  "Присъствие на живо в конференцията",
-  "Онлайн достъп до всички презентации",
-  "Записи от събитието за 30 дни",
-  "Networking сесии с участници",
-  "Кафе пауза и обяд включени",
-  "Достъп до ексклузивни материали",
-  "Сертификат за участие",
-  "Приоритетна поддръжка",
+  "Присъствие на живо на конференцията",
+  "Достъп до записа от събитието",
+  "Пропуск за кафе паузата",
+  "ВИП място на първите редове в залата",
+  "ВИП вечеря в ресторанта на хотела с част от лекторите",
 ];
 
 export default function Example() {
@@ -44,7 +40,7 @@ export default function Example() {
                           id="tier-online"
                           className="text-center text-2xl font-medium text-gray-900"
                         >
-                          Онлайн
+                          Виртуален билет
                         </h3>
                         <div className="mt-4 flex items-center justify-center">
                           <span className="flex items-start px-3 text-6xl tracking-tight text-gray-900">
@@ -105,7 +101,7 @@ export default function Example() {
                         id="tier-business"
                         className="text-center text-3xl font-semibold tracking-tight text-gray-900 sm:-mx-6"
                       >
-                        Бизнес
+                        Бизнес билет
                       </h3>
                       <div className="mt-4 flex items-center justify-center">
                         <span className="flex items-start px-3 text-6xl tracking-tight text-gray-900 sm:text-6xl">
@@ -155,7 +151,7 @@ export default function Example() {
                           id="tier-vip"
                           className="text-center text-2xl font-medium text-gray-900"
                         >
-                          VIP
+                          ВИП билет
                         </h3>
                         <div className="mt-4 flex items-center justify-center">
                           <span className="flex items-start px-3 text-6xl tracking-tight text-gray-900">
@@ -206,7 +202,7 @@ export default function Example() {
       <div className="bg-gray-900 px-6 pt-8 pb-10 lg:px-8 mt-8">
         <div className="mx-auto max-w-7xl text-center">
           <p className="text-lg text-gray-300">
-            Искате да купите билети с различен метод? {" "}
+            Искате да купите билети с различен метод?{" "}
             <a
               href="https://bilet.bg/bg/cart/better-self-biohacking-summit-2025-6457"
               target="_blank"
