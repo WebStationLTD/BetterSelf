@@ -14,12 +14,13 @@ const pacifico = Pacifico({
 
 const navigation = {
   event: [
-    { name: "Купи билет", href: "#" },
+    { name: "Купи билет", href: "/tickets" },
     { name: "Програма", href: "/schedule" },
   ],
   resources: [
     { name: "Блог", href: "/blog" },
-    { name: "Спонсори", href: "/#sponsors" },
+    { name: "Спонсори", href: "/sponsors" },
+    { name: "Контакти", href: "/contact" },
   ],
   social: [
     {

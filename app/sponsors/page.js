@@ -1,4 +1,5 @@
 import SponsorsAndPartners from "@/components/SponsorsAndPartners";
+import ContactInfo from "@/components/ContactInfo";
 
 export const metadata = {
   title: "Спонсори и Партньори - BetterSelf",
@@ -20,5 +21,9 @@ export const metadata = {
 };
 
 export default function SponsorsPage() {
-  return <SponsorsAndPartners />;
+  return (
+    <SponsorsAndPartners>
+      <ContactInfo />
+    </SponsorsAndPartners>
+  );
 }

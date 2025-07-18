@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import ContactForm from "./contactForm";
-import ContactInfo from "./ContactInfo";
 
 const sponsors = [
   {
@@ -95,7 +94,7 @@ const partners = [
   },
 ];
 
-export default function SponsorsAndPartners() {
+export default function SponsorsAndPartners({ children }) {
   return (
     <>
       {/* Contact Section - Dark */}
@@ -138,7 +137,7 @@ export default function SponsorsAndPartners() {
               <h2 className="text-3xl font-bold tracking-tight text-white">
                 Станете спонсор
               </h2>
-              <ContactInfo />
+              {children}
               <p className="mt-6 text-lg leading-8 text-gray-300">
                 Вярвате в силата на превенцията, оптималното здраве и
                 съзнателния живот? Ако вашата мисия, продукт или услуга помага
