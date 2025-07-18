@@ -73,13 +73,13 @@ export default function Hero() {
         <div className="relative z-10 flex items-center justify-center h-[600px] px-6">
           <div className="text-center max-w-6xl mx-auto">
             {/* Main Heading */}
-            <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold tracking-tight text-white font-display mb-4">
-              Biohacking & Longevity
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold tracking-tight text-white font-display mb-4">
+              Биохакинг и дълголетие
             </h1>
 
             {/* Secondary Heading */}
-            <h2 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold tracking-tight text-white font-display mb-6">
-              Conference 2025
+            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold tracking-tight text-white font-display mb-6">
+              Конференция 2025
             </h2>
 
             {/* Quote */}
@@ -89,7 +89,7 @@ export default function Hero() {
 
             {/* Subtitle */}
             <p className="text-lg md:text-xl lg:text-2xl font-medium text-white font-display mb-12 opacity-90">
-              Let's start the journey to your BETTERSELF
+              Направете следващата голяма крачка по пътя към своето ПО-ДОБРО АЗ
             </p>
 
             {/* Action Buttons */}

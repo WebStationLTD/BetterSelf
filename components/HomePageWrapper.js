@@ -8,6 +8,9 @@ import TicketIframeController from "./TicketIframeController";
 const EventCountdown = dynamic(() => import("./EventCountdown"), {
   ssr: true,
 });
+const AboutSection = dynamic(() => import("./AboutSection"), {
+  ssr: true,
+});
 const Schedule = dynamic(() => import("./schedule"), {
   ssr: true,
 });
@@ -62,10 +65,7 @@ export default function HomePageWrapper() {
     <>
       <HeroSection />
       <EventCountdown />
-
-      {/* Контролиран iframe за билети - временно за тестване */}
-      {/* <TicketIframeController /> */}
-
+      <AboutSection />
       <Incentives />
       <Schedule />
       <Team />

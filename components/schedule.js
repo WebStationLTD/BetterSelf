@@ -78,6 +78,31 @@ function AddToCalendarButton() {
     };
   }, []);
 
+  // Добавяме скрипт за превод на етикетите
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.type = "text/javascript";
+    script.innerHTML = `
+      window.addeventasync = function(){
+          addeventatc.settings({
+              appleical  : {show:true, text:"Apple Календар"},
+              google     : {show:true, text:"Google Календар"},
+              office365  : {show:true, text:"Microsoft 365"},
+              outlook    : {show:true, text:"Outlook"},
+              outlookcom : {show:true, text:"Outlook.com"},
+              yahoo      : {show:true, text:"Yahoo Календар"}
+          });
+      };
+    `;
+    document.body.appendChild(script);
+
+    return () => {
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
+
   if (!isClient) {
     return null;
   }
@@ -143,10 +168,10 @@ export default function Schedule() {
                     <CalendarIcon className="h-6 w-6 text-[#ff8d00] group-hover:text-white transition-colors duration-300" />
                     <div className="text-left">
                       <div className="font-semibold text-gray-900 group-hover:text-white transition-colors duration-300">
-                        Добави в календара
+                        Отбележете си тази дата,
                       </div>
                       <div className="text-sm text-gray-600 group-hover:text-white transition-colors duration-300">
-                        Не пропускай събитието!
+                        за да не пропуснете събитието!
                       </div>
                     </div>
                   </div>
