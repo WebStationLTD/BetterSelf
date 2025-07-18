@@ -14,15 +14,6 @@ export default async function ContactInfo() {
         <>
           <div className="flex gap-x-4">
             <dt className="flex-none">
-              <BuildingOffice2Icon
-                className="h-7 w-6 text-gray-400"
-                aria-hidden="true"
-              />
-            </dt>
-            <dd>{contactInfo.address}</dd>
-          </div>
-          <div className="flex gap-x-4">
-            <dt className="flex-none">
               <PhoneIcon className="h-7 w-6 text-gray-400" aria-hidden="true" />
             </dt>
             <dd>
