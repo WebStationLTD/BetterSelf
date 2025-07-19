@@ -202,16 +202,61 @@ export default function Example() {
       <div className="bg-gray-900 px-6 pt-8 pb-10 lg:px-8 mt-8">
         <div className="mx-auto max-w-7xl text-center">
           <p className="text-lg text-gray-300">
-            Искате да купите билети с различен метод?{" "}
+            Искате да купите билети с различен метод на плащане?{" "}
             <a
               href="https://bilet.bg/bg/cart/better-self-biohacking-summit-2025-6457"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold text-[#ff8d00] hover:text-orange-300 transition-colors duration-300"
+              className="font-semibold text-[#ff8d00] hover:text-orange-300 transition-colors duration-300 mr-2"
             >
               Следвайте този линк
             </a>
+            и платете с:
           </p>
+
+          {/* Методи за плащане */}
+          <div className="mt-8">
+            {/* <h3 className="text-xl font-semibold text-gray-300 mb-6">
+              Плати тук с:
+            </h3> */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
+              {/* PayPal */}
+              <div className="bg-gray-800 border border-gray-700 rounded-lg p-4 hover:border-[#ff8d00] transition-colors duration-300">
+                <div className="flex items-center justify-center h-12">
+                  <span className="text-base font-medium text-gray-300">
+                    PayPal
+                  </span>
+                </div>
+              </div>
+
+              {/* ePay.bg, EasyPay, ATM */}
+              <div className="bg-gray-800 border border-gray-700 rounded-lg p-4 hover:border-[#ff8d00] transition-colors duration-300">
+                <div className="flex items-center justify-center h-12">
+                  <span className="text-base font-medium text-gray-300 text-center">
+                    ePay.bg, EasyPay, ATM
+                  </span>
+                </div>
+              </div>
+
+              {/* Банков превод */}
+              <div className="bg-gray-800 border border-gray-700 rounded-lg p-4 hover:border-[#ff8d00] transition-colors duration-300">
+                <div className="flex items-center justify-center h-12">
+                  <span className="text-base font-medium text-gray-300">
+                    Банков превод
+                  </span>
+                </div>
+              </div>
+
+              {/* Наложен платеж */}
+              <div className="bg-gray-800 border border-gray-700 rounded-lg p-4 hover:border-[#ff8d00] transition-colors duration-300">
+                <div className="flex items-center justify-center h-12">
+                  <span className="text-base font-medium text-gray-300 text-center">
+                    Наложен платеж (SPEEDY)
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
