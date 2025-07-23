@@ -118,6 +118,52 @@ export default async function MemberDetails({ params }) {
           />
         </div>
       </div>
+
+      {/* JavaScript to fix WordPress video width issues */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function() {
+              function fixVideoWidths() {
+                // Find all elements with inline width styles
+                const elements = document.querySelectorAll('[style*="width"]');
+                elements.forEach(el => {
+                  const style = el.getAttribute('style');
+                  if (style && style.includes('width: 640px')) {
+                    // Remove the width style completely
+                    el.style.width = '';
+                    // Or set it to 100%
+                    el.style.width = '100%';
+                    el.style.maxWidth = '100%';
+                  }
+                });
+                
+                // Also target specific WordPress video containers
+                const videoContainers = document.querySelectorAll('.wp-video, .wp-block-video, figure');
+                videoContainers.forEach(container => {
+                  if (container.style.width === '640px' || container.getAttribute('width') === '640') {
+                    container.style.width = '100%';
+                    container.style.maxWidth = '100%';
+                    container.removeAttribute('width');
+                  }
+                });
+              }
+              
+              // Run immediately
+              fixVideoWidths();
+              
+              // Run after DOM is fully loaded
+              if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', fixVideoWidths);
+              }
+              
+              // Run after a short delay to catch any dynamically loaded content
+              setTimeout(fixVideoWidths, 100);
+              setTimeout(fixVideoWidths, 500);
+            })();
+          `,
+        }}
+      />
     </>
   );
 }

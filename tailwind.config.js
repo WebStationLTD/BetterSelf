@@ -14,6 +14,13 @@ export default {
   ],
   theme: {
     extend: {
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            maxWidth: "none",
+          },
+        },
+      }),
       spacing: {
         30: "7.5rem", // 120px
         46: "11.5rem", // 184px

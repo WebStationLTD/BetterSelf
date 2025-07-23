@@ -17,3 +17,32 @@ html {
 /* @theme {
   --breakpoint-under-1680: 92rem;
 } */
+
+/* 
+  Final, robust fix for responsive WordPress content (videos, iframes, etc.)
+  This targets elements inside .prose, which is used for the content from WordPress.
+*/
+.prose video,
+.prose iframe {
+  width: 100% !important;
+  max-width: 100% !important; /* Ensure it never overflows its container */
+  height: auto !important; /* Maintain the original aspect ratio */
+  border-radius: 0.75rem; /* 12px, for consistent styling */
+  margin-top: 1.5em !important;
+  margin-bottom: 1.5em !important;
+}
+
+/* Also target any potential wrappers WordPress might add */
+.prose figure,
+.prose .wp-block-embed,
+.prose .wp-block-video,
+.prose .wp-video {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Final override for the prose container width issue. */
+.prose {
+  max-width: none !important;
+}
