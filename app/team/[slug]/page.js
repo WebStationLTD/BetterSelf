@@ -125,27 +125,29 @@ export default async function MemberDetails({ params }) {
           __html: `
             (function() {
               function fixVideoWidths() {
-                // Find all elements with inline width styles
-                const elements = document.querySelectorAll('[style*="width"]');
-                elements.forEach(el => {
-                  const style = el.getAttribute('style');
-                  if (style && style.includes('width: 640px')) {
-                    // Remove the width style completely
-                    el.style.width = '';
-                    // Or set it to 100%
-                    el.style.width = '100%';
-                    el.style.maxWidth = '100%';
-                  }
-                });
-                
-                // Also target specific WordPress video containers
-                const videoContainers = document.querySelectorAll('.wp-video, .wp-block-video, figure');
-                videoContainers.forEach(container => {
-                  if (container.style.width === '640px' || container.getAttribute('width') === '640') {
-                    container.style.width = '100%';
-                    container.style.maxWidth = '100%';
-                    container.removeAttribute('width');
-                  }
+                // Only target elements within .prose containers (WordPress content)
+                const proseContainers = document.querySelectorAll('.prose');
+                proseContainers.forEach(proseContainer => {
+                  
+                  // Target video-related elements specifically
+                  const videoElements = proseContainer.querySelectorAll('video, iframe, .wp-video, .wp-block-video, figure:has(video), figure:has(iframe)');
+                  videoElements.forEach(el => {
+                    // Check parent elements for width constraints
+                    let current = el;
+                    while (current && current !== proseContainer) {
+                      const style = current.getAttribute('style');
+                      if (style && (style.includes('width: 640px') || style.includes('width:640px'))) {
+                        current.style.width = '100%';
+                        current.style.maxWidth = '100%';
+                      }
+                      // Also check for width attribute
+                      if (current.getAttribute('width') === '640') {
+                        current.removeAttribute('width');
+                        current.style.width = '100%';
+                      }
+                      current = current.parentElement;
+                    }
+                  });
                 });
               }
               
@@ -159,7 +161,6 @@ export default async function MemberDetails({ params }) {
               
               // Run after a short delay to catch any dynamically loaded content
               setTimeout(fixVideoWidths, 100);
-              setTimeout(fixVideoWidths, 500);
             })();
           `,
         }}
