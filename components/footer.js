@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Pacifico } from "next/font/google";
-import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 import Link from "next/link";
 
 const pacifico = Pacifico({
@@ -34,6 +34,13 @@ const navigation = {
       name: "Instagram",
       href: "https://www.instagram.com/betterself.bg/",
       icon: FaInstagram,
+      target: "_blank",
+      rel: "noopener noreferrer",
+    },
+    {
+      name: "TikTok",
+      href: "https://www.tiktok.com/@betterself.bg",
+      icon: FaTiktok,
       target: "_blank",
       rel: "noopener noreferrer",
     },
