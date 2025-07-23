@@ -105,6 +105,11 @@ export default function Example() {
                         <span className="font-bold">99 лв.</span>
                       </span>
                     </div>
+                    <div className="mt-2 text-center">
+                      <span className="inline-block bg-red-50 text-red-700 text-xs font-semibold px-3 py-1 rounded-full border border-red-200 shadow-sm">
+                        МЕСТАТА СА ОГРАНИЧЕНИ
+                      </span>
+                    </div>
                   </div>
                 </div>
                 <div className="flex flex-grow flex-col justify-between rounded-b-lg border-t-2 border-gray-700 bg-gray-800 px-6 pt-10 pb-8 sm:px-10 sm:py-10">
@@ -151,6 +156,11 @@ export default function Example() {
                       <div className="mt-4 flex items-center justify-center">
                         <span className="flex items-start px-3 text-6xl tracking-tight text-gray-900">
                           <span className="font-bold">249 лв.</span>
+                        </span>
+                      </div>
+                      <div className="mt-2 text-center">
+                        <span className="inline-block bg-red-50 text-red-700 text-xs font-semibold px-3 py-1 rounded-full border border-red-200 shadow-sm">
+                          МЕСТАТА СА ОГРАНИЧЕНИ
                         </span>
                       </div>
                     </div>
