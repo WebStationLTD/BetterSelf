@@ -18,8 +18,7 @@ const incentives = [
     icon: UserIcon,
     description:
       "Какво можем да променим преди зачеване и през бременността за превенция на аутизма",
-    video:
-      "https://betterself.admin-panels.com/wp-content/uploads/2025/07/Sigridov-v6-Short.mov",
+    video: "/wp-content/uploads/2025/07/Sigridov-v6-Short.mov",
   },
   {
     name: "Хранене за дълголетие",
