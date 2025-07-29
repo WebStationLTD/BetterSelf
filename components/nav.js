@@ -251,14 +251,14 @@ export default function Navigation() {
                 ))}
               </div>
               {/* Скрито временно - Wydarzenia dropdown 
-              {navigation.categories.map((category) => (
-                <Tab
-                  key={category.name}
-                  className="flex-1 border-b-2 border-transparent px-1 py-4 text-2xl font-bold text-center text-gray-900 hover:text-[#ff8d00] data-headlessui-state-selected:border-[#ff8d00] data-headlessui-state-selected:text-[#ff8d00]"
-                >
-                  {category.name}
-                </Tab>
-              ))}
+                  {navigation.categories.map((category) => (
+                    <Tab
+                      key={category.name}
+                      className="flex-1 border-b-2 border-transparent px-1 py-4 text-2xl font-bold text-center text-gray-900 hover:text-[#ff8d00] data-headlessui-state-selected:border-[#ff8d00] data-headlessui-state-selected:text-[#ff8d00]"
+                    >
+                      {category.name}
+                    </Tab>
+                  ))}
               */}
               {/* Loader */}
               {loading && (
@@ -372,79 +372,79 @@ export default function Navigation() {
                     ))}
                     {/* 
 Скрито временно - Wydarzenia dropdown 
-{navigation.categories.map((category) => (
-  <Popover key={category.name} className="flex">
-    {({ open, close }) => (
-      <>
-        <div className="relative flex">
-          <PopoverButton className="relative z-10 -mb-px flex items-center border-b-2 border-transparent pt-px font-medium text-white transition-colors duration-200 ease-out hover:text-gray-400 data-open:border-[#ff8d00] data-open:text-[#ff8d00] cursor-pointer focus-visible:outline-none transition-all text-lg">
-            {category.name}
-            <ChevronDownIcon
-              className={`ml-2 h-5 w-5 text-gray-500 transition-transform duration-200 ease-in-out ${
-                open ? "rotate-180" : "rotate-0"
-              }`}
-            />
-          </PopoverButton>
-        </div>
-        <PopoverPanel
-          transition
-          className="absolute inset-x-0 top-full text-sm text-gray-500 transition data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
-        >
-          <div
-            aria-hidden="true"
-            className="absolute inset-0 top-1/2 bg-white shadow-sm"
-          />
-          <div className="relative bg-white">
-            <div className="mx-auto max-w-7xl px-8">
-              {loading && (
-                <div className="flex justify-center py-10">
-                  <div className="w-12 h-12 border-4 border-gray-500 border-t-[#ff8d00] rounded-full animate-spin"></div>
-                </div>
-              )}
-              {!loading && (
-                <div className="grid grid-cols-2 gap-x-8 gap-y-10 py-6">
-                  <div className="col-start-2">
-                    <div className="group relative text-base sm:text-sm">
-                      <Image
-                        width={560}
-                        height={560}
-                        alt=""
-                        src="/menu-hero-image.jpg"
-                        className="w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75"
-                      />
-                    </div>
-                  </div>
-                  <ul className="text-lg divide-y divide-gray-100 start-1 row-start-1 grid grid-cols-1 sm:grid-cols-2 gap-x-6">
-                    {[
-                      ...category.featured,
-                      ...category.services,
-                    ].map((service) => (
-                      <li
-                        key={service.id || service.name}
-                        className="flex gap-x-4 py-1 items-center"
-                      >
-                        <Link
-                          className="min-w-0 w-full flex"
-                          href={service.href}
-                          prefetch={true}
-                          onClick={close}
-                        >
-                          <p className="text-xl font-semibold text-gray-900 transition-colors duration-300 hover:text-[#ff8d00]">
-                            {service.name}
-                          </p>
-                        </Link>
-                      </li>
+                    {navigation.categories.map((category) => (
+                      <Popover key={category.name} className="flex">
+                        {({ open, close }) => (
+                          <>
+                            <div className="relative flex">
+                              <PopoverButton className="relative z-10 -mb-px flex items-center border-b-2 border-transparent pt-px font-medium text-white transition-colors duration-200 ease-out hover:text-gray-400 data-open:border-[#ff8d00] data-open:text-[#ff8d00] cursor-pointer focus-visible:outline-none transition-all text-lg">
+                                {category.name}
+                                <ChevronDownIcon
+                                  className={`ml-2 h-5 w-5 text-gray-500 transition-transform duration-200 ease-in-out ${
+                                    open ? "rotate-180" : "rotate-0"
+                                  }`}
+                                />
+                              </PopoverButton>
+                            </div>
+                            <PopoverPanel
+                              transition
+                              className="absolute inset-x-0 top-full text-sm text-gray-500 transition data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
+                            >
+                              <div
+                                aria-hidden="true"
+                                className="absolute inset-0 top-1/2 bg-white shadow-sm"
+                              />
+                              <div className="relative bg-white">
+                                <div className="mx-auto max-w-7xl px-8">
+                                  {loading && (
+                                    <div className="flex justify-center py-10">
+                                      <div className="w-12 h-12 border-4 border-gray-500 border-t-[#ff8d00] rounded-full animate-spin"></div>
+                                    </div>
+                                  )}
+                                  {!loading && (
+                                    <div className="grid grid-cols-2 gap-x-8 gap-y-10 py-6">
+                                      <div className="col-start-2">
+                                        <div className="group relative text-base sm:text-sm">
+                                          <Image
+                                            width={560}
+                                            height={560}
+                                            alt=""
+                                            src="/menu-hero-image.jpg"
+                                            className="w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75"
+                                          />
+                                        </div>
+                                      </div>
+                                      <ul className="text-lg divide-y divide-gray-100 start-1 row-start-1 grid grid-cols-1 sm:grid-cols-2 gap-x-6">
+                                        {[
+                                          ...category.featured,
+                                          ...category.services,
+                                        ].map((service) => (
+                                          <li
+                                            key={service.id || service.name}
+                                            className="flex gap-x-4 py-1 items-center"
+                                          >
+                                            <Link
+                                              className="min-w-0 w-full flex"
+                                              href={service.href}
+                                              prefetch={true}
+                                              onClick={close}
+                                            >
+                                              <p className="text-xl font-semibold text-gray-900 transition-colors duration-300 hover:text-[#ff8d00]">
+                                                {service.name}
+                                              </p>
+                                            </Link>
+                                          </li>
+                                        ))}
+                                      </ul>
+                                    </div>
+                                  )}
+                                </div>
+                              </div>
+                            </PopoverPanel>
+                          </>
+                        )}
+                      </Popover>
                     ))}
-                  </ul>
-                </div>
-              )}
-            </div>
-          </div>
-        </PopoverPanel>
-      </>
-    )}
-  </Popover>
-))}
 */}
                   </div>
                 </PopoverGroup>

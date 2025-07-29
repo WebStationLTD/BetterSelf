@@ -18,7 +18,7 @@ const incentives = [
     icon: UserIcon,
     description:
       "Какво можем да променим преди зачеване и през бременността за превенция на аутизма",
-    video: "/Sigridov-v6-Short.mov",
+    video: "/sigridov-v6-short.mov",
   },
   {
     name: "Хранене за дълголетие",
@@ -166,8 +166,11 @@ export default function Incentives() {
                             objectFit: "cover",
                           }}
                         >
+                          <source
+                            src={incentive.video}
+                            type="video/quicktime"
+                          />
                           <source src={incentive.video} type="video/mp4" />
-                          <source src={incentive.video} type="video/mov" />
                           Вашият браузър не поддържа видео елемента.
                         </video>
                       </div>
