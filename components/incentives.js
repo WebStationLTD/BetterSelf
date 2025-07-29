@@ -18,6 +18,8 @@ const incentives = [
     icon: UserIcon,
     description:
       "Какво можем да променим преди зачеване и през бременността за превенция на аутизма",
+    video:
+      "https://betterself.admin-panels.com/wp-content/uploads/2025/07/Sigridov-v6-Short.mov",
   },
   {
     name: "Хранене за дълголетие",
@@ -102,6 +104,25 @@ export default function Incentives() {
                       {incentive.description}
                     </p>
                   </div>
+
+                  {/* Видео секция - показва се само ако има видео */}
+                  {incentive.video && (
+                    <div className="mt-4 w-full">
+                      <video
+                        className="w-full h-auto rounded-lg shadow-lg"
+                        controls
+                        preload="metadata"
+                        style={{
+                          maxHeight: "200px",
+                          objectFit: "cover",
+                        }}
+                      >
+                        <source src={incentive.video} type="video/mp4" />
+                        <source src={incentive.video} type="video/mov" />
+                        Вашият браузър не поддържа видео елемента.
+                      </video>
+                    </div>
+                  )}
                 </div>
 
                 <div className="mt-6 mb-6">
@@ -133,6 +154,25 @@ export default function Incentives() {
                         {incentive.description}
                       </p>
                     </div>
+
+                    {/* Видео секция - показва се само ако има видео */}
+                    {incentive.video && (
+                      <div className="mt-4 w-full">
+                        <video
+                          className="w-full h-auto rounded-lg shadow-lg"
+                          controls
+                          preload="metadata"
+                          style={{
+                            maxHeight: "200px",
+                            objectFit: "cover",
+                          }}
+                        >
+                          <source src={incentive.video} type="video/mp4" />
+                          <source src={incentive.video} type="video/mov" />
+                          Вашият браузър не поддържа видео елемента.
+                        </video>
+                      </div>
+                    )}
                   </div>
 
                   <div className="mt-6 mb-6">

@@ -83,7 +83,8 @@ const partners = [
     name: "Suga Buba",
     logo: "/suga-buba-logo.jpg",
     link: "https://sugabuba.com/",
-    description: "Онлайн магазин за ръчно изработени бижута и аксесоари.",
+    description:
+      "SUGA BUBA е устойчива компания, посветена на био и пречистена козметика.",
   },
   {
     name: "Preciva",
