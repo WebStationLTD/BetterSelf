@@ -70,7 +70,7 @@ export const searchContent = cache(async (query) => {
         id: member.id,
         title: cleanDecodeText(member.title.rendered),
         slug: member.slug,
-        type: "team",
+        type: "lecturers",
       })),
       ...(services || []).map((service) => ({
         id: service.id,

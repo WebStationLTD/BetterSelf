@@ -83,7 +83,7 @@ export default async function Team() {
                 className="flex flex-col gap-10 py-12 first:pt-0 last:pb-0 sm:flex-row"
               >
                 <Link
-                  href={`/team/${member.slug}`}
+                  href={`/lecturers/${member.slug}`}
                   prefetch={true}
                   className="block w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0"
                 >
@@ -99,7 +99,7 @@ export default async function Team() {
                   </div>
                 </Link>
                 <div className="max-w-xl flex-auto">
-                  <Link href={`/team/${member.slug}`} prefetch={true}>
+                  <Link href={`/lecturers/${member.slug}`} prefetch={true}>
                     <h3 className="text-lg/8 font-semibold tracking-tight text-gray-900">
                       {member.name || "Член на екипа"}
                     </h3>

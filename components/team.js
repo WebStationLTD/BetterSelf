@@ -41,7 +41,7 @@ export default function Team() {
             >
               {member.slug && (
                 <Link
-                  href={`/team/${member.slug}`}
+                  href={`/lecturers/${member.slug}`}
                   prefetch={true}
                   className="group"
                 >
