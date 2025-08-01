@@ -45,25 +45,25 @@ export async function generateMetadata() {
   return {
     metadataBase: new URL(`${protocol}://${host}`),
     title: {
-      template: "%s | NextLevel Services",
-      default: "NextLevel Services | Професионални бизнес услуги",
+      template: "%s | BetterSelf",
+      default: "BetterSelf | Конференция за здраве и личностно развитие",
     },
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "BetterSelf 2025 - Водещата конференция в България за здраве, дълголетие, биохакинг и личностно развитие. Присъединете се към най-иновативните специалисти и открийте пътя към по-доброто себе си.",
     openGraph: {
-      title: "NextLevel Services | Професионални бизнес услуги",
+      title: "BetterSelf | Конференция за здраве и личностно развитие",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      images: "/lawyer.webp",
+        "BetterSelf 2025 - Водещата конференция в България за здраве, дълголетие, биохакинг и личностно развитие. Присъединете се към най-иновативните специалисти и открийте пътя към по-доброто себе си.",
+      images: "/betterself-hero-image.jpg",
       type: "website",
       locale: "bg_BG",
-      siteName: "NextLevel Services",
+      siteName: "BetterSelf",
     },
     twitter: {
       card: "summary_large_image",
-      title: "NextLevel Services",
-      description: "Lorem ipsum dolor sit amet",
-      images: ["/lawyer.webp"],
+      title: "BetterSelf - Конференция за здраве и личностно развитие",
+      description: "Открийте пътя към по-доброто себе си с BetterSelf 2025",
+      images: ["/betterself-hero-image.jpg"],
     },
     robots: {
       index: true,
@@ -129,22 +129,29 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "LegalService",
-              name: "Lorem ipsum dolor sit amet",
+              "@type": "Event",
+              name: "BetterSelf 2025 - Конференция за здраве и личностно развитие",
               description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-              url: "https://example.bg",
-              contactPoint: {
-                "@type": "ContactPoint",
-                telephone: "+359XXXXXXXXX",
-                contactType: "customer service",
+                "Водещата конференция в България за здраве, дълголетие, биохакинг и личностно развитие. Присъединете се към най-иновативните специалисти и открийте пътя към по-доброто себе си.",
+              url: "https://www.betterself.bg",
+              image: "/betterself-hero-image.jpg",
+              startDate: "2025-05-17",
+              eventStatus: "https://schema.org/EventScheduled",
+              eventAttendanceMode:
+                "https://schema.org/OfflineEventAttendanceMode",
+              location: {
+                "@type": "Place",
+                name: "София, България",
+                address: {
+                  "@type": "PostalAddress",
+                  addressLocality: "София",
+                  addressCountry: "BG",
+                },
               },
-              address: {
-                "@type": "PostalAddress",
-                streetAddress: "Example Street 123",
-                addressLocality: "София",
-                postalCode: "1000",
-                addressCountry: "BG",
+              organizer: {
+                "@type": "Organization",
+                name: "BetterSelf",
+                url: "https://www.betterself.bg",
               },
             }),
           }}

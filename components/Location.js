@@ -2,8 +2,8 @@
 
 export default function Location() {
   return (
-    <div className="bg-gray-900 py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div className="bg-gray-900 py-24 sm:py-32 overflow-x-hidden">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
@@ -13,7 +13,7 @@ export default function Location() {
             Присъединете се към нас в сърцето на София, в престижния Гранд хотел
             Астория
           </p>
-          <div className="mt-8 flex items-center justify-center gap-6 text-base font-semibold text-gray-300">
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-base font-semibold text-gray-300">
             <div className="flex items-center gap-2">
               <svg
                 className="h-5 w-5 text-[#ff8d00]"
@@ -90,13 +90,13 @@ export default function Location() {
             </div>
 
             {/* Decorative elements */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full blur-3xl"></div>
+            <div className="absolute top-0 right-0 w-16 h-16 sm:w-24 sm:h-24 lg:w-32 lg:h-32 bg-white/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 w-12 h-12 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-white/10 rounded-full blur-3xl"></div>
           </div>
         </div>
 
         {/* Map Section */}
-        <div className="mt-16">
+        <div className="mt-16 overflow-x-hidden">
           <div className="relative rounded-2xl overflow-hidden bg-gray-800 shadow-2xl">
             {/* Decorative border */}
             <div className="absolute inset-0 rounded-2xl ring-1 ring-gray-700 ring-inset"></div>
@@ -195,7 +195,7 @@ export default function Location() {
         <svg
           viewBox="0 0 1024 1024"
           aria-hidden="true"
-          className="absolute -top-24 left-1/2 -z-10 size-[64rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] opacity-20"
+          className="hidden sm:block absolute -top-24 left-1/2 -z-10 w-[24rem] h-[24rem] sm:w-[32rem] sm:h-[32rem] md:w-[48rem] md:h-[48rem] lg:w-[64rem] lg:h-[64rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] opacity-20 overflow-hidden"
         >
           <circle
             r={512}

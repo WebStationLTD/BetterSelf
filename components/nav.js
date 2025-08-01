@@ -176,14 +176,14 @@ export default function Navigation() {
   }, []);
 
   return (
-    <div className="bg-gray-800 sticky shadow-md top-0 block w-full z-50">
+    <div className="bg-gray-800 sticky shadow-md top-0 block w-full z-40">
       {/* Mobile menu */}
-      <Dialog open={open} onClose={setOpen} className="relative z-40 lg:hidden">
+      <Dialog open={open} onClose={setOpen} className="relative z-50 lg:hidden">
         <DialogBackdrop
           transition
-          className="fixed inset-0 bg-black/25 transition-opacity duration-300 ease-linear data-closed:opacity-0"
+          className="fixed inset-0 bg-black/25 transition-opacity duration-300 ease-linear data-closed:opacity-0 z-40"
         />
-        <div className="fixed inset-0 z-40 flex">
+        <div className="fixed inset-0 z-50 flex">
           <DialogPanel
             transition
             className="relative flex w-full max-w-xs transform flex-col overflow-y-auto bg-white pb-12 shadow-xl transition duration-300 ease-in-out data-closed:-translate-x-full"
@@ -199,13 +199,15 @@ export default function Navigation() {
                 <XMarkIcon aria-hidden="true" className="size-6" />
               </button>
               <div className="ml-4">
-                <Image
-                  src="/better-self-logo.png"
-                  alt=""
-                  width={197}
-                  height={60}
-                  className="h-10 w-auto"
-                />
+                <Link href="/" onClick={() => setOpen(false)} className="block">
+                  <Image
+                    src="/better-self-logo.png"
+                    alt="BetterSelf Logo"
+                    width={197}
+                    height={60}
+                    className="h-10 w-auto cursor-pointer hover:opacity-80 transition-opacity"
+                  />
+                </Link>
               </div>
             </div>
             {/* Links */}
