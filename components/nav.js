@@ -73,6 +73,7 @@ export default function Navigation() {
     ],
     pages: [
       { name: "Лектори", href: "/lecturers" },
+      { name: "Екип", href: "/team" },
       { name: "Програма", href: "/schedule" },
       { name: "Спонсори", href: "/sponsors" },
       { name: "Билети", href: "/tickets" },

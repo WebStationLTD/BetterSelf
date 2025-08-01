@@ -89,7 +89,7 @@ export default function ContactForm() {
             <div className="sm:col-span-2">
               <label
                 htmlFor="name"
-                className="block text-sm/6 font-semibold text-gray-900"
+                className="block text-sm/6 font-semibold text-black"
               >
                 Име*
               </label>
@@ -111,7 +111,7 @@ export default function ContactForm() {
             <div className="sm:col-span-2">
               <label
                 htmlFor="email"
-                className="block text-sm/6 font-semibold text-gray-900"
+                className="block text-sm/6 font-semibold text-black"
               >
                 Имейл*
               </label>
@@ -133,7 +133,7 @@ export default function ContactForm() {
             <div className="sm:col-span-2">
               <label
                 htmlFor="phone-number"
-                className="block text-sm/6 font-semibold text-gray-900"
+                className="block text-sm/6 font-semibold text-black"
               >
                 Телефон*
               </label>
@@ -155,7 +155,7 @@ export default function ContactForm() {
             <div className="sm:col-span-2">
               <label
                 htmlFor="subject"
-                className="block text-sm/6 font-semibold text-gray-900"
+                className="block text-sm/6 font-semibold text-black"
               >
                 Тема*
               </label>
@@ -176,7 +176,7 @@ export default function ContactForm() {
             <div className="sm:col-span-2">
               <label
                 htmlFor="message"
-                className="block text-sm/6 font-semibold text-gray-900"
+                className="block text-sm/6 font-semibold text-black"
               >
                 Съобщение
               </label>
