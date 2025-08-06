@@ -25,6 +25,13 @@ const sponsors = [
     link: "https://nad.bg/",
     description: "Иновативен център за клетъчна регенерация и подмладяване.",
   },
+  {
+    name: "Dr. Bastet",
+    logo: "/dr-bastet-logo.jpg",
+    link: "https://drbastet.com/",
+    description:
+      "Експертна грижа и професионални услуги в областта на здравеопазването.",
+  },
 ];
 
 const partners = [

@@ -71,6 +71,23 @@ export default function Clients() {
                   />
                 </Link>
               </div>
+              <div className="h-16 flex items-center justify-center relative">
+                <Link
+                  href="https://drbastet.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300"
+                >
+                  <Image
+                    alt="Dr. Bastet"
+                    src="/dr-bastet-logo.jpg"
+                    fill
+                    quality={80}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </Link>
+              </div>
             </div>
           </div>
 
