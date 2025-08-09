@@ -32,6 +32,20 @@ const sponsors = [
     description:
       "Dr. Bastet съчетава биохакинг и нутригеномика в натурални хранителни добавки за глюкозен баланс, дълголетие и метаболитно здраве. И това е само началото.",
   },
+  {
+    name: "Thermanumera",
+    logo: "/therma-numera-logo.png",
+    link: "https://thermanumera.com/bg/",
+    description:
+      "Therma Numera Longevity SPA - Високотехнологичният трендсетър в СПА индустрията.",
+  },
+  {
+    name: "DexaFit Sofia",
+    logo: "/dexafit-sofia-logo.png",
+    link: "https://www.sofia.dexafit.com/bg",
+    description:
+      "DexaFit Sofia е високотехнологичен медицински център, който предлага персонализирани анализи.",
+  },
 ];
 
 const partners = [

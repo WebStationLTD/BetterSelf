@@ -88,6 +88,40 @@ export default function Clients() {
                   />
                 </Link>
               </div>
+              <div className="h-16 flex items-center justify-center relative">
+                <Link
+                  href="https://thermanumera.com/bg/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300"
+                >
+                  <Image
+                    alt="Thermanumera"
+                    src="/therma-numera-logo.png"
+                    fill
+                    quality={80}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </Link>
+              </div>
+              <div className="h-16 flex items-center justify-center relative">
+                <Link
+                  href="https://www.sofia.dexafit.com/bg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300"
+                >
+                  <Image
+                    alt="DexaFit Sofia"
+                    src="/dexafit-sofia-logo.png"
+                    fill
+                    quality={80}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </Link>
+              </div>
             </div>
           </div>
 
