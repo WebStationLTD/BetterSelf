@@ -15,44 +15,53 @@ const panelsData = {
     bgPattern: "bg-blue-50",
     lecturers: [
       {
-        id: 1,
-        name: "Александър Иванов",
-        company: "даскал Алекс",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
-        image: "/placeholder.webp",
-      },
-      {
         id: 2,
         name: "Александър Йорданов",
-        company: "WebStation™",
+        company: "WebStation™ & Insurance BG",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
-        image: "/placeholder.webp",
+          "Визионер в дигиталния маркетинг и технологичните иновации. Co-founder на WebStation™ и Insurance BG, Александър е признат експерт в SEO оптимизацията и дигиталната трансформация на бизнеса. Завършил е престижния Anglia Ruskin University в Cambridge, UK, където е заложил основите на своята технологична експертиза. С дълбоки познания в изкуствения интелект и над десетилетие опит в дигиталния маркетинг, той трансформира начина, по който компаниите достигат до своите клиенти. Александър интегрира най-новите AI технологии в маркетингови стратегии, постигайки революционни резултати за своите клиенти. Неговият подход съчетава технологичната иновация с дълбоко разбиране на потребителското поведение, правейки го водеща фигура в българската технологична екосистема.",
+        image: "/александър-йорданов.jpg",
       },
+      // Временно скрити участници - чакат снимки и текстове
+      // {
+      //   id: 1,
+      //   name: "Александър Иванов",
+      //   company: "даскал Алекс",
+      //   description:
+      //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+      //   image: "/placeholder.webp",
+      // },
+      // {
+      //   id: 3,
+      //   name: "Йоан Аспарухов",
+      //   company: "EcomLabs",
+      //   description:
+      //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+      //   image: "/placeholder.webp",
+      // },
+      // {
+      //   id: 4,
+      //   name: "Димитър Гочев",
+      //   company: "",
+      //   description:
+      //     "Lorem ipsum dolor sit amet, consectetur adipисcing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+      //   image: "/placeholder.webp",
+      // },
+      // {
+      //   id: 5,
+      //   name: "Георги",
+      //   company: "Терма Нумера",
+      //   description:
+      //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+      //   image: "/placeholder.webp",
+      // },
       {
-        id: 3,
-        name: "Йоан Аспарухов",
-        company: "EcomLabs",
+        id: 6,
+        name: "Денис Колев",
+        company: "DexaFit Sofia",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
-        image: "/placeholder.webp",
-      },
-      {
-        id: 4,
-        name: "Димитър Гочев",
-        company: "",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
-        image: "/placeholder.webp",
-      },
-      {
-        id: 5,
-        name: "Георги",
-        company: "Терма Нумера",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
-        image: "/placeholder.webp",
+          "Co-Founder на DexaFit Sofia,компания, която е представител на InsideTracker и Bioniq за България. Медицински център, който се стреми да предоставя персонализирани и технологични подходи към личното здраве на своите пациенти.",
+        image: "/денис-колев.jpg",
       },
     ],
   },
@@ -76,7 +85,7 @@ const panelsData = {
         company: "NAD.BG",
         description:
           "Предприемач, инвеститор и визионер в сферата на биохакинга и дълголетието. Собственик на NAD.BG с международен опит в изграждането на компании в Русия, Украйна, САЩ, Франция и Сингапур. В портфолиото му стоят милиардни сделки, управление на над $38 млрд. активи и ръководство на екипи с хиляди служители. Master Franchise Owner на REVIV Bulgaria, COO на VostokFinance Group, консултант в Bain & Company и съосновател на Easy Credit Ukraine. На BetterSelf 2025 ще говори за най-иновативните практики в биохакинга и дълголетието, как да различаваме реално работещите подходи от маркетинговите митове и кои тенденции в науката и технологиите вече променят живота ни.",
-        image: "/daniel_cakov.jpg",
+        image: "/даниел-цаков.jpg",
       },
     ],
   },
