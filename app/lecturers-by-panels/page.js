@@ -67,8 +67,16 @@ const panelsData = {
         name: "Биляна Маринова",
         company: "Dr. Bastet",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
-        image: "/placeholder.webp",
+          'Създател на Dr. Bastet и посланик на глюкозната революция в България. След като тялото ѝ "се отказва" на 39 – без енергия, с подут корем и блокиран метаболизъм – Биляна тръгва по пътя на дълбока лична трансформация. През знания, проучвания и обучения създава GlucoHack – първата българска формула, вдъхновена от биохакинг и нутригеномика, която работи с тялото, а не срещу него. Днес тя иска да вдъхнови със своя пример други жени (и мъже) да си върнат контрола – не чрез диети, а по натурален начин, чрез малки ритуали, фибри, суперхрани и ензими, които трансформират тялото отвътре навън.',
+        image: "/биляна-маринова.jpg",
+      },
+      {
+        id: 7,
+        name: "Даниел Цанков",
+        company: "NAD.BG",
+        description:
+          "Предприемач, инвеститор и визионер в сферата на биохакинга и дълголетието. Собственик на NAD.BG с международен опит в изграждането на компании в Русия, Украйна, САЩ, Франция и Сингапур. В портфолиото му стоят милиардни сделки, управление на над $38 млрд. активи и ръководство на екипи с хиляди служители. Master Franchise Owner на REVIV Bulgaria, COO на VostokFinance Group, консултант в Bain & Company и съосновател на Easy Credit Ukraine. На BetterSelf 2025 ще говори за най-иновативните практики в биохакинга и дълголетието, как да различаваме реално работещите подходи от маркетинговите митове и кои тенденции в науката и технологиите вече променят живота ни.",
+        image: "/daniel_cakov.jpg",
       },
     ],
   },
@@ -294,31 +302,6 @@ export default function LecturersByPanels() {
                       </div>
                     </div>
                   ))}
-
-                  {/* Placeholder за бъдещи лектори */}
-                  <div className="bg-white rounded-xl shadow-lg border-2 border-dashed border-gray-300 p-8">
-                    <div className="text-center text-gray-500">
-                      <svg
-                        className="w-12 h-12 mx-auto mb-4 text-gray-400"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                        />
-                      </svg>
-                      <p className="text-lg font-medium mb-2">
-                        Още лектори скоро
-                      </p>
-                      <p className="text-sm">
-                        Работим върху добавянето на повече експерти в този панел
-                      </p>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
