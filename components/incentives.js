@@ -61,6 +61,7 @@ const incentives = [
     icon: BeakerIcon,
     description:
       "Въведение в света на биохакинга: комбинирани практики за здраве и благосъстояние, подкрепени от науката",
+    youtubeVideo: "lbfGvCXmzSY",
   },
   {
     name: "Емоционална интелигентност",
@@ -122,6 +123,22 @@ export default function Incentives() {
                       </video>
                     </div>
                   )}
+
+                  {/* YouTube видео секция - показва се само ако има YouTube видео */}
+                  {incentive.youtubeVideo && (
+                    <div className="mt-4 w-full">
+                      <div className="relative w-full h-[600px] md:h-[700px] lg:h-[800px]">
+                        <iframe
+                          className="absolute top-0 left-0 w-full h-full rounded-lg shadow-xl border-2 border-orange-200"
+                          src={`https://www.youtube-nocookie.com/embed/${incentive.youtubeVideo}?modestbranding=1&rel=0&showinfo=0&controls=1&hd=1&iv_load_policy=3&fs=1&disablekb=0&title=0&byline=0&portrait=0`}
+                          title="YouTube video player"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowFullScreen
+                        ></iframe>
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 <div className="mt-6 mb-6">
@@ -173,6 +190,22 @@ export default function Incentives() {
                           <source src={incentive.video} type="video/mp4" />
                           Вашият браузър не поддържа видео елемента.
                         </video>
+                      </div>
+                    )}
+
+                    {/* YouTube видео секция - показва се само ако има YouTube видео */}
+                    {incentive.youtubeVideo && (
+                      <div className="mt-4 w-full">
+                        <div className="relative w-full h-[600px] md:h-[700px] lg:h-[800px]">
+                          <iframe
+                            className="absolute top-0 left-0 w-full h-full rounded-lg shadow-xl border-2 border-orange-200"
+                            src={`https://www.youtube-nocookie.com/embed/${incentive.youtubeVideo}?modestbranding=1&rel=0&showinfo=0&controls=1&hd=1&iv_load_policy=3&fs=1&disablekb=0&title=0&byline=0&portrait=0`}
+                            title="YouTube video player"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowFullScreen
+                          ></iframe>
+                        </div>
                       </div>
                     )}
                   </div>

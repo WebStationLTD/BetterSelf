@@ -2,7 +2,13 @@
 
 import { useState, useEffect } from "react";
 import { Pacifico } from "next/font/google";
-import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaTiktok,
+  FaLinkedin,
+  FaYoutube,
+} from "react-icons/fa";
 import Link from "next/link";
 
 const pacifico = Pacifico({
@@ -41,6 +47,20 @@ const navigation = {
       name: "TikTok",
       href: "https://www.tiktok.com/@betterself.bg",
       icon: FaTiktok,
+      target: "_blank",
+      rel: "noopener noreferrer",
+    },
+    {
+      name: "LinkedIn",
+      href: "https://www.linkedin.com/company/betterself-bg/",
+      icon: FaLinkedin,
+      target: "_blank",
+      rel: "noopener noreferrer",
+    },
+    {
+      name: "YouTube",
+      href: "https://www.youtube.com/@jasminnemajid",
+      icon: FaYoutube,
       target: "_blank",
       rel: "noopener noreferrer",
     },
