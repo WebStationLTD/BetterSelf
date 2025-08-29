@@ -1,4 +1,5 @@
 import Image from "next/image";
+import LecturerCard from "../../components/LecturerCard";
 
 export const metadata = {
   title: "Участници в панели - BetterSelf",
@@ -18,27 +19,13 @@ const panelsData = {
         id: 2,
         name: "Александър Йорданов",
         company: "WebStation™ & Insurance BG",
+        companyLink: "https://webstation.bg/",
         description:
           "Експерт в дигиталния маркетинг и технологичните иновации. Александър Йорданов е основател на WebStation™ и Insurance BG, компании, които се специализират в оптимизацията на онлайн процесите. Завършил е Anglia Ruskin University в Cambridge, UK. С дълбоки познания в Google процесите, SEO оптимизация с помощта на изкуствения интелект и над десетилетие опит в дигиталния маркетинг, той трансформира начина, по който компаниите достигат до своите клиенти. Александър интегрира най-новите AI технологии в маркетингови стратегии, постигайки революционни резултати за своите клиенти. Неговият подход съчетава технологичната иновация с дълбоко разбиране на потребителското поведение и критериите на търсещите машини, правейки компанията му WebStation™ водещ фактор в българската технологична SEO екосистема.",
         image: "/александър-йорданов.jpg",
       },
       // Временно скрити участници - чакат снимки и текстове
-      // {
-      //   id: 1,
-      //   name: "Александър Иванов",
-      //   company: "даскал Алекс",
-      //   description:
-      //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
-      //   image: "/placeholder.webp",
-      // },
-      // {
-      //   id: 3,
-      //   name: "Йоан Аспарухов",
-      //   company: "EcomLabs",
-      //   description:
-      //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
-      //   image: "/placeholder.webp",
-      // },
+
       // {
       //   id: 4,
       //   name: "Димитър Гочев",
@@ -59,9 +46,28 @@ const panelsData = {
         id: 6,
         name: "Денис Колев",
         company: "DexaFit Sofia",
+        companyLink: "https://www.sofia.dexafit.com/bg",
         description:
           "Co-Founder на DexaFit Sofia,компания, която е представител на InsideTracker и Bioniq за България. Медицински център, който се стреми да предоставя персонализирани и технологични подходи към личното здраве на своите пациенти.",
         image: "/денис-колев.jpg",
+      },
+      {
+        id: 3,
+        name: "Йоан Аспарухов",
+        company: "EcomLabs360",
+        // EcomLabs360 няма публичен сайт в sponsors списъка
+        description:
+          "Йоан Аспарухов е експерт в електронната търговия и дигиталния маркетинг с над десет години опит в изграждането и развитието на онлайн бизнеси в България и чужбина. Той е основател на EcomLabs360 – агенция за performance маркетинг, работеща с утвърдени и скалиращи брандове. В портфолиото на компанията му влизат партньорства с различни международни и локални марки. Йоан има богат опит в управлението на рекламни кампании в глобални платформи, създаването на маркетингови стратегии и оптимизацията на онлайн магазини. Съчетава креативност и данни, за да помага на брандовете да постигат устойчив растеж, като активно интегрира иновативни технологии и изкуствен интелект в процесите на дигиталния маркетинг. На BetterSelf 2025 той ще сподели практически опит за ролята на изкуствения интелект в ускоряването на растежа и развитието на съвременните брандове.",
+        image: "/йоан-аспарухов.jpg",
+      },
+      {
+        id: 1,
+        name: "Александър Иванов",
+        company: "wellConnected & CreateX",
+        companyLink: "https://createx.bg/",
+        description:
+          'Александър Иванов е създател на първата екосистема от комуникационни и дигитални агенции в България - wellConnected, Александър Иванов ръководи утвърдени компании като CreateX, Native Digital и InventAR - първата агенция за добавена реалност в страната, но и постоянно поставя нови стандарти в бранша. С образование по "Финанси" от Стопанска академия "Димитър А. Ценов" и страст към преподаването, той е завършил две годишната програма като учител по програма "Заедно в Час", където вдъхновява много ученици. В периода 2016 - 2020 година е бил образователен директор в SoftUni Digital & SoftUni Creative и главен мениджър за България на Google Digital Garage, където се е доказал като лидер в обучението по дигитални умения. Неговата мисия е да подготви хората за бъдещето на маркетинга и технологиите. И е успял - с над 45 000 курсисти, преминали през курсовете му по Marketing Basics в SoftUni и Основи на дигиталния маркетинг в Националния военен университет "Васил Левски" и Великотърновския университет "Св. св. Кирил и Методий". Освен това Александър е активен социален предприемач и съосновател на Сдружение "Дигитален Търновград" и медийната група "Дигитално Дело", като допринася за дигиталната трансформация на регионите в България. Той също така вдъхновява младите поколения чрез менторство в инициативата Mentor the Young.',
+        image: "/александър-иванов.jpg",
       },
     ],
   },
@@ -75,6 +81,7 @@ const panelsData = {
         id: 6,
         name: "Биляна Маринова",
         company: "Dr. Bastet",
+        companyLink: "https://drbastet.com/",
         description:
           'Създател на Dr. Bastet и посланик на глюкозната революция в България. След като тялото ѝ "се отказва" на 39 – без енергия, с подут корем и блокиран метаболизъм – Биляна тръгва по пътя на дълбока лична трансформация. През знания, проучвания и обучения създава GlucoHack – първата българска формула, вдъхновена от биохакинг и нутригеномика, която работи с тялото, а не срещу него. Днес тя иска да вдъхнови със своя пример други жени (и мъже) да си върнат контрола – не чрез диети, а по натурален начин, чрез малки ритуали, фибри, суперхрани и ензими, които трансформират тялото отвътре навън.',
         image: "/биляна-маринова.jpg",
@@ -83,6 +90,7 @@ const panelsData = {
         id: 7,
         name: "Даниел Цанков",
         company: "NAD.BG",
+        companyLink: "https://nad.bg/",
         description:
           "Предприемач, инвеститор и визионер в сферата на биохакинга и дълголетието. Собственик на NAD.BG с международен опит в изграждането на компании в Русия, Украйна, САЩ, Франция и Сингапур. В портфолиото му стоят милиардни сделки, управление на над $38 млрд. активи и ръководство на екипи с хиляди служители. Master Franchise Owner на REVIV Bulgaria, COO на VostokFinance Group, консултант в Bain & Company и съосновател на Easy Credit Ukraine. На BetterSelf 2025 ще говори за най-иновативните практики в биохакинга и дълголетието, как да различаваме реално работещите подходи от маркетинговите митове и кои тенденции в науката и технологиите вече променят живота ни.",
         image: "/даниел-цаков.jpg",
@@ -181,46 +189,12 @@ export default function LecturersByPanels() {
                 {/* Лектори */}
                 <div className="space-y-8">
                   {panelsData["innovations-ai"].lecturers.map((lecturer) => (
-                    <div
+                    <LecturerCard
                       key={lecturer.id}
-                      className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden"
-                    >
-                      <div className="p-6">
-                        <div className="flex flex-col md:flex-row gap-6">
-                          {/* Снимка */}
-                          <div className="flex-shrink-0 mx-auto md:mx-0">
-                            <div className="relative w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden ring-4 ring-blue-100">
-                              <Image
-                                src={lecturer.image}
-                                alt={lecturer.name}
-                                fill
-                                className="object-cover"
-                                sizes="(max-width: 768px) 96px, 112px"
-                              />
-                            </div>
-                          </div>
-
-                          {/* Информация */}
-                          <div className="flex-1 text-center md:text-left">
-                            <h3 className="text-xl font-bold text-gray-900 mb-2">
-                              {lecturer.name}
-                            </h3>
-                            {lecturer.company && (
-                              <div className="mb-3">
-                                <span
-                                  className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r ${panelsData["innovations-ai"].color} text-white shadow-sm`}
-                                >
-                                  {lecturer.company}
-                                </span>
-                              </div>
-                            )}
-                            <p className="text-gray-600 text-sm leading-relaxed">
-                              {lecturer.description}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                      lecturer={lecturer}
+                      panelColor={panelsData["innovations-ai"].color}
+                      ringColor="ring-blue-100"
+                    />
                   ))}
                 </div>
               </div>
@@ -270,46 +244,12 @@ export default function LecturersByPanels() {
                 {/* Лектори */}
                 <div className="space-y-8">
                   {panelsData["longevity"].lecturers.map((lecturer) => (
-                    <div
+                    <LecturerCard
                       key={lecturer.id}
-                      className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden"
-                    >
-                      <div className="p-6">
-                        <div className="flex flex-col md:flex-row gap-6">
-                          {/* Снимка */}
-                          <div className="flex-shrink-0 mx-auto md:mx-0">
-                            <div className="relative w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden ring-4 ring-green-100">
-                              <Image
-                                src={lecturer.image}
-                                alt={lecturer.name}
-                                fill
-                                className="object-cover"
-                                sizes="(max-width: 768px) 96px, 112px"
-                              />
-                            </div>
-                          </div>
-
-                          {/* Информация */}
-                          <div className="flex-1 text-center md:text-left">
-                            <h3 className="text-xl font-bold text-gray-900 mb-2">
-                              {lecturer.name}
-                            </h3>
-                            {lecturer.company && (
-                              <div className="mb-3">
-                                <span
-                                  className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r ${panelsData["longevity"].color} text-white shadow-sm`}
-                                >
-                                  {lecturer.company}
-                                </span>
-                              </div>
-                            )}
-                            <p className="text-gray-600 text-sm leading-relaxed">
-                              {lecturer.description}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                      lecturer={lecturer}
+                      panelColor={panelsData["longevity"].color}
+                      ringColor="ring-green-100"
+                    />
                   ))}
                 </div>
               </div>
