@@ -29,11 +29,11 @@ export default function LecturerCard({ lecturer, panelColor, ringColor }) {
   return (
     <div
       className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden ${
-        isExpanded ? "h-auto min-h-80 md:min-h-72" : "h-80 md:h-72"
+        isExpanded ? "h-auto min-h-96 md:min-h-72" : "min-h-96 md:h-72"
       }`}
     >
-      <div className="p-8 h-full flex flex-col justify-center">
-        <div className="flex flex-col md:flex-row gap-8 items-center md:items-center h-full">
+      <div className="p-6 md:p-8 h-full flex flex-col justify-start md:justify-center">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center md:items-center h-full">
           {/* Снимка */}
           <div className="flex-shrink-0 mx-auto md:mx-0">
             <div
@@ -50,9 +50,9 @@ export default function LecturerCard({ lecturer, panelColor, ringColor }) {
           </div>
 
           {/* Информация */}
-          <div className="flex-1 text-center md:text-left flex flex-col justify-center min-h-0">
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-gray-900 leading-tight">
+          <div className="flex-1 text-center md:text-left flex flex-col justify-start md:justify-center min-h-0">
+            <div className="space-y-3 md:space-y-4">
+              <h3 className="text-xl md:text-2xl font-bold text-gray-900 leading-tight">
                 {lecturer.name}
               </h3>
               {lecturer.company && (
@@ -77,7 +77,7 @@ export default function LecturerCard({ lecturer, panelColor, ringColor }) {
               )}
 
               {/* Описание с анимация */}
-              <div className="relative flex-1 min-h-0">
+              <div className="relative">
                 <div className="text-gray-600 text-sm leading-relaxed">
                   <div
                     className={`transition-all duration-700 ease-in-out overflow-hidden ${
@@ -103,7 +103,7 @@ export default function LecturerCard({ lecturer, panelColor, ringColor }) {
 
                 {/* Бутон "Вижте повече" */}
                 {shouldShowButton && (
-                  <div className="mt-4 text-left">
+                  <div className="mt-4 text-center md:text-left">
                     <button
                       onClick={() => setIsExpanded(!isExpanded)}
                       className={`inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-gradient-to-r ${panelColor} rounded-full hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 active:scale-95`}
