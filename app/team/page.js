@@ -626,6 +626,346 @@ export default function TeamPage() {
         </div>
       </div>
 
+      {/* Videographers Team Section */}
+      <div className="bg-gray-50 py-12 sm:py-6">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          {/* Section Title */}
+          <div className="mx-auto max-w-2xl text-center mb-20">
+            <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+              Видеографи
+            </h2>
+            <p className="mt-6 text-lg/8 text-gray-600">
+              Професионалисти в областта на видеозаснемането и създаването на
+              съдържание
+            </p>
+          </div>
+
+          {/* Creative Collaboration Section */}
+          <div className="relative bg-white rounded-3xl shadow-xl overflow-hidden border-2 border-purple-100/50 mb-16">
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-white to-violet-50"></div>
+
+            {/* Advanced gradient effects with purple/violet theme */}
+            <div
+              className="absolute -bottom-24 -left-24 w-80 h-80 opacity-35 blur-2xl rounded-full animate-pulse"
+              style={{
+                background: "linear-gradient(135deg, #8B5CF6, #A855F7)",
+                animationDuration: "8s",
+              }}
+            ></div>
+            <div
+              className="absolute top-20 right-16 w-64 h-64 opacity-20 blur-xl rounded-full animate-pulse"
+              style={{
+                background:
+                  "conic-gradient(from 45deg, #8B5CF6, #C084FC, #8B5CF6)",
+                animationDuration: "15s",
+              }}
+            ></div>
+            <div
+              className="absolute bottom-1/3 left-1/2 -translate-x-1/2 w-48 h-48 opacity-25 blur-lg rounded-full animate-pulse"
+              style={{
+                background: "radial-gradient(ellipse, #A855F7, transparent)",
+                animationDuration: "12s",
+              }}
+            ></div>
+
+            <div className="relative px-8 py-12 sm:px-16 sm:py-16">
+              {/* Header with icons */}
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-12">
+                <div className="flex items-center gap-4">
+                  <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-r from-purple-500 to-violet-600 rounded-2xl flex items-center justify-center">
+                    <svg
+                      className="w-8 h-8 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900">
+                      Креативна колаборация
+                    </h3>
+                    <p className="font-medium text-purple-600">
+                      Видеопродукция и съдържание за социални мрежи
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Main Content */}
+              <h2 className="text-4xl font-bold tracking-tight text-gray-900 mb-8">
+                Неделин Радков & Вероника Цветанова
+              </h2>
+
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 items-start">
+                {/* Left side - Main Description */}
+                <div className="lg:col-span-2">
+                  <p className="text-xl text-gray-600 mb-8 leading-relaxed font-medium">
+                    Динамичен дует, който съчетава техническото майсторство с
+                    креативната стратегия
+                  </p>
+
+                  <div className="space-y-6 text-gray-600">
+                    <p className="text-lg leading-relaxed">
+                      <strong className="text-gray-900">Неделин Радков</strong>{" "}
+                      и{" "}
+                      <strong className="text-gray-900">
+                        Вероника Цветанова
+                      </strong>{" "}
+                      са част от екипа на Better Self, но същевременно стоят и
+                      зад собствените си компании – той в областта на
+                      видеозаснемането и продукцията, а тя в управлението и
+                      стратегическото развитие на съдържание за социални мрежи.
+                    </p>
+                    <p className="text-lg leading-relaxed">
+                      Вече повече от{" "}
+                      <strong className="text-purple-600">пет години</strong>{" "}
+                      двамата развиват дейността си на българския пазар, като
+                      чрез тясно сътрудничество между техните фирми предлагат
+                      цялостни решения – от изграждането на концепция и
+                      сценарий, през професионалното заснемане, до финалното
+                      представяне на съдържанието пред аудиторията.
+                    </p>
+                    <p className="text-lg leading-relaxed">
+                      Тази колаборация съчетава{" "}
+                      <strong className="text-gray-900">
+                        творческия поглед и техническото майсторство
+                      </strong>{" "}
+                      с умението да се управлява и насочва съдържанието така, че
+                      то да достига и въздейства максимално.
+                    </p>
+                  </div>
+
+                  {/* Services */}
+                  <div className="mt-10">
+                    <h4 className="text-lg font-semibold text-gray-900 mb-6">
+                      Специализации и услуги:
+                    </h4>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div className="flex flex-col gap-2">
+                        <h5 className="font-semibold text-purple-600">
+                          Неделин Радков
+                        </h5>
+                        <div className="flex flex-wrap gap-2">
+                          {[
+                            "Видеопродукция",
+                            "Професионално заснемане",
+                            "Пост-продукция",
+                            "Корпоративни видеа",
+                            "Рекламни клипове",
+                          ].map((service) => (
+                            <span
+                              key={service}
+                              className="px-3 py-1 bg-purple-100 rounded-full text-sm font-medium text-purple-700"
+                            >
+                              {service}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="flex flex-col gap-2">
+                        <h5 className="font-semibold text-violet-600">
+                          Вероника Цветанова
+                        </h5>
+                        <div className="flex flex-wrap gap-2">
+                          {[
+                            "Стратегия за съдържание",
+                            "Управление социални мрежи",
+                            "Концепция и сценарий",
+                            "Дигитален маркетинг",
+                            "Брандинг стратегии",
+                          ].map((service) => (
+                            <span
+                              key={service}
+                              className="px-3 py-1 bg-violet-100 rounded-full text-sm font-medium text-violet-700"
+                            >
+                              {service}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right side - Visual representation */}
+                <div className="relative hidden lg:block">
+                  <div className="aspect-square w-full max-w-sm mx-auto">
+                    {/* Creative workflow visual */}
+                    <div className="relative w-full h-full">
+                      {/* Center collaboration icon */}
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-24 h-24 bg-white rounded-3xl shadow-lg flex items-center justify-center border-4 border-purple-100">
+                          <svg
+                            className="w-12 h-12 text-purple-600"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+
+                      {/* Orbiting elements */}
+                      <div
+                        className="absolute inset-0 animate-spin"
+                        style={{ animationDuration: "25s" }}
+                      >
+                        <div className="relative w-full h-full">
+                          {[
+                            {
+                              icon: "🎬",
+                              label: "Video",
+                              position: "top-0 left-1/2 -translate-x-1/2",
+                            },
+                            {
+                              icon: "📱",
+                              label: "Social",
+                              position: "top-1/4 right-0",
+                            },
+                            {
+                              icon: "✨",
+                              label: "Creative",
+                              position: "bottom-1/4 right-0",
+                            },
+                            {
+                              icon: "🎯",
+                              label: "Strategy",
+                              position: "bottom-0 left-1/2 -translate-x-1/2",
+                            },
+                            {
+                              icon: "📈",
+                              label: "Growth",
+                              position: "bottom-1/4 left-0",
+                            },
+                            {
+                              icon: "🎨",
+                              label: "Design",
+                              position: "top-1/4 left-0",
+                            },
+                          ].map((item, index) => (
+                            <div
+                              key={index}
+                              className={`absolute w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center border-2 border-purple-100 ${item.position}`}
+                            >
+                              <span className="text-lg">{item.icon}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Bottom Section - Photos and Stats */}
+              <div className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8 items-center">
+                {/* Left - Nedelin Photo */}
+                <div className="relative">
+                  <div className="relative">
+                    {/* Decorative elements behind photo */}
+                    <div className="absolute -top-4 -right-4 w-40 h-40 sm:w-48 sm:h-48 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse -z-10"></div>
+                    <div
+                      className="absolute -bottom-4 -left-4 w-40 h-40 sm:w-48 sm:h-48 bg-violet-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse -z-10"
+                      style={{ animationDelay: "1s" }}
+                    ></div>
+
+                    <div className="relative aspect-[3/4] w-full max-w-xs mx-auto overflow-hidden rounded-2xl bg-gray-100 shadow-2xl z-10">
+                      <img
+                        src="/placeholder.webp"
+                        alt="Неделин Радков"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+
+                    {/* Photo label */}
+                    <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-white px-4 py-2 rounded-full shadow-lg border border-purple-100">
+                      <p className="text-sm font-medium text-gray-700">
+                        Неделин Радков
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Middle - Stats */}
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="text-center p-4 bg-purple-50 rounded-xl">
+                    <div className="text-2xl font-bold text-purple-600">5+</div>
+                    <div className="text-sm text-gray-600 font-medium">
+                      Години сътрудничество
+                    </div>
+                  </div>
+                  <div className="text-center p-4 bg-violet-50 rounded-xl">
+                    <div className="text-2xl font-bold text-violet-600">
+                      100+
+                    </div>
+                    <div className="text-sm text-gray-600 font-medium">
+                      Реализирани проекта
+                    </div>
+                  </div>
+                  <div className="text-center p-4 bg-purple-50 rounded-xl">
+                    <div className="text-2xl font-bold text-purple-600">∞</div>
+                    <div className="text-sm text-gray-600 font-medium">
+                      Креативни идеи
+                    </div>
+                  </div>
+                  <div className="text-center p-4 bg-violet-50 rounded-xl">
+                    <div className="text-2xl font-bold text-violet-600">
+                      360°
+                    </div>
+                    <div className="text-sm text-gray-600 font-medium">
+                      Цялостни решения
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right - Veronika Photo */}
+                <div className="relative">
+                  <div className="relative">
+                    {/* Decorative elements behind photo */}
+                    <div
+                      className="absolute -top-4 -right-4 w-40 h-40 sm:w-48 sm:h-48 bg-violet-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse -z-10"
+                      style={{ animationDelay: "2s" }}
+                    ></div>
+                    <div
+                      className="absolute -bottom-4 -left-4 w-40 h-40 sm:w-48 sm:h-48 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse -z-10"
+                      style={{ animationDelay: "3s" }}
+                    ></div>
+
+                    <div className="relative aspect-[3/4] w-full max-w-xs mx-auto overflow-hidden rounded-2xl bg-gray-100 shadow-2xl z-10">
+                      <img
+                        src="/placeholder.webp"
+                        alt="Вероника Цветанова"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+
+                    {/* Photo label */}
+                    <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-white px-4 py-2 rounded-full shadow-lg border border-violet-100">
+                      <p className="text-sm font-medium text-gray-700">
+                        Вероника Цветанова
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Call to Action */}
       <div className="bg-gradient-to-r from-orange-500 to-orange-600 py-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
