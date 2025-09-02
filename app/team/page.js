@@ -360,275 +360,9 @@ export default function TeamPage() {
         </div>
       </div>
 
-      {/* Organizational Team Section */}
-      <div className="bg-white py-12 sm:py-6">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          {/* Section Title */}
-          <div className="mx-auto max-w-2xl text-center mb-20">
-            <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-              Организаторски екип
-            </h2>
-            <p className="mt-6 text-lg/8 text-gray-600">
-              Експертите и визионерите, които създават и развиват BetterSelf
-            </p>
-          </div>
-
-          {/* Two Column Layout for Team Members */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20">
-            {/* Jasmina Majid */}
-            <div className="relative isolate">
-              <div className="flex flex-col items-center text-center">
-                {/* Image */}
-                <div className="relative mb-8">
-                  {/* Decorative elements behind image */}
-                  <div className="absolute -top-4 -right-4 w-72 h-72 bg-orange-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse -z-10"></div>
-                  <div
-                    className="absolute -bottom-8 -left-4 w-72 h-72 bg-yellow-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse -z-10"
-                    style={{ animationDelay: "1s" }}
-                  ></div>
-
-                  <div className="relative aspect-square w-80 overflow-hidden rounded-3xl bg-gray-100 shadow-2xl z-10">
-                    <img
-                      src="/жасмина-маджид.webp"
-                      alt="Д-р Жасмина Маджид"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="w-full">
-                  <div className="flex items-center justify-center gap-3 mb-6">
-                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl flex items-center justify-center">
-                      <svg
-                        className="w-6 h-6 text-white"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="text-orange-600 font-medium text-center">
-                        Основател & Визионер
-                      </p>
-                    </div>
-                  </div>
-
-                  <h3 className="text-3xl font-bold tracking-tight text-gray-900 mb-4">
-                    Д-р Жасмина Маджид
-                  </h3>
-
-                  <p className="text-lg text-orange-600 mb-6 font-medium">
-                    Основател и визионер на BetterSelf
-                  </p>
-
-                  <p className="text-lg text-gray-600 mb-6 leading-relaxed font-medium">
-                    Създател на концепцията и главен организатор на
-                    конференцията BetterSelf 2025
-                  </p>
-
-                  <div className="text-base text-gray-600 text-left space-y-5 leading-loose">
-                    <p className="font-medium">
-                      Д-р Жасмина Маджид е икономист, предприемач и медиен
-                      професионалист с дългогодишен опит в създаването на
-                      проекти, посветени на здравето, личностното развитие и
-                      бъдещето на човешкия потенциал.
-                    </p>
-                    <p className="font-medium">
-                      Тя е двигателят зад визията BetterSelf – не просто като
-                      събитие, а като цялостна платформа и общност, която събира
-                      най-иновативните специалисти, лекари, биохакери, психолози
-                      и новатори с обща мисия: да направим по-доброто себе си
-                      възможно – физически, психически и емоционално.
-                    </p>
-                    <p className="font-medium">
-                      Като основен инициатор на конференцията, Жасмина е
-                      отговорна за създаването на концепцията, подбора на
-                      лекторите, стратегическото партньорство, избора на локация
-                      и цялостната организация.
-                    </p>
-                    <p className="font-medium">
-                      Нейната роля е визионерска – тя изгражда екипа, задава
-                      посоката и създава мост между науката за дълголетие,
-                      практиките на био-хакингa и реалните нужди на съвременния
-                      човек.
-                    </p>
-                    <p className="font-medium">
-                      BetterSelf е нейна кауза – платформа, която тепърва ще се
-                      развива с годишни конференции, тематични мини-събития и
-                      мрежа от професионалисти и компании, обединени от
-                      желанието да вдъхновяват, лекуват и трансформират.
-                    </p>
-                  </div>
-
-                  {/* Stats */}
-                  <div className="mt-8 grid grid-cols-2 gap-6">
-                    <div className="text-center p-4 bg-orange-50 rounded-xl">
-                      <div className="text-2xl font-bold text-orange-600">
-                        10+
-                      </div>
-                      <div className="text-sm text-gray-600">Години опит</div>
-                    </div>
-                    <div className="text-center p-4 bg-orange-50 rounded-xl">
-                      <div className="text-2xl font-bold text-orange-600">
-                        1000+
-                      </div>
-                      <div className="text-sm text-gray-600">Проекта</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Totka Naloka */}
-            <div className="relative isolate">
-              <div className="flex flex-col items-center text-center">
-                {/* Image */}
-                <div className="relative mb-8">
-                  {/* Decorative elements behind image */}
-                  <div
-                    className="absolute -top-4 -right-4 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse -z-10"
-                    style={{ animationDelay: "2s" }}
-                  ></div>
-                  <div
-                    className="absolute -bottom-8 -left-4 w-72 h-72 bg-indigo-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse -z-10"
-                    style={{ animationDelay: "3s" }}
-                  ></div>
-
-                  <div className="relative aspect-square w-80 overflow-hidden rounded-3xl bg-gray-100 shadow-2xl z-10">
-                    <img
-                      src="/totka-nalocca.jpg"
-                      alt="Тотка Налока"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="w-full">
-                  <div className="flex items-center justify-center gap-3 mb-6">
-                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
-                      <svg
-                        className="w-6 h-6 text-white"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-4m-5 0H3m2 0h4M9 7h6m-6 4h6m-6 4h6"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="text-blue-600 font-medium text-center">
-                        Оперативен директор
-                      </p>
-                    </div>
-                  </div>
-
-                  <h3 className="text-3xl font-bold tracking-tight text-gray-900 mb-4">
-                    Тотка Налока
-                  </h3>
-
-                  <p className="text-lg text-blue-600 mb-6 font-medium">
-                    Оперативен директор и стратегически консултант за сценично и
-                    техническо преживяване
-                  </p>
-
-                  <div className="text-base text-gray-600 text-left space-y-5 leading-loose">
-                    <p className="font-medium">
-                      Тотка Налока е стратегически консултант с фокус върху
-                      цялостния успех на събитията – от планирането и
-                      изпълнението до рентабилността, печалбата и въздействието
-                      върху участниците. Работи в тясно сътрудничество с
-                      различни екипи, за да изгражда и прилага ефективни
-                      стратегии, които гарантират постигането на конкретни
-                      резултати.
-                    </p>
-                    <p className="font-medium">
-                      В Biohacking BetaSelf 2025 Тотка отговаря за
-                      стратегическото и оперативното планиране на събитието,
-                      включително продажбената стратегия, клиентското
-                      преживяване и логистиката на място. Тя координира ключови
-                      процеси и обезпечава синхрон между екипите, така че всяка
-                      част от събитието да допринася към една обща, въздействаща
-                      и печеливша цялост.
-                    </p>
-                    <p className="font-medium">
-                      Преди да се присъедини към BetterSelf, Тотка е ръководила
-                      лондонския офис на Success Resources – най-голямата
-                      световна компания за организиране на събития, с над 7
-                      офиса на различни континенти и годишен оборот от над 100
-                      милиона долара. Като Country Manager тя е отговаряла за
-                      продажбите и оперативната дейност в Европа и
-                      Великобритания, ръководила е екип от 30 души и е била
-                      активна част от международния мениджърски екип на
-                      компанията, включващ офиси в Сингапур, Китай, Малайзия,
-                      Австралия, Южна Африка и Европа. Наред с това, Тотка е
-                      менажирала ключови партньорства в цяла Европа, изграждайки
-                      стабилни бизнес взаимоотношения и локални мрежи, които
-                      допринасят за растежа и въздействието на бранда на
-                      континента.
-                    </p>
-                    <p className="font-medium">
-                      Под нейно ръководство са организирани стотици събития с
-                      водещи имена в индустрията като Тони Робинс, Робърт
-                      Кийосаки, Гари Вайнерчук и други – събития, които
-                      вдъхновяват, въздействат и оставят траен резултат.
-                    </p>
-                    <p className="font-medium">
-                      След този период Тотка се посвещава на консултиране на
-                      бизнеси и на своята мисия да помага на хората чрез
-                      коучинг. Работата ѝ е насочена към стратегическо развитие,
-                      менторство и изграждане на устойчиви системи за растеж –
-                      както в личен, така и в професионален контекст. Паралелно
-                      с това, през последните години тя активно съдейства и за
-                      развитието на личния бранд на съпруга ѝ Моузес Налока, с
-                      участие в управлението и стратегическото позициониране на
-                      неговите инициативи.
-                    </p>
-                    <p className="font-medium">
-                      Нейната мисия е всяко събитие да бъде създадено
-                      стратегически – така че да е запомнящо се, рентабилно и да
-                      носи реална стойност за участниците и организаторите.
-                    </p>
-                  </div>
-
-                  {/* Stats */}
-                  <div className="mt-8 grid grid-cols-2 gap-6">
-                    <div className="text-center p-4 bg-blue-50 rounded-xl">
-                      <div className="text-2xl font-bold text-blue-600">
-                        15+
-                      </div>
-                      <div className="text-sm text-gray-600">Години опит</div>
-                    </div>
-                    <div className="text-center p-4 bg-blue-50 rounded-xl">
-                      <div className="text-2xl font-bold text-blue-600">
-                        500+
-                      </div>
-                      <div className="text-sm text-gray-600">Събития</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Videographers Team Section */}
+      {/* Videographers Team Section - SECOND */}
       <div className="bg-gray-50 py-12 sm:py-6">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-16">
           {/* Section Title */}
           <div className="mx-auto max-w-2xl text-center mb-20">
             <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
@@ -957,6 +691,983 @@ export default function TeamPage() {
                       <p className="text-sm font-medium text-gray-700">
                         Вероника Цветанова
                       </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Max Group Events Section - THIRD */}
+      <div className="bg-white py-12 sm:py-6">
+        <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-16">
+          {/* Section Title */}
+          <div className="mx-auto max-w-2xl text-center mb-20">
+            <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+              Max Group Events
+            </h2>
+            <p className="mt-6 text-lg/8 text-gray-600">
+              Техническо озвучаване и осветление от най-високо ниво
+            </p>
+          </div>
+
+          {/* Max Group Events Section */}
+          <div className="relative bg-white rounded-3xl shadow-xl overflow-hidden border-2 border-red-100/50 mb-16">
+            <div className="absolute inset-0 bg-gradient-to-br from-red-50 via-white to-rose-50"></div>
+
+            {/* Advanced gradient effects with red/rose theme */}
+            <div
+              className="absolute -bottom-24 -left-24 w-80 h-80 opacity-35 blur-2xl rounded-full animate-pulse"
+              style={{
+                background: "linear-gradient(135deg, #EF4444, #F87171)",
+                animationDuration: "9s",
+              }}
+            ></div>
+            <div
+              className="absolute top-20 right-16 w-64 h-64 opacity-20 blur-xl rounded-full animate-pulse"
+              style={{
+                background:
+                  "conic-gradient(from 90deg, #EF4444, #FB7185, #EF4444)",
+                animationDuration: "18s",
+              }}
+            ></div>
+            <div
+              className="absolute bottom-1/3 left-1/2 -translate-x-1/2 w-48 h-48 opacity-25 blur-lg rounded-full animate-pulse"
+              style={{
+                background: "radial-gradient(ellipse, #F87171, transparent)",
+                animationDuration: "14s",
+              }}
+            ></div>
+
+            <div className="relative px-8 py-12 sm:px-16 sm:py-16">
+              {/* Header with icons */}
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-12">
+                <div className="flex items-center gap-4">
+                  <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-r from-red-500 to-rose-600 rounded-2xl flex items-center justify-center">
+                    <svg
+                      className="w-8 h-8 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900">
+                      Техническо превъзходство
+                    </h3>
+                    <p className="font-medium text-red-600">
+                      Професионално озвучаване и осветление
+                    </p>
+                  </div>
+                </div>
+
+                {/* Max Group Events Logo */}
+                <div className="flex-shrink-0 self-start sm:self-center">
+                  <img
+                    src="/max-group-events-logo.png"
+                    alt="Max Group Events Logo"
+                    className="h-16 w-auto"
+                  />
+                </div>
+              </div>
+
+              {/* Main Content */}
+              <h2 className="text-4xl font-bold tracking-tight text-gray-900 mb-8">
+                Max Group Events
+              </h2>
+
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 items-start">
+                {/* Left side - Main Description */}
+                <div className="lg:col-span-2">
+                  <p className="text-xl text-gray-600 mb-8 leading-relaxed font-medium">
+                    Екипът, който ще превърне BetterSelf в истинско зрелище!
+                  </p>
+
+                  <div className="space-y-6 text-gray-600">
+                    <p className="text-lg leading-relaxed">
+                      <strong className="text-gray-900">
+                        Max Group Events
+                      </strong>{" "}
+                      е екипът, който ще превърне BetterSelf в истинско зрелище!
+                      Те ще осигурят пълното техническо обезпечаване на
+                      конференцията – професионално озвучаване и осветление от
+                      най-високо ниво.
+                    </p>
+                    <p className="text-lg leading-relaxed">
+                      Благодарение на тяхната апаратура и дългогодишен опит,
+                      всяка лекция, дискусия и музикална част ще прозвучи{" "}
+                      <strong className="text-red-600">кристално ясно</strong>,
+                      а светлинният дизайн ще изгради неповторима атмосфера,
+                      която ще подчертае емоцията и мащаба на събитието.
+                    </p>
+                    <p className="text-lg leading-relaxed">
+                      С Max Group Events сцената на BetterSelf ще оживее – с{" "}
+                      <strong className="text-gray-900">
+                        енергия, прецизност и впечатляваща визия
+                      </strong>
+                      .
+                    </p>
+                    <p className="text-lg leading-relaxed">
+                      От години Max Group Events е доказан професионален
+                      партньор в цялостната организация и управление на събития.
+                      Техният обхват включва концепция и креативен дизайн,
+                      сцени, озвучаване, осветление, мултимедия, специални
+                      ефекти, логистика, декорация и координация на място, както
+                      и артистични програми, водещи и персонал.
+                    </p>
+                    <p className="text-lg leading-relaxed">
+                      Специализират в корпоративни събития, концерти, фестивали,
+                      конференции, промоции, частни тържества и мащабни публични
+                      прояви – винаги с внимание към всеки детайл.
+                    </p>
+                  </div>
+
+                  {/* Services */}
+                  <div className="mt-10">
+                    <h4 className="text-lg font-semibold text-gray-900 mb-6">
+                      Специализирани услуги:
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {[
+                        "Професионално озвучаване",
+                        "Сценично осветление",
+                        "Мултимедия системи",
+                        "Специални ефекти",
+                        "Сценичен дизайн",
+                        "Логистика",
+                        "Декорация",
+                        "Координация на място",
+                        "Артистични програми",
+                        "Корпоративни събития",
+                        "Концерти и фестивали",
+                        "Конференции",
+                      ].map((service) => (
+                        <span
+                          key={service}
+                          className="px-3 py-1 bg-red-100 rounded-full text-sm font-medium text-red-700"
+                        >
+                          {service}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right side - Visual representation */}
+                <div className="relative hidden lg:block">
+                  <div className="aspect-square w-full max-w-sm mx-auto">
+                    {/* Technical equipment visual */}
+                    <div className="relative w-full h-full">
+                      {/* Center stage icon */}
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-24 h-24 bg-white rounded-3xl shadow-lg flex items-center justify-center border-4 border-red-100">
+                          <svg
+                            className="w-12 h-12 text-red-600"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 0h10m-10 0a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V6a2 2 0 00-2-2M9 12h6m-6 4h6"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+
+                      {/* Orbiting elements */}
+                      <div
+                        className="absolute inset-0 animate-spin"
+                        style={{ animationDuration: "30s" }}
+                      >
+                        <div className="relative w-full h-full">
+                          {[
+                            {
+                              icon: "🎤",
+                              label: "Audio",
+                              position: "top-0 left-1/2 -translate-x-1/2",
+                            },
+                            {
+                              icon: "💡",
+                              label: "Lighting",
+                              position: "top-1/4 right-0",
+                            },
+                            {
+                              icon: "🎭",
+                              label: "Stage",
+                              position: "bottom-1/4 right-0",
+                            },
+                            {
+                              icon: "📺",
+                              label: "Media",
+                              position: "bottom-0 left-1/2 -translate-x-1/2",
+                            },
+                            {
+                              icon: "✨",
+                              label: "Effects",
+                              position: "bottom-1/4 left-0",
+                            },
+                            {
+                              icon: "🎪",
+                              label: "Events",
+                              position: "top-1/4 left-0",
+                            },
+                          ].map((item, index) => (
+                            <div
+                              key={index}
+                              className={`absolute w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center border-2 border-red-100 ${item.position}`}
+                            >
+                              <span className="text-lg">{item.icon}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Bottom Section - Team Photos and Stats */}
+              <div className="mt-16 grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-6 items-center">
+                {/* Left - Nadezhda Photo */}
+                <div className="relative">
+                  <div className="relative">
+                    {/* Decorative elements behind photo */}
+                    <div className="absolute -top-4 -right-4 w-32 h-32 bg-red-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse -z-10"></div>
+                    <div
+                      className="absolute -bottom-4 -left-4 w-32 h-32 bg-rose-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse -z-10"
+                      style={{ animationDelay: "1s" }}
+                    ></div>
+
+                    <div className="relative aspect-[3/4] w-full max-w-xs mx-auto overflow-hidden rounded-2xl bg-gray-100 shadow-2xl z-10">
+                      <img
+                        src="/надежда-първанова.jpg"
+                        alt="Надежда Първанова"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+
+                    {/* Photo label */}
+                    <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-white px-3 py-1 rounded-full shadow-lg border border-red-100">
+                      <p className="text-xs font-medium text-gray-700">
+                        Надежда Първанова
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Middle Left - Stoyan Photo */}
+                <div className="relative">
+                  <div className="relative">
+                    {/* Decorative elements behind photo */}
+                    <div
+                      className="absolute -top-4 -right-4 w-32 h-32 bg-rose-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse -z-10"
+                      style={{ animationDelay: "2s" }}
+                    ></div>
+                    <div
+                      className="absolute -bottom-4 -left-4 w-32 h-32 bg-red-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse -z-10"
+                      style={{ animationDelay: "3s" }}
+                    ></div>
+
+                    <div className="relative aspect-[3/4] w-full max-w-xs mx-auto overflow-hidden rounded-2xl bg-gray-100 shadow-2xl z-10">
+                      <img
+                        src="/стоян-тенов.jpg"
+                        alt="Стоян Тенов"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+
+                    {/* Photo label */}
+                    <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-white px-3 py-1 rounded-full shadow-lg border border-rose-100">
+                      <p className="text-xs font-medium text-gray-700">
+                        Стоян Тенов
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Middle Right - Stats */}
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="text-center p-3 bg-red-50 rounded-xl">
+                    <div className="text-xl font-bold text-red-600">10+</div>
+                    <div className="text-xs text-gray-600 font-medium">
+                      Години опит
+                    </div>
+                  </div>
+                  <div className="text-center p-3 bg-rose-50 rounded-xl">
+                    <div className="text-xl font-bold text-rose-600">500+</div>
+                    <div className="text-xs text-gray-600 font-medium">
+                      Събития
+                    </div>
+                  </div>
+                  <div className="text-center p-3 bg-red-50 rounded-xl">
+                    <div className="text-xl font-bold text-red-600">24/7</div>
+                    <div className="text-xs text-gray-600 font-medium">
+                      Подкрепа
+                    </div>
+                  </div>
+                  <div className="text-center p-3 bg-rose-50 rounded-xl">
+                    <div className="text-xl font-bold text-rose-600">100%</div>
+                    <div className="text-xs text-gray-600 font-medium">
+                      Качество
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right - Company Photo */}
+                <div className="relative">
+                  <div className="relative">
+                    {/* Decorative elements behind photo */}
+                    <div
+                      className="absolute -top-4 -right-4 w-32 h-32 bg-red-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse -z-10"
+                      style={{ animationDelay: "4s" }}
+                    ></div>
+                    <div
+                      className="absolute -bottom-4 -left-4 w-32 h-32 bg-rose-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse -z-10"
+                      style={{ animationDelay: "5s" }}
+                    ></div>
+
+                    <div className="relative aspect-[4/3] w-full max-w-xs mx-auto overflow-hidden rounded-2xl bg-gray-100 shadow-2xl z-10">
+                      <img
+                        src="/max-group-events.jpg"
+                        alt="Max Group Events"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+
+                    {/* Photo label */}
+                    <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-white px-3 py-1 rounded-full shadow-lg border border-red-100">
+                      <p className="text-xs font-medium text-gray-700">
+                        Max Group Events
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* CreateX & wellConnected Ecosystem Section - FOURTH */}
+      <div className="bg-gray-50 py-12 sm:py-6">
+        <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-16">
+          {/* Section Title */}
+          <div className="mx-auto max-w-2xl text-center mb-20">
+            <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+              CreateX & wellConnected
+            </h2>
+            <p className="mt-6 text-lg/8 text-gray-600">
+              AI автоматизации и интегрирани решения за дигитално развитие
+            </p>
+          </div>
+
+          {/* CreateX Section */}
+          <div className="relative bg-white rounded-3xl shadow-xl overflow-hidden border-2 border-cyan-100/50 mb-16">
+            <div className="absolute inset-0 bg-gradient-to-br from-cyan-50 via-white to-blue-50"></div>
+
+            {/* Advanced gradient effects with cyan/blue theme */}
+            <div
+              className="absolute -bottom-24 -left-24 w-80 h-80 opacity-35 blur-2xl rounded-full animate-pulse"
+              style={{
+                background: "linear-gradient(135deg, #06B6D4, #0EA5E9)",
+                animationDuration: "10s",
+              }}
+            ></div>
+            <div
+              className="absolute top-20 right-16 w-64 h-64 opacity-20 blur-xl rounded-full animate-pulse"
+              style={{
+                background:
+                  "conic-gradient(from 180deg, #06B6D4, #3B82F6, #06B6D4)",
+                animationDuration: "20s",
+              }}
+            ></div>
+            <div
+              className="absolute bottom-1/3 left-1/2 -translate-x-1/2 w-48 h-48 opacity-25 blur-lg rounded-full animate-pulse"
+              style={{
+                background: "radial-gradient(ellipse, #0EA5E9, transparent)",
+                animationDuration: "16s",
+              }}
+            ></div>
+
+            <div className="relative px-8 py-12 sm:px-16 sm:py-16">
+              {/* Header with icons */}
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-12">
+                <div className="flex items-center gap-4">
+                  <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center">
+                    <svg
+                      className="w-8 h-8 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M13 10V3L4 14h7v7l9-11h-7z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900">
+                      AI Иновации & Екосистема
+                    </h3>
+                    <p className="font-medium text-cyan-600">
+                      Интегрирани решения за дигитално развитие
+                    </p>
+                  </div>
+                </div>
+
+                {/* CreateX Logo */}
+                <div className="flex-shrink-0 self-start sm:self-center">
+                  <img
+                    src="/createx-logo.png"
+                    alt="CreateX Logo"
+                    className="h-16 w-auto"
+                  />
+                </div>
+              </div>
+
+              {/* Main Content */}
+              <h2 className="text-4xl font-bold tracking-tight text-gray-900 mb-8">
+                CreateX & wellConnected Ecosystem
+              </h2>
+
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 items-start">
+                {/* Left side - Main Description */}
+                <div className="lg:col-span-2">
+                  <p className="text-xl text-gray-600 mb-8 leading-relaxed font-medium">
+                    Екосистема за умно, бързо и устойчиво бизнес развитие
+                  </p>
+
+                  <div className="space-y-6 text-gray-600">
+                    <p className="text-lg leading-relaxed">
+                      <strong className="text-gray-900">CreateX</strong> е част
+                      от екосистемата{" "}
+                      <strong className="text-cyan-600">wellConnected</strong> –
+                      група компании, които заедно създават интегрирани решения
+                      за дигитално развитие.
+                    </p>
+                    <p className="text-lg leading-relaxed">
+                      Нашата мисия е да помагаме на бизнесите да растат{" "}
+                      <strong className="text-gray-900">
+                        по-умно, по-бързо и по-устойчиво
+                      </strong>
+                      , като комбинираме силата на AI автоматизациите с
+                      експертизата ни в дигиталния маркетинг.
+                    </p>
+                    <p className="text-lg leading-relaxed">
+                      Така, с един партньор, компаниите получават цялостен
+                      подход – от стратегия и маркетинг, до автоматизации и
+                      технологични решения, които{" "}
+                      <strong className="text-cyan-600">
+                        пестят време и увеличават ефективността
+                      </strong>
+                      .
+                    </p>
+                    <p className="text-lg leading-relaxed">
+                      <strong className="text-gray-900">wellConnected</strong> е
+                      повече от агенция – това е екосистема, в която CreateX е
+                      двигателят на иновациите в маркетинга и AI
+                      автоматизацията.
+                    </p>
+                  </div>
+
+                  {/* Services */}
+                  <div className="mt-10">
+                    <h4 className="text-lg font-semibold text-gray-900 mb-6">
+                      В рамките на екосистемата предлагаме:
+                    </h4>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                      <div className="flex flex-col gap-3">
+                        <h5 className="font-semibold text-cyan-600">
+                          Дигитален маркетинг
+                        </h5>
+                        <div className="flex flex-wrap gap-2">
+                          {[
+                            "Кампании",
+                            "Съдържание",
+                            "Социални мрежи",
+                            "SEO",
+                            "Google & Meta реклама",
+                          ].map((service) => (
+                            <span
+                              key={service}
+                              className="px-3 py-1 bg-cyan-100 rounded-full text-sm font-medium text-cyan-700"
+                            >
+                              {service}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="flex flex-col gap-3">
+                        <h5 className="font-semibold text-blue-600">
+                          AI автоматизации
+                        </h5>
+                        <div className="flex flex-wrap gap-2">
+                          {[
+                            "Чатботове",
+                            "Анализ на данни",
+                            "CRM интеграции",
+                            "Автоматизация процеси",
+                            "Генериране съдържание",
+                          ].map((service) => (
+                            <span
+                              key={service}
+                              className="px-3 py-1 bg-blue-100 rounded-full text-sm font-medium text-blue-700"
+                            >
+                              {service}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="flex flex-col gap-3">
+                        <h5 className="font-semibold text-cyan-600">
+                          Creative & Production
+                        </h5>
+                        <div className="flex flex-wrap gap-2">
+                          {["Дизайн", "Видео", "Криейтив кампании"].map(
+                            (service) => (
+                              <span
+                                key={service}
+                                className="px-3 py-1 bg-cyan-100 rounded-full text-sm font-medium text-cyan-700"
+                              >
+                                {service}
+                              </span>
+                            )
+                          )}
+                        </div>
+                      </div>
+                      <div className="flex flex-col gap-3">
+                        <h5 className="font-semibold text-blue-600">
+                          Tech & Web
+                        </h5>
+                        <div className="flex flex-wrap gap-2">
+                          {[
+                            "Уебсайтове",
+                            "E-commerce",
+                            "Системи за управление",
+                          ].map((service) => (
+                            <span
+                              key={service}
+                              className="px-3 py-1 bg-blue-100 rounded-full text-sm font-medium text-blue-700"
+                            >
+                              {service}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right side - Visual representation */}
+                <div className="relative hidden lg:block">
+                  <div className="aspect-square w-full max-w-sm mx-auto">
+                    {/* AI ecosystem visual */}
+                    <div className="relative w-full h-full">
+                      {/* Center AI icon */}
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-24 h-24 bg-white rounded-3xl shadow-lg flex items-center justify-center border-4 border-cyan-100">
+                          <svg
+                            className="w-12 h-12 text-cyan-600"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+
+                      {/* Orbiting elements */}
+                      <div
+                        className="absolute inset-0 animate-spin"
+                        style={{ animationDuration: "35s" }}
+                      >
+                        <div className="relative w-full h-full">
+                          {[
+                            {
+                              icon: "🤖",
+                              label: "AI",
+                              position: "top-0 left-1/2 -translate-x-1/2",
+                            },
+                            {
+                              icon: "📊",
+                              label: "Analytics",
+                              position: "top-1/4 right-0",
+                            },
+                            {
+                              icon: "🎯",
+                              label: "Marketing",
+                              position: "bottom-1/4 right-0",
+                            },
+                            {
+                              icon: "💻",
+                              label: "Tech",
+                              position: "bottom-0 left-1/2 -translate-x-1/2",
+                            },
+                            {
+                              icon: "🎨",
+                              label: "Creative",
+                              position: "bottom-1/4 left-0",
+                            },
+                            {
+                              icon: "⚡",
+                              label: "Automation",
+                              position: "top-1/4 left-0",
+                            },
+                          ].map((item, index) => (
+                            <div
+                              key={index}
+                              className={`absolute w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center border-2 border-cyan-100 ${item.position}`}
+                            >
+                              <span className="text-lg">{item.icon}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Bottom Section - Company Photo and Stats */}
+              <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                {/* Left - Company Photo */}
+                <div className="relative">
+                  <div className="relative">
+                    {/* Decorative elements above and below photo */}
+                    <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-40 h-40 sm:w-56 sm:h-56 bg-cyan-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse -z-10"></div>
+                    <div
+                      className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-40 h-40 sm:w-56 sm:h-56 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse -z-10"
+                      style={{ animationDelay: "1s" }}
+                    ></div>
+
+                    <div className="relative aspect-[16/9] w-full max-w-2xl mx-auto overflow-hidden rounded-2xl bg-gray-100 shadow-2xl z-10">
+                      <img
+                        src="/CreateX&wellConnected-Ecosystem.jpg"
+                        alt="CreateX & wellConnected Ecosystem"
+                        className="w-full h-full object-contain bg-white"
+                      />
+                    </div>
+
+                    {/* Photo label */}
+                    <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-white px-4 py-2 rounded-full shadow-lg border border-cyan-100">
+                      <p className="text-sm font-medium text-gray-700">
+                        CreateX & wellConnected Ecosystem
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right - Company Stats */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="text-center p-4 bg-cyan-50 rounded-xl">
+                    <div className="text-2xl font-bold text-cyan-600">AI</div>
+                    <div className="text-sm text-gray-600 font-medium">
+                      Автоматизации
+                    </div>
+                  </div>
+                  <div className="text-center p-4 bg-blue-50 rounded-xl">
+                    <div className="text-2xl font-bold text-blue-600">360°</div>
+                    <div className="text-sm text-gray-600 font-medium">
+                      Дигитални решения
+                    </div>
+                  </div>
+                  <div className="text-center p-4 bg-cyan-50 rounded-xl">
+                    <div className="text-2xl font-bold text-cyan-600">∞</div>
+                    <div className="text-sm text-gray-600 font-medium">
+                      Възможности
+                    </div>
+                  </div>
+                  <div className="text-center p-4 bg-blue-50 rounded-xl">
+                    <div className="text-2xl font-bold text-blue-600">1</div>
+                    <div className="text-sm text-gray-600 font-medium">
+                      Партньор за всичко
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Organizational Team Section - LAST */}
+      <div className="bg-white py-12 sm:py-6">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          {/* Section Title */}
+          <div className="mx-auto max-w-2xl text-center mb-20">
+            <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+              Организаторски екип
+            </h2>
+            <p className="mt-6 text-lg/8 text-gray-600">
+              Експертите и визионерите, които създават и развиват BetterSelf
+            </p>
+          </div>
+
+          {/* Two Column Layout for Team Members */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20">
+            {/* Jasmina Majid */}
+            <div className="relative isolate">
+              <div className="flex flex-col items-center text-center">
+                {/* Image */}
+                <div className="relative mb-8">
+                  {/* Decorative elements behind image */}
+                  <div className="absolute -top-4 -right-4 w-72 h-72 bg-orange-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse -z-10"></div>
+                  <div
+                    className="absolute -bottom-8 -left-4 w-72 h-72 bg-yellow-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse -z-10"
+                    style={{ animationDelay: "1s" }}
+                  ></div>
+
+                  <div className="relative aspect-square w-80 overflow-hidden rounded-3xl bg-gray-100 shadow-2xl z-10">
+                    <img
+                      src="/жасмина-маджид.webp"
+                      alt="Д-р Жасмина Маджид"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="w-full">
+                  <div className="flex items-center justify-center gap-3 mb-6">
+                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl flex items-center justify-center">
+                      <svg
+                        className="w-6 h-6 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                        />
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="text-orange-600 font-medium text-center">
+                        Основател & Визионер
+                      </p>
+                    </div>
+                  </div>
+
+                  <h3 className="text-3xl font-bold tracking-tight text-gray-900 mb-4">
+                    Д-р Жасмина Маджид
+                  </h3>
+
+                  <p className="text-lg text-orange-600 mb-6 font-medium">
+                    Основател и визионер на BetterSelf
+                  </p>
+
+                  <p className="text-lg text-gray-600 mb-6 leading-relaxed font-medium">
+                    Създател на концепцията и главен организатор на
+                    конференцията BetterSelf 2025
+                  </p>
+
+                  <div className="text-base text-gray-600 text-left space-y-5 leading-loose">
+                    <p className="font-medium">
+                      Д-р Жасмина Маджид е икономист, предприемач и медиен
+                      професионалист с дългогодишен опит в създаването на
+                      проекти, посветени на здравето, личностното развитие и
+                      бъдещето на човешкия потенциал.
+                    </p>
+                    <p className="font-medium">
+                      Тя е двигателят зад визията BetterSelf – не просто като
+                      събитие, а като цялостна платформа и общност, която събира
+                      най-иновативните специалисти, лекари, биохакери, психолози
+                      и новатори с обща мисия: да направим по-доброто себе си
+                      възможно – физически, психически и емоционално.
+                    </p>
+                    <p className="font-medium">
+                      Като основен инициатор на конференцията, Жасмина е
+                      отговорна за създаването на концепцията, подбора на
+                      лекторите, стратегическото партньорство, избора на локация
+                      и цялостната организация.
+                    </p>
+                    <p className="font-medium">
+                      Нейната роля е визионерска – тя изгражда екипа, задава
+                      посоката и създава мост между науката за дълголетие,
+                      практиките на био-хакингa и реалните нужди на съвременния
+                      човек.
+                    </p>
+                    <p className="font-medium">
+                      BetterSelf е нейна кауза – платформа, която тепърва ще се
+                      развива с годишни конференции, тематични мини-събития и
+                      мрежа от професионалисти и компании, обединени от
+                      желанието да вдъхновяват, лекуват и трансформират.
+                    </p>
+                  </div>
+
+                  {/* Stats */}
+                  <div className="mt-8 grid grid-cols-2 gap-6">
+                    <div className="text-center p-4 bg-orange-50 rounded-xl">
+                      <div className="text-2xl font-bold text-orange-600">
+                        10+
+                      </div>
+                      <div className="text-sm text-gray-600">Години опит</div>
+                    </div>
+                    <div className="text-center p-4 bg-orange-50 rounded-xl">
+                      <div className="text-2xl font-bold text-orange-600">
+                        1000+
+                      </div>
+                      <div className="text-sm text-gray-600">Проекта</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Totka Naloka */}
+            <div className="relative isolate">
+              <div className="flex flex-col items-center text-center">
+                {/* Image */}
+                <div className="relative mb-8">
+                  {/* Decorative elements behind image */}
+                  <div
+                    className="absolute -top-4 -right-4 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse -z-10"
+                    style={{ animationDelay: "2s" }}
+                  ></div>
+                  <div
+                    className="absolute -bottom-8 -left-4 w-72 h-72 bg-indigo-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse -z-10"
+                    style={{ animationDelay: "3s" }}
+                  ></div>
+
+                  <div className="relative aspect-square w-80 overflow-hidden rounded-3xl bg-gray-100 shadow-2xl z-10">
+                    <img
+                      src="/totka-nalocca.jpg"
+                      alt="Тотка Налока"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="w-full">
+                  <div className="flex items-center justify-center gap-3 mb-6">
+                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
+                      <svg
+                        className="w-6 h-6 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-4m-5 0H3m2 0h4M9 7h6m-6 4h6m-6 4h6"
+                        />
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="text-blue-600 font-medium text-center">
+                        Оперативен директор
+                      </p>
+                    </div>
+                  </div>
+
+                  <h3 className="text-3xl font-bold tracking-tight text-gray-900 mb-4">
+                    Тотка Налока
+                  </h3>
+
+                  <p className="text-lg text-blue-600 mb-6 font-medium">
+                    Оперативен директор и стратегически консултант за сценично и
+                    техническо преживяване
+                  </p>
+
+                  <div className="text-base text-gray-600 text-left space-y-5 leading-loose">
+                    <p className="font-medium">
+                      Тотка Налока е стратегически консултант с фокус върху
+                      цялостния успех на събитията – от планирането и
+                      изпълнението до рентабилността, печалбата и въздействието
+                      върху участниците. Работи в тясно сътрудничество с
+                      различни екипи, за да изгражда и прилага ефективни
+                      стратегии, които гарантират постигането на конкретни
+                      резултати.
+                    </p>
+                    <p className="font-medium">
+                      В Biohacking BetaSelf 2025 Тотка отговаря за
+                      стратегическото и оперативното планиране на събитието,
+                      включително продажбената стратегия, клиентското
+                      преживяване и логистиката на място. Тя координира ключови
+                      процеси и обезпечава синхрон между екипите, така че всяка
+                      част от събитието да допринася към една обща, въздействаща
+                      и печеливша цялост.
+                    </p>
+                    <p className="font-medium">
+                      Преди да се присъедини към BetterSelf, Тотка е ръководила
+                      лондонския офис на Success Resources – най-голямата
+                      световна компания за организиране на събития, с над 7
+                      офиса на различни континенти и годишен оборот от над 100
+                      милиона долара. Като Country Manager тя е отговаряла за
+                      продажбите и оперативната дейност в Европа и
+                      Великобритания, ръководила е екип от 30 души и е била
+                      активна част от международния мениджърски екип на
+                      компанията, включващ офиси в Сингапур, Китай, Малайзия,
+                      Австралия, Южна Африка и Европа. Наред с това, Тотка е
+                      менажирала ключови партньорства в цяла Европа, изграждайки
+                      стабилни бизнес взаимоотношения и локални мрежи, които
+                      допринасят за растежа и въздействието на бранда на
+                      континента.
+                    </p>
+                    <p className="font-medium">
+                      Под нейно ръководство са организирани стотици събития с
+                      водещи имена в индустрията като Тони Робинс, Робърт
+                      Кийосаки, Гари Вайнерчук и други – събития, които
+                      вдъхновяват, въздействат и оставят траен резултат.
+                    </p>
+                    <p className="font-medium">
+                      След този период Тотка се посвещава на консултиране на
+                      бизнеси и на своята мисия да помага на хората чрез
+                      коучинг. Работата ѝ е насочена към стратегическо развитие,
+                      менторство и изграждане на устойчиви системи за растеж –
+                      както в личен, така и в професионален контекст. Паралелно
+                      с това, през последните години тя активно съдейства и за
+                      развитието на личния бранд на съпруга ѝ Моузес Налока, с
+                      участие в управлението и стратегическото позициониране на
+                      неговите инициативи.
+                    </p>
+                    <p className="font-medium">
+                      Нейната мисия е всяко събитие да бъде създадено
+                      стратегически – така че да е запомнящо се, рентабилно и да
+                      носи реална стойност за участниците и организаторите.
+                    </p>
+                  </div>
+
+                  {/* Stats */}
+                  <div className="mt-8 grid grid-cols-2 gap-6">
+                    <div className="text-center p-4 bg-blue-50 rounded-xl">
+                      <div className="text-2xl font-bold text-blue-600">
+                        15+
+                      </div>
+                      <div className="text-sm text-gray-600">Години опит</div>
+                    </div>
+                    <div className="text-center p-4 bg-blue-50 rounded-xl">
+                      <div className="text-2xl font-bold text-blue-600">
+                        500+
+                      </div>
+                      <div className="text-sm text-gray-600">Събития</div>
                     </div>
                   </div>
                 </div>
