@@ -1066,7 +1066,7 @@ export default function TeamPage() {
           {/* Section Title */}
           <div className="mx-auto max-w-2xl text-center mb-20">
             <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-              CreateX & wellConnected
+              Meta Marketing
             </h2>
             <p className="mt-6 text-lg/8 text-gray-600">
               AI автоматизации и интегрирани решения за дигитално развитие
