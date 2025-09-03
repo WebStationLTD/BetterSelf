@@ -297,9 +297,11 @@ export default function TeamPage() {
                         className="w-full h-full object-cover"
                       />
                     </div>
+                  </div>
 
-                    {/* Photo label */}
-                    <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-white px-4 py-2 rounded-full shadow-lg border border-emerald-100">
+                  {/* Photo label - под снимката */}
+                  <div className="mt-4 text-center">
+                    <div className="inline-block bg-white px-4 py-2 rounded-full shadow-lg border border-emerald-100">
                       <p className="text-sm font-medium text-gray-700">
                         WebStation™ Екип
                       </p>
@@ -623,9 +625,11 @@ export default function TeamPage() {
                         className="w-full h-full object-cover"
                       />
                     </div>
+                  </div>
 
-                    {/* Photo label */}
-                    <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-white px-4 py-2 rounded-full shadow-lg border border-purple-100">
+                  {/* Photo label - под снимката */}
+                  <div className="mt-4 text-center">
+                    <div className="inline-block bg-white px-4 py-2 rounded-full shadow-lg border border-purple-100">
                       <p className="text-sm font-medium text-gray-700">
                         Неделин Радков
                       </p>
@@ -685,9 +689,11 @@ export default function TeamPage() {
                         className="w-full h-full object-cover"
                       />
                     </div>
+                  </div>
 
-                    {/* Photo label */}
-                    <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-white px-4 py-2 rounded-full shadow-lg border border-violet-100">
+                  {/* Photo label - под снимката */}
+                  <div className="mt-4 text-center">
+                    <div className="inline-block bg-white px-4 py-2 rounded-full shadow-lg border border-violet-100">
                       <p className="text-sm font-medium text-gray-700">
                         Вероника Цветанова
                       </p>
@@ -957,9 +963,11 @@ export default function TeamPage() {
                         className="w-full h-full object-cover"
                       />
                     </div>
+                  </div>
 
-                    {/* Photo label */}
-                    <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-white px-3 py-1 rounded-full shadow-lg border border-red-100">
+                  {/* Photo label - под снимката */}
+                  <div className="mt-4 text-center">
+                    <div className="inline-block bg-white px-3 py-1 rounded-full shadow-lg border border-red-100">
                       <p className="text-xs font-medium text-gray-700">
                         Надежда Първанова
                       </p>
@@ -987,9 +995,11 @@ export default function TeamPage() {
                         className="w-full h-full object-cover"
                       />
                     </div>
+                  </div>
 
-                    {/* Photo label */}
-                    <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-white px-3 py-1 rounded-full shadow-lg border border-rose-100">
+                  {/* Photo label - под снимката */}
+                  <div className="mt-4 text-center">
+                    <div className="inline-block bg-white px-3 py-1 rounded-full shadow-lg border border-rose-100">
                       <p className="text-xs font-medium text-gray-700">
                         Стоян Тенов
                       </p>
@@ -1045,9 +1055,11 @@ export default function TeamPage() {
                         className="w-full h-full object-cover"
                       />
                     </div>
+                  </div>
 
-                    {/* Photo label */}
-                    <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-white px-3 py-1 rounded-full shadow-lg border border-red-100">
+                  {/* Photo label - под снимката */}
+                  <div className="mt-4 text-center">
+                    <div className="inline-block bg-white px-3 py-1 rounded-full shadow-lg border border-red-100">
                       <p className="text-xs font-medium text-gray-700">
                         Max Group Events
                       </p>
@@ -1368,9 +1380,11 @@ export default function TeamPage() {
                         className="w-full h-full object-contain bg-white"
                       />
                     </div>
+                  </div>
 
-                    {/* Photo label */}
-                    <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-white px-4 py-2 rounded-full shadow-lg border border-cyan-100">
+                  {/* Photo label - под снимката */}
+                  <div className="mt-4 text-center">
+                    <div className="inline-block bg-white px-4 py-2 rounded-full shadow-lg border border-cyan-100">
                       <p className="text-sm font-medium text-gray-700">
                         CreateX & wellConnected Ecosystem
                       </p>
