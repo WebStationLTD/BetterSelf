@@ -620,7 +620,7 @@ export default function TeamPage() {
 
                     <div className="relative aspect-[3/4] w-full max-w-xs mx-auto overflow-hidden rounded-2xl bg-gray-100 shadow-2xl z-10">
                       <img
-                        src="/placeholder.webp"
+                        src="/неделин-радков.jpg"
                         alt="Неделин Радков"
                         className="w-full h-full object-cover"
                       />
@@ -684,7 +684,7 @@ export default function TeamPage() {
 
                     <div className="relative aspect-[3/4] w-full max-w-xs mx-auto overflow-hidden rounded-2xl bg-gray-100 shadow-2xl z-10">
                       <img
-                        src="/placeholder.webp"
+                        src="/вероника-цветанова.jpg"
                         alt="Вероника Цветанова"
                         className="w-full h-full object-cover"
                       />

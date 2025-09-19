@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import ContactForm from "./contactForm";
+import SponsorCard from "./SponsorCard";
 
 const sponsors = [
   {
@@ -52,6 +53,13 @@ const sponsors = [
     link: "https://www.insidetracker.com/",
     description:
       "InsideTracker е платформа за анализ на кръвни и ДНК резултати, която дава персонализирани насоки за подобрение на личното здраве.",
+  },
+  {
+    name: "Benlian Food Philosophy",
+    logo: "/benlian-logo.jpg",
+    link: "https://benlianfoods.com/",
+    description:
+      "Продуктите на Benlian Food Philosophy са изработени изцяло от натурални съставки, не съдържат глутен и са резултат от нашето желание да направим натуралната и здравословна храна част от живота на всеки. Чрез използване на иновативни методи в преработката на храни запазваме хранителните свойства на съставките в техния суров вид. По този начин показваме на хората, че здравословната храна може да бъде вкусна, както и вкусната храна може да бъде здравословна. Benlian Food Philosophy RMD (remedy) e абсолютно нов и иновативен продукт за пазара и съвсем естествено продължение на философията на компанията. Нашата мисия е да представим това високофенолно маслиново масло extra virgin, с 1000+ mg/kg натурални полифеноли, като суперхрана и мазнина от природата, с естествени противовъзпалителни и антиоксидантни свойства. Benlian RMD е подходящо за терапевтична употреба в ежедневието и идва в подкрепа на: храносмилането и контрола на телесното тегло, когнитивната дейност и паметта, здравето на костите и ставите, здравето на сърцето и нивата на HDL холестерол, здравето на кожата и нейната жизненост. Нашата препоръка е прием на 20g (oк. 1.5 с.л.) сутрин, в съчетание с балансирана диета и здравословен начин на живот, като част от личната програма на всеки за жизненост и дълголетие.",
   },
 ];
 
@@ -237,37 +245,7 @@ export default function SponsorsAndPartners({ children }) {
             <div className="w-48 h-1 mx-auto my-4 bg-[#ff8d00] rounded"></div>
             <div className="mx-auto mt-12 grid max-w-lg grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
               {sponsors.map((sponsor) => (
-                <div
-                  key={sponsor.name}
-                  className="flex flex-col items-center text-center bg-white p-8 rounded-xl shadow-lg transition hover:shadow-2xl"
-                >
-                  <div className="relative h-32 w-full mb-6">
-                    <Image
-                      src={sponsor.logo}
-                      alt={sponsor.name}
-                      fill
-                      quality={100}
-                      loading="lazy"
-                      className="object-contain"
-                    />
-                  </div>
-                  <h3 className="text-xl font-semibold leading-8 text-gray-900">
-                    {sponsor.name}
-                  </h3>
-                  <p className="mt-4 text-base leading-7 text-gray-600 flex-grow">
-                    {sponsor.description}
-                  </p>
-                  <div className="mt-6">
-                    <Link
-                      href={sponsor.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm font-semibold leading-6 text-[#ff8d00] hover:text-orange-500"
-                    >
-                      Научете повече <span aria-hidden="true">→</span>
-                    </Link>
-                  </div>
-                </div>
+                <SponsorCard key={sponsor.name} sponsor={sponsor} />
               ))}
             </div>
           </div>
