@@ -1425,6 +1425,91 @@ export default function TeamPage() {
         </div>
       </div>
 
+      {/* BulStream Section */}
+      <div className="bg-white py-24">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              BulStream
+            </h2>
+            <p className="mt-4 text-lg leading-8 text-gray-600">
+              Нашият партньор за видео продукция и стрийминг
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left - Company Logo */}
+            <div className="text-center lg:text-left">
+              <div className="mb-8">
+                <img
+                  src="/bulstream-logo.png"
+                  alt="BulStream Logo"
+                  className="h-20 w-auto mx-auto lg:mx-0"
+                />
+              </div>
+              <p className="text-lg leading-8 text-gray-600 mb-6">
+                BulStream е българска компания, специализирана в цялостни
+                решения за видео продукция, стрийминг и излъчване на живо. С
+                опит в реализирането на корпоративни събития, концерти, спортни
+                формати и телевизионни продукции, ние комбинираме иновации и
+                професионализъм, за да превърнем всяка идея във впечатляващо
+                визуално изживяване.
+              </p>
+              <div className="flex justify-center lg:justify-start">
+                <a
+                  href="https://bulstream.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
+                >
+                  Посетете сайта
+                  <svg
+                    className="ml-2 -mr-1 w-4 h-4"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            {/* Right - Team Photo */}
+            <div className="relative">
+              <div className="relative">
+                {/* Decorative elements behind photo */}
+                <div className="absolute -top-4 -right-4 w-40 h-40 sm:w-48 sm:h-48 bg-orange-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse -z-10"></div>
+                <div
+                  className="absolute -bottom-4 -left-4 w-40 h-40 sm:w-48 sm:h-48 bg-red-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse -z-10"
+                  style={{ animationDelay: "1s" }}
+                ></div>
+
+                <div className="relative aspect-[4/3] w-full max-w-lg mx-auto overflow-hidden rounded-2xl bg-gray-100 shadow-2xl z-10">
+                  <img
+                    src="/bulstream.jpg"
+                    alt="BulStream Team"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Photo label */}
+              <div className="mt-4 text-center">
+                <div className="inline-block bg-white px-4 py-2 rounded-full shadow-lg border border-orange-100">
+                  <p className="text-sm font-medium text-gray-700">
+                    Екипът на BulStream
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Organizational Team Section - LAST */}
       <div className="bg-white py-12 sm:py-6">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
