@@ -122,7 +122,8 @@ export default function Clients() {
                   />
                 </Link>
               </div>
-              <div className="h-16 flex items-center justify-center relative">
+              {/* ВРЕМЕННО СКРИТО - Benlian Food Philosophy */}
+              {/* <div className="h-16 flex items-center justify-center relative">
                 <Link
                   href="https://benlianfoods.com/"
                   target="_blank"
@@ -138,7 +139,7 @@ export default function Clients() {
                     className="max-h-full max-w-full object-contain"
                   />
                 </Link>
-              </div>
+              </div> */}
               <div className="h-16 flex items-center justify-center relative">
                 <Link
                   href="https://revita.bg/double-wood"
