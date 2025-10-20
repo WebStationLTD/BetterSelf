@@ -10,7 +10,7 @@ export const metadata = {
 // Данни за лекторите - hardcoded в кода
 const panelsData = {
   "innovations-ai": {
-    title: "Иновации и технологии",
+    title: "Иновации и технологии 1",
     subtitle: "Водещи експерти в областта на технологиите и иновациите",
     color: "from-blue-600 to-purple-600",
     bgPattern: "bg-blue-50",
