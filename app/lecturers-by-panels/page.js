@@ -188,7 +188,7 @@ export default function LecturersByPanels() {
       <div className="bg-gray-50 min-h-screen">
         <div className="mx-auto max-w-full">
           <div className="grid lg:grid-cols-2 gap-0 min-h-screen">
-            {/* Панел "Иновации и изкуствен интелект" */}
+            {/* Панел "Иновации и технологии" */}
             <div
               className={`relative ${panelsData["innovations-ai"].bgPattern} lg:border-r-2 border-gray-200`}
             >
