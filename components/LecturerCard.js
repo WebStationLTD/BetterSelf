@@ -4,7 +4,12 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function LecturerCard({ lecturer, panelColor, ringColor }) {
+export default function LecturerCard({
+  lecturer,
+  panelColor,
+  ringColor,
+  isModerator = false,
+}) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   // Функция за съкращаване на текста
@@ -28,16 +33,29 @@ export default function LecturerCard({ lecturer, panelColor, ringColor }) {
 
   return (
     <div
-      className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden ${
+      className={`${
+        isModerator
+          ? "bg-gradient-to-r from-purple-100 to-blue-100 border-2 border-purple-300 shadow-2xl transform scale-105"
+          : "bg-white shadow-lg hover:shadow-xl"
+      } rounded-xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden ${
         isExpanded ? "h-auto min-h-96 md:min-h-72" : "min-h-96 md:h-72"
       }`}
     >
+      {isModerator && (
+        <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white text-center py-2 px-4">
+          <span className="text-sm font-bold uppercase tracking-wide">
+            🎤 Водеща на панела
+          </span>
+        </div>
+      )}
       <div className="p-6 md:p-8 h-full flex flex-col justify-start md:justify-center">
         <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center md:items-center h-full">
           {/* Снимка */}
           <div className="flex-shrink-0 mx-auto md:mx-0">
             <div
-              className={`relative w-28 h-28 md:w-32 md:h-32 rounded-full overflow-hidden ring-4 ${ringColor} shadow-lg`}
+              className={`relative w-28 h-28 md:w-32 md:h-32 rounded-full overflow-hidden ring-4 ${
+                isModerator ? "ring-purple-300 shadow-xl" : ringColor
+              } shadow-lg`}
             >
               <Image
                 src={lecturer.image}
@@ -52,7 +70,11 @@ export default function LecturerCard({ lecturer, panelColor, ringColor }) {
           {/* Информация */}
           <div className="flex-1 text-center md:text-left flex flex-col justify-start md:justify-center min-h-0">
             <div className="space-y-3 md:space-y-4">
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 leading-tight">
+              <h3
+                className={`text-xl md:text-2xl font-bold leading-tight ${
+                  isModerator ? "text-purple-900" : "text-gray-900"
+                }`}
+              >
                 {lecturer.name}
               </h3>
               {lecturer.company && (
@@ -62,13 +84,21 @@ export default function LecturerCard({ lecturer, panelColor, ringColor }) {
                       href={lecturer.companyLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r ${panelColor} text-white shadow-sm hover:shadow-lg transition-all duration-300 transform hover:scale-105`}
+                      className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium shadow-sm hover:shadow-lg transition-all duration-300 transform hover:scale-105 ${
+                        isModerator
+                          ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white"
+                          : `bg-gradient-to-r ${panelColor} text-white`
+                      }`}
                     >
                       {lecturer.company}
                     </Link>
                   ) : (
                     <span
-                      className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r ${panelColor} text-white shadow-sm`}
+                      className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium shadow-sm ${
+                        isModerator
+                          ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white"
+                          : `bg-gradient-to-r ${panelColor} text-white`
+                      }`}
                     >
                       {lecturer.company}
                     </span>

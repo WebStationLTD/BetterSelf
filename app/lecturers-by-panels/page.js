@@ -1,4 +1,3 @@
-import Image from "next/image";
 import LecturerCard from "../../components/LecturerCard";
 
 export const metadata = {
@@ -243,73 +242,13 @@ export default function LecturersByPanels() {
                 {/* Лектори */}
                 <div className="space-y-8">
                   {panelsData["innovations-ai"].lecturers.map((lecturer) => (
-                    <div
+                    <LecturerCard
                       key={lecturer.id}
-                      className={`${
-                        lecturer.isModerator
-                          ? "bg-gradient-to-r from-purple-100 to-blue-100 border-2 border-purple-300 shadow-2xl transform scale-105"
-                          : "bg-white shadow-lg hover:shadow-xl"
-                      } rounded-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden`}
-                    >
-                      {lecturer.isModerator && (
-                        <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white text-center py-2 px-4">
-                          <span className="text-sm font-bold uppercase tracking-wide">
-                            🎤 Водеща на панела
-                          </span>
-                        </div>
-                      )}
-                      <div className="p-6">
-                        <div className="flex flex-col md:flex-row gap-6">
-                          {/* Снимка */}
-                          <div className="flex-shrink-0 mx-auto md:mx-0">
-                            <div
-                              className={`relative w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden ${
-                                lecturer.isModerator
-                                  ? "ring-4 ring-purple-300 shadow-xl"
-                                  : "ring-4 ring-blue-100"
-                              }`}
-                            >
-                              <Image
-                                src={lecturer.image}
-                                alt={lecturer.name}
-                                fill
-                                className="object-cover"
-                                sizes="(max-width: 768px) 96px, 112px"
-                              />
-                            </div>
-                          </div>
-
-                          {/* Информация */}
-                          <div className="flex-1 text-center md:text-left">
-                            <h3
-                              className={`text-xl font-bold mb-2 ${
-                                lecturer.isModerator
-                                  ? "text-purple-900"
-                                  : "text-gray-900"
-                              }`}
-                            >
-                              {lecturer.name}
-                            </h3>
-                            {lecturer.company && (
-                              <div className="mb-3">
-                                <span
-                                  className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium shadow-sm ${
-                                    lecturer.isModerator
-                                      ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white"
-                                      : `bg-gradient-to-r ${panelsData["innovations-ai"].color} text-white`
-                                  }`}
-                                >
-                                  {lecturer.company}
-                                </span>
-                              </div>
-                            )}
-                            <p className="text-gray-600 text-sm leading-relaxed">
-                              {lecturer.description}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                      lecturer={lecturer}
+                      panelColor={panelsData["innovations-ai"].color}
+                      ringColor="ring-blue-100"
+                      isModerator={lecturer.isModerator}
+                    />
                   ))}
                 </div>
               </div>
