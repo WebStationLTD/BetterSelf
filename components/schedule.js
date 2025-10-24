@@ -158,10 +158,6 @@ export default function Schedule() {
                 <MapPinIcon className="h-5 w-5 text-[#ff8d00]" />
                 <span>Гранд Хотел Астория</span>
               </div>
-              <div className="flex items-center gap-2">
-                <BuildingOffice2Icon className="h-5 w-5 text-[#ff8d00]" />
-                <span>Бална зала Опера, ет. R</span>
-              </div>
             </div>
 
             {/* Add to Calendar Button */}

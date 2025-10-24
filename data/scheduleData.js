@@ -5,7 +5,7 @@ export const scheduleData = [
     time: "09:00 - 09:30",
     title: "Регистрация и посрещане",
     speaker: "Организаторски екип",
-    location: "Главно фоайе",
+    location: "Бална зала Опера, ет. R",
     description: "Получаване на баджове и работни материали",
     type: "registration",
   },
