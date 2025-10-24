@@ -5,6 +5,7 @@ import {
   MapPinIcon,
   UserIcon,
   CalendarIcon,
+  BuildingOffice2Icon,
 } from "@heroicons/react/24/outline";
 import { scheduleData, getTypeStyles } from "../data/scheduleData";
 import { useEffect, useState } from "react";
@@ -144,11 +145,11 @@ export default function Schedule() {
       >
         <div className="lg:w-4/5 lg:mx-auto">
           {/* Header */}
-          <div className="mx-auto max-w-2xl text-center">
+          <div className="mx-auto max-w-8xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Програма на събитието
             </h2>
-            <div className="mt-8 flex justify-center items-center gap-6 text-base font-semibold text-gray-700">
+            <div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 text-base font-semibold text-gray-700">
               <div className="flex items-center gap-2">
                 <ClockIcon className="h-5 w-5 text-[#ff8d00]" />
                 <span>02 ноември 2025</span>
@@ -156,6 +157,10 @@ export default function Schedule() {
               <div className="flex items-center gap-2">
                 <MapPinIcon className="h-5 w-5 text-[#ff8d00]" />
                 <span>Гранд Хотел Астория</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <BuildingOffice2Icon className="h-5 w-5 text-[#ff8d00]" />
+                <span>Бална зала Опера, ет. R</span>
               </div>
             </div>
 

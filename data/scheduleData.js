@@ -34,7 +34,7 @@ export const scheduleData = [
     time: "10:30 - 11:00",
     title: "Кафе пауза",
     speaker: "",
-    location: "Главно фоайе",
+    location: "Лоби Опера 1",
     description:
       "Възможност да презаредите и да се запознаете с нови хора със сродни интереси",
     type: "break",
@@ -73,9 +73,9 @@ export const scheduleData = [
   {
     id: 8,
     time: "13:00 - 14:00",
-    title: "Обедна пауза",
+    title: "Обяд",
     speaker: "",
-    location: "Ресторант",
+    location: "Ресторант Атриум",
     description: "Кратка почивка преди следващия панел",
     type: "break",
   },
