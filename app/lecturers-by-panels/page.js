@@ -95,6 +95,15 @@ const panelsData = {
     bgPattern: "bg-green-50",
     lecturers: [
       {
+        id: 200,
+        name: "Мариан Морфис",
+        company: "Водещ на Панел Longevity",
+        description:
+          'Мариан Морфис е предприемач и маркетинг стратег с над 8 години опит, работил с едни от най-успешните брандове в България и помогнал им да скалират бизнеса си. Той е съосновател на Mentor Space – иновативна платформа, която прави връзката с топ експерти лесна и достъпна. Водещ е на подкаста "Разпитът", където разкрива историите, уроците и принципите зад успеха на изявени личности от различни сфери.',
+        image: "/мариан-морфис.jpg",
+        isModerator: true,
+      },
+      {
         id: 201,
         name: "Биляна Маринова",
         company: "Dr. Bastet",
@@ -248,6 +257,13 @@ export default function LecturersByPanels() {
                       panelColor={panelsData["innovations-ai"].color}
                       ringColor="ring-blue-100"
                       isModerator={lecturer.isModerator}
+                      moderatorTitle="Водеща на панела"
+                      moderatorColors={{
+                        bgGradient: "from-purple-100 to-purple-200",
+                        borderColor: "border-purple-300",
+                        ringColor: "ring-purple-300",
+                        badgeGradient: "from-purple-600 to-purple-700",
+                      }}
                     />
                   ))}
                 </div>
@@ -303,6 +319,14 @@ export default function LecturersByPanels() {
                       lecturer={lecturer}
                       panelColor={panelsData["longevity"].color}
                       ringColor="ring-green-100"
+                      isModerator={lecturer.isModerator}
+                      moderatorTitle="Водещ на панела"
+                      moderatorColors={{
+                        bgGradient: "from-blue-100 to-cyan-100",
+                        borderColor: "border-blue-300",
+                        ringColor: "ring-blue-300",
+                        badgeGradient: "from-blue-600 to-cyan-600",
+                      }}
                     />
                   ))}
                 </div>

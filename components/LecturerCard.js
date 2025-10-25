@@ -9,6 +9,13 @@ export default function LecturerCard({
   panelColor,
   ringColor,
   isModerator = false,
+  moderatorTitle = "Водеща на панела",
+  moderatorColors = {
+    bgGradient: "from-purple-100 to-purple-200",
+    borderColor: "border-purple-300",
+    ringColor: "ring-purple-300",
+    badgeGradient: "from-purple-600 to-purple-700",
+  },
 }) {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -35,16 +42,18 @@ export default function LecturerCard({
     <div
       className={`${
         isModerator
-          ? "bg-gradient-to-r from-purple-100 to-blue-100 border-2 border-purple-300 shadow-2xl transform scale-105"
+          ? `bg-gradient-to-r ${moderatorColors.bgGradient} border-2 ${moderatorColors.borderColor} shadow-2xl transform scale-105`
           : "bg-white shadow-lg hover:shadow-xl"
       } rounded-xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden ${
         isExpanded ? "h-auto min-h-96 md:min-h-72" : "min-h-96 md:h-72"
       }`}
     >
       {isModerator && (
-        <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white text-center py-2 px-4">
+        <div
+          className={`bg-gradient-to-r ${moderatorColors.badgeGradient} text-white text-center py-2 px-4`}
+        >
           <span className="text-sm font-bold uppercase tracking-wide">
-            🎤 Водеща на панела
+            🎤 {moderatorTitle}
           </span>
         </div>
       )}
@@ -54,7 +63,9 @@ export default function LecturerCard({
           <div className="flex-shrink-0 mx-auto md:mx-0">
             <div
               className={`relative w-28 h-28 md:w-32 md:h-32 rounded-full overflow-hidden ring-4 ${
-                isModerator ? "ring-purple-300 shadow-xl" : ringColor
+                isModerator
+                  ? `${moderatorColors.ringColor} shadow-xl`
+                  : ringColor
               } shadow-lg`}
             >
               <Image
@@ -86,7 +97,7 @@ export default function LecturerCard({
                       rel="noopener noreferrer"
                       className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium shadow-sm hover:shadow-lg transition-all duration-300 transform hover:scale-105 ${
                         isModerator
-                          ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white"
+                          ? `bg-gradient-to-r ${moderatorColors.badgeGradient} text-white`
                           : `bg-gradient-to-r ${panelColor} text-white`
                       }`}
                     >
@@ -96,7 +107,7 @@ export default function LecturerCard({
                     <span
                       className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium shadow-sm ${
                         isModerator
-                          ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white"
+                          ? `bg-gradient-to-r ${moderatorColors.badgeGradient} text-white`
                           : `bg-gradient-to-r ${panelColor} text-white`
                       }`}
                     >
