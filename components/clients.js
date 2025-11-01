@@ -142,6 +142,23 @@ export default function Clients() {
               </div> */}
               <div className="h-16 flex items-center justify-center relative">
                 <Link
+                  href="https://www.insidetracker.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300"
+                >
+                  <Image
+                    alt="InsideTracker"
+                    src="/inside-tracker.jpg"
+                    fill
+                    quality={100}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </Link>
+              </div>
+              <div className="h-16 flex items-center justify-center relative">
+                <Link
                   href="https://revita.bg/double-wood"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -150,6 +167,23 @@ export default function Clients() {
                   <Image
                     alt="Double Wood Supplements"
                     src="/double-wood-logo.jpg"
+                    fill
+                    quality={100}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </Link>
+              </div>
+              <div className="h-16 flex items-center justify-center relative">
+                <Link
+                  href="https://momvy.eu/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300"
+                >
+                  <Image
+                    alt="MOMVY"
+                    src="/momvy-logo.png"
                     fill
                     quality={100}
                     loading="lazy"
@@ -310,6 +344,40 @@ export default function Clients() {
                   <Image
                     alt="Preciva"
                     src="/preciva-logo.jpg"
+                    fill
+                    quality={100}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </Link>
+              </div>
+              <div className="h-16 flex items-center justify-center relative">
+                <Link
+                  href="https://www.eiacademy.bg/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300"
+                >
+                  <Image
+                    alt="Десислава Дамянова"
+                    src="/академия-за-емоционална-интелигентност.jpg"
+                    fill
+                    quality={100}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </Link>
+              </div>
+              <div className="h-16 flex items-center justify-center relative">
+                <Link
+                  href="https://insurance.bg/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300"
+                >
+                  <Image
+                    alt="Insurance.bg"
+                    src="/insurance-logo.png"
                     fill
                     quality={100}
                     loading="lazy"
