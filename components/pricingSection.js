@@ -80,49 +80,50 @@ export default function Example() {
                   </div>
                 </div>
               </div>
-              <div className="relative z-10 mx-auto flex w-full max-w-lg flex-col rounded-lg shadow-xl lg:-my-8">
+              <div className="relative z-10 mx-auto flex w-full max-w-lg flex-col rounded-lg shadow-xl lg:-my-8 opacity-60 grayscale">
                 <div
                   aria-hidden="true"
-                  className="pointer-events-none absolute inset-0 rounded-lg border-2 border-[#ff8d00]"
+                  className="pointer-events-none absolute inset-0 rounded-lg border-2 border-gray-400"
                 />
-                <div className="absolute inset-x-0 top-0 translate-y-px transform">
+                {/* Overlay badge - ИЗЧЕРПАН */}
+                <div className="absolute inset-x-0 top-0 translate-y-px transform z-20">
                   <div className="flex -translate-y-1/2 transform justify-center">
-                    <span className="inline-flex rounded-full bg-[#ff8d00] px-4 py-1 text-base font-semibold text-white">
-                      Най-популярен{" "}
+                    <span className="inline-flex rounded-full bg-gray-500 px-4 py-1 text-base font-semibold text-white shadow-lg">
+                      🔒 ПРОДАЖБИТЕ ПРИКЛЮЧИХА
                     </span>
                   </div>
                 </div>
-                <div className="rounded-t-lg bg-white px-6 pt-12 pb-10">
+                <div className="rounded-t-lg bg-gray-100 px-6 pt-12 pb-10">
                   <div>
                     <h3
                       id="tier-business"
-                      className="text-center text-3xl font-semibold tracking-tight text-gray-900 sm:-mx-6"
+                      className="text-center text-3xl font-semibold tracking-tight text-gray-600 sm:-mx-6"
                     >
                       Бизнес билет
                     </h3>
                     <div className="mt-4 flex items-center justify-center">
-                      <span className="flex items-start px-3 text-6xl tracking-tight text-gray-900 sm:text-6xl">
-                        <span className="font-bold">99 лв.</span>
+                      <span className="flex items-start px-3 text-6xl tracking-tight text-gray-600 sm:text-6xl">
+                        <span className="font-bold line-through">99 лв.</span>
                       </span>
                     </div>
                     <div className="mt-2 text-center">
-                      <span className="inline-block bg-red-50 text-red-700 text-xs font-semibold px-3 py-1 rounded-full border border-red-200 shadow-sm">
-                        МЕСТАТА СА ОГРАНИЧЕНИ
+                      <span className="inline-block bg-gray-200 text-gray-600 text-xs font-semibold px-3 py-1 rounded-full border border-gray-300 shadow-sm">
+                        ИЗЧЕРПАНИ
                       </span>
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-grow flex-col justify-between rounded-b-lg border-t-2 border-gray-700 bg-gray-800 px-6 pt-10 pb-8 sm:px-10 sm:py-10">
+                <div className="flex flex-grow flex-col justify-between rounded-b-lg border-t-2 border-gray-400 bg-gray-700 px-6 pt-10 pb-8 sm:px-10 sm:py-10">
                   <ul role="list" className="space-y-4">
                     {businessFeatures.map((feature) => (
                       <li key={feature} className="flex items-start">
                         <div className="shrink-0">
                           <CheckIcon
                             aria-hidden="true"
-                            className="size-6 shrink-0 text-[#ff8d00]"
+                            className="size-6 shrink-0 text-gray-500"
                           />
                         </div>
-                        <p className="ml-3 text-base font-medium text-gray-300">
+                        <p className="ml-3 text-base font-medium text-gray-400">
                           {feature}
                         </p>
                       </li>
@@ -130,52 +131,57 @@ export default function Example() {
                   </ul>
                   <div className="mt-10">
                     <div className="rounded-lg shadow-md">
-                      <a
-                        href="https://buy.stripe.com/aFabJ1fDL2JZcE25nx2kw01"
-                        aria-describedby="tier-business"
-                        className="block w-full rounded-lg border border-transparent bg-[#ff8d00] px-6 py-4 text-center text-xl/6 font-medium text-white hover:bg-orange-500"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      <button
+                        disabled
+                        className="block w-full rounded-lg border border-gray-400 bg-gray-400 px-6 py-4 text-center text-xl/6 font-medium text-gray-200 cursor-not-allowed"
                       >
-                        Купи{" "}
-                      </a>
+                        Изчерпани
+                      </button>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="mx-auto flex w-full max-w-md flex-col overflow-hidden rounded-lg shadow-lg">
+              <div className="relative mx-auto flex w-full max-w-md flex-col overflow-hidden rounded-lg shadow-lg opacity-60 grayscale">
+                {/* Overlay badge - ИЗЧЕРПАН */}
+                <div className="absolute inset-x-0 top-6 z-20 flex justify-center">
+                  <span className="inline-flex rounded-full bg-gray-500 px-4 py-1 text-sm font-semibold text-white shadow-lg">
+                    🔒 ПРОДАЖБИТЕ ПРИКЛЮЧИХА
+                  </span>
+                </div>
                 <div className="flex flex-1 flex-col">
-                  <div className="bg-white px-6 py-10">
+                  <div className="bg-gray-100 px-6 py-10">
                     <div>
                       <h3
                         id="tier-vip"
-                        className="text-center text-2xl font-medium text-gray-900"
+                        className="text-center text-2xl font-medium text-gray-600"
                       >
                         ВИП билет
                       </h3>
                       <div className="mt-4 flex items-center justify-center">
-                        <span className="flex items-start px-3 text-6xl tracking-tight text-gray-900">
-                          <span className="font-bold">249 лв.</span>
+                        <span className="flex items-start px-3 text-6xl tracking-tight text-gray-600">
+                          <span className="font-bold line-through">
+                            249 лв.
+                          </span>
                         </span>
                       </div>
                       <div className="mt-2 text-center">
-                        <span className="inline-block bg-red-50 text-red-700 text-xs font-semibold px-3 py-1 rounded-full border border-red-200 shadow-sm">
-                          МЕСТАТА СА ОГРАНИЧЕНИ
+                        <span className="inline-block bg-gray-200 text-gray-600 text-xs font-semibold px-3 py-1 rounded-full border border-gray-300 shadow-sm">
+                          ИЗЧЕРПАНИ
                         </span>
                       </div>
                     </div>
                   </div>
-                  <div className="flex flex-1 flex-col justify-between border-t-2 border-gray-700 bg-gray-800 p-6 sm:p-10 lg:p-6 xl:p-10">
+                  <div className="flex flex-1 flex-col justify-between border-t-2 border-gray-400 bg-gray-700 p-6 sm:p-10 lg:p-6 xl:p-10">
                     <ul role="list" className="space-y-4">
                       {vipFeatures.map((feature) => (
                         <li key={feature} className="flex items-start">
                           <div className="shrink-0">
                             <CheckIcon
                               aria-hidden="true"
-                              className="size-6 shrink-0 text-[#ff8d00]"
+                              className="size-6 shrink-0 text-gray-500"
                             />
                           </div>
-                          <p className="ml-3 text-base font-medium text-gray-300">
+                          <p className="ml-3 text-base font-medium text-gray-400">
                             {feature}
                           </p>
                         </li>
@@ -183,15 +189,12 @@ export default function Example() {
                     </ul>
                     <div className="mt-8">
                       <div className="rounded-lg shadow-md">
-                        <a
-                          href="https://buy.stripe.com/3cI00jdvD4S7bzY5nx2kw02"
-                          aria-describedby="tier-vip"
-                          className="block w-full rounded-lg border border-transparent bg-white px-6 py-3 text-center text-base font-medium text-indigo-600 hover:bg-gray-50"
-                          target="_blank"
-                          rel="noopener noreferrer"
+                        <button
+                          disabled
+                          className="block w-full rounded-lg border border-gray-400 bg-gray-400 px-6 py-3 text-center text-base font-medium text-gray-200 cursor-not-allowed"
                         >
-                          Купи
-                        </a>
+                          Изчерпани
+                        </button>
                       </div>
                     </div>
                   </div>
