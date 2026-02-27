@@ -107,7 +107,7 @@ export default async function ContactPage() {
             <div className="text-lg leading-8 text-gray-700">
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-6">
                 Станете партньор на Better Self - Biohacking & Longevity
-                Conference 2025
+                Conference 2026
               </h2>
               <p className="mb-4">
                 Вярвате в силата на превенцията, оптималното здраве и
@@ -117,7 +117,7 @@ export default async function ContactPage() {
                 холистичен подход – мястото ви е с нас!
               </p>
               <p>
-                Better Self - Biohacking & Longevity Conference 2025 събира на
+                Better Self - Biohacking & Longevity Conference 2026 събира на
                 едно място водещите имена, брандове и иноватори в сектора.
                 Свържете се с нас, за да обсъдим персонализирана форма на
                 партньорство, която да отрази най-силно стойността на вашия

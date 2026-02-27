@@ -212,7 +212,7 @@ export default function SponsorsAndPartners({ children }) {
                 холистичен подход – мястото ви е с нас!
               </p>
               <p className="mt-6 text-lg leading-8 text-gray-300">
-                Better Self - Biohacking & Longevity Conference 2025 събира на
+                Better Self - Biohacking & Longevity Conference 2026 събира на
                 едно място водещите имена, брандове и иноватори в сектора.
                 Свържете се с нас, за да обсъдим персонализирана форма на
                 партньорство, която да отрази най-силно стойността на вашия

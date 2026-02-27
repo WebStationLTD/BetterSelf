@@ -2,9 +2,9 @@ import Schedule from "../../components/schedule";
 
 // Метаданни за страницата
 export const metadata = {
-  title: "Програма на събитието - BetterSelf Conference 2025",
+  title: "Програма на събитието - BetterSelf Conference 2026",
   description:
-    "Подробна програма на конференцията за биохакинг и дълголетие. Вижте всички лекции, презентации и панелни дискусии на 02 ноември 2025.",
+    "Подробна програма на конференцията за биохакинг и дълголетие. Вижте всички лекции, презентации и панелни дискусии на 01 ноември 2026.",
   keywords: [
     "програма",
     "schedule",
@@ -16,15 +16,15 @@ export const metadata = {
     "презентации",
   ],
   openGraph: {
-    title: "Програма на събитието - BetterSelf Conference 2025",
+    title: "Програма на събитието - BetterSelf Conference 2026",
     description:
-      "Подробна програма на конференцията за биохакинг и дълголетие на 02 ноември 2025",
+      "Подробна програма на конференцията за биохакинг и дълголетие на 01 ноември 2026",
     images: [
       {
         url: "/betterself-hero-image.jpg",
         width: 1200,
         height: 630,
-        alt: "BetterSelf Conference 2025 Schedule",
+        alt: "BetterSelf Conference 2026 Schedule",
       },
     ],
     locale: "bg_BG",
@@ -32,9 +32,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Програма на събитието - BetterSelf Conference 2025",
+    title: "Програма на събитието - BetterSelf Conference 2026",
     description:
-      "Подробна програма на конференцията за биохакинг и дълголетие на 02 ноември 2025",
+      "Подробна програма на конференцията за биохакинг и дълголетие на 01 ноември 2026",
     images: ["/betterself-hero-image.jpg"],
   },
 };

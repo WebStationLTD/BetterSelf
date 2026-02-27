@@ -12,9 +12,9 @@ import TicketIframeController from "../../components/TicketIframeController";
 
 // Page metadata for SEO and social sharing
 export const metadata = {
-  title: "Test Iframe - BetterSelf Conference 2025",
+  title: "Test Iframe - BetterSelf Conference 2026",
   description: "Test page for ticket booking iframe functionality",
-  robots: "noindex, nofollow", // Prevent search engine indexing
+  robots: "noindex, nofollow",
 };
 
 export default function TestPage() {
@@ -28,7 +28,7 @@ export default function TestPage() {
               Iframe Test Page
             </h1>
             <div className="text-sm text-gray-500">
-              BetterSelf Conference 2025
+              BetterSelf Conference 2026
             </div>
           </div>
         </div>
@@ -57,7 +57,7 @@ export default function TestPage() {
       <footer className="bg-white border-t mt-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <p className="text-center text-sm text-gray-500">
-            Test Page - BetterSelf Conference 2025 |
+            Test Page - BetterSelf Conference 2026 |
             <a
               href="/"
               className="ml-2 text-blue-600 hover:text-blue-800 underline"

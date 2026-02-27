@@ -78,6 +78,7 @@ export default function Navigation() {
       { name: "Програма", href: "/schedule" },
       { name: "Спонсори", href: "/sponsors" },
       { name: "Билети", href: "/tickets" },
+      { name: "2025", href: "/event-2025" },
     ],
   });
 

@@ -9,12 +9,6 @@ export const metadata = {
 };
 
 export default async function Team() {
-  const members = await getMembers();
-
-  if (!members || members.length === 0) {
-    throw new Error("Team members not found");
-  }
-
   return (
     <>
       <div className="bg-white">
@@ -77,70 +71,27 @@ export default async function Team() {
             </p>
           </div>
           <ul role="list" className="divide-y divide-gray-200 xl:col-span-3">
-            {members.map((member) => (
+            {Array.from({ length: 8 }).map((_, index) => (
               <li
-                key={member.id}
+                key={index}
                 className="flex flex-col gap-10 py-12 first:pt-0 last:pb-0 sm:flex-row"
               >
-                <Link
-                  href={`/lecturers/${member.slug}`}
-                  prefetch={true}
-                  className="block w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0"
-                >
-                  <div className="relative aspect-square w-full overflow-hidden rounded-2xl">
-                    <Image
-                      fill
-                      alt={member.name || "Член на екипа"}
-                      src={member.profilepicture || "/placeholder.webp"}
-                      className="object-cover"
-                      sizes="(max-width: 639px) 8rem, (max-width: 767px) 9rem, (max-width: 1023px) 10rem, 11rem"
-                      quality={100}
-                    />
+                <div className="block w-32 sm:w-36 md:w-40 lg:w-44 flex-shrink-0">
+                  <div className="relative aspect-square w-full overflow-hidden rounded-2xl bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center group hover:from-orange-50 hover:to-yellow-50 transition-all duration-500">
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#ff8d00]/10 via-orange-500/5 to-yellow-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="relative z-10 text-center">
+                      <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ff8d00] via-orange-400 to-yellow-500 animate-pulse">
+                        Coming Soon
+                      </h3>
+                    </div>
                   </div>
-                </Link>
-                <div className="max-w-xl flex-auto">
-                  <Link href={`/lecturers/${member.slug}`} prefetch={true}>
-                    <h3 className="text-lg/8 font-semibold tracking-tight text-gray-900">
-                      {member.name || "Член на екипа"}
-                    </h3>
-                    <p className="text-base/7 text-gray-600">
-                      {member.position || ""}
+                </div>
+                <div className="max-w-xl flex-auto flex items-center justify-center">
+                  <div className="text-center">
+                    <p className="text-lg text-gray-500">
+                      Очаквайте скоро
                     </p>
-                    <div
-                      className="mt-2 text-base/7 text-gray-600 prose"
-                      dangerouslySetInnerHTML={{
-                        __html:
-                          member.description && member.description.length > 100
-                            ? `${member.description.slice(0, 200)}...`
-                            : member.description || "",
-                      }}
-                    />
-                  </Link>
-                  <ul role="list" className="mt-6 flex gap-x-6">
-                    {member.linkedin && member.linkedin.url && (
-                      <li>
-                        <Link
-                          href={member.linkedin.url}
-                          target={member.linkedin.target || "_blank"}
-                          className="text-gray-400 hover:text-gray-500"
-                        >
-                          <span className="sr-only">LinkedIn</span>
-                          <svg
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            aria-hidden="true"
-                            className="size-5"
-                          >
-                            <path
-                              d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
-                              clipRule="evenodd"
-                              fillRule="evenodd"
-                            />
-                          </svg>
-                        </Link>
-                      </li>
-                    )}
-                  </ul>
+                  </div>
                 </div>
               </li>
             ))}

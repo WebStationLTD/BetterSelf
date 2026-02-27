@@ -15,9 +15,9 @@ export default function EventCountdown() {
   useEffect(() => {
     setMounted(true);
 
-    // Събитието е на 02 ноември 2025 в 09:00 в София, България
+    // Събитието е на 01 ноември 2026 в 09:00 в София, България
     // Създаваме датата директно като българско местно време
-    const targetDate = new Date(2025, 10, 2, 9, 0, 0).getTime(); // месец 10 = ноември (0-indexed)
+    const targetDate = new Date(2026, 10, 1, 9, 0, 0).getTime(); // месец 10 = ноември (0-indexed)
 
     const updateCountdown = () => {
       const now = new Date().getTime();

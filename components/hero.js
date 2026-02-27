@@ -79,7 +79,7 @@ export default function Hero() {
 
             {/* Secondary Heading */}
             <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold tracking-tight text-white font-display mb-6">
-              Конференция 2025
+              Конференция 2026
             </h2>
             <h3 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-[#ff8d00] font-display mb-2 sm:mb-8">
               BETTER SELF
@@ -113,7 +113,7 @@ export default function Hero() {
             {/* Event Details */}
             <div className="relative rounded-full px-6 py-3 text-lg font-medium text-white ring-2 ring-white ring-opacity-30 hover:ring-opacity-50 transition-all duration-300 inline-block">
               <span className="text-xl font-bold mr-4">
-                02.11.2025 - Гранд Хотел Астория
+                01.11.2026 - Гранд Хотел Астория
               </span>
               <Link
                 href="/tickets"

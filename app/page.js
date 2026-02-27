@@ -6,7 +6,7 @@ export const revalidate = 3600;
 
 // Добавяне на метаданни за главната страница
 export const metadata = {
-  title: "BetterSelf - Biohacking & Longevity Conference 2025",
+  title: "BetterSelf - Biohacking & Longevity Conference 2026",
   description:
     "Присъединете се към водещата конференция за биохакинг и дълголетие в България. Научете от експерти как да оптимизирате здравето и живота си.",
   keywords: [
@@ -19,15 +19,15 @@ export const metadata = {
     "biohacking",
   ],
   openGraph: {
-    title: "BetterSelf - Biohacking & Longevity Conference 2025",
+    title: "BetterSelf - Biohacking & Longevity Conference 2026",
     description:
-      "Еднодневна конференция за биохакинг и дълголетие на 02.11.2025",
+      "Еднодневна конференция за биохакинг и дълголетие на 01.11.2026",
     images: [
       {
         url: "/betterself-hero-image.jpg",
         width: 1200,
         height: 630,
-        alt: "BetterSelf Conference 2025",
+        alt: "BetterSelf Conference 2026",
       },
     ],
     locale: "bg_BG",
@@ -35,9 +35,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "BetterSelf - Biohacking & Longevity Conference 2025",
+    title: "BetterSelf - Biohacking & Longevity Conference 2026",
     description:
-      "Еднодневна конференция за биохакинг и дълголетие на 02.11.2025",
+      "Еднодневна конференция за биохакинг и дълголетие на 01.11.2026",
     images: ["/betterself-hero-image.jpg"],
   },
 };

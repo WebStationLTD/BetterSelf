@@ -1802,7 +1802,7 @@ export default function TeamPage() {
 
                   <p className="text-lg text-gray-600 mb-6 leading-relaxed font-medium">
                     Създател на концепцията и главен организатор на
-                    конференцията BetterSelf 2025
+                    конференцията BetterSelf 2026
                   </p>
 
                   <div className="text-base text-gray-600 text-left space-y-5 leading-loose">
@@ -1927,7 +1927,7 @@ export default function TeamPage() {
                       резултати.
                     </p>
                     <p className="font-medium">
-                      В Biohacking BetaSelf 2025 Тотка отговаря за
+                      В Biohacking BetaSelf 2026 Тотка отговаря за
                       стратегическото и оперативното планиране на събитието,
                       включително продажбената стратегия, клиентското
                       преживяване и логистиката на място. Тя координира ключови

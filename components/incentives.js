@@ -88,61 +88,23 @@ export default function Incentives() {
             {incentives.slice(0, 6).map((incentive) => (
               <div
                 key={incentive.name}
-                className="flex flex-col items-center text-center p-6 pb-4 rounded-lg border border-white bg-gray-800/30 hover:bg-gray-800/50 transition-all duration-300 h-full justify-between"
+                className="flex flex-col items-center justify-center text-center p-6 pb-4 rounded-lg border border-white bg-gray-800/30 hover:bg-gray-800/50 transition-all duration-300 h-full relative overflow-hidden group"
               >
-                <div className="flex flex-col items-center w-full">
-                  <div className="shrink-0 mt-6">
-                    <div className="h-20 w-20 flex items-center justify-center rounded-full bg-[#ff8d00]">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#ff8d00]/10 via-orange-500/5 to-yellow-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative z-10 flex flex-col items-center justify-center h-full">
+                  <div className="shrink-0">
+                    <div className="h-20 w-20 flex items-center justify-center rounded-full bg-[#ff8d00] animate-pulse">
                       <incentive.icon className="h-12 w-12 text-white" />
                     </div>
                   </div>
-                  <div className="mt-4">
-                    <h3 className="text-xl font-medium text-white">
-                      {incentive.name}
+                  <div className="mt-8">
+                    <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ff8d00] via-orange-400 to-yellow-500 animate-pulse">
+                      Coming Soon
                     </h3>
-                    <p className="mt-1 text-base font-medium text-orange-400">
-                      {incentive.description}
+                    <p className="mt-3 text-sm text-gray-400">
+                      Очаквайте скоро
                     </p>
                   </div>
-
-                  {/* Видео секция - показва се само ако има видео */}
-                  {incentive.video && (
-                    <div className="mt-4 w-full">
-                      <video
-                        className="w-full h-auto rounded-lg shadow-lg"
-                        controls
-                        preload="metadata"
-                        style={{
-                          maxHeight: "200px",
-                          objectFit: "cover",
-                        }}
-                      >
-                        <source src={incentive.video} type="video/quicktime" />
-                        <source src={incentive.video} type="video/mp4" />
-                        Вашият браузър не поддържа видео елемента.
-                      </video>
-                    </div>
-                  )}
-
-                  {/* YouTube видео секция - показва се само ако има YouTube видео */}
-                  {incentive.youtubeVideo && (
-                    <div className="mt-4 w-full">
-                      <div className="relative w-full h-[600px] md:h-[700px] lg:h-[800px]">
-                        <iframe
-                          className="absolute top-0 left-0 w-full h-full rounded-lg shadow-xl border-2 border-orange-200"
-                          src={`https://www.youtube-nocookie.com/embed/${incentive.youtubeVideo}?modestbranding=1&rel=0&showinfo=0&controls=1&hd=1&iv_load_policy=3&fs=1&disablekb=0&title=0&byline=0&portrait=0`}
-                          title="YouTube video player"
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                          allowFullScreen
-                        ></iframe>
-                      </div>
-                    </div>
-                  )}
-                </div>
-
-                <div className="mt-6 mb-6">
-                  <p className="text-base text-white">{incentive.lecturer}</p>
                 </div>
               </div>
             ))}
@@ -154,64 +116,23 @@ export default function Incentives() {
               {incentives.slice(6, 8).map((incentive) => (
                 <div
                   key={incentive.name}
-                  className="flex flex-col items-center text-center p-6 pb-4 rounded-lg border border-white bg-gray-800/30 hover:bg-gray-800/50 transition-all duration-300 h-full justify-between"
+                  className="flex flex-col items-center justify-center text-center p-6 pb-4 rounded-lg border border-white bg-gray-800/30 hover:bg-gray-800/50 transition-all duration-300 h-full relative overflow-hidden group"
                 >
-                  <div className="flex flex-col items-center w-full">
-                    <div className="shrink-0 mt-6">
-                      <div className="h-20 w-20 flex items-center justify-center rounded-full bg-[#ff8d00]">
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#ff8d00]/10 via-orange-500/5 to-yellow-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="relative z-10 flex flex-col items-center justify-center h-full">
+                    <div className="shrink-0">
+                      <div className="h-20 w-20 flex items-center justify-center rounded-full bg-[#ff8d00] animate-pulse">
                         <incentive.icon className="h-12 w-12 text-white" />
                       </div>
                     </div>
-                    <div className="mt-4">
-                      <h3 className="text-xl font-medium text-white">
-                        {incentive.name}
+                    <div className="mt-8">
+                      <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ff8d00] via-orange-400 to-yellow-500 animate-pulse">
+                        Coming Soon
                       </h3>
-                      <p className="mt-1 text-base font-medium text-orange-400">
-                        {incentive.description}
+                      <p className="mt-3 text-sm text-gray-400">
+                        Очаквайте скоро
                       </p>
                     </div>
-
-                    {/* Видео секция - показва се само ако има видео */}
-                    {incentive.video && (
-                      <div className="mt-4 w-full">
-                        <video
-                          className="w-full h-auto rounded-lg shadow-lg"
-                          controls
-                          preload="metadata"
-                          style={{
-                            maxHeight: "200px",
-                            objectFit: "cover",
-                          }}
-                        >
-                          <source
-                            src={incentive.video}
-                            type="video/quicktime"
-                          />
-                          <source src={incentive.video} type="video/mp4" />
-                          Вашият браузър не поддържа видео елемента.
-                        </video>
-                      </div>
-                    )}
-
-                    {/* YouTube видео секция - показва се само ако има YouTube видео */}
-                    {incentive.youtubeVideo && (
-                      <div className="mt-4 w-full">
-                        <div className="relative w-full h-[600px] md:h-[700px] lg:h-[800px]">
-                          <iframe
-                            className="absolute top-0 left-0 w-full h-full rounded-lg shadow-xl border-2 border-orange-200"
-                            src={`https://www.youtube-nocookie.com/embed/${incentive.youtubeVideo}?modestbranding=1&rel=0&showinfo=0&controls=1&hd=1&iv_load_policy=3&fs=1&disablekb=0&title=0&byline=0&portrait=0`}
-                            title="YouTube video player"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowFullScreen
-                          ></iframe>
-                        </div>
-                      </div>
-                    )}
-                  </div>
-
-                  <div className="mt-6 mb-6">
-                    <p className="text-base text-white">{incentive.lecturer}</p>
                   </div>
                 </div>
               ))}

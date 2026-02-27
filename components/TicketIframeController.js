@@ -13,8 +13,8 @@ export default function TicketIframeController() {
     <div className="w-full">
       <div className="relative">
         <iframe
-          src="https://bilet.bg/bg/cart/better-self-biohacking-summit-2025-6457?noframe=true"
-          title="Ticket booking module - BetterSelf Conference 2025"
+          src="https://bilet.bg/bg/cart/better-self-biohacking-summit-2026?noframe=true"
+          title="Ticket booking module - BetterSelf Conference 2026"
           className="w-full h-[200vh] lg:h-[180vh] border-0"
           scrolling="no"
           allowFullScreen

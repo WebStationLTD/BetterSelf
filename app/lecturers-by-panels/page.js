@@ -65,7 +65,7 @@ const panelsData = {
         company: "EcomLabs360",
         // EcomLabs360 няма публичен сайт в sponsors списъка
         description:
-          "Йоан Аспарухов е експерт в електронната търговия и дигиталния маркетинг с над десет години опит в изграждането и развитието на онлайн бизнеси в България и чужбина. Той е основател на EcomLabs360 – агенция за performance маркетинг, работеща с утвърдени и скалиращи брандове. В портфолиото на компанията му влизат партньорства с различни международни и локални марки. Йоан има богат опит в управлението на рекламни кампании в глобални платформи, създаването на маркетингови стратегии и оптимизацията на онлайн магазини. Съчетава креативност и данни, за да помага на брандовете да постигат устойчив растеж, като активно интегрира иновативни технологии и изкуствен интелект в процесите на дигиталния маркетинг. На BetterSelf 2025 той ще сподели практически опит за ролята на изкуствения интелект в ускоряването на растежа и развитието на съвременните брандове.",
+          "Йоан Аспарухов е експерт в електронната търговия и дигиталния маркетинг с над десет години опит в изграждането и развитието на онлайн бизнеси в България и чужбина. Той е основател на EcomLabs360 – агенция за performance маркетинг, работеща с утвърдени и скалиращи брандове. В портфолиото на компанията му влизат партньорства с различни международни и локални марки. Йоан има богат опит в управлението на рекламни кампании в глобални платформи, създаването на маркетингови стратегии и оптимизацията на онлайн магазини. Съчетава креативност и данни, за да помага на брандовете да постигат устойчив растеж, като активно интегрира иновативни технологии и изкуствен интелект в процесите на дигиталния маркетинг. На BetterSelf 2026 той ще сподели практически опит за ролята на изкуствения интелект в ускоряването на растежа и развитието на съвременните брандове.",
         image: "/йоан-аспарухов.jpg",
       },
       {
@@ -118,7 +118,7 @@ const panelsData = {
         company: "NAD.BG",
         companyLink: "https://nad.bg/",
         description:
-          "Предприемач, инвеститор и визионер в сферата на биохакинга и дълголетието. Собственик на NAD.BG с международен опит в изграждането на компании в Русия, Украйна, САЩ, Франция и Сингапур. В портфолиото му стоят милиардни сделки, управление на над $38 млрд. активи и ръководство на екипи с хиляди служители. Master Franchise Owner на REVIV Bulgaria, COO на VostokFinance Group, консултант в Bain & Company и съосновател на Easy Credit Ukraine. На BetterSelf 2025 ще говори за най-иновативните практики в биохакинга и дълголетието, как да различаваме реално работещите подходи от маркетинговите митове и кои тенденции в науката и технологиите вече променят живота ни.",
+          "Предприемач, инвеститор и визионер в сферата на биохакинга и дълголетието. Собственик на NAD.BG с международен опит в изграждането на компании в Русия, Украйна, САЩ, Франция и Сингапур. В портфолиото му стоят милиардни сделки, управление на над $38 млрд. активи и ръководство на екипи с хиляди служители. Master Franchise Owner на REVIV Bulgaria, COO на VostokFinance Group, консултант в Bain & Company и съосновател на Easy Credit Ukraine. На BetterSelf 2026 ще говори за най-иновативните практики в биохакинга и дълголетието, как да различаваме реално работещите подходи от маркетинговите митове и кои тенденции в науката и технологиите вече променят живота ни.",
         image: "/даниел-цаков.jpg",
       },
       // ВРЕМЕННО СКРИТО - Анна Петкова
@@ -248,23 +248,25 @@ export default function LecturersByPanels() {
                   ></div>
                 </div>
 
-                {/* Лектори */}
+                {/* Coming Soon ефект */}
                 <div className="space-y-8">
-                  {panelsData["innovations-ai"].lecturers.map((lecturer) => (
-                    <LecturerCard
-                      key={lecturer.id}
-                      lecturer={lecturer}
-                      panelColor={panelsData["innovations-ai"].color}
-                      ringColor="ring-blue-100"
-                      isModerator={lecturer.isModerator}
-                      moderatorTitle="Водеща на панела"
-                      moderatorColors={{
-                        bgGradient: "from-purple-100 to-purple-200",
-                        borderColor: "border-purple-300",
-                        ringColor: "ring-purple-300",
-                        badgeGradient: "from-purple-600 to-purple-700",
-                      }}
-                    />
+                  {Array.from({ length: 6 }).map((_, index) => (
+                    <div
+                      key={index}
+                      className="relative bg-white rounded-2xl shadow-lg border-2 border-gray-200 p-8 overflow-hidden group hover:shadow-xl transition-all duration-500"
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-br from-[#ff8d00]/10 via-orange-500/5 to-yellow-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      <div className="relative z-10 flex items-center justify-center min-h-[200px]">
+                        <div className="text-center">
+                          <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ff8d00] via-orange-400 to-yellow-500 animate-pulse">
+                            Coming Soon
+                          </h3>
+                          <p className="mt-3 text-sm text-gray-500">
+                            Очаквайте скоро
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   ))}
                 </div>
               </div>
@@ -311,23 +313,25 @@ export default function LecturersByPanels() {
                   ></div>
                 </div>
 
-                {/* Лектори */}
+                {/* Coming Soon ефект */}
                 <div className="space-y-8">
-                  {panelsData["longevity"].lecturers.map((lecturer) => (
-                    <LecturerCard
-                      key={lecturer.id}
-                      lecturer={lecturer}
-                      panelColor={panelsData["longevity"].color}
-                      ringColor="ring-green-100"
-                      isModerator={lecturer.isModerator}
-                      moderatorTitle="Водещ на панела"
-                      moderatorColors={{
-                        bgGradient: "from-blue-100 to-cyan-100",
-                        borderColor: "border-blue-300",
-                        ringColor: "ring-blue-300",
-                        badgeGradient: "from-blue-600 to-cyan-600",
-                      }}
-                    />
+                  {Array.from({ length: 6 }).map((_, index) => (
+                    <div
+                      key={index}
+                      className="relative bg-white rounded-2xl shadow-lg border-2 border-gray-200 p-8 overflow-hidden group hover:shadow-xl transition-all duration-500"
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-br from-[#ff8d00]/10 via-orange-500/5 to-yellow-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      <div className="relative z-10 flex items-center justify-center min-h-[200px]">
+                        <div className="text-center">
+                          <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ff8d00] via-orange-400 to-yellow-500 animate-pulse">
+                            Coming Soon
+                          </h3>
+                          <p className="mt-3 text-sm text-gray-500">
+                            Очаквайте скоро
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   ))}
                 </div>
               </div>

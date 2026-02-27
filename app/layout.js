@@ -49,11 +49,11 @@ export async function generateMetadata() {
       default: "BetterSelf | Конференция за здраве и личностно развитие",
     },
     description:
-      "BetterSelf 2025 - Водещата конференция в България за здраве, дълголетие, биохакинг и личностно развитие. Присъединете се към най-иновативните специалисти и открийте пътя към по-доброто себе си.",
+      "BetterSelf 2026 - Водещата конференция в България за здраве, дълголетие, биохакинг и личностно развитие. Присъединете се към най-иновативните специалисти и открийте пътя към по-доброто себе си.",
     openGraph: {
       title: "BetterSelf | Конференция за здраве и личностно развитие",
       description:
-        "BetterSelf 2025 - Водещата конференция в България за здраве, дълголетие, биохакинг и личностно развитие. Присъединете се към най-иновативните специалисти и открийте пътя към по-доброто себе си.",
+        "BetterSelf 2026 - Водещата конференция в България за здраве, дълголетие, биохакинг и личностно развитие. Присъединете се към най-иновативните специалисти и открийте пътя към по-доброто себе си.",
       images: "/betterself-hero-image.jpg",
       type: "website",
       locale: "bg_BG",
@@ -62,7 +62,7 @@ export async function generateMetadata() {
     twitter: {
       card: "summary_large_image",
       title: "BetterSelf - Конференция за здраве и личностно развитие",
-      description: "Открийте пътя към по-доброто себе си с BetterSelf 2025",
+      description: "Открийте пътя към по-доброто себе си с BetterSelf 2026",
       images: ["/betterself-hero-image.jpg"],
     },
     robots: {
@@ -130,12 +130,12 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Event",
-              name: "BetterSelf 2025 - Конференция за здраве и личностно развитие",
+              name: "BetterSelf 2026 - Конференция за здраве и личностно развитие",
               description:
                 "Водещата конференция в България за здраве, дълголетие, биохакинг и личностно развитие. Присъединете се към най-иновативните специалисти и открийте пътя към по-доброто себе си.",
               url: "https://www.betterself.bg",
               image: "/betterself-hero-image.jpg",
-              startDate: "2025-05-17",
+              startDate: "2026-11-01",
               eventStatus: "https://schema.org/EventScheduled",
               eventAttendanceMode:
                 "https://schema.org/OfflineEventAttendanceMode",
