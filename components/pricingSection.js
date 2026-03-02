@@ -67,7 +67,7 @@ export default function Example() {
                     <div className="mt-8">
                       <div className="rounded-lg shadow-md">
                         <a
-                          href="https://buy.stripe.com/eVq4gz8bj70fbzY2bl2kw05"
+                          href="https://buy.stripe.com/dRmcN5ajr1FV47w4jt2kw06"
                           aria-describedby="tier-online"
                           className="block w-full rounded-lg border border-transparent bg-white px-6 py-3 text-center text-base font-medium text-indigo-600 hover:bg-gray-50"
                           target="_blank"
@@ -150,7 +150,7 @@ export default function Example() {
                       </h3>
                       <div className="mt-4 flex items-center justify-center">
                         <span className="flex items-start px-3 text-6xl tracking-tight text-gray-900">
-                          <span className="font-bold">85€</span>
+                          <span className="font-bold">149€</span>
                         </span>
                       </div>
                     </div>
