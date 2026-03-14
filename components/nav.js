@@ -203,7 +203,7 @@ export default function Navigation() {
               <div className="ml-4">
                 <Link href="/" onClick={() => setOpen(false)} className="block">
                   <Image
-                    src="/better-self-logo.png"
+                    src="/better-self-logo-2026.png"
                     alt="BetterSelf Logo"
                     width={197}
                     height={60}
@@ -330,7 +330,7 @@ export default function Navigation() {
                     width={197}
                     height={60}
                     alt=""
-                    src="/better-self-logo.png"
+                    src="/better-self-logo-2026.png"
                     className="w-auto h-[50px] lg:h-[60px] object-contain"
                   />
                 </Link>
