@@ -71,126 +71,43 @@ export default function Clients() {
                   />
                 </Link>
               </div>
+              {/* ВРЕМЕННО СКРИТО
               <div className="h-16 flex items-center justify-center relative">
-                <Link
-                  href="https://drbastet.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300"
-                >
-                  <Image
-                    alt="Dr. Bastet"
-                    src="/dr-bastet-logo.jpg"
-                    fill
-                    quality={80}
-                    loading="lazy"
-                    className="max-h-full max-w-full object-contain"
-                  />
+                <Link href="https://drbastet.com/" target="_blank" rel="noopener noreferrer" className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300">
+                  <Image alt="Dr. Bastet" src="/dr-bastet-logo.jpg" fill quality={80} loading="lazy" className="max-h-full max-w-full object-contain" />
                 </Link>
               </div>
               <div className="h-16 flex items-center justify-center relative">
-                <Link
-                  href="https://thermanumera.com/bg/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300"
-                >
-                  <Image
-                    alt="Thermanumera"
-                    src="/therma-numera-logo.png"
-                    fill
-                    quality={80}
-                    loading="lazy"
-                    className="max-h-full max-w-full object-contain"
-                  />
+                <Link href="https://thermanumera.com/bg/" target="_blank" rel="noopener noreferrer" className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300">
+                  <Image alt="Thermanumera" src="/therma-numera-logo.png" fill quality={80} loading="lazy" className="max-h-full max-w-full object-contain" />
                 </Link>
               </div>
               <div className="h-16 flex items-center justify-center relative">
-                <Link
-                  href="https://www.sofia.dexafit.com/bg"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300"
-                >
-                  <Image
-                    alt="DexaFit Sofia"
-                    src="/dexafit-sofia-logo.png"
-                    fill
-                    quality={80}
-                    loading="lazy"
-                    className="max-h-full max-w-full object-contain"
-                  />
-                </Link>
-              </div>
-              {/* ВРЕМЕННО СКРИТО - Benlian Food Philosophy */}
-              {/* <div className="h-16 flex items-center justify-center relative">
-                <Link
-                  href="https://benlianfoods.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300"
-                >
-                  <Image
-                    alt="Benlian Food Philosophy"
-                    src="/benlian-logo.jpg"
-                    fill
-                    quality={100}
-                    loading="lazy"
-                    className="max-h-full max-w-full object-contain"
-                  />
-                </Link>
-              </div> */}
-              <div className="h-16 flex items-center justify-center relative">
-                <Link
-                  href="https://www.insidetracker.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300"
-                >
-                  <Image
-                    alt="InsideTracker"
-                    src="/inside-tracker.jpg"
-                    fill
-                    quality={100}
-                    loading="lazy"
-                    className="max-h-full max-w-full object-contain"
-                  />
+                <Link href="https://www.sofia.dexafit.com/bg" target="_blank" rel="noopener noreferrer" className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300">
+                  <Image alt="DexaFit Sofia" src="/dexafit-sofia-logo.png" fill quality={80} loading="lazy" className="max-h-full max-w-full object-contain" />
                 </Link>
               </div>
               <div className="h-16 flex items-center justify-center relative">
-                <Link
-                  href="https://revita.bg/double-wood"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300"
-                >
-                  <Image
-                    alt="Double Wood Supplements"
-                    src="/double-wood-logo.jpg"
-                    fill
-                    quality={100}
-                    loading="lazy"
-                    className="max-h-full max-w-full object-contain"
-                  />
+                <Link href="https://benlianfoods.com/" target="_blank" rel="noopener noreferrer" className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300">
+                  <Image alt="Benlian Food Philosophy" src="/benlian-logo.jpg" fill quality={100} loading="lazy" className="max-h-full max-w-full object-contain" />
                 </Link>
               </div>
               <div className="h-16 flex items-center justify-center relative">
-                <Link
-                  href="https://momvy.eu/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300"
-                >
-                  <Image
-                    alt="MOMVY"
-                    src="/momvy-logo.png"
-                    fill
-                    quality={100}
-                    loading="lazy"
-                    className="max-h-full max-w-full object-contain"
-                  />
+                <Link href="https://www.insidetracker.com/" target="_blank" rel="noopener noreferrer" className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300">
+                  <Image alt="InsideTracker" src="/inside-tracker.jpg" fill quality={100} loading="lazy" className="max-h-full max-w-full object-contain" />
                 </Link>
               </div>
+              <div className="h-16 flex items-center justify-center relative">
+                <Link href="https://revita.bg/double-wood" target="_blank" rel="noopener noreferrer" className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300">
+                  <Image alt="Double Wood Supplements" src="/double-wood-logo.jpg" fill quality={100} loading="lazy" className="max-h-full max-w-full object-contain" />
+                </Link>
+              </div>
+              <div className="h-16 flex items-center justify-center relative">
+                <Link href="https://momvy.eu/" target="_blank" rel="noopener noreferrer" className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300">
+                  <Image alt="MOMVY" src="/momvy-logo.png" fill quality={100} loading="lazy" className="max-h-full max-w-full object-contain" />
+                </Link>
+              </div>
+              */}
             </div>
           </div>
 
@@ -229,33 +146,16 @@ export default function Clients() {
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
+              {/* ВРЕМЕННО СКРИТО
               <div className="h-16 flex items-center justify-center relative">
-                <Link
-                  href="https://createx.bg/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300"
-                >
-                  <Image
-                    alt="Createx"
-                    src="/createx-logo.png"
-                    fill
-                    quality={100}
-                    loading="lazy"
-                    className="max-h-full max-w-full object-contain"
-                  />
+                <Link href="https://createx.bg/" target="_blank" rel="noopener noreferrer" className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300">
+                  <Image alt="Createx" src="/createx-logo.png" fill quality={100} loading="lazy" className="max-h-full max-w-full object-contain" />
                 </Link>
               </div>
               <div className="h-16 flex items-center justify-center relative">
-                <Image
-                  alt="Ecom"
-                  src="/ecom-logo.png"
-                  fill
-                  quality={100}
-                  loading="lazy"
-                  className="max-h-full max-w-full object-contain"
-                />
+                <Image alt="Ecom" src="/ecom-logo.png" fill quality={100} loading="lazy" className="max-h-full max-w-full object-contain" />
               </div>
+              */}
               <div className="h-16 flex items-center justify-center relative">
                 <Link
                   href="https://maxgroupevents.com/"
