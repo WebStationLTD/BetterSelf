@@ -2,78 +2,53 @@
 
 import Link from "next/link";
 import LazyImageObserver from "./LazyImageObserver";
-import { useEffect, useRef } from "react";
 
 export default function Hero() {
-  const videoRef = useRef(null);
-
-  // Добавяме дебъг клас към body
-  useEffect(() => {
-    document.body.classList.add("debug-indicator");
-
-    // Дебъг за видеото
-    const video = videoRef.current;
-    if (video) {
-      video.addEventListener("loadstart", () =>
-        console.log("Video: Started loading")
-      );
-      video.addEventListener("loadeddata", () =>
-        console.log("Video: Data loaded")
-      );
-      video.addEventListener("canplay", () => console.log("Video: Can play"));
-      video.addEventListener("playing", () => console.log("Video: Playing"));
-      video.addEventListener("error", (e) => console.error("Video error:", e));
-    }
-
-    return () => {
-      document.body.classList.remove("debug-indicator");
-    };
-  }, []);
 
   return (
     <>
       <LazyImageObserver />
-      <div className="relative w-full h-[600px]">
-        {/* Hero Background Video */}
-        <div className="absolute inset-0 w-full h-full">
-          <video
-            ref={videoRef}
-            autoPlay
-            muted
-            loop
-            playsInline
-            poster="/betterself-hero-image.jpg"
-            className="w-full h-full object-cover"
+      <div className="relative w-full min-h-[700px]">
+        {/* Hero Background - poster image shows instantly while YouTube loads */}
+        <div
+          className="absolute inset-0 w-full h-full overflow-hidden"
+          style={{
+            backgroundImage: "url(/betterself-hero-image.jpg)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <iframe
+            src="https://www.youtube.com/embed/nzdDwg_bq_Q?autoplay=1&mute=1&loop=1&playlist=nzdDwg_bq_Q&controls=0&showinfo=0&rel=0&playsinline=1&modestbranding=1&enablejsapi=1&vq=hd720"
+            allow="autoplay; fullscreen"
+            allowFullScreen
+            loading="eager"
             style={{
-              objectFit: "cover",
-              objectPosition: "center top",
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              width: "100vw",
+              height: "56.25vw",
+              minHeight: "100%",
+              minWidth: "177.78vh",
+              transform: "translate(-50%, -50%)",
+              pointerEvents: "none",
+              border: "none",
             }}
-            onError={(e) => {
-              console.error("Video failed to load:", e);
-            }}
-            onLoadStart={() => console.log("Video load start")}
-            onCanPlay={() => console.log("Video can play")}
-          >
-            {/* MP4 формат за максимална съвместимост */}
-            <source src="/betterself-hero-video.mp4" type="video/mp4" />
-            {/* Fallback за браузери, които не поддържат видео */}
-            Вашият браузър не поддържа видео тагове.
-          </video>
+          />
         </div>
 
         {/* Dark Overlay for Better Text Readability */}
         <div
           className="absolute inset-0"
-          style={{
-            backgroundColor: "rgba(0, 0, 0, 0.55)",
-          }}
-        ></div>
+          style={{ backgroundColor: "rgba(0, 0, 0, 0.55)" }}
+        />
 
-        {/* Hero Content - Centered */}
-        <div className="relative z-10 flex items-center justify-center h-[600px] px-6">
+        {/* Hero Content */}
+        <div className="relative z-10 flex items-center justify-center min-h-[700px] px-6 py-20 sm:py-28">
           <div className="text-center max-w-6xl mx-auto">
             {/* Main Heading */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold tracking-tight text-white font-display mb-4">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold tracking-tight text-white font-display mb-5">
               Биохакинг и дълголетие
             </h1>
 
@@ -81,21 +56,23 @@ export default function Hero() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold tracking-tight text-white font-display mb-6">
               Конференция 2026
             </h2>
-            <h3 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-[#ff8d00] font-display mb-2 sm:mb-8">
+
+            <h3 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-[#ff8d00] font-display mb-6 sm:mb-10">
               BETTER SELF
             </h3>
+
             {/* Quote */}
-            <p className="text-2xl md:text-3xl lg:text-4xl font-medium text-white font-display mb-2 sm:mb-8">
+            <p className="text-2xl md:text-3xl lg:text-4xl font-medium text-white font-display mb-6 sm:mb-10">
               "Очи в очи"
             </p>
 
             {/* Subtitle */}
-            <p className="text-lg md:text-xl lg:text-2xl font-medium text-white font-display mb-4 sm:mb-12 opacity-90">
+            <p className="text-lg md:text-xl lg:text-2xl font-medium text-white font-display mb-8 sm:mb-14 opacity-90">
               Направете следващата голяма крачка по пътя към своето ПО-ДОБРО АЗ
             </p>
 
             {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-4 sm:mb-10">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8 sm:mb-12">
               <Link
                 href="/tickets"
                 className="rounded-md bg-[#ff8d00] hover:bg-orange-600 px-6 py-3 text-lg font-semibold text-black shadow-lg transition-all duration-300 transform hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600"
