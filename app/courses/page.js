@@ -15,6 +15,8 @@ const courses = [
     instructorTitle: "Тренер по харизма и говорни умения",
     instructorImage: "/placeholder.webp",
     courseImage: "/иван-головацкий-курс.jpg",
+    courseImageMobile: "/иван-головацкий-курс-mobile.jpg",
+    venueImages: ["/зала-Library-1.jpg", "/зала-Library-2.jpg"],
     date: "31 Май 2026",
     time: "9:30 – 18:00",
     location: "Хотел Интерконтинентал София",
@@ -144,38 +146,61 @@ export default function CoursesPage() {
                 <div className="lg:grid lg:grid-cols-5">
                   {/* Left: Course Image + Quick Info */}
                   <div className="lg:col-span-2 flex flex-col">
-                    {/* Course Image */}
-                    <div className="relative w-full aspect-[4/3] lg:aspect-auto lg:flex-1" style={{ minHeight: "300px" }}>
+
+                    {/* Mobile image – full natural height, no crop */}
+                    <div className="relative lg:hidden">
                       <Image
-                        src={course.courseImage}
+                        src={course.courseImageMobile || course.courseImage}
                         alt={course.title}
-                        fill
-                        className="object-cover object-center"
-                        sizes="(max-width: 1024px) 100vw, 40vw"
+                        width={800}
+                        height={600}
+                        className="w-full h-auto block"
                         priority
                       />
-                      {/* Gradient overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-                      {/* Price badge */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/5 to-transparent pointer-events-none" />
                       <div className="absolute top-4 left-4 bg-[#ff8d00] text-white font-bold px-4 py-2 rounded-xl text-lg shadow-lg">
                         {course.price}
                       </div>
-                      {/* Badge */}
                       <div className="absolute top-4 right-4">
                         <span className="inline-flex items-center gap-1.5 rounded-full bg-white/20 backdrop-blur-sm px-3 py-1.5 text-xs font-semibold text-white ring-1 ring-white/30">
                           <span className="w-1.5 h-1.5 rounded-full bg-orange-400 animate-pulse" />
                           {course.badge}
                         </span>
                       </div>
-                      {/* Instructor overlay */}
                       <div className="absolute bottom-0 left-0 right-0 p-5 flex items-center gap-3">
                         <div className="relative w-12 h-12 rounded-full overflow-hidden ring-2 ring-white/60 flex-shrink-0 shadow-lg">
-                          <Image
-                            src={course.instructorImage}
-                            alt={course.instructor}
-                            fill
-                            className="object-cover"
-                          />
+                          <Image src={course.instructorImage} alt={course.instructor} fill className="object-cover" />
+                        </div>
+                        <div>
+                          <p className="text-white font-bold text-sm leading-tight">{course.instructor}</p>
+                          <p className="text-orange-200 text-xs mt-0.5">{course.instructorTitle}</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Desktop image – full image with contain, no crop */}
+                    <div className="hidden lg:block relative flex-1 bg-gray-900" style={{ minHeight: "340px" }}>
+                      <Image
+                        src={course.courseImage}
+                        alt={course.title}
+                        fill
+                        className="object-contain object-center"
+                        sizes="40vw"
+                        priority
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+                      <div className="absolute top-4 left-4 bg-[#ff8d00] text-white font-bold px-4 py-2 rounded-xl text-lg shadow-lg">
+                        {course.price}
+                      </div>
+                      <div className="absolute top-4 right-4">
+                        <span className="inline-flex items-center gap-1.5 rounded-full bg-white/20 backdrop-blur-sm px-3 py-1.5 text-xs font-semibold text-white ring-1 ring-white/30">
+                          <span className="w-1.5 h-1.5 rounded-full bg-orange-400 animate-pulse" />
+                          {course.badge}
+                        </span>
+                      </div>
+                      <div className="absolute bottom-0 left-0 right-0 p-5 flex items-center gap-3">
+                        <div className="relative w-12 h-12 rounded-full overflow-hidden ring-2 ring-white/60 flex-shrink-0 shadow-lg">
+                          <Image src={course.instructorImage} alt={course.instructor} fill className="object-cover" />
                         </div>
                         <div>
                           <p className="text-white font-bold text-sm leading-tight">{course.instructor}</p>
@@ -289,6 +314,28 @@ export default function CoursesPage() {
                                   <p className="text-xs text-gray-500 mt-0.5">{item.note}</p>
                                 )}
                               </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Venue Gallery */}
+                    {course.venueImages && course.venueImages.length > 0 && (
+                      <div>
+                        <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-4">
+                          Локация – Хотел Интерконтинентал София
+                        </h4>
+                        <div className="grid grid-cols-2 gap-3">
+                          {course.venueImages.map((img, i) => (
+                            <div key={i} className="relative aspect-[4/3] rounded-xl overflow-hidden">
+                              <Image
+                                src={img}
+                                alt={`Зала ${i + 1}`}
+                                fill
+                                className="object-cover hover:scale-105 transition-transform duration-500"
+                                sizes="(max-width: 768px) 50vw, 25vw"
+                              />
                             </div>
                           ))}
                         </div>
