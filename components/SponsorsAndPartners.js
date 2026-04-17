@@ -20,12 +20,6 @@ const sponsors = [
     description:
       "Водеща клиника по дерматология и естетична медицина с най-съвременна апаратура.",
   },
-  {
-    name: "Nad Clinic",
-    logo: "/nad-clinic-logo.jpg",
-    link: "https://nad.bg/",
-    description: "Иновативен център за клетъчна регенерация и подмладяване.",
-  },
   // ВРЕМЕННО СКРИТО
   // {
   //   name: "Dr. Bastet",
