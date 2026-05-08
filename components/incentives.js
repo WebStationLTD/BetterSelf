@@ -42,11 +42,12 @@ const incentives = [
       "Психологически стратегии за постигане на върхови резултати и преодоляване на ограниченията",
   },
   {
-    name: "Биохакинг за красота",
+    name: "Промените на кожата при жените в перименопауза и менопауза",
     lecturer: "Д-р Камелия Присадашка",
     icon: SparklesIcon,
     description:
       "Съвременни научни подходи за развиване и поддържане на красотата отвътре и отвън",
+    showTopic: true,
   },
   {
     name: "Харизма и дизайн на гласа",
@@ -64,11 +65,12 @@ const incentives = [
     youtubeVideo: "lbfGvCXmzSY",
   },
   {
-    name: "Емоционална интелигентност",
+    name: 'Можеш да правиш всичко „правилно" и пак да си изтощен – защо?',
     lecturer: "Десислава Дамянова",
     icon: FaceSmileIcon,
     description:
       "Как да разпознаваме, разбираме и управляваме емоциите за по-хармонични и удовлетворяващи взаимоотношения",
+    showTopic: true,
   },
 ];
 
@@ -93,17 +95,30 @@ export default function Incentives() {
                 <div className="absolute inset-0 bg-gradient-to-br from-[#ff8d00]/10 via-orange-500/5 to-yellow-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="relative z-10 flex flex-col items-center justify-center h-full">
                   <div className="shrink-0">
-                    <div className="h-20 w-20 flex items-center justify-center rounded-full bg-[#ff8d00] animate-pulse">
+                    <div className={`h-20 w-20 flex items-center justify-center rounded-full bg-[#ff8d00] ${!incentive.showTopic ? "animate-pulse" : ""}`}>
                       <incentive.icon className="h-12 w-12 text-white" />
                     </div>
                   </div>
                   <div className="mt-8">
-                    <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ff8d00] via-orange-400 to-yellow-500 animate-pulse">
-                      Coming Soon
-                    </h3>
-                    <p className="mt-3 text-sm text-gray-400">
-                      Очаквайте скоро
-                    </p>
+                    {incentive.showTopic ? (
+                      <>
+                        <h3 className="text-xl font-bold text-white leading-snug">
+                          {incentive.name}
+                        </h3>
+                        <p className="mt-3 text-sm font-medium text-[#ff8d00]">
+                          {incentive.lecturer}
+                        </p>
+                      </>
+                    ) : (
+                      <>
+                        <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ff8d00] via-orange-400 to-yellow-500 animate-pulse">
+                          Coming Soon
+                        </h3>
+                        <p className="mt-3 text-sm text-gray-400">
+                          Очаквайте скоро
+                        </p>
+                      </>
+                    )}
                   </div>
                 </div>
               </div>
@@ -121,17 +136,30 @@ export default function Incentives() {
                   <div className="absolute inset-0 bg-gradient-to-br from-[#ff8d00]/10 via-orange-500/5 to-yellow-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <div className="relative z-10 flex flex-col items-center justify-center h-full">
                     <div className="shrink-0">
-                      <div className="h-20 w-20 flex items-center justify-center rounded-full bg-[#ff8d00] animate-pulse">
+                      <div className={`h-20 w-20 flex items-center justify-center rounded-full bg-[#ff8d00] ${!incentive.showTopic ? "animate-pulse" : ""}`}>
                         <incentive.icon className="h-12 w-12 text-white" />
                       </div>
                     </div>
                     <div className="mt-8">
-                      <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ff8d00] via-orange-400 to-yellow-500 animate-pulse">
-                        Coming Soon
-                      </h3>
-                      <p className="mt-3 text-sm text-gray-400">
-                        Очаквайте скоро
-                      </p>
+                      {incentive.showTopic ? (
+                        <>
+                          <h3 className="text-xl font-bold text-white leading-snug">
+                            {incentive.name}
+                          </h3>
+                          <p className="mt-3 text-sm font-medium text-[#ff8d00]">
+                            {incentive.lecturer}
+                          </p>
+                        </>
+                      ) : (
+                        <>
+                          <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ff8d00] via-orange-400 to-yellow-500 animate-pulse">
+                            Coming Soon
+                          </h3>
+                          <p className="mt-3 text-sm text-gray-400">
+                            Очаквайте скоро
+                          </p>
+                        </>
+                      )}
                     </div>
                   </div>
                 </div>

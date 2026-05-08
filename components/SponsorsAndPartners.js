@@ -216,7 +216,9 @@ export default function SponsorsAndPartners({ children }) {
               </p>
               <div className="mt-10 text-center">
                 <Link
-                  href="#"
+                  href="/Green Illustrated Project Proposal A4.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-block rounded-md bg-[#ff8d00] px-4 py-3 text-sm font-semibold text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600 sm:whitespace-nowrap"
                 >
                   Изтеглете PDF за повече информация
@@ -243,7 +245,9 @@ export default function SponsorsAndPartners({ children }) {
             </p>
             <div className="mt-10">
               <Link
-                href="#"
+                href="/Green Illustrated Project Proposal A4.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block rounded-md bg-[#ff8d00] px-4 py-3 text-sm font-semibold text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600 sm:whitespace-nowrap"
               >
                 Изтеглете PDF за повече информация
