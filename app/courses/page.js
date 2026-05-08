@@ -13,7 +13,7 @@ const courses = [
     title: "Говорене пред публика",
     instructor: "Иван Головацкий",
     instructorTitle: "Тренер по харизма и говорни умения",
-    instructorImage: "/placeholder.webp",
+    instructorImage: "/betterself-avatar.png",
     courseImage: "/иван-головацкий-курс.jpg",
     courseImageMobile: "/иван-головацкий-курс-mobile.jpg",
     venueImages: ["/зала-Library-1.jpg", "/зала-Library-2.jpg"],
