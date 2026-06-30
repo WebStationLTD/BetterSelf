@@ -39,3 +39,23 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Cursor chat workspace — BetNavigator & client scratch (deployed to WP directly, not this repo)
+/bn-sports-data/
+/bn-navigation/
+/bn-*.php
+/bn-styles-live.txt
+/_pf_*
+/_t_*
+/_wb_*
+/_shortcodes.php
+/_probe.txt
+/_p121_*
+/_page6_*
+/_tf.txt
+/*.html
+!/public/
+/seo-drift/
+/sofia-dl/
+/sofia-times/
+/assets/
