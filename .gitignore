@@ -56,6 +56,16 @@ next-env.d.ts
 /*.html
 !/public/
 /seo-drift/
+/seo_drift_baseline_*.json
 /sofia-dl/
 /sofia-times/
 /assets/
+
+# Cursor chat scratch — Python audit/investigation scripts (not part of BetterSelf site)
+/*.py
+/check_*.py
+/hack_*.py
+/live_check_*.py
+/quick_check.py
+/cluster-plan.json
+/cluster-plan.md
