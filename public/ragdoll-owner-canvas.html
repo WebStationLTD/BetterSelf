@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Рагдол — Интерактивен гид за нов собственик | София</title>
+  <meta name="description" content="Пълен интерактивен гид за нов собственик на Ragdoll в София: развъдници, храна, витамини, фонтани, катерушки, бюджет и съвети за компания." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #1c2421;
+      --muted: #5a6a63;
+      --paper: #f3f6f2;
+      --panel: rgba(255, 255, 255, 0.72);
+      --line: rgba(28, 36, 33, 0.12);
+      --sage: #3f6f5b;
+      --sage-deep: #2a4d3f;
+      --moss: #6f8f5a;
+      --sand: #d8c3a5;
+      --blush: #c97b63;
+      --sky: #7ea8b5;
+      --ok: #2f7d57;
+      --warn: #b7791f;
+      --shadow: 0 18px 50px rgba(28, 36, 33, 0.12);
+      --radius: 22px;
+      --font-display: "Fraunces", Georgia, serif;
+      --font-body: "Manrope", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: var(--font-body);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(126, 168, 181, 0.35), transparent 60%),
+        radial-gradient(900px 500px at 100% 0%, rgba(201, 123, 99, 0.18), transparent 55%),
+        linear-gradient(180deg, #e8f0ea 0%, var(--paper) 38%, #eef2ec 100%);
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.35;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233f6f5b' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      z-index: 0;
+    }
+
+    .shell {
+      position: relative;
+      z-index: 1;
+      width: min(1180px, calc(100% - 2rem));
+      margin: 0 auto;
+      padding: 1.5rem 0 4rem;
+    }
+
+    .hero {
+      display: grid;
+      gap: 1.25rem;
+      padding: 1.75rem 1.5rem 1.25rem;
+      border-radius: calc(var(--radius) + 8px);
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.85), rgba(243,246,242,0.65)),
+        linear-gradient(180deg, rgba(63,111,91,0.08), transparent);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      animation: rise 0.7s ease both;
+    }
+
+    .brand {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      margin: 0;
+      color: var(--sage-deep);
+    }
+
+    .brand span {
+      display: block;
+      font-size: 0.34em;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--blush);
+      font-family: var(--font-body);
+      font-weight: 700;
+      margin-bottom: 0.55rem;
+    }
+
+    .lede {
+      max-width: 62ch;
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    .truth-banner {
+      display: grid;
+      gap: 0.35rem;
+      padding: 1rem 1.1rem;
+      border-radius: 16px;
+      background: linear-gradient(120deg, rgba(63,111,91,0.12), rgba(126,168,181,0.16));
+      border: 1px solid rgba(63,111,91,0.22);
+      animation: pulseSoft 3.5s ease-in-out infinite;
+    }
+
+    .truth-banner strong {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--sage-deep);
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .chip {
+      padding: 0.4rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.7);
+      border: 1px solid var(--line);
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+
+    .tabs {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      position: sticky;
+      top: 1rem;
+      align-self: start;
+      max-height: calc(100vh - 2rem);
+      overflow: auto;
+      padding-right: 0.25rem;
+    }
+
+    .tab {
+      appearance: none;
+      border: 1px solid transparent;
+      background: transparent;
+      text-align: left;
+      padding: 0.75rem 0.9rem;
+      border-radius: 14px;
+      font: inherit;
+      font-weight: 600;
+      color: var(--muted);
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s, transform 0.2s, border-color 0.2s;
+    }
+
+    .tab:hover {
+      background: rgba(255,255,255,0.55);
+      color: var(--ink);
+      transform: translateX(2px);
+    }
+
+    .tab.active {
+      background: var(--sage);
+      color: white;
+      border-color: var(--sage-deep);
+      box-shadow: 0 10px 24px rgba(63,111,91,0.28);
+    }
+
+    .panel {
+      display: none;
+      background: var(--panel);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.35rem 1.35rem 1.6rem;
+      box-shadow: var(--shadow);
+      animation: fadeIn 0.35s ease both;
+    }
+
+    .panel.active { display: block; }
+
+    .panel h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      margin: 0 0 0.4rem;
+      letter-spacing: -0.02em;
+      color: var(--sage-deep);
+    }
+
+    .panel .sub {
+      color: var(--muted);
+      margin: 0 0 1.2rem;
+      max-width: 70ch;
+      line-height: 1.5;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.9rem;
+    }
+
+    .item {
+      padding: 1rem;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid var(--line);
+    }
+
+    .item h3 {
+      margin: 0 0 0.35rem;
+      font-size: 1.05rem;
+      font-family: var(--font-display);
+      color: var(--ink);
+    }
+
+    .item p, .item li {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.94rem;
+      line-height: 1.5;
+    }
+
+    .item ul {
+      margin: 0.45rem 0 0;
+      padding-left: 1.1rem;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin: 0.65rem 0 0.75rem;
+    }
+
+    .tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      padding: 0.22rem 0.55rem;
+      border-radius: 999px;
+      background: rgba(63,111,91,0.12);
+      color: var(--sage-deep);
+    }
+
+    .tag.warn { background: rgba(183,121,31,0.14); color: #8a5a12; }
+    .tag.sky { background: rgba(126,168,181,0.22); color: #2f5c68; }
+    .tag.blush { background: rgba(201,123,99,0.18); color: #8a4633; }
+
+    a.link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      margin-top: 0.7rem;
+      color: var(--sage);
+      font-weight: 700;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(63,111,91,0.35);
+    }
+
+    a.link:hover { color: var(--sage-deep); border-bottom-color: var(--sage-deep); }
+
+    .links-stack { display: grid; gap: 0.45rem; margin-top: 0.7rem; }
+    .links-stack a {
+      color: var(--sage-deep);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.92rem;
+    }
+    .links-stack a:hover { text-decoration: underline; }
+
+    .callout {
+      margin: 1rem 0;
+      padding: 1rem 1.1rem;
+      border-radius: 16px;
+      border-left: 4px solid var(--sage);
+      background: rgba(63,111,91,0.08);
+    }
+
+    .callout.ok { border-left-color: var(--ok); background: rgba(47,125,87,0.08); }
+    .callout.warn { border-left-color: var(--warn); background: rgba(183,121,31,0.1); }
+    .callout.blush { border-left-color: var(--blush); background: rgba(201,123,99,0.1); }
+
+    .callout strong { display: block; margin-bottom: 0.25rem; font-family: var(--font-display); }
+
+    .checklist label {
+      display: flex;
+      gap: 0.65rem;
+      align-items: flex-start;
+      padding: 0.7rem 0.8rem;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.7);
+      margin-bottom: 0.45rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .checklist label:hover { background: white; }
+    .checklist input { margin-top: 0.2rem; accent-color: var(--sage); }
+    .checklist label.done {
+      background: rgba(63,111,91,0.1);
+      text-decoration: line-through;
+      color: var(--muted);
+    }
+
+    .budget-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.5rem;
+      padding: 0.7rem 0;
+      border-bottom: 1px dashed var(--line);
+      font-size: 0.95rem;
+    }
+
+    .budget-row:last-child { border-bottom: 0; }
+    .budget-row strong { color: var(--sage-deep); white-space: nowrap; }
+
+    .total-box {
+      margin-top: 1rem;
+      padding: 1rem;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--sage), var(--sage-deep));
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .total-box span { opacity: 0.9; }
+    .total-box strong {
+      font-family: var(--font-display);
+      font-size: 1.55rem;
+    }
+
+    .day-timeline {
+      display: grid;
+      gap: 0.55rem;
+    }
+
+    .slot {
+      display: grid;
+      grid-template-columns: 88px 1fr;
+      gap: 0.75rem;
+      padding: 0.8rem;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.75);
+      border: 1px solid var(--line);
+    }
+
+    .slot time {
+      font-weight: 800;
+      color: var(--sage);
+      font-size: 0.9rem;
+    }
+
+    .progress {
+      margin: 0.5rem 0 1rem;
+      height: 8px;
+      border-radius: 999px;
+      background: rgba(28,36,33,0.08);
+      overflow: hidden;
+    }
+
+    .progress > i {
+      display: block;
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, var(--moss), var(--sage));
+      transition: width 0.35s ease;
+    }
+
+    .search {
+      width: 100%;
+      margin-bottom: 0.9rem;
+      padding: 0.8rem 1rem;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.85);
+      font: inherit;
+    }
+
+    .search:focus {
+      outline: 2px solid rgba(63,111,91,0.35);
+      border-color: var(--sage);
+    }
+
+    .footer-note {
+      margin-top: 1.25rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .mobile-select {
+      display: none;
+      width: 100%;
+      margin-bottom: 0.85rem;
+      padding: 0.85rem 1rem;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: white;
+      font: inherit;
+      font-weight: 700;
+      color: var(--sage-deep);
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: none; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: none; }
+    }
+
+    @keyframes pulseSoft {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(63,111,91,0.08); }
+      50% { box-shadow: 0 0 0 8px rgba(63,111,91,0.0); }
+    }
+
+    @media (max-width: 900px) {
+      .layout { grid-template-columns: 1fr; }
+      .tabs { display: none; }
+      .mobile-select { display: block; position: sticky; top: 0.5rem; z-index: 5; }
+      .grid-2, .grid-3 { grid-template-columns: 1fr; }
+      .slot { grid-template-columns: 1fr; }
+      .shell { width: min(1180px, calc(100% - 1.2rem)); }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="hero">
+      <div>
+        <h1 class="brand">
+          <span>Интерактивен canvas · София</span>
+          Ragdoll Owner Hub
+        </h1>
+        <p class="lede">
+          Всичко за новия собственик на рагдол: развъдници, храна, витамини, фонтани,
+          катерушки, бюджет, компания и реалният работен ден — без излишни драми.
+        </p>
+      </div>
+      <div class="truth-banner">
+        <strong>За самотата през деня: 5–7 часа сами е нормално за работещо семейство.</strong>
+        <span>Не ти трябва „15 минути и край“. Трябва качествен ритуал сутрин + вечер, enrichment през деня и пространство. Това е реалистичният план — по-долу е разписан.</span>
+      </div>
+      <div class="chips">
+        <span class="chip">Само домашна котка</span>
+        <span class="chip">Супер с деца</span>
+        <span class="chip">Средно скубене</span>
+        <span class="chip">Едра порода</span>
+        <span class="chip">София · България</span>
+      </div>
+    </header>
+
+    <div class="layout">
+      <nav class="tabs" aria-label="Секции">
+        <button class="tab active" data-tab="overview">Обзор</button>
+        <button class="tab" data-tab="breeders">Развъдници</button>
+        <button class="tab" data-tab="food">Храна & витамини</button>
+        <button class="tab" data-tab="shops">Магазини София</button>
+        <button class="tab" data-tab="gear">Фонтани & къщи</button>
+        <button class="tab" data-tab="money">Бюджет / пари</button>
+        <button class="tab" data-tab="company">Компания & самота</button>
+        <button class="tab" data-tab="care">Грижи & характер</button>
+        <button class="tab" data-tab="checklist">Чеклист</button>
+        <button class="tab" data-tab="advice">Съвети + рутина</button>
+      </nav>
+
+      <main>
+        <select class="mobile-select" id="mobileTabs" aria-label="Избери секция">
+          <option value="overview">Обзор</option>
+          <option value="breeders">Развъдници</option>
+          <option value="food">Храна & витамини</option>
+          <option value="shops">Магазини София</option>
+          <option value="gear">Фонтани & къщи</option>
+          <option value="money">Бюджет / пари</option>
+          <option value="company">Компания & самота</option>
+          <option value="care">Грижи & характер</option>
+          <option value="checklist">Чеклист</option>
+          <option value="advice">Съвети + рутина</option>
+        </select>
+
+        <!-- OVERVIEW -->
+        <section id="overview" class="panel active">
+          <h2>Перфектният старт с рагдол</h2>
+          <p class="sub">Рагдолът е спокойна, привързана, „кучешка“ котка — идеална за семейство с деца и апартамент. Не е дива. Трябва да живее на закрито.</p>
+
+          <div class="grid-3">
+            <article class="item">
+              <h3>Характер</h3>
+              <p>Нежен, търпелив, обича гушкане, следва хората. Рядко е агресивен. Името идва от това, че се отпуска като парцалена кукла.</p>
+            </article>
+            <article class="item">
+              <h3>Размер</h3>
+              <p>Едра порода: често 5–9 кг. Расте до ~3–4 години. Нужна е стабилна XL катерушка, не мъничка.</p>
+            </article>
+            <article class="item">
+              <h3>Дом</h3>
+              <p>Става за една стая като база (детската), но най-добре да има достъп до повече от апартамента, когато сте вкъщи.</p>
+            </article>
+          </div>
+
+          <div class="callout ok">
+            <strong>Твоят реален сценарий е ОК</strong>
+            Деца на училище + родители на работа = 5–7 часа сами. Това е стандартен работен ден. Рагдолът може да го понася, ако вечерите/сутрините са пълни с внимание и стаята е подготвена за enrichment — не ако е празна кутия без стимулация.
+          </div>
+
+          <div class="grid-2" style="margin-top:1rem;">
+            <article class="item">
+              <h3>Какво ще направиш с този canvas</h3>
+              <ul>
+                <li>Избери развъдник с родословие</li>
+                <li>Поръчай храна, фонтан, катерушка</li>
+                <li>Планирай бюджет start + месечно</li>
+                <li>Настрой деня за самота без вина</li>
+                <li>Маркирай чеклиста преди прибиране</li>
+              </ul>
+            </article>
+            <article class="item">
+              <h3>Златни правила</h3>
+              <ul>
+                <li>Само на закрито (+ мрежи на прозорци)</li>
+                <li>Родословие FIFe / WCF / TICA</li>
+                <li>Сресване 2–3× седмично</li>
+                <li>Качествено внимание &gt; хронометър от 15 мин</li>
+                <li>Височина &gt; квадратура</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <!-- BREEDERS -->
+        <section id="breeders" class="panel">
+          <h2>Развъдници — оригинални рагдол котенца</h2>
+          <p class="sub">Търси лиценз, родословие, чип, паспорт, ваксини и договор. Избягвай „рагдол тип“ без документи.</p>
+
+          <input class="search" id="breederSearch" type="search" placeholder="Търси развъдник… (напр. София, Methodius)" />
+
+          <div class="grid-2" id="breederList">
+            <article class="item" data-search="regina feles sofia софия">
+              <h3>Regina Feles Ragdoll BG</h3>
+              <div class="meta">
+                <span class="tag">София + Родопи</span>
+                <span class="tag sky">FIFe</span>
+                <span class="tag">Семейни котенца</span>
+              </div>
+              <p>Български развъдник с присъствие в столицата. Добър старт, ако искаш да видиш котенца по-близо до София.</p>
+              <div class="links-stack">
+                <a href="https://reginafeles.com/" target="_blank" rel="noopener">Официален сайт →</a>
+                <a href="https://reginafeles.com/about/" target="_blank" rel="noopener">За нас / локации →</a>
+                <a href="https://bazar.bg/obiava-54559497/ragdol-ragdoll-kotentse-s-rodoslowie" target="_blank" rel="noopener">Примерна обява с родословие →</a>
+              </div>
+            </article>
+
+            <article class="item" data-search="methodius bg methodius развъдник">
+              <h3>BG Methodius</h3>
+              <div class="meta">
+                <span class="tag">Дългогодишен</span>
+                <span class="tag sky">TICA</span>
+                <span class="tag">Изложби</span>
+              </div>
+              <p>Един от познатите рагдол развъдници в България. Често котенцата се запазват предварително — пиши за чакащ списък.</p>
+              <div class="links-stack">
+                <a href="https://www.ragdoll-bg.com/" target="_blank" rel="noopener">Начало →</a>
+                <a href="http://www.ragdoll-bg.com/available.html" target="_blank" rel="noopener">Свободни / reserve →</a>
+                <a href="https://www.ragdoll-bg.com/aboutus.html" target="_blank" rel="noopener">За развъдника →</a>
+              </div>
+            </article>
+
+            <article class="item" data-search="bleuroi bleu roi гоце делчев fife wcf">
+              <h3>BleuRoi Ragdoll Cattery</h3>
+              <div class="meta">
+                <span class="tag">Лиценз 47090/2024</span>
+                <span class="tag sky">FIFe & WCF</span>
+                <span class="tag">Доставка в България</span>
+              </div>
+              <p>Лицензиран развъдник (Гоце Делчев) с родословие, 2 ваксини, чип, европаспорт. Организират транспорт.</p>
+              <div class="links-stack">
+                <a href="https://www.ragdollbleuroi.eu/" target="_blank" rel="noopener">Сайт BleuRoi →</a>
+              </div>
+            </article>
+
+            <article class="item" data-search="bazar обяви sofia софия проверка">
+              <h3>Обяви в София (с проверка)</h3>
+              <div class="meta">
+                <span class="tag warn">Проверявай документи</span>
+                <span class="tag blush">Не купувай само по снимка</span>
+              </div>
+              <p>Използвай обявите само като вход. На място: родословие, микрочип, паспорт, договор, родители.</p>
+              <div class="links-stack">
+                <a href="https://bazar.bg/obiavi/domashni-lubimci?q=%D1%80%D0%B0%D0%B3%D0%B4%D0%BE%D0%BB+%D1%80%D0%BE%D0%B4%D0%BE%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D0%B5" target="_blank" rel="noopener">Bazar — рагдол с родословие →</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="callout warn">
+            <strong>Чеклист преди пари</strong>
+            Официално родословие · европаспорт · микрочип · ваксини · договор · здравна история на родителите (HCM/PKD тестове, ако са налични) · среща с котенцето на живо.
+          </div>
+        </section>
+
+        <!-- FOOD -->
+        <section id="food" class="panel">
+          <h2>Храна, мокри консерви и витамини</h2>
+          <p class="sub">Най-лесно: качествена суха по възраст + мокра всеки ден + фонтан. Витамини — като бонус, не като заместител на добра храна.</p>
+
+          <div class="grid-2">
+            <article class="item">
+              <h3>Специална за рагдол (adult)</h3>
+              <div class="meta"><span class="tag">12+ месеца</span><span class="tag sky">Омега-3/6 · таурин</span></div>
+              <p>Royal Canin Ragdoll Adult — формула за едра челюст, кожа/козина, стави.</p>
+              <div class="links-stack">
+                <a href="https://www.zooplus.bg/shop/kotki/kotki_suha_hrana/royal_canin/royal_canin_breed_kotki/428692" target="_blank" rel="noopener">Zooplus — RC Ragdoll Adult →</a>
+                <a href="https://happypaws.bg/royal-canin-ragdoll-suha-hrana-za-kotki-poroda-regdol-nad-1-godina-10-kg.html" target="_blank" rel="noopener">HappyPaws София — 10 кг →</a>
+                <a href="https://petmarket.bg/en/product/royal-canin-ragdoll-10-kg/" target="_blank" rel="noopener">Petmarket — RC Ragdoll 10 кг →</a>
+                <a href="https://zoovet.bg/products/royal_canin_ragdoll_adult-140:25" target="_blank" rel="noopener">Зооветмаркет →</a>
+                <a href="https://www.zoolorka.com/bg/product/9820-suha-hrana-za-kotki-ot-porodata-regdol-royal-canin-ragdoll-adult-10kg-/" target="_blank" rel="noopener">Зоо Лорка →</a>
+              </div>
+            </article>
+
+            <article class="item">
+              <h3>За котенце (до ~12 месеца)</h3>
+              <div class="meta"><span class="tag warn">Не давай adult още</span><span class="tag">Kitten / Babycat</span></div>
+              <p>Докато е малък: Kitten формула + мокра. След ~12 мес. премини към Ragdoll Adult постепенно (7–10 дни).</p>
+              <div class="links-stack">
+                <a href="https://zoocenter.bg/product/royal-canin-babycat-podrastvashti-kotenca" target="_blank" rel="noopener">RC Mother & Babycat консерва →</a>
+                <a href="https://www.zooplus.bg/shop/kotki" target="_blank" rel="noopener">Zooplus — секция котки (kitten) →</a>
+              </div>
+            </article>
+
+            <article class="item">
+              <h3>Добри алтернативи (premium)</h3>
+              <p>Ако не държиш непременно на breed формула: Brit Care, Farmina N&D, Applaws/Animonda мокри, Orijen/Acana (по-скъпи). Важното е пълен баланс + таурин.</p>
+              <ul>
+                <li>Микс: суха сутрин/вечер + мокра 1–2× дневно</li>
+                <li>Винаги чиста вода (фонтан!)</li>
+                <li>След кастрация — следи килограмите</li>
+              </ul>
+            </article>
+
+            <article class="item">
+              <h3>Витамини & пасти (полезно, не задължително)</h3>
+              <div class="meta"><span class="tag blush">Питай ветеринар при свръхдозиране</span></div>
+              <p>При качествена пълноценна храна витамините са „extra“ — особено полезни за козина, сърце (таурин) и апетит.</p>
+              <div class="links-stack">
+                <a href="https://www.zooplus.bg/shop/kotki/snaksove_za_kotki/gimpet/gimpet_pasti/352057" target="_blank" rel="noopener">GimCat Multi-Vitamin-Extra паста →</a>
+                <a href="https://www.zooplus.bg/shop/kotki/snaksove_za_kotki/gimpet/expert_line/437828" target="_blank" rel="noopener">GimCat Taurine Extra →</a>
+                <a href="https://www.zooplus.bg/shop/kotki/specialna_hrana_dobavki/taurin/351992" target="_blank" rel="noopener">Felini Taurin →</a>
+                <a href="https://www.zooplus.bg/shop/kotki/specialna_hrana_dobavki" target="_blank" rel="noopener">Всички добавки Zooplus →</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="callout">
+            <strong>Практичен режим</strong>
+            Сутрин: малко мокра + суха · През деня: вода от фонтан · Вечер: мокра + игра · Паста с витамини: няколко пъти седмично като лакомство/връзка.
+          </div>
+        </section>
+
+        <!-- SHOPS -->
+        <section id="shops" class="panel">
+          <h2>Къде да купуваш онлайн (София / България)</h2>
+          <p class="sub">Доставка до адрес, BOX NOW или взимане от магазин. Сравни цените — торба 10 кг често излиза по-евтино.</p>
+
+          <div class="grid-2">
+            <article class="item">
+              <h3>Zooplus.bg</h3>
+              <p>Огромен избор: храна, фонтани, катерушки, витамини. Често най-добри цени при по-големи поръчки.</p>
+              <a class="link" href="https://www.zooplus.bg/shop/kotki" target="_blank" rel="noopener">Отвори магазин котки →</a>
+            </article>
+            <article class="item">
+              <h3>HappyPaws.bg (София магазин)</h3>
+              <p>Онлайн + физически магазин: ул. Охридско езеро 18–20, София. Взимане на място често с допълнителна отстъпка.</p>
+              <div class="links-stack">
+                <a href="https://happypaws.bg/" target="_blank" rel="noopener">HappyPaws начало →</a>
+                <a href="https://happypaws.bg/delivery-and-payment" target="_blank" rel="noopener">Доставка / взимане →</a>
+              </div>
+            </article>
+            <article class="item">
+              <h3>Petmarket.bg</h3>
+              <p>Бърза доставка, BOX NOW, често RC Ragdoll на склад.</p>
+              <div class="links-stack">
+                <a href="https://petmarket.bg/" target="_blank" rel="noopener">Petmarket →</a>
+                <a href="https://petmarket.bg/box-now-dostavka/" target="_blank" rel="noopener">BOX NOW доставка →</a>
+              </div>
+            </article>
+            <article class="item">
+              <h3>Още надеждни</h3>
+              <div class="links-stack">
+                <a href="https://zoovet.bg/" target="_blank" rel="noopener">Зооветмаркет →</a>
+                <a href="https://www.zoolorka.com/" target="_blank" rel="noopener">Зоомагазин Лорка →</a>
+                <a href="https://www.sorbe.bg/domashni-liubimci/kotki" target="_blank" rel="noopener">Sorbe — котки / катерушки →</a>
+                <a href="https://zoocenter.bg/" target="_blank" rel="noopener">ZooCenter →</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- GEAR -->
+        <section id="gear" class="panel">
+          <h2>Фонтан за вода + къща с катерушки</h2>
+          <p class="sub">Двете най-важни покупки след храната: течаща вода (бъбреци!) и висока стабилна кула за едра котка.</p>
+
+          <h3 style="font-family:var(--font-display);color:var(--sage-deep);margin:0 0 0.7rem;">Фонтани (препоръчани)</h3>
+          <div class="grid-2">
+            <article class="item">
+              <h3>Catit PIXI — неръждаема стомана</h3>
+              <div class="meta"><span class="tag">Топ избор</span><span class="tag sky">Тиха помпа</span></div>
+              <p>Красив, лесен за чистене, 3 режима на струя. Стоманата намалява миризми и бактерии спрямо евтина пластмаса.</p>
+              <a class="link" href="https://www.zooplus.bg/shop/kotki/poilki_hranilki_kupichki/vsichki_produkti_kupichki/poilki_kotki/1939829" target="_blank" rel="noopener">Купи Catit PIXI стомана →</a>
+            </article>
+            <article class="item">
+              <h3>Catit PIXI бял / Flower Fountain</h3>
+              <p>По-достъпни варианти. Flower Fountain е класика и насърчава пиенето.</p>
+              <div class="links-stack">
+                <a href="https://www.zooplus.bg/shop/kotki/poilki_hranilki_kupichki/vsichki_produkti_kupichki/poilki_kotki/1938354" target="_blank" rel="noopener">Catit PIXI бял →</a>
+                <a href="https://www.zooplus.bg/shop/kotki/poilki_hranilki_kupichki/poilki/628420" target="_blank" rel="noopener">Catit 2.0 Flower Fountain →</a>
+                <a href="https://www.zooplus.bg/shop/top_marki/catit/poilki" target="_blank" rel="noopener">Всички Catit поилки →</a>
+              </div>
+            </article>
+            <article class="item">
+              <h3>TIAKI стомана 3 л</h3>
+              <div class="meta"><span class="tag">Бюджет + качество</span></div>
+              <p>Голям резервоар — удобно за работния ден. Вкл. помпа и филтър.</p>
+              <a class="link" href="https://www.zooplus.bg/shop/kotki/poilki_hranilki_kupichki/poilki/2422827" target="_blank" rel="noopener">TIAKI фонтан 3 л →</a>
+            </article>
+            <article class="item">
+              <h3>Съвет за фонтана</h3>
+              <ul>
+                <li>Сменяй водата на 1–2 дни</li>
+                <li>Мий помпата седмично</li>
+                <li>Сменяй филтрите по инструкция</li>
+                <li>Дръж далеч от тоалетната</li>
+              </ul>
+            </article>
+          </div>
+
+          <h3 style="font-family:var(--font-display);color:var(--sage-deep);margin:1.4rem 0 0.7rem;">Къщи / катерушки (XL за рагдол)</h3>
+          <div class="grid-2">
+            <article class="item">
+              <h3>Zooplus Basics XL · ~171 см</h3>
+              <p>Къщичка, хамаци, сизал, платформи — подходяща за едра котка в детска стая.</p>
+              <a class="link" href="https://www.zooplus.bg/shop/kotki/durveta_za_draskane/golemi_durveta_za_draskane/do_180_cm/2255773" target="_blank" rel="noopener">XL 171 см →</a>
+            </article>
+            <article class="item">
+              <h3>Zooplus Basics XXL · ~196 см</h3>
+              <div class="meta"><span class="tag">Ако искаш „огромна готина къща“</span></div>
+              <p>Почти до тавана усещане. Повече височина = повече територия в малка стая.</p>
+              <a class="link" href="https://www.zooplus.bg/shop/kotki/durveta_za_draskane/golemi_durveta_za_draskane/nad_180_cm/2255837" target="_blank" rel="noopener">XXL 196 см →</a>
+            </article>
+            <article class="item">
+              <h3>Още линкове</h3>
+              <div class="links-stack">
+                <a href="https://www.zooplus.bg/shop/kotki/durveta_za_draskane" target="_blank" rel="noopener">Всички катерушки Zooplus →</a>
+                <a href="https://bazar.bg/obiavi/katerushki-za-kotki" target="_blank" rel="noopener">Bazar — катерушки София →</a>
+                <a href="https://www.sorbe.bg/domashni-liubimci/kotki" target="_blank" rel="noopener">Sorbe катерушки →</a>
+              </div>
+            </article>
+            <article class="item">
+              <h3>За детската стая</h3>
+              <ul>
+                <li>Постави кулата до стена / ъгъл (стабилност)</li>
+                <li>Прозорец с мрежа = „котешка ТВ“</li>
+                <li>ТВ високо — добре, пази от бутане</li>
+                <li>Тоалетна: голяма, открита, далеч от храната</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <!-- MONEY -->
+        <section id="money" class="panel">
+          <h2>Пари — стартов и месечен бюджет</h2>
+          <p class="sub">Ориентировъчни цени за София/онлайн България (2026). Варират според марка и промоции.</p>
+
+          <div class="grid-2">
+            <article class="item">
+              <h3>Старт (еднократно)</h3>
+              <div class="budget-row"><span>Котенце с родословие</span><strong>1 300–1 800 €+</strong></div>
+              <div class="budget-row"><span>XXL катерушка / къща</span><strong>80–220 €</strong></div>
+              <div class="budget-row"><span>Фонтан за вода</span><strong>30–85 €</strong></div>
+              <div class="budget-row"><span>Тоалетна + старт пясък</span><strong>25–60 €</strong></div>
+              <div class="budget-row"><span>Носач + купи + играчки</span><strong>40–100 €</strong></div>
+              <div class="budget-row"><span>Мрежи за прозорци</span><strong>30–120 €</strong></div>
+              <div class="budget-row"><span>Първи ветеринар / ваксини (ако трябват)</span><strong>40–100 €</strong></div>
+              <div class="total-box">
+                <span>Стартов пакет без котенцето</span>
+                <strong>~250–650 €</strong>
+              </div>
+            </article>
+
+            <article class="item">
+              <h3>Месечно</h3>
+              <div class="budget-row"><span>Суха + мокра храна</span><strong>45–90 €</strong></div>
+              <div class="budget-row"><span>Пясък</span><strong>12–25 €</strong></div>
+              <div class="budget-row"><span>Филтри/пасти/лакомства</span><strong>8–20 €</strong></div>
+              <div class="budget-row"><span>Резерв ветеринар (средно месечно)</span><strong>10–25 €</strong></div>
+              <div class="total-box">
+                <span>Реалистично месечно</span>
+                <strong>~75–150 €</strong>
+              </div>
+              <p style="margin-top:0.8rem;color:var(--muted);font-size:0.92rem;">Годишен ветеринар (ваксини, чип вече има, кастрация ако не е направена, кръвни при нужда): отделно 100–300 €/година.</p>
+            </article>
+          </div>
+
+          <div class="callout blush">
+            <strong>Къде да не пестиш</strong>
+            Развъдник с документи · мрежи · фонтан · качествена храна · стабилна катерушка. Можеш да пестиш от брандирани легла и 20 излишни играчки.
+          </div>
+        </section>
+
+        <!-- COMPANY -->
+        <section id="company" class="panel">
+          <h2>Компания — без вина за работния ден</h2>
+          <p class="sub">Да, рагдолът обича хора. Не, това не означава, че трябва някой да е вкъщи 24/7. Работещи семейства гледат рагдоли успешно всеки ден.</p>
+
+          <div class="callout ok">
+            <strong>Честният отговор за твоя случай</strong>
+            5–6–7 часа сами, докато децата са на училище и вие сте на работа, е <em>нормално</em>. Проблемът не е „ще е сам“. Проблемът е „дали средата и вечерта компенсират“. Ако внимавате повече от 10–15 минути на ден (а вие казвате, че ще внимавате), сте в добрата зона.
+          </div>
+
+          <div class="grid-2">
+            <article class="item">
+              <h3>Какво реално му трябва</h3>
+              <ul>
+                <li>Предвидим ритуал сутрин (храна + 10 мин игра)</li>
+                <li>През деня: прозорец, кула, пъзел хранилка, може тихо радио/ТВ</li>
+                <li>Вечер: 20–40 мин игра + гушкане + сресване</li>
+                <li>Достъп до повече от една стая, когато сте вкъщи</li>
+              </ul>
+            </article>
+            <article class="item">
+              <h3>Втора котка?</h3>
+              <p><strong>Бонус, не задължение.</strong> Ако един ден решите — супер, особено две котенца заедно. Но едно рагдолче в обогатена детска стая + любящо семейство вечер е напълно валиден модел.</p>
+              <div class="meta" style="margin-top:0.7rem;">
+                <span class="tag">1 котка = ОК</span>
+                <span class="tag sky">2 котки = още по-лесно през деня</span>
+              </div>
+            </article>
+          </div>
+
+          <h3 style="font-family:var(--font-display);color:var(--sage-deep);margin:1.2rem 0 0.7rem;">Компенсация за самотата (практично)</h3>
+          <div class="grid-3">
+            <article class="item">
+              <h3>Cat TV</h3>
+              <p>Мрежа на прозореца + хранилка за птици отвън. Това запълва часове.</p>
+            </article>
+            <article class="item">
+              <h3>Puzzle feeder</h3>
+              <p>Скрий част от сухата храна в играчка — удължава „лова“ докато ви няма.</p>
+            </article>
+            <article class="item">
+              <h3>Вашият мирис</h3>
+              <p>Оставете носена тениска на леглото му. Рагдолите се успокояват от познат аромат.</p>
+            </article>
+          </div>
+
+          <div class="callout warn">
+            <strong>Кога да внимаваш</strong>
+            Ако мяука часове наред, отказва храна, дере мебели агресивно или се крие постоянно — тогава не е „просто сам“, а стресиран. Тогава: повече enrichment, камера за проверка, евентуално втора котка или посещение по обяд от роднина.
+          </div>
+        </section>
+
+        <!-- CARE -->
+        <section id="care" class="panel">
+          <h2>Грижи, скубене, здраве, характер</h2>
+          <p class="sub">Кратката енциклопедия — за да знаеш какво да очакваш преди да го вземеш.</p>
+
+          <div class="grid-2">
+            <article class="item">
+              <h3>Скубене</h3>
+              <p><strong>Средно.</strong> Не е хипоалергенен. Повече напролет/есен. Метален гребен 2–3× седмично решава 90% от проблема. Козината е полудълга и по-лесна от персийска.</p>
+            </article>
+            <article class="item">
+              <h3>С деца</h3>
+              <p>Една от най-добрите породи. Търпелив е. Научете децата: без дърпане на опашка, без събуждане насила, миене на ръце след игра.</p>
+            </article>
+            <article class="item">
+              <h3>Здраве</h3>
+              <ul>
+                <li>Питай за HCM (сърце) при родителите</li>
+                <li>PKD при някои линии</li>
+                <li>Следи теглото — обичат храна</li>
+                <li>Зъби + годишен преглед</li>
+              </ul>
+            </article>
+            <article class="item">
+              <h3>Поведение</h3>
+              <ul>
+                <li>Тих глас обикновено</li>
+                <li>Обича да е „в стаята с хората“</li>
+                <li>Играе кротко, често без нокти навън</li>
+                <li>Лесно се носи / гушка</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="callout">
+            <strong>Тясно ли му е само в една стая?</strong>
+            Не, ако има висока катерушка, прозорец и играчки — <em>като база</em>. Да, ако е заключен там 24/7 без социален контакт. Идеал: детската е неговият дом, апартаментът е неговата територия вечер.
+          </div>
+        </section>
+
+        <!-- CHECKLIST -->
+        <section id="checklist" class="panel">
+          <h2>Чеклист преди прибиране на котенцето</h2>
+          <p class="sub">Маркирай — прогресът се пази в този браузър.</p>
+          <div class="progress" aria-hidden="true"><i id="checkProgress"></i></div>
+          <div class="checklist" id="ownerChecklist">
+            <label><input type="checkbox" /> Избран лицензиран развъдник + видени документи</label>
+            <label><input type="checkbox" /> Мрежи на прозорците в стаята</label>
+            <label><input type="checkbox" /> Купена XL/XXL катерушка и сглобена</label>
+            <label><input type="checkbox" /> Фонтан за вода + резервни филтри</label>
+            <label><input type="checkbox" /> Тоалетна + пясък (далеч от храната)</label>
+            <label><input type="checkbox" /> Суха храна по възраст + мокра за първите дни (същата като при развъдника, ако е възможно)</label>
+            <label><input type="checkbox" /> Носач, купи, гребен, нокторезачки</label>
+            <label><input type="checkbox" /> Играчки + пъзел хранилка</label>
+            <label><input type="checkbox" /> Записан час при ветеринар в София (познанство)</label>
+            <label><input type="checkbox" /> Разговор с децата: правила за гушкане и покой</label>
+            <label><input type="checkbox" /> План за сутрешен/вечерен ритуал в работни дни</label>
+            <label><input type="checkbox" /> Бюджет за първия месец заделен</label>
+          </div>
+        </section>
+
+        <!-- ADVICE -->
+        <section id="advice" class="panel">
+          <h2>Съвети + перфектен работен ден</h2>
+          <p class="sub">Готова схема за семейство, което излиза 5–7 часа. Това е работният модел — не идеалът от Instagram.</p>
+
+          <div class="day-timeline">
+            <div class="slot">
+              <time>07:00</time>
+              <div>
+                <strong>Сутрин преди училище/работа</strong>
+                <p style="margin:0.25rem 0 0;color:var(--muted);">Мокра храна + тоалетна проверка + 8–12 мин игра с въдица. После спокойно сбогуване — без дълги драми на вратата.</p>
+              </div>
+            </div>
+            <div class="slot">
+              <time>08–15 ч.</time>
+              <div>
+                <strong>Сам вкъщи (нормално)</strong>
+                <p style="margin:0.25rem 0 0;color:var(--muted);">Фонтанът работи · част от сухата храна в пъзел · перваз/прозорец · може тих канал/радио. Не е изоставен — спи и гледа навън голяма част от времето.</p>
+              </div>
+            </div>
+            <div class="slot">
+              <time>15–16 ч.</time>
+              <div>
+                <strong>Децата се връщат</strong>
+                <p style="margin:0.25rem 0 0;color:var(--muted);">Кратко спокойно поздравяване. Не го бъркайте веднага — дайте 5 минути да се събуди/приближи сам.</p>
+              </div>
+            </div>
+            <div class="slot">
+              <time>18–20 ч.</time>
+              <div>
+                <strong>Главното внимание (тук се печели денят)</strong>
+                <p style="margin:0.25rem 0 0;color:var(--muted);">20–40 мин активна игра + вечеря + гушкане по леглата + сресване през ден. Това замества „цял ден заедно“ по-добре от разпокъсани 2 минути тук-там.</p>
+              </div>
+            </div>
+            <div class="slot">
+              <time>21:30</time>
+              <div>
+                <strong>Лека нощ</strong>
+                <p style="margin:0.25rem 0 0;color:var(--muted);">Последна тоалетна проверка, вода, любима играчка. Рагдолите често спят с децата — супер, ако няма алергии.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-2" style="margin-top:1rem;">
+            <article class="item">
+              <h3>Първите 2 седмици</h3>
+              <ul>
+                <li>Дръж го първо в една стая (детската) — по-малко страх</li>
+                <li>После отваряй към коридора постепенно</li>
+                <li>Не мени храната рязко</li>
+                <li>Нека децата седят на пода — той идва</li>
+              </ul>
+            </article>
+            <article class="item">
+              <h3>Бързи „да / не“</h3>
+              <ul>
+                <li>✅ Домашна котка завинаги</li>
+                <li>✅ Детска стая като база</li>
+                <li>✅ 5–7 ч сами с enrichment</li>
+                <li>❌ Балкон без мрежа</li>
+                <li>❌ Евтино коте без документи „прилича на рагдол“</li>
+                <li>❌ Вина, че работите</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="callout ok">
+            <strong>Долната линия</strong>
+            Рагдолът е създаден за дом и семейство — не за улицата. Вашето семейство му дава точно това: деца, вечерно внимание, голяма къща-катерушка и сигурна стая. Самотата през учебния/работния ден не ви прави лоши стопани.
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <p class="footer-note">Ragdoll Owner Hub · интерактивен canvas за София · линковете водят към външни магазини/развъдници · цените са ориентировъчни</p>
+  </div>
+
+  <script>
+    (function () {
+      const tabs = Array.from(document.querySelectorAll(".tab"));
+      const panels = Array.from(document.querySelectorAll(".panel"));
+      const mobile = document.getElementById("mobileTabs");
+
+      function activate(id) {
+        tabs.forEach((t) => t.classList.toggle("active", t.dataset.tab === id));
+        panels.forEach((p) => p.classList.toggle("active", p.id === id));
+        if (mobile) mobile.value = id;
+        history.replaceState(null, "", "#" + id);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      tabs.forEach((tab) => tab.addEventListener("click", () => activate(tab.dataset.tab)));
+      mobile?.addEventListener("change", () => activate(mobile.value));
+
+      const initial = location.hash.replace("#", "") || "overview";
+      if (document.getElementById(initial)) activate(initial);
+
+      const search = document.getElementById("breederSearch");
+      const list = document.getElementById("breederList");
+      search?.addEventListener("input", () => {
+        const q = search.value.trim().toLowerCase();
+        list.querySelectorAll(".item").forEach((item) => {
+          const hay = (item.dataset.search + " " + item.textContent).toLowerCase();
+          item.style.display = !q || hay.includes(q) ? "" : "none";
+        });
+      });
+
+      const checks = document.querySelectorAll("#ownerChecklist input");
+      const bar = document.getElementById("checkProgress");
+      const KEY = "ragdoll-owner-checklist-v1";
+
+      function renderProgress() {
+        const total = checks.length;
+        const done = Array.from(checks).filter((c) => c.checked).length;
+        bar.style.width = total ? Math.round((done / total) * 100) + "%" : "0%";
+        checks.forEach((c) => c.closest("label").classList.toggle("done", c.checked));
+      }
+
+      try {
+        const saved = JSON.parse(localStorage.getItem(KEY) || "[]");
+        checks.forEach((c, i) => { c.checked = !!saved[i]; });
+      } catch (_) {}
+
+      checks.forEach((c, i) => {
+        c.addEventListener("change", () => {
+          const state = Array.from(checks).map((x) => x.checked);
+          localStorage.setItem(KEY, JSON.stringify(state));
+          renderProgress();
+        });
+      });
+      renderProgress();
+    })();
+  </script>
+</body>
+</html>
