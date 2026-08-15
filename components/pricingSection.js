@@ -1,5 +1,33 @@
 import { CheckIcon } from "@heroicons/react/24/outline";
 
+const STRIPE_LINKS = {
+  online: "https://buy.stripe.com/dRmcN5ajr1FV47w4jt2kw06",
+  business: "https://buy.stripe.com/3cI9AT0IR2JZ9rQ9DN2kw04",
+  vip: "https://buy.stripe.com/5kQ6oHdvDckzavU03d2kw03",
+};
+
+function checkoutUrl(base, promoCode) {
+  if (!promoCode) return base;
+  return `${base}?prefilled_promo_code=${encodeURIComponent(promoCode)}`;
+}
+
+function TicketPrice({ regular, discounted }) {
+  if (!discounted) {
+    return (
+      <span className="flex items-start px-3 text-6xl tracking-tight text-gray-900">
+        <span className="font-bold">{regular}</span>
+      </span>
+    );
+  }
+
+  return (
+    <span className="flex flex-col items-center px-3 tracking-tight text-gray-900">
+      <span className="text-xl text-gray-400 line-through">{regular}</span>
+      <span className="text-6xl font-bold">{discounted}</span>
+    </span>
+  );
+}
+
 const onlineFeatures = [
   "Онлайн достъп до конференцията в реално време",
   "Достъп до записа от събитието",
@@ -17,12 +45,29 @@ const businessFeatures = [
   "Пропуск за кафе паузата",
 ];
 
-export default function Example() {
+export default function Example({
+  promoCode = null,
+  heading = "Цени",
+  subheading = null,
+  hideAlternativePayment = false,
+} = {}) {
+  const isPartnerOffer = Boolean(promoCode);
+
   return (
     <div className="bg-gray-900 pb-14">
       <div className="px-6 pt-10 lg:px-8">
         <div className="text-center">
-          <h2 className="text-5xl font-semibold text-gray-300">Цени</h2>
+          {isPartnerOffer && (
+            <p className="mb-4 inline-flex rounded-full bg-[#ff8d00] px-4 py-1 text-sm font-semibold text-white">
+              20% отстъпка с QR
+            </p>
+          )}
+          <h2 className="text-5xl font-semibold text-gray-300">{heading}</h2>
+          {subheading && (
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-400">
+              {subheading}
+            </p>
+          )}
         </div>
       </div>
 
@@ -42,9 +87,10 @@ export default function Example() {
                         Виртуален билет
                       </h3>
                       <div className="mt-4 flex items-center justify-center">
-                        <span className="flex items-start px-3 text-6xl tracking-tight text-gray-900">
-                          <span className="font-bold">35€</span>
-                        </span>
+                        <TicketPrice
+                          regular="35€"
+                          discounted={isPartnerOffer ? "28€" : null}
+                        />
                       </div>
                     </div>
                   </div>
@@ -67,7 +113,7 @@ export default function Example() {
                     <div className="mt-8">
                       <div className="rounded-lg shadow-md">
                         <a
-                          href="https://buy.stripe.com/dRmcN5ajr1FV47w4jt2kw06"
+                          href={checkoutUrl(STRIPE_LINKS.online, promoCode)}
                           aria-describedby="tier-online"
                           className="block w-full rounded-lg border border-transparent bg-white px-6 py-3 text-center text-base font-medium text-indigo-600 hover:bg-gray-50"
                           target="_blank"
@@ -100,10 +146,11 @@ export default function Example() {
                     >
                       Бизнес билет
                     </h3>
-                    <div className="mt-4 flex items-center justify-center">
-                      <span className="flex items-start px-3 text-6xl tracking-tight text-gray-900 sm:text-6xl">
-                        <span className="font-bold">65€</span>
-                      </span>
+                      <div className="mt-4 flex items-center justify-center">
+                      <TicketPrice
+                        regular="65€"
+                        discounted={isPartnerOffer ? "52€" : null}
+                      />
                     </div>
                   </div>
                 </div>
@@ -126,7 +173,7 @@ export default function Example() {
                   <div className="mt-10">
                     <div className="rounded-lg shadow-md">
                       <a
-                        href="https://buy.stripe.com/3cI9AT0IR2JZ9rQ9DN2kw04"
+                        href={checkoutUrl(STRIPE_LINKS.business, promoCode)}
                         aria-describedby="tier-business"
                         className="block w-full rounded-lg border border-transparent bg-[#ff8d00] px-6 py-4 text-center text-xl/6 font-medium text-white hover:bg-orange-600 transition-colors duration-300"
                         target="_blank"
@@ -149,9 +196,10 @@ export default function Example() {
                         ВИП билет
                       </h3>
                       <div className="mt-4 flex items-center justify-center">
-                        <span className="flex items-start px-3 text-6xl tracking-tight text-gray-900">
-                          <span className="font-bold">149€</span>
-                        </span>
+                        <TicketPrice
+                          regular="149€"
+                          discounted={isPartnerOffer ? "119.20€" : null}
+                        />
                       </div>
                     </div>
                   </div>
@@ -174,7 +222,7 @@ export default function Example() {
                     <div className="mt-8">
                       <div className="rounded-lg shadow-md">
                         <a
-                          href="https://buy.stripe.com/5kQ6oHdvDckzavU03d2kw03"
+                          href={checkoutUrl(STRIPE_LINKS.vip, promoCode)}
                           aria-describedby="tier-vip"
                           className="block w-full rounded-lg border border-transparent bg-white px-6 py-3 text-center text-base font-medium text-indigo-600 hover:bg-gray-50 transition-colors duration-300"
                           target="_blank"
@@ -192,7 +240,7 @@ export default function Example() {
         </div>
       </div>
 
-      {/* Алтернативен метод за плащане */}
+      {!hideAlternativePayment && (
       <div className="bg-gray-900 px-6 pt-8 pb-10 lg:px-8 mt-8">
         <div className="mx-auto max-w-7xl text-center">
           <p className="text-lg text-gray-300">
@@ -253,6 +301,7 @@ export default function Example() {
           </div>
         </div>
       </div>
+      )}
     </div>
   );
 }
