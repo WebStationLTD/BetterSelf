@@ -111,7 +111,7 @@ export default function Clients() {
                 >
                   <Image
                     alt="Fast Track"
-                    src="/fast-track-logo.svg"
+                    src="/fast-track-logo.png"
                     fill
                     quality={100}
                     loading="lazy"
