@@ -18,8 +18,8 @@ export const LOCAL_LECTURERS = [
     phonenumber: null,
     email: null,
     linkedin: {
-      title: "LinkedIn",
-      url: "https://www.linkedin.com/in/chpopov",
+      title: null,
+      url: null,
       target: "_blank",
     },
     description: `
