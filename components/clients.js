@@ -104,6 +104,23 @@ export default function Clients() {
             <div className="grid grid-cols-2 gap-8 items-center">
               <div className="h-16 flex items-center justify-center relative">
                 <Link
+                  href="https://fasttrack-growth.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300"
+                >
+                  <Image
+                    alt="Fast Track"
+                    src="/fast-track-logo.svg"
+                    fill
+                    quality={100}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </Link>
+              </div>
+              <div className="h-16 flex items-center justify-center relative">
+                <Link
                   href="https://webstation.bg/"
                   target="_blank"
                   rel="noopener noreferrer"

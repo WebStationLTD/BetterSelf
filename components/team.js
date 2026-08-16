@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { getMembers } from "../services/members";
+import { getConfirmedMembers } from "../data/confirmedLecturers";
 
 export default function Team() {
   const [members, setMembers] = useState([]);
@@ -18,20 +19,7 @@ export default function Team() {
     fetchMembers();
   }, []);
 
-  // Потвърдени лектори за 2026
-  const confirmedLecturers = [
-    "Иван Сигридов",
-    "Десислава Дамянова",
-    "Камелия Присадашка",
-    "Константин Маламов",
-    "Иван Головацкий",
-    "Моузес Налока",
-  ];
-
-  // Филтрираме потвърдените лектори
-  const confirmedMembers = members.filter((member) =>
-    confirmedLecturers.some((name) => member.name?.includes(name))
-  );
+  const confirmedMembers = getConfirmedMembers(members);
 
   // Броят Coming Soon кутии = 6 - потвърдени лектори
   const comingSoonCount = Math.max(0, 6 - confirmedMembers.length);

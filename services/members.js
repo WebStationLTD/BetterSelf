@@ -1,5 +1,6 @@
 import { fetchAPI } from "./api";
 import { cache } from "react";
+import { getLocalLecturer } from "../data/confirmedLecturers";
 
 /**
  * Get all members
@@ -50,6 +51,11 @@ export const getMemberInfo = cache(async (slug) => {
     if (!slug) {
       console.error("No slug provided to getMemberInfo");
       return null;
+    }
+
+    const localLecturer = getLocalLecturer(slug);
+    if (localLecturer) {
+      return localLecturer;
     }
 
     // Fetch new data from API

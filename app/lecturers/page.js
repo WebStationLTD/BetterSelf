@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getMembers } from "../../services/members";
+import { getConfirmedMembers } from "../../data/confirmedLecturers";
 
 export const metadata = {
   title: "Лектори - BetterSelf",
@@ -11,20 +12,7 @@ export const metadata = {
 export default async function Team() {
   const members = await getMembers();
 
-  // Потвърдени лектори за 2026
-  const confirmedLecturers = [
-    "Иван Сигридов",
-    "Десислава Дамянова",
-    "Камелия Присадашка",
-    "Константин Маламов",
-    "Иван Головацкий",
-    "Моузес Налока",
-  ];
-
-  // Филтрираме потвърдените лектори
-  const confirmedMembers = members.filter((member) =>
-    confirmedLecturers.some((name) => member.name?.includes(name))
-  );
+  const confirmedMembers = getConfirmedMembers(members);
 
   // Броят Coming Soon кутии = 8 - потвърдени лектори
   const comingSoonCount = Math.max(0, 8 - confirmedMembers.length);

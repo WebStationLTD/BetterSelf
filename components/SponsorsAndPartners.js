@@ -75,6 +75,13 @@ const sponsors = [
 
 const partners = [
   {
+    name: "Fast Track",
+    logo: "/fast-track-logo.svg",
+    link: "https://fasttrack-growth.com/",
+    description:
+      "Глобална консултантска компания с над 500 клиента в 30 държави. Развива стратегии и лидерски програми за компании като Google, Mango, Ray-Ban и Four Seasons.",
+  },
+  {
     name: "Webstation",
     logo: "/webstation-ltd-logo.svg",
     link: "https://webstation.bg/",
