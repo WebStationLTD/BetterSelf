@@ -3,7 +3,6 @@
 import { useEffect } from "react";
 import HeroSection from "./hero";
 import dynamic from "next/dynamic";
-import TicketIframeController from "./TicketIframeController";
 
 const EventCountdown = dynamic(() => import("./EventCountdown"), {
   ssr: true,

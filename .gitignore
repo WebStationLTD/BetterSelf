@@ -69,3 +69,6 @@ next-env.d.ts
 /quick_check.py
 /cluster-plan.json
 /cluster-plan.md
+
+# Local Cursor stubs (not part of the BetterSelf site)
+.cursor/
