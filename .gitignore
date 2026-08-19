@@ -70,5 +70,11 @@ next-env.d.ts
 /cluster-plan.json
 /cluster-plan.md
 
+# Cursor chat scratch — JS audit probes (LeaderFitness / WP, not BetterSelf)
+/_tmp_*.js
+/_tmp_*
+/_tmp_audit_*.js
+/_tmp_home_*.js
+
 # Local Cursor stubs (not part of the BetterSelf site)
 .cursor/
