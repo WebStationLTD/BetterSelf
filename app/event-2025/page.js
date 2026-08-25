@@ -10,7 +10,8 @@ import {
   NewspaperIcon,
   ExternalLinkIcon,
 } from "@heroicons/react/24/outline";
-import { scheduleData, getTypeStyles } from "../../data/scheduleData";
+import { scheduleData } from "../../data/scheduleData2025";
+import { getTypeStyles } from "../../data/scheduleData";
 import { getMembers } from "../../services/members";
 import {
   BeakerIcon,

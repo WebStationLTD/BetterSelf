@@ -157,6 +157,15 @@ const panelsData = {
           "Деница Киркова има над 15 години международен опит в Спа, уелнес и Longevity индустрията. Тя е специализирана в консултиране на собственици на СПА центрове, консултанти, мениджъри, архитекти и дизайнери при планирането, проектирането и изграждането на уелнес обекти на световно ниво. Нейната експертиза обхваща предпроектни проучвания, СПА концепции, функционални разпределения, програмиране на съоръжения, избор на оборудване, спецификация на материали, интериорен дизайн и иновативен мениджмънт на проекти. Като признат специалист в областта на технологичните решения за дълголетие, Деница е консултирала множество СПА и уелнес проекти в различни държави, като внася дълбоко културно разбиране и специфични за пазара познания. Тя често е канена като лектор на водещи международни конференции за СПА и уелнес и е автор на редица публикации, посветени на глобалните уелнес тенденции и тяхното регионално и културно разнообразие. Като основател и собственик на Crystal Spa and Wellness, Деница ръководи компания, специализирана в СПА консултантски услуги, както и в доставка на високотехнологично оборудване и обзавеждане за луксозни СПА и уелнес центрове. Деница притежава магистърска степен по Hospitality and Spa Management от FH Joanneum – University of Applied Sciences, Австрия, както и магистърска степен по Икономически науки от Нов български университет, България.",
         image: "/denitsa-kirkova.jpg",
       },
+      {
+        id: 206,
+        name: "Д-р Гергана Иванова",
+        company: "Медицински университет-София",
+        description:
+          "Д-р Гергана Иванова е анестезиолог, реаниматор и преподавател в Медицински университет-София. Като инструктор към European Resuscitation Council обучава медицински специалисти и граждани в оказване на кардиопулмонална ресусцитация и работи по международни проекти, свързани с изграждането на ефективни системи за реакция при сърдечен арест. Вярва, че най-мощният инструмент в медицината не е технологията, а добре подготвеният човек – защото понякога няколко правилни действия в първите минути могат да променят съдбата на един живот. Работата ѝ обединява науката, обучението и практиката с убеждението, че най-добрият „биохак“ е разбирането как функционира човешкото тяло. Тема: Последният биохак: как да рестартираш човешкия живот. Подтема: Как науката за сърдечния арест показва докъде се простират възможностите на човешкия организъм.",
+        image: "/gergana-ivanova.jpg",
+        confirmed: true,
+      },
     ],
   },
 };
@@ -248,11 +257,37 @@ export default function LecturersByPanels() {
                   ></div>
                 </div>
 
-                {/* Coming Soon ефект */}
+                {/* Само потвърдени за 2026 + Coming Soon */}
                 <div className="space-y-8">
-                  {Array.from({ length: 6 }).map((_, index) => (
+                  {panelsData["innovations-ai"].lecturers
+                    .filter((lecturer) => lecturer.confirmed)
+                    .map((lecturer) => (
+                      <LecturerCard
+                        key={lecturer.id}
+                        lecturer={lecturer}
+                        panelColor={panelsData["innovations-ai"].color}
+                        ringColor="ring-blue-100"
+                        isModerator={lecturer.isModerator}
+                        moderatorTitle="Водеща на панела"
+                        moderatorColors={{
+                          bgGradient: "from-purple-100 to-purple-200",
+                          borderColor: "border-purple-300",
+                          ringColor: "ring-purple-300",
+                          badgeGradient: "from-purple-600 to-purple-700",
+                        }}
+                      />
+                    ))}
+                  {Array.from({
+                    length: Math.max(
+                      0,
+                      6 -
+                        panelsData["innovations-ai"].lecturers.filter(
+                          (lecturer) => lecturer.confirmed,
+                        ).length,
+                    ),
+                  }).map((_, index) => (
                     <div
-                      key={index}
+                      key={`coming-soon-innovations-${index}`}
                       className="relative bg-white rounded-2xl shadow-lg border-2 border-gray-200 p-8 overflow-hidden group hover:shadow-xl transition-all duration-500"
                     >
                       <div className="absolute inset-0 bg-gradient-to-br from-[#ff8d00]/10 via-orange-500/5 to-yellow-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -313,11 +348,37 @@ export default function LecturersByPanels() {
                   ></div>
                 </div>
 
-                {/* Coming Soon ефект */}
+                {/* Само потвърдени за 2026 + Coming Soon */}
                 <div className="space-y-8">
-                  {Array.from({ length: 6 }).map((_, index) => (
+                  {panelsData["longevity"].lecturers
+                    .filter((lecturer) => lecturer.confirmed)
+                    .map((lecturer) => (
+                      <LecturerCard
+                        key={lecturer.id}
+                        lecturer={lecturer}
+                        panelColor={panelsData["longevity"].color}
+                        ringColor="ring-green-100"
+                        isModerator={lecturer.isModerator}
+                        moderatorTitle="Водещ на панела"
+                        moderatorColors={{
+                          bgGradient: "from-blue-100 to-cyan-100",
+                          borderColor: "border-blue-300",
+                          ringColor: "ring-blue-300",
+                          badgeGradient: "from-blue-600 to-cyan-600",
+                        }}
+                      />
+                    ))}
+                  {Array.from({
+                    length: Math.max(
+                      0,
+                      6 -
+                        panelsData["longevity"].lecturers.filter(
+                          (lecturer) => lecturer.confirmed,
+                        ).length,
+                    ),
+                  }).map((_, index) => (
                     <div
-                      key={index}
+                      key={`coming-soon-longevity-${index}`}
                       className="relative bg-white rounded-2xl shadow-lg border-2 border-gray-200 p-8 overflow-hidden group hover:shadow-xl transition-all duration-500"
                     >
                       <div className="absolute inset-0 bg-gradient-to-br from-[#ff8d00]/10 via-orange-500/5 to-yellow-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>

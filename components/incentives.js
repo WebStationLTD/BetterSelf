@@ -13,19 +13,19 @@ import {
 
 const incentives = [
   {
-    name: "Аутизъм: Вътреутробни сигнали и превенция",
-    lecturer: "Д-р Иван Сигридов",
+    name: "Медицината на бъдещето: От лечение на болести към програмиране на здраве",
+    lecturer: "Магдалена Николова",
     icon: UserIcon,
     description:
-      "Какво можем да променим преди зачеване и през бременността за превенция на аутизма",
-    video: "/sigridov-v6-short.mov",
+      "Как съвременната наука измества фокуса от лечение на болести към програмиране на здраве",
+    showTopic: true,
   },
   {
-    name: "Хранене за дълголетие",
-    lecturer: "Д-р Енджи Касабие",
+    name: "Лекция",
+    lecturer: "Христо Попов",
     icon: HeartIcon,
     description:
-      "Холистични хранителни стратегии за здраве, жизненост и дълголетие",
+      "Основател и CEO на Fast Track",
   },
   {
     name: "Оптимизирани хормони",
@@ -70,6 +70,14 @@ const incentives = [
     icon: FaceSmileIcon,
     description:
       "Как да разпознаваме, разбираме и управляваме емоциите за по-хармонични и удовлетворяващи взаимоотношения",
+    showTopic: true,
+  },
+  {
+    name: "Сърдечно-съдово здраве и дълголетие",
+    lecturer: "Проф. д-р Иво Петров, дмн",
+    icon: AcademicCapIcon,
+    description:
+      "Кратка лекция за връзката между сърдечно-съдовото здраве и дълголетието",
     showTopic: true,
   },
 ];
@@ -127,8 +135,8 @@ export default function Incentives() {
 
           {/* Последните две лекции, центрирани */}
           <div className="mt-8 flex justify-center">
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-2">
-              {incentives.slice(6, 8).map((incentive) => (
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              {incentives.slice(6).map((incentive) => (
                 <div
                   key={incentive.name}
                   className="flex flex-col items-center justify-center text-center p-6 pb-4 rounded-lg border border-white bg-gray-800/30 hover:bg-gray-800/50 transition-all duration-300 h-full relative overflow-hidden group"

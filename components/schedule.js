@@ -115,7 +115,7 @@ function AddToCalendarButton() {
       startDate="2026-11-01"
       endDate="2026-11-01"
       startTime="09:00"
-      endTime="18:00"
+      endTime="18:15"
       location="Grand Hotel Astoria, Sofia"
       options="['Apple','Google','iCal','Microsoft365','Outlook.com','Yahoo']"
       timeZone="Europe/Sofia"
@@ -290,35 +290,113 @@ export default function Schedule() {
                           </div>
                         </div>
 
-                        {/* Content Card - Mobile - Coming Soon */}
+                        {/* Content Card - Mobile */}
                         <div
-                          className={`flex-1 ${styles.cardBg} border-2 ${styles.borderColor} rounded-xl p-5 ${styles.shadowColor} shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group flex items-center justify-center min-h-[200px]`}
+                          className={`flex-1 ${styles.cardBg} border-2 ${styles.borderColor} rounded-xl p-5 ${styles.shadowColor} shadow-lg hover:shadow-xl transition-all duration-300`}
                         >
-                          <div className="absolute inset-0 bg-gradient-to-br from-[#ff8d00]/10 via-orange-500/5 to-yellow-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                          <div className="relative z-10 text-center">
-                            <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ff8d00] via-orange-400 to-yellow-500 animate-pulse">
-                              Coming Soon
-                            </h3>
-                            <p className="mt-2 text-sm text-gray-600">
-                              Очаквайте скоро
-                            </p>
+                          <div className="flex items-center justify-between mb-3">
+                            <div className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-sm font-semibold text-gray-900 shadow-sm border border-gray-200">
+                              <ClockIcon className="h-4 w-4 text-[#ff8d00]" />
+                              {item.time}
+                            </div>
+                            {item.type === "panel" && (
+                              <span
+                                className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium ${styles.badge}`}
+                              >
+                                {styles.label}
+                              </span>
+                            )}
                           </div>
+
+                          <h3 className="text-lg font-bold text-gray-900 mb-2 leading-tight">
+                            {item.title}
+                          </h3>
+
+                          {item.speaker && (
+                            <div className="flex items-center gap-2 mb-2">
+                              <UserIcon className="h-4 w-4 text-[#ff8d00] flex-shrink-0" />
+                              <span className="text-sm font-semibold text-gray-700">
+                                {item.speaker}
+                              </span>
+                            </div>
+                          )}
+
+                          <div className="flex items-center gap-2 mb-3">
+                            <MapPinIcon className="h-4 w-4 text-gray-500 flex-shrink-0" />
+                            <span className="text-sm text-gray-600">
+                              {item.location}
+                            </span>
+                          </div>
+
+                          <p className="text-sm text-gray-600 leading-relaxed mb-3">
+                            {item.description}
+                          </p>
+
+                          {item.type !== "panel" && (
+                            <span
+                              className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium ${styles.badge}`}
+                            >
+                              {styles.label}
+                            </span>
+                          )}
                         </div>
                       </div>
 
-                      {/* Desktop/Tablet Grid Card - Coming Soon */}
+                      {/* Desktop/Tablet Grid Card */}
                       <div
-                        className={`hidden md:block relative ${styles.cardBg} border-2 ${styles.borderColor} rounded-2xl p-5 ${styles.shadowColor} shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] group-hover:z-20 h-full flex flex-col items-center justify-center overflow-hidden min-h-[250px]`}
+                        className={`hidden md:block relative ${styles.cardBg} border-2 ${styles.borderColor} rounded-2xl p-5 ${styles.shadowColor} shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] group-hover:z-20 h-full flex flex-col`}
                       >
-                        <div className="absolute inset-0 bg-gradient-to-br from-[#ff8d00]/10 via-orange-500/5 to-yellow-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        <div className="relative z-10 text-center">
-                          <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ff8d00] via-orange-400 to-yellow-500 animate-pulse">
-                            Coming Soon
-                          </h3>
-                          <p className="mt-3 text-sm text-gray-600">
-                            Очаквайте скоро
-                          </p>
+                        <div className="flex items-center justify-between mb-3">
+                          <div className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-sm font-semibold text-gray-900 shadow-md border border-gray-200 w-fit">
+                            <ClockIcon className="h-4 w-4 text-[#ff8d00]" />
+                            {item.time}
+                          </div>
+                          {item.type === "panel" && (
+                            <span
+                              className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium ${styles.badge}`}
+                            >
+                              {styles.label}
+                            </span>
+                          )}
                         </div>
+
+                        <h3 className="text-lg font-bold text-gray-900 mb-3 leading-tight group-hover:text-[#ff8d00] transition-colors duration-300 flex-grow-0">
+                          {item.title}
+                        </h3>
+
+                        {item.speaker && (
+                          <div className="flex items-center gap-2 mb-2">
+                            <UserIcon className="h-4 w-4 text-[#ff8d00] flex-shrink-0" />
+                            <span
+                              className={`text-sm font-semibold text-gray-700 ${
+                                item.type === "panel" ? "" : "line-clamp-1"
+                              }`}
+                            >
+                              {item.speaker}
+                            </span>
+                          </div>
+                        )}
+
+                        <div className="flex items-center gap-2 mb-3">
+                          <MapPinIcon className="h-4 w-4 text-gray-500 flex-shrink-0" />
+                          <span className="text-sm text-gray-600">
+                            {item.location}
+                          </span>
+                        </div>
+
+                        <p className="text-sm text-gray-600 leading-relaxed mb-4 flex-grow">
+                          {item.description}
+                        </p>
+
+                        {item.type !== "panel" && (
+                          <div className="mt-auto">
+                            <span
+                              className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium ${styles.badge}`}
+                            >
+                              {styles.label}
+                            </span>
+                          </div>
+                        )}
                       </div>
                     </div>
                   );

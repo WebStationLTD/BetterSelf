@@ -66,6 +66,11 @@ export default async function MemberDetails({ params }) {
             src={member.profilepicture || "/placeholder.webp"}
             className="rounded-2xl object-cover"
           />
+          {member.photoCredit && (
+            <p className="mt-2 text-xs text-gray-500">
+              Фотокредит: {member.photoCredit}
+            </p>
+          )}
           <h2 className="text-xl font-semibold mb-2 mt-4">
             {member.name || "Член на екипа"}
           </h2>
@@ -86,6 +91,17 @@ export default async function MemberDetails({ params }) {
               </p>
             )} */}
 
+            {member.website && member.website.url && (
+              <p className="mb-3">
+                <Link
+                  href={member.website.url}
+                  target={member.website.target || "_blank"}
+                  className="text-[#ff8d00] hover:text-orange-600 font-medium"
+                >
+                  {member.website.title || member.website.url}
+                </Link>
+              </p>
+            )}
             {member.linkedin && member.linkedin.url && (
               <Link
                 href={member.linkedin.url}
