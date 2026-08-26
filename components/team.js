@@ -22,7 +22,7 @@ export default function Team() {
   const confirmedMembers = getConfirmedMembers(members);
 
   // Броят Coming Soon кутии = 6 - потвърдени лектори
-  const comingSoonCount = Math.max(0, 6 - confirmedMembers.length);
+  const comingSoonCount = 0;
 
   return (
     <div className="bg-white py-24 sm:py-24">

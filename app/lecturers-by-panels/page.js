@@ -257,7 +257,6 @@ export default function LecturersByPanels() {
                   ></div>
                 </div>
 
-                {/* Само потвърдени за 2026 + Coming Soon */}
                 <div className="space-y-8">
                   {panelsData["innovations-ai"].lecturers
                     .filter((lecturer) => lecturer.confirmed)
@@ -267,7 +266,7 @@ export default function LecturersByPanels() {
                         lecturer={lecturer}
                         panelColor={panelsData["innovations-ai"].color}
                         ringColor="ring-blue-100"
-                        isModerator={lecturer.isModerator}
+                        isModerator={false}
                         moderatorTitle="Водеща на панела"
                         moderatorColors={{
                           bgGradient: "from-purple-100 to-purple-200",
@@ -348,7 +347,6 @@ export default function LecturersByPanels() {
                   ></div>
                 </div>
 
-                {/* Само потвърдени за 2026 + Coming Soon */}
                 <div className="space-y-8">
                   {panelsData["longevity"].lecturers
                     .filter((lecturer) => lecturer.confirmed)
@@ -358,7 +356,7 @@ export default function LecturersByPanels() {
                         lecturer={lecturer}
                         panelColor={panelsData["longevity"].color}
                         ringColor="ring-green-100"
-                        isModerator={lecturer.isModerator}
+                        isModerator={false}
                         moderatorTitle="Водещ на панела"
                         moderatorColors={{
                           bgGradient: "from-blue-100 to-cyan-100",

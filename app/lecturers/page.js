@@ -15,7 +15,7 @@ export default async function Team() {
   const confirmedMembers = getConfirmedMembers(members);
 
   // Броят Coming Soon кутии = 8 - потвърдени лектори
-  const comingSoonCount = Math.max(0, 8 - confirmedMembers.length);
+  const comingSoonCount = 0;
 
   return (
     <>

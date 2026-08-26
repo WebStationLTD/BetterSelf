@@ -16,71 +16,82 @@ const incentives = [
     name: "Медицината на бъдещето: От лечение на болести към програмиране на здраве",
     lecturer: "Магдалена Николова",
     icon: UserIcon,
-    description:
-      "Как съвременната наука измества фокуса от лечение на болести към програмиране на здраве",
-    showTopic: true,
   },
   {
-    name: "Лекция",
-    lecturer: "Христо Попов",
-    icon: HeartIcon,
-    description:
-      "Основател и CEO на Fast Track",
+    name: "Longevity Mindset: дълголетието като начин на мислене",
+    lecturer: "Д-р Жасмина Маджид",
+    icon: BeakerIcon,
   },
   {
     name: "Оптимизирани хормони",
     lecturer: "Д-р Константин Маламов",
     icon: ScaleIcon,
-    description:
-      "Диригенти на поведението и успеха ни – как да балансираме хормоните за максимално добро здраве",
-  },
-  {
-    name: "Как мислят шампионите?",
-    lecturer: "Моузес Налока",
-    icon: TrophyIcon,
-    description:
-      "Психологически стратегии за постигане на върхови резултати и преодоляване на ограниченията",
-  },
-  {
-    name: "Промените на кожата при жените в перименопауза и менопауза",
-    lecturer: "Д-р Камелия Присадашка",
-    icon: SparklesIcon,
-    description:
-      "Съвременни научни подходи за развиване и поддържане на красотата отвътре и отвън",
-    showTopic: true,
-  },
-  {
-    name: "Харизма и дизайн на гласа",
-    lecturer: "Иван Головацкий",
-    icon: MicrophoneIcon,
-    description:
-      "Как да говорим красиво и въздействащо, така, че не само да ни слушат, но и да ни чуват",
-  },
-  {
-    name: "Защо биохакинг?",
-    lecturer: "Д-р Жасмина Маджид",
-    icon: BeakerIcon,
-    description:
-      "Въведение в света на биохакинга: комбинирани практики за здраве и благосъстояние, подкрепени от науката",
-    youtubeVideo: "lbfGvCXmzSY",
   },
   {
     name: 'Можеш да правиш всичко „правилно" и пак да си изтощен – защо?',
     lecturer: "Десислава Дамянова",
     icon: FaceSmileIcon,
-    description:
-      "Как да разпознаваме, разбираме и управляваме емоциите за по-хармонични и удовлетворяващи взаимоотношения",
-    showTopic: true,
+  },
+  {
+    name: "Промените на кожата при жените в перименопауза и менопауза",
+    lecturer: "Д-р Камелия Присадашка",
+    icon: SparklesIcon,
+  },
+  {
+    name: "Асертивност – качеството на уверените хора",
+    lecturer: "Иван Головацкий",
+    icon: MicrophoneIcon,
+  },
+  {
+    lecturer: "Христо Попов",
+    icon: HeartIcon,
   },
   {
     name: "Сърдечно-съдово здраве и дълголетие",
     lecturer: "Проф. д-р Иво Петров, дмн",
     icon: AcademicCapIcon,
-    description:
-      "Кратка лекция за връзката между сърдечно-съдовото здраве и дълголетието",
-    showTopic: true,
+  },
+  {
+    name: "Как мислят шампионите?",
+    lecturer: "Моузес Налока",
+    icon: TrophyIcon,
+  },
+  {
+    lecturer: "Gary Andrew Rhodes",
+    icon: ComputerDesktopIcon,
   },
 ];
+
+function TopicCard({ incentive }) {
+  return (
+    <div className="flex flex-col items-center justify-center text-center p-6 pb-4 rounded-lg border border-white bg-gray-800/30 hover:bg-gray-800/50 transition-all duration-300 h-full relative overflow-hidden group">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#ff8d00]/10 via-orange-500/5 to-yellow-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      <div className="relative z-10 flex flex-col items-center justify-center h-full">
+        <div className="shrink-0">
+          <div className="h-20 w-20 flex items-center justify-center rounded-full bg-[#ff8d00]">
+            <incentive.icon className="h-12 w-12 text-white" />
+          </div>
+        </div>
+        <div className="mt-8">
+          {incentive.name ? (
+            <>
+              <h3 className="text-xl font-bold text-white leading-snug">
+                {incentive.name}
+              </h3>
+              <p className="mt-3 text-sm font-medium text-[#ff8d00]">
+                {incentive.lecturer}
+              </p>
+            </>
+          ) : (
+            <h3 className="text-xl font-bold text-white leading-snug">
+              {incentive.lecturer}
+            </h3>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function Incentives() {
   return (
@@ -96,81 +107,20 @@ export default function Incentives() {
           </div>
           <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {incentives.slice(0, 6).map((incentive) => (
-              <div
-                key={incentive.name}
-                className="flex flex-col items-center justify-center text-center p-6 pb-4 rounded-lg border border-white bg-gray-800/30 hover:bg-gray-800/50 transition-all duration-300 h-full relative overflow-hidden group"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-[#ff8d00]/10 via-orange-500/5 to-yellow-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="relative z-10 flex flex-col items-center justify-center h-full">
-                  <div className="shrink-0">
-                    <div className={`h-20 w-20 flex items-center justify-center rounded-full bg-[#ff8d00] ${!incentive.showTopic ? "animate-pulse" : ""}`}>
-                      <incentive.icon className="h-12 w-12 text-white" />
-                    </div>
-                  </div>
-                  <div className="mt-8">
-                    {incentive.showTopic ? (
-                      <>
-                        <h3 className="text-xl font-bold text-white leading-snug">
-                          {incentive.name}
-                        </h3>
-                        <p className="mt-3 text-sm font-medium text-[#ff8d00]">
-                          {incentive.lecturer}
-                        </p>
-                      </>
-                    ) : (
-                      <>
-                        <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ff8d00] via-orange-400 to-yellow-500 animate-pulse">
-                          Coming Soon
-                        </h3>
-                        <p className="mt-3 text-sm text-gray-400">
-                          Очаквайте скоро
-                        </p>
-                      </>
-                    )}
-                  </div>
-                </div>
-              </div>
+              <TopicCard
+                key={incentive.lecturer}
+                incentive={incentive}
+              />
             ))}
           </div>
 
-          {/* Последните две лекции, центрирани */}
           <div className="mt-8 flex justify-center">
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-2">
               {incentives.slice(6).map((incentive) => (
-                <div
-                  key={incentive.name}
-                  className="flex flex-col items-center justify-center text-center p-6 pb-4 rounded-lg border border-white bg-gray-800/30 hover:bg-gray-800/50 transition-all duration-300 h-full relative overflow-hidden group"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#ff8d00]/10 via-orange-500/5 to-yellow-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="relative z-10 flex flex-col items-center justify-center h-full">
-                    <div className="shrink-0">
-                      <div className={`h-20 w-20 flex items-center justify-center rounded-full bg-[#ff8d00] ${!incentive.showTopic ? "animate-pulse" : ""}`}>
-                        <incentive.icon className="h-12 w-12 text-white" />
-                      </div>
-                    </div>
-                    <div className="mt-8">
-                      {incentive.showTopic ? (
-                        <>
-                          <h3 className="text-xl font-bold text-white leading-snug">
-                            {incentive.name}
-                          </h3>
-                          <p className="mt-3 text-sm font-medium text-[#ff8d00]">
-                            {incentive.lecturer}
-                          </p>
-                        </>
-                      ) : (
-                        <>
-                          <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ff8d00] via-orange-400 to-yellow-500 animate-pulse">
-                            Coming Soon
-                          </h3>
-                          <p className="mt-3 text-sm text-gray-400">
-                            Очаквайте скоро
-                          </p>
-                        </>
-                      )}
-                    </div>
-                  </div>
-                </div>
+                <TopicCard
+                  key={incentive.lecturer}
+                  incentive={incentive}
+                />
               ))}
             </div>
           </div>
