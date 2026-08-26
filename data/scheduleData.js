@@ -52,7 +52,7 @@ export const scheduleData = [
   {
     id: 6,
     time: "11:30 - 12:00",
-    title: "Невронаука и психобиология",
+    title: "Правиш всичко „правилно“, но защо си изтощен?",
     speaker: "Десислава Дамянова",
     location: "Главна зала",
     description:
