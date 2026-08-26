@@ -58,7 +58,7 @@ export const LOCAL_LECTURERS = [
     name: "Магдалена Николова",
     slug: "magdalena-nikolova",
     position: "BSc Biology & Neuroscience | MPhil Stem Cell Medicine",
-    profilepicture: "/placeholder.webp",
+    profilepicture: "/magdalena-nikolova.jpg",
     phonenumber: null,
     email: null,
     linkedin: {
