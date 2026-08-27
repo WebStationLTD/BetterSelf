@@ -54,6 +54,40 @@ export default function Clients() {
                   />
                 </Link>
               </div>
+              <div className="h-16 flex items-center justify-center relative">
+                <Link
+                  href="https://drbastet.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300"
+                >
+                  <Image
+                    alt="Dr. Bastet"
+                    src="/dr-bastet-logo.jpg"
+                    fill
+                    quality={80}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </Link>
+              </div>
+              <div className="h-16 flex items-center justify-center relative">
+                <Link
+                  href="https://www.sofia.dexafit.com/bg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300"
+                >
+                  <Image
+                    alt="DexaFit Sofia"
+                    src="/dexafit-sofia-logo.png"
+                    fill
+                    quality={80}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </Link>
+              </div>
               {/* ВРЕМЕННО СКРИТО
               <div className="h-16 flex items-center justify-center relative">
                 <Link href="https://drbastet.com/" target="_blank" rel="noopener noreferrer" className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300">
@@ -112,6 +146,23 @@ export default function Clients() {
                   <Image
                     alt="Fast Track"
                     src="/fast-track-logo.png"
+                    fill
+                    quality={100}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </Link>
+              </div>
+              <div className="h-16 flex items-center justify-center relative">
+                <Link
+                  href="https://biohacking.bg/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300"
+                >
+                  <Image
+                    alt="Biohacking.bg"
+                    src="/biohacking-bg-logo.png"
                     fill
                     quality={100}
                     loading="lazy"

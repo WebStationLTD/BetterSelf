@@ -63,7 +63,8 @@ export const scheduleData = [
     id: 7,
     time: "12:00 - 13:00",
     title: "Иновации и технологии",
-    speaker: "",
+    speaker:
+      "Gary Andrew Rhodes, Биляна Маринова (Dr. Bastet), Биорезонанс, Грег Диаманти",
     location: "Главна зала",
     description:
       "Как да използваме изкуствения интелект и иновативни технологии за лично и професионално развитие",
@@ -140,7 +141,8 @@ export const scheduleData = [
     id: 15,
     time: "16:45 - 17:45",
     title: "Панел Longevity",
-    speaker: "Д-р Гергана Иванова",
+    speaker:
+      "Мариана Атанасова, Мария Варсанова (Biohacking.bg), Джули (Biohacking.bg), Д-р Гергана Иванова, Ванко Пъмпкин",
     location: "Главна зала",
     description: "Дискусия за стратегиите за дълголетие и здравословен живот",
     type: "panel",

@@ -20,6 +20,20 @@ const sponsors = [
     description:
       "Водеща клиника по дерматология и естетична медицина с най-съвременна апаратура.",
   },
+  {
+    name: "Dr. Bastet",
+    logo: "/dr-bastet-logo.jpg",
+    link: "https://drbastet.com/",
+    description:
+      "Dr. Bastet съчетава биохакинг и нутригеномика в натурални хранителни добавки за глюкозен баланс, дълголетие и метаболитно здраве. И това е само началото.",
+  },
+  {
+    name: "DexaFit Sofia",
+    logo: "/dexafit-sofia-logo.png",
+    link: "https://www.sofia.dexafit.com/bg",
+    description:
+      "DexaFit Sofia е високотехнологичен медицински център, който предлага персонализирани анализи.",
+  },
   // ВРЕМЕННО СКРИТО
   // {
   //   name: "Dr. Bastet",
@@ -80,6 +94,13 @@ const partners = [
     link: "https://fasttrack-growth.com/",
     description:
       "Глобална консултантска компания с над 500 клиента в 30 държави. Развива стратегии и лидерски програми за компании като Google, Mango, Ray-Ban и Four Seasons.",
+  },
+  {
+    name: "Biohacking.bg",
+    logo: "/biohacking-bg-logo.png",
+    link: "https://biohacking.bg/",
+    description:
+      "Платформа, която обединява наука, технологии и практики за оптимизиране на тялото и ума.",
   },
   {
     name: "Webstation",

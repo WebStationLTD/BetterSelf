@@ -20,6 +20,8 @@ export default function LecturerCard({
   const [isExpanded, setIsExpanded] = useState(false);
 
   // Функция за съкращаване на текста
+  const description = lecturer.description || "";
+
   const truncateText = (text, maxLength = 250) => {
     if (text.length <= maxLength) return text;
 
@@ -32,11 +34,11 @@ export default function LecturerCard({
       : truncated + "...";
   };
 
-  const shouldShowButton = lecturer.description.length > 250;
+  const shouldShowButton = description.length > 250;
   const displayText =
     isExpanded || !shouldShowButton
-      ? lecturer.description
-      : truncateText(lecturer.description);
+      ? description
+      : truncateText(description);
 
   return (
     <div
@@ -45,7 +47,11 @@ export default function LecturerCard({
           ? `bg-gradient-to-r ${moderatorColors.bgGradient} border-2 ${moderatorColors.borderColor} shadow-2xl transform scale-105`
           : "bg-white shadow-lg hover:shadow-xl"
       } rounded-xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden ${
-        isExpanded ? "h-auto min-h-96 md:min-h-72" : "min-h-96 md:h-72"
+        description
+          ? isExpanded
+            ? "h-auto min-h-96 md:min-h-72"
+            : "min-h-96 md:h-72"
+          : "min-h-0"
       }`}
     >
       {isModerator && (
