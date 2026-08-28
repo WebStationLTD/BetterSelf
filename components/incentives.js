@@ -43,6 +43,7 @@ const incentives = [
     icon: MicrophoneIcon,
   },
   {
+    name: "Енергията като капитал",
     lecturer: "Христо Попов",
     icon: HeartIcon,
   },

@@ -102,7 +102,7 @@ export const scheduleData = [
   {
     id: 11,
     time: "15:00 - 15:30",
-    title: "Христо Попов",
+    title: "Енергията като капитал",
     speaker: "Христо Попов",
     location: "Главна зала",
     description: "",
