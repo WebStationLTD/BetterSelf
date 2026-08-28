@@ -142,7 +142,7 @@ export const scheduleData = [
     time: "16:45 - 17:45",
     title: "Панел Longevity",
     speaker:
-      "Мариана Атанасова, Мария Варсанова (Biohacking.bg), Джули (Biohacking.bg), Д-р Гергана Иванова, Ванко Пъмпкин",
+      "Мариана Атанасова, Мария Варсанова (Biohacking.bg), Джулия Димитрова (Biohacking.bg), Д-р Гергана Иванова, Ванко Пъмпкин",
     location: "Главна зала",
     description: "Дискусия за стратегиите за дълголетие и здравословен живот",
     type: "panel",
