@@ -117,11 +117,11 @@ export default function Footer() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div>
             <img
-              alt="BetterSelf"
+              alt="BetterSelf by MD Capital"
               src="/betterself-x-md-logo.png"
               width={280}
               height={101}
-              className="h-12 w-auto lg:h-10"
+              className="h-16 w-auto lg:h-14"
             />
           </div>
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">

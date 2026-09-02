@@ -337,7 +337,7 @@ export default function SponsorsAndPartners({ children }) {
                   <p className="mb-6 text-center text-sm font-semibold uppercase tracking-[0.25em] text-[#ff8d00]">
                     Генерален спонсор
                   </p>
-                  <div className="relative mx-auto h-36 w-full max-w-xl sm:h-40">
+                  <div className="relative mx-auto h-40 w-full max-w-xl sm:h-40">
                     <Image
                       src={sponsor.logo}
                       alt={sponsor.name}
@@ -364,7 +364,7 @@ export default function SponsorsAndPartners({ children }) {
                     key={sponsor.name}
                     className="rounded-3xl border-2 border-gray-200 bg-white px-4 py-8 shadow-lg sm:px-8 sm:py-10"
                   >
-                    <div className="relative mx-auto h-24 w-full sm:h-32">
+                    <div className="relative mx-auto h-28 w-full sm:h-32">
                       <Image
                         src={sponsor.logo}
                         alt={sponsor.name}

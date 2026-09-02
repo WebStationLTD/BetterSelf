@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import LazyImageObserver from "./LazyImageObserver";
 
@@ -57,9 +58,19 @@ export default function Hero() {
               Конференция 2026
             </h2>
 
-            <h3 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-[#ff8d00] font-display mb-6 sm:mb-10">
-              BETTER SELF
-            </h3>
+            <h3 className="sr-only">Better Self by MD Capital</h3>
+            <div className="mb-6 flex justify-center sm:mb-10">
+              <div className="inline-flex rounded-3xl bg-white px-5 py-4 shadow-2xl sm:px-8 sm:py-5">
+                <Image
+                  src="/betterself-x-md-logo.png"
+                  alt="BetterSelf by MD Capital"
+                  width={800}
+                  height={289}
+                  priority
+                  className="h-[4.5rem] w-auto object-contain sm:h-28 md:h-32 lg:h-36"
+                />
+              </div>
+            </div>
 
             {/* Quote */}
             <p className="text-2xl md:text-3xl lg:text-4xl font-medium text-white font-display mb-6 sm:mb-10">

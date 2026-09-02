@@ -201,14 +201,18 @@ export default function Navigation() {
                 <span className="sr-only">Close menu</span>
                 <XMarkIcon aria-hidden="true" className="size-6" />
               </button>
-              <div className="ml-4">
-                <Link href="/" onClick={() => setOpen(false)} className="block">
+              <div className="ml-3">
+                <Link
+                  href="/"
+                  onClick={() => setOpen(false)}
+                  className="block rounded-2xl bg-white px-3 py-2 shadow-sm"
+                >
                   <Image
                     src="/betterself-x-md-logo.png"
-                    alt="BetterSelf Logo"
+                    alt="BetterSelf by MD Capital"
                     width={280}
                     height={101}
-                    className="h-12 w-auto cursor-pointer hover:opacity-80 transition-opacity lg:h-10"
+                    className="h-16 w-auto cursor-pointer object-contain transition-opacity hover:opacity-80"
                   />
                 </Link>
               </div>
@@ -311,7 +315,7 @@ export default function Navigation() {
       <header className="relative bg-gray-800">
         <nav aria-label="Top" className="mx-auto w-full px-4 sm:px-6 lg:px-8">
           <div className="">
-            <div className="flex items-center justify-between h-16 lg:h-16">
+            <div className="flex min-h-20 items-center justify-between py-2 lg:min-h-[88px]">
               {/* Mobile menu button - запазваме мобилната версия непроменена */}
               <button
                 type="button"
@@ -324,15 +328,19 @@ export default function Navigation() {
               </button>
 
               {/* Секция 1: Лого */}
-              <div className="w-3/4 lg:w-1/5 flex items-center justify-start">
-                <Link href="/" className="block ml-5 lg:ml-0">
+              <div className="flex w-3/4 items-center justify-start lg:w-1/5">
+                <Link
+                  href="/"
+                  className="ml-3 block rounded-2xl bg-white px-2.5 py-1.5 shadow-sm lg:ml-0 lg:px-3 lg:py-2"
+                >
                   <span className="sr-only">Betterself</span>
                   <Image
                     width={280}
                     height={101}
-                    alt=""
+                    alt="BetterSelf by MD Capital"
                     src="/betterself-x-md-logo.png"
-                    className="w-auto h-[62px] lg:h-[60px] object-contain"
+                    className="h-14 w-auto object-contain lg:h-16"
+                    priority
                   />
                 </Link>
               </div>
