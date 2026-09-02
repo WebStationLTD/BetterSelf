@@ -1,6 +1,7 @@
 import { fetchAPI } from "./api";
 import { cache } from "react";
 import he from "he";
+import { getLocalPosts } from "../data/localPosts";
 
 // Helper функция за правилно декодиране на HTML entities
 const cleanDecodeText = (text) => {
@@ -58,12 +59,29 @@ export const searchContent = cache(async (query) => {
     ]);
 
     // Филтрираме и форматираме резултатите
+    const queryLower = query.toLowerCase();
+    const localMatches = getLocalPosts().filter((post) => {
+      const haystack = `${post.title.rendered} ${post.content.rendered}`
+        .replace(/<[^>]+>/g, " ")
+        .toLowerCase();
+      return haystack.includes(queryLower);
+    });
+    const remotePosts = blogPosts || [];
+    const mergedPosts = [
+      ...localMatches,
+      ...remotePosts.filter(
+        (post) => !localMatches.some((local) => local.slug === post.slug),
+      ),
+    ];
+
     const results = [
-      ...(blogPosts || []).map((post) => ({
+      ...mergedPosts.map((post) => ({
         id: post.id,
         title: cleanDecodeText(post.title.rendered),
         slug: post.slug,
-        excerpt: cleanDecodeText(post.excerpt?.rendered || ""),
+        excerpt: cleanDecodeText(
+          post.excerpt?.rendered || post.yoast_head_json?.description || "",
+        ),
         type: "blog",
       })),
       ...(members || []).map((member) => ({

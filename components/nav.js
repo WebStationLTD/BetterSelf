@@ -204,11 +204,11 @@ export default function Navigation() {
               <div className="ml-4">
                 <Link href="/" onClick={() => setOpen(false)} className="block">
                   <Image
-                    src="/better-self-logo-2026.png"
+                    src="/betterself-x-md-logo.png"
                     alt="BetterSelf Logo"
-                    width={197}
-                    height={60}
-                    className="h-10 w-auto cursor-pointer hover:opacity-80 transition-opacity"
+                    width={280}
+                    height={101}
+                    className="h-12 w-auto cursor-pointer hover:opacity-80 transition-opacity lg:h-10"
                   />
                 </Link>
               </div>
@@ -328,11 +328,11 @@ export default function Navigation() {
                 <Link href="/" className="block ml-5 lg:ml-0">
                   <span className="sr-only">Betterself</span>
                   <Image
-                    width={197}
-                    height={60}
+                    width={280}
+                    height={101}
                     alt=""
-                    src="/better-self-logo-2026.png"
-                    className="w-auto h-[50px] lg:h-[60px] object-contain"
+                    src="/betterself-x-md-logo.png"
+                    className="w-auto h-[62px] lg:h-[60px] object-contain"
                   />
                 </Link>
               </div>

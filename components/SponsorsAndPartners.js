@@ -10,14 +10,26 @@ const sponsors = [
     name: "MD Capital",
     logo: "/md-capital-logo.png",
     description:
-      "Генерален спонсор на BetterSelf 2026.",
+      "MD CAPITAL е водеща инвестиционна компания, специализирана в строителството на съвременни, екосъобразни и висококачествени сгради. С дългогодишен опит в индустрията ние сме надежден партньор в реализирането на устойчиви и иновативни проекти, съчетаващи естетика и функционалност. В MD Capital не просто изграждаме сгради – ние създаваме възможности, оформяме среда и вдъхваме живот на идеи. Вярваме, че всяка сграда е повече от проект – тя е дългосрочна стойност, визия и отговорност към бъдещето. Успехът ни се гради върху задълбочени анализи, иновативно мислене и внимание към всеки детайл. Ние трансформираме перспективни локации в съвременни и устойчиви пространства. За нас истинската стойност не се измерва единствено в реализирани проекти, а в доверието и дългосрочните партньорства, които изграждаме.",
     featured: true,
+  },
+  {
+    name: "HYDE",
+    logo: "/hyde-logo.jpg",
+    description: "",
+    featuredAfterGeneral: true,
   },
   {
     name: "Simeonovsko 12",
     logo: "/simeonovsko12-logo.png",
     description: "",
     featuredAfterGeneral: true,
+  },
+  {
+    name: "Ралица Узунова",
+    logo: "/ralitsa-uzunova-logo.jpg",
+    description:
+      "Остеоестет и създател на Фейс Фитнес. Освободи • Активирай • Поддържай.",
   },
   {
     name: "A&G Luxury Boutique",
@@ -318,7 +330,7 @@ export default function SponsorsAndPartners({ children }) {
                   <p className="mb-6 text-center text-sm font-semibold uppercase tracking-[0.25em] text-[#ff8d00]">
                     Генерален спонсор
                   </p>
-                  <div className="relative mx-auto h-32 w-full max-w-xl sm:h-40">
+                  <div className="relative mx-auto h-36 w-full max-w-xl sm:h-40">
                     <Image
                       src={sponsor.logo}
                       alt={sponsor.name}
@@ -331,30 +343,32 @@ export default function SponsorsAndPartners({ children }) {
                     {sponsor.name}
                   </h3>
                   {sponsor.description ? (
-                    <p className="mt-3 text-center text-base text-gray-600">
+                    <p className="mx-auto mt-3 max-w-3xl text-center text-base leading-7 text-gray-600">
                       {sponsor.description}
                     </p>
                   ) : null}
                 </div>
               ))}
-            {sponsors
-              .filter((sponsor) => sponsor.featuredAfterGeneral)
-              .map((sponsor) => (
-                <div
-                  key={sponsor.name}
-                  className="mx-auto mt-8 max-w-4xl rounded-3xl border-2 border-gray-200 bg-white px-8 py-10 shadow-lg"
-                >
-                  <div className="relative mx-auto h-28 w-full max-w-md sm:h-36">
-                    <Image
-                      src={sponsor.logo}
-                      alt={sponsor.name}
-                      fill
-                      quality={100}
-                      className="object-contain"
-                    />
+            <div className="mx-auto mt-8 grid max-w-4xl grid-cols-2 gap-4 sm:gap-6">
+              {sponsors
+                .filter((sponsor) => sponsor.featuredAfterGeneral)
+                .map((sponsor) => (
+                  <div
+                    key={sponsor.name}
+                    className="rounded-3xl border-2 border-gray-200 bg-white px-4 py-8 shadow-lg sm:px-8 sm:py-10"
+                  >
+                    <div className="relative mx-auto h-24 w-full sm:h-32">
+                      <Image
+                        src={sponsor.logo}
+                        alt={sponsor.name}
+                        fill
+                        quality={100}
+                        className="object-contain"
+                      />
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+            </div>
             <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
               {sponsors
                 .filter(
@@ -386,7 +400,7 @@ export default function SponsorsAndPartners({ children }) {
                     href={partner.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex h-32 w-full items-center justify-center rounded-2xl bg-white p-6 shadow-lg transition-transform duration-300 hover:scale-105"
+                    className="flex h-36 w-full items-center justify-center rounded-2xl bg-white p-6 shadow-lg transition-transform duration-300 hover:scale-105 sm:h-32"
                   >
                     <div className="relative h-full w-full">
                       <Image
@@ -400,7 +414,7 @@ export default function SponsorsAndPartners({ children }) {
                     </div>
                   </Link>
                 ) : (
-                  <div className="flex h-32 w-full items-center justify-center rounded-2xl bg-white p-6 shadow-lg">
+                  <div className="flex h-36 w-full items-center justify-center rounded-2xl bg-white p-6 shadow-lg sm:h-32">
                     <div className="relative h-full w-full">
                       <Image
                         src={partner.logo}

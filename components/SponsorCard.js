@@ -32,7 +32,7 @@ export default function SponsorCard({ sponsor }) {
         isExpanded ? "h-auto min-h-fit" : "h-auto"
       }`}
     >
-      <div className="relative h-32 w-full mb-6 flex-shrink-0">
+      <div className="relative mb-6 h-36 w-full flex-shrink-0 sm:h-32">
         <Image
           src={sponsor.logo}
           alt={sponsor.name}

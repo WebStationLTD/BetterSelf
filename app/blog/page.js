@@ -1,10 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { getLocalPosts } from "../../data/localPosts";
+
 export const metadata = {
   title: "Блог - Betterself",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "Идеи, истории и практични насоки за здраве, дълголетие и пътя към по-доброто себе си.",
 };
 
 export default async function Blog({ searchParams }) {
@@ -28,7 +30,11 @@ export default async function Blog({ searchParams }) {
     );
   }
 
-  const posts = await response.json();
+  const wordpressPosts = await response.json();
+  const posts =
+    currentPage === 1
+      ? [...getLocalPosts(), ...wordpressPosts]
+      : wordpressPosts;
   const totalPagesHeader = response.headers.get("x-wp-totalpages");
   const totalPages = Number(totalPagesHeader) || 1;
 
@@ -42,8 +48,8 @@ export default async function Blog({ searchParams }) {
                 От нашия блог
               </h1>
               <p className="mt-6 text-lg/8 text-white">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Идеи, истории и практични насоки за здраве, дълголетие и пътя
+                към по-доброто себе си.
               </p>
             </div>
             <svg
