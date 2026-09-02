@@ -320,7 +320,7 @@ export default function Navigation() {
               <button
                 type="button"
                 onClick={() => setOpen(true)}
-                className="relative rounded-md bg-white p-2 text-gray-400 lg:hidden"
+                className="relative w-10 shrink-0 rounded-md bg-white p-2 text-gray-400 lg:hidden"
               >
                 <span className="absolute -inset-0.5" />
                 <span className="sr-only">Open menu</span>
@@ -328,10 +328,10 @@ export default function Navigation() {
               </button>
 
               {/* Секция 1: Лого */}
-              <div className="flex w-3/4 items-center justify-start lg:w-1/5">
+              <div className="flex flex-1 items-center justify-center lg:w-1/5 lg:flex-none lg:justify-start">
                 <Link
                   href="/"
-                  className="ml-3 block rounded-2xl bg-white px-2.5 py-1.5 shadow-sm lg:ml-0 lg:px-3 lg:py-2"
+                  className="block rounded-2xl bg-white px-2.5 py-1.5 shadow-sm lg:px-3 lg:py-2"
                 >
                   <span className="sr-only">Betterself</span>
                   <Image
@@ -465,11 +465,11 @@ export default function Navigation() {
               </div>
 
               {/* Секция 3: Търсачка - за мобилни само икона, за десктоп - цяло поле */}
-              <div className="lg:hidden">
+              <div className="flex w-10 shrink-0 justify-end lg:hidden">
                 <button
                   type="button"
                   onClick={() => setShowMobileSearch(!showMobileSearch)}
-                  className="p-2 text-gray-500 rounded-md hover:bg-gray-100 transition-colors"
+                  className="rounded-md p-2 text-gray-500 transition-colors hover:bg-gray-100"
                 >
                   <MagnifyingGlassIcon className="h-6 w-6" />
                 </button>
