@@ -72,6 +72,23 @@ export default function Clients() {
                 />
               </div>
               <div className="relative flex h-20 items-center justify-center sm:h-16">
+                <Link
+                  href="https://zapper.sky.bg/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative flex h-full w-full items-center justify-center transition-opacity duration-300 hover:opacity-75"
+                >
+                  <Image
+                    alt="Скай Запер"
+                    src="/sky-zapper-logo.jpg"
+                    fill
+                    quality={100}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </Link>
+              </div>
+              <div className="relative flex h-20 items-center justify-center sm:h-16">
                 <Image
                   alt="A&G Luxury Boutique"
                   src="/ag-luxury-boutique-logo.jpg"

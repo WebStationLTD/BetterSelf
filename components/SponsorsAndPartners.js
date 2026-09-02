@@ -32,6 +32,13 @@ const sponsors = [
       "Остеоестет и създател на Фейс Фитнес. Освободи • Активирай • Поддържай.",
   },
   {
+    name: "Скай Запер",
+    logo: "/sky-zapper-logo.jpg",
+    link: "https://zapper.sky.bg/",
+    description:
+      "Българска компания за уреди за биорезонансни терапии — за професионална работа и домашна употреба.",
+  },
+  {
     name: "A&G Luxury Boutique",
     logo: "/ag-luxury-boutique-logo.jpg",
     description:
