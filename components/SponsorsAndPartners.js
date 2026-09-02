@@ -7,6 +7,25 @@ import SponsorCard from "./SponsorCard";
 
 const sponsors = [
   {
+    name: "MD Capital",
+    logo: "/md-capital-logo.png",
+    description:
+      "Генерален спонсор на BetterSelf 2026.",
+    featured: true,
+  },
+  {
+    name: "Simeonovsko 12",
+    logo: "/simeonovsko12-logo.png",
+    description: "",
+    featuredAfterGeneral: true,
+  },
+  {
+    name: "A&G Luxury Boutique",
+    logo: "/ag-luxury-boutique-logo.jpg",
+    description:
+      "A&G Luxury Boutique във Виена и София – фини бижута и персонални консултации.",
+  },
+  {
     name: "Grand Hotel Astoria",
     logo: "/grand-hotel-astoria-logo.png",
     link: "https://www.astoriagrandhotel.bg/",
@@ -289,10 +308,61 @@ export default function SponsorsAndPartners({ children }) {
               Спонсори
             </h2>
             <div className="w-48 h-1 mx-auto my-4 bg-[#ff8d00] rounded"></div>
-            <div className="mx-auto mt-12 grid max-w-lg grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-              {sponsors.map((sponsor) => (
-                <SponsorCard key={sponsor.name} sponsor={sponsor} />
+            {sponsors
+              .filter((sponsor) => sponsor.featured)
+              .map((sponsor) => (
+                <div
+                  key={sponsor.name}
+                  className="mx-auto mt-12 max-w-4xl rounded-3xl border-2 border-[#ff8d00]/30 bg-gradient-to-br from-orange-50 via-white to-yellow-50 px-8 py-10 shadow-xl"
+                >
+                  <p className="mb-6 text-center text-sm font-semibold uppercase tracking-[0.25em] text-[#ff8d00]">
+                    Генерален спонсор
+                  </p>
+                  <div className="relative mx-auto h-32 w-full max-w-xl sm:h-40">
+                    <Image
+                      src={sponsor.logo}
+                      alt={sponsor.name}
+                      fill
+                      quality={100}
+                      className="object-contain"
+                    />
+                  </div>
+                  <h3 className="mt-6 text-center text-2xl font-semibold text-gray-900">
+                    {sponsor.name}
+                  </h3>
+                  {sponsor.description ? (
+                    <p className="mt-3 text-center text-base text-gray-600">
+                      {sponsor.description}
+                    </p>
+                  ) : null}
+                </div>
               ))}
+            {sponsors
+              .filter((sponsor) => sponsor.featuredAfterGeneral)
+              .map((sponsor) => (
+                <div
+                  key={sponsor.name}
+                  className="mx-auto mt-8 max-w-4xl rounded-3xl border-2 border-gray-200 bg-white px-8 py-10 shadow-lg"
+                >
+                  <div className="relative mx-auto h-28 w-full max-w-md sm:h-36">
+                    <Image
+                      src={sponsor.logo}
+                      alt={sponsor.name}
+                      fill
+                      quality={100}
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+              ))}
+            <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+              {sponsors
+                .filter(
+                  (sponsor) => !sponsor.featured && !sponsor.featuredAfterGeneral,
+                )
+                .map((sponsor) => (
+                  <SponsorCard key={sponsor.name} sponsor={sponsor} />
+                ))}
             </div>
           </div>
         </div>

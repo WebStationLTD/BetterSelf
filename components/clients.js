@@ -19,7 +19,44 @@ export default function Clients() {
             </h2>
             {/* Хоризонтална линия с градиент под заглавието */}
             <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent mb-8"></div>
+            <div className="mb-6 rounded-3xl border-2 border-[#ff8d00]/30 bg-gradient-to-br from-orange-50 via-white to-yellow-50 px-6 py-8">
+              <p className="mb-5 text-center text-xs font-semibold uppercase tracking-[0.25em] text-[#ff8d00]">
+                Генерален спонсор
+              </p>
+              <div className="relative mx-auto h-24 w-full max-w-sm sm:h-28">
+                <Image
+                  alt="MD Capital"
+                  src="/md-capital-logo.png"
+                  fill
+                  quality={100}
+                  loading="lazy"
+                  className="max-h-full max-w-full object-contain"
+                />
+              </div>
+            </div>
+            <div className="mb-10 rounded-3xl border-2 border-gray-200 bg-white px-6 py-8 shadow-sm">
+              <div className="relative mx-auto h-20 w-full max-w-xs sm:h-24">
+                <Image
+                  alt="Simeonovsko 12"
+                  src="/simeonovsko12-logo.png"
+                  fill
+                  quality={100}
+                  loading="lazy"
+                  className="max-h-full max-w-full object-contain"
+                />
+              </div>
+            </div>
             <div className="grid grid-cols-2 gap-8 items-center">
+              <div className="h-16 flex items-center justify-center relative">
+                <Image
+                  alt="A&G Luxury Boutique"
+                  src="/ag-luxury-boutique-logo.jpg"
+                  fill
+                  quality={80}
+                  loading="lazy"
+                  className="max-h-full max-w-full object-contain"
+                />
+              </div>
               <div className="h-16 flex items-center justify-center relative">
                 <Link
                   href="https://www.astoriagrandhotel.bg/"
