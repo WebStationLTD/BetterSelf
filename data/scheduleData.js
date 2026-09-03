@@ -64,7 +64,7 @@ export const scheduleData = [
     time: "12:00 - 13:00",
     title: "Иновации и технологии",
     speaker:
-      "Мирослав Тошкин (MD CAPITAL), Gary Andrew Rhodes (Screen My Bones®), Биляна Маринова (Dr. Bastet), Зорница Трендафилова (Скай Запер), Gregor Sideris (A&G Luxury Boutique)",
+      "Мирослав Тошкин (MD CAPITAL), Gary Andrew Rhodes (Screen My Bones®), Биляна Маринова (Dr. Bastet), Зорница Трендафилова (Скай Запер), Gregor Sideris (A&G Luxury Boutique), Христо Балканов (Балканска застрахователно-брокерска къща)",
     location: "Главна зала",
     description:
       "Как да използваме изкуствения интелект и иновативни технологии за лично и професионално развитие",
