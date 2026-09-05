@@ -52,7 +52,7 @@ export default async function PartnerPage({ searchParams }) {
     return (
       <OfferMessage
         title="Офертата още не е активна"
-        body="Специалната QR отстъпка от 20% важи от 2 до 5 септември 2026. Дотогава билетите са на редовна цена."
+        body="Специалната QR отстъпка от 20% важи от 2 до 7 септември 2026. Дотогава билетите са на редовна цена."
       />
     );
   }
@@ -61,7 +61,7 @@ export default async function PartnerPage({ searchParams }) {
     return (
       <OfferMessage
         title="Офертата приключи"
-        body="QR отстъпката от 20% беше валидна до 5 септември 2026. Билети на редовна цена са налични на страницата за билети."
+        body="QR отстъпката от 20% беше валидна до 7 септември 2026. Билети на редовна цена са налични на страницата за билети."
       />
     );
   }
@@ -70,7 +70,7 @@ export default async function PartnerPage({ searchParams }) {
     <PricingSection
       promoCode={PARTNER_PROMO_CODE}
       heading="Специална QR оферта"
-      subheading="Същите билети за основното събитие, с 20% отстъпка. Валидна от 2 до 5 септември 2026."
+      subheading="Същите билети за основното събитие, с 20% отстъпка. Валидна от 2 до 7 септември 2026."
       hideAlternativePayment
     />
   );
