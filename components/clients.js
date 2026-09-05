@@ -60,6 +60,18 @@ export default function Clients() {
                 </div>
               </div>
             </div>
+            <div className="mb-10 rounded-3xl border-2 border-gray-200 bg-white px-6 py-6 shadow-sm">
+              <div className="relative mx-auto h-20 w-full max-w-xs sm:h-16">
+                <Image
+                  alt="Балканска застрахователно-брокерска къща"
+                  src="/bzbk-logo.png"
+                  fill
+                  quality={100}
+                  loading="lazy"
+                  className="max-h-full max-w-full object-contain"
+                />
+              </div>
+            </div>
             <div className="grid grid-cols-2 gap-8 items-center">
               <div className="relative flex h-24 items-center justify-center sm:h-16">
                 <Image

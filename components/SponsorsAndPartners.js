@@ -26,6 +26,12 @@ const sponsors = [
     featuredAfterGeneral: true,
   },
   {
+    name: "Балканска застрахователно-брокерска къща",
+    logo: "/bzbk-logo.png",
+    description: "",
+    featuredAfterPair: true,
+  },
+  {
     name: "Ралица Узунова",
     logo: "/ralitsa-uzunova-logo.jpg",
     description:
@@ -376,10 +382,31 @@ export default function SponsorsAndPartners({ children }) {
                   </div>
                 ))}
             </div>
+            {sponsors
+              .filter((sponsor) => sponsor.featuredAfterPair)
+              .map((sponsor) => (
+                <div
+                  key={sponsor.name}
+                  className="mx-auto mt-8 max-w-4xl rounded-3xl border-2 border-gray-200 bg-white px-8 py-8 shadow-lg"
+                >
+                  <div className="relative mx-auto h-24 w-full max-w-md sm:h-28">
+                    <Image
+                      src={sponsor.logo}
+                      alt={sponsor.name}
+                      fill
+                      quality={100}
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+              ))}
             <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
               {sponsors
                 .filter(
-                  (sponsor) => !sponsor.featured && !sponsor.featuredAfterGeneral,
+                  (sponsor) =>
+                    !sponsor.featured &&
+                    !sponsor.featuredAfterGeneral &&
+                    !sponsor.featuredAfterPair,
                 )
                 .map((sponsor) => (
                   <SponsorCard key={sponsor.name} sponsor={sponsor} />
