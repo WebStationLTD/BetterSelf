@@ -178,6 +178,74 @@ export default function Clients() {
                   />
                 </Link>
               </div>
+              <div className="relative flex h-24 items-center justify-center sm:h-16">
+                <Link
+                  href="https://www.vayabeachresort.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative flex h-full w-full items-center justify-center transition-opacity duration-300 hover:opacity-75"
+                >
+                  <Image
+                    alt="VAYA Beach Resort"
+                    src="/vaya-beach-resort-logo.png"
+                    fill
+                    quality={100}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </Link>
+              </div>
+              <div className="relative flex h-24 items-center justify-center sm:h-16">
+                <Link
+                  href="https://nuviva.bg/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative flex h-full w-full items-center justify-center transition-opacity duration-300 hover:opacity-75"
+                >
+                  <Image
+                    alt="NUVIVA Medical Center"
+                    src="/nuviva-medical-center-logo.svg"
+                    fill
+                    quality={100}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </Link>
+              </div>
+              <div className="relative flex h-24 items-center justify-center sm:h-16">
+                <Link
+                  href="https://hongqi.bg/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative flex h-full w-full items-center justify-center transition-opacity duration-300 hover:opacity-75"
+                >
+                  <Image
+                    alt="Hongqi България"
+                    src="/hongqi-bulgaria-logo.png"
+                    fill
+                    quality={100}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </Link>
+              </div>
+              <div className="relative flex h-24 items-center justify-center sm:h-16">
+                <Link
+                  href="https://touchandcare.bg/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative flex h-full w-full items-center justify-center transition-opacity duration-300 hover:opacity-75"
+                >
+                  <Image
+                    alt="Touch & Care Center"
+                    src="/touch-and-care-logo.png"
+                    fill
+                    quality={100}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </Link>
+              </div>
               {/* ВРЕМЕННО СКРИТО
               <div className="relative flex h-24 items-center justify-center sm:h-16">
                 <Link href="https://drbastet.com/" target="_blank" rel="noopener noreferrer" className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300">
@@ -226,6 +294,23 @@ export default function Clients() {
             {/* Хоризонтална линия с градиент под заглавието */}
             <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent mb-8"></div>
             <div className="grid grid-cols-2 gap-8 items-center">
+              <div className="relative flex h-24 items-center justify-center sm:h-16">
+                <Link
+                  href="https://www.screenmybones.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative flex h-full w-full items-center justify-center transition-opacity duration-300 hover:opacity-75"
+                >
+                  <Image
+                    alt="Screen My Bones"
+                    src="/screen-my-bones-logo.png"
+                    fill
+                    quality={100}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </Link>
+              </div>
               <div className="relative flex h-24 items-center justify-center sm:h-16">
                 <Link
                   href="https://fasttrack-growth.com/"

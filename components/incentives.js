@@ -23,7 +23,7 @@ const incentives = [
     icon: BeakerIcon,
   },
   {
-    name: "Оптимизирани хормони",
+    name: "Можем ли да препрограмираме стареенето?",
     lecturer: "Д-р Константин Маламов",
     icon: ScaleIcon,
   },
@@ -58,6 +58,7 @@ const incentives = [
     icon: TrophyIcon,
   },
   {
+    name: "Здраве на костите и съвременните технологии за оптимизирането му",
     lecturer: "Gary Andrew Rhodes",
     icon: ComputerDesktopIcon,
   },
