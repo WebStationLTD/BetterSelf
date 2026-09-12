@@ -15,6 +15,17 @@ const panelsData = {
     bgPattern: "bg-blue-50",
     lecturers: [
       {
+        id: 99,
+        name: "Лилия Стефанова",
+        company: "Психолог и водеща",
+        companyLink: "https://lilastefanova.bg/za-men/",
+        description:
+          "Лилия Стефанова е психолог и терапевт, магистър по спортна психология, телевизионен водещ и водещ на събития и семинари. Има над десет години практика, работа с хиляди клиенти, корпоративни екипи и елитни спортисти, както и опит като водеща на телевизионни предавания и конференции. На BetterSelf 2026 е водеща на панел „Иновации и технологии“.",
+        image: "/lilia-stefanova.jpg",
+        moderator: true,
+        moderatorTitle: "Водеща на панела",
+      },
+      {
         id: 100,
         name: "Мирослав Тошкин",
         company: "MD CAPITAL",
@@ -74,11 +85,14 @@ const panelsData = {
     bgPattern: "bg-green-50",
     lecturers: [
       {
-        id: 201,
-        name: "Мариана Атанасова",
-        company: "",
-        description: "",
-        image: "/placeholder.webp",
+        id: 200,
+        name: "Мариан Морфис",
+        company: "Mentor Space",
+        description:
+          "Мариан Морфис е основател на Mentor Space и водещ на дълбоки разговори с предприемачи, иноватори и лидери. С опит в маркетинга и креативните агенции, той се връща като водещ на Панел Longevity — ролята, която имаше и на BetterSelf 2025.",
+        image: "/marian-morphis.jpg",
+        moderator: true,
+        moderatorTitle: "Водещ на панела",
       },
       {
         id: 202,
@@ -229,6 +243,8 @@ export default function LecturersByPanels() {
                       lecturer={lecturer}
                       panelColor={panelsData["innovations-ai"].color}
                       ringColor="ring-blue-100"
+                      isModerator={Boolean(lecturer.moderator)}
+                      moderatorTitle={lecturer.moderatorTitle}
                     />
                   ))}
                 </div>
@@ -283,6 +299,8 @@ export default function LecturersByPanels() {
                       lecturer={lecturer}
                       panelColor={panelsData["longevity"].color}
                       ringColor="ring-green-100"
+                      isModerator={Boolean(lecturer.moderator)}
+                      moderatorTitle={lecturer.moderatorTitle}
                     />
                   ))}
                 </div>

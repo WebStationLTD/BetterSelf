@@ -10,6 +10,8 @@ import {
   AcademicCapIcon,
   ScaleIcon,
 } from "@heroicons/react/24/outline";
+import LecturerReel from "./LecturerReel";
+import { getLecturerVideo } from "../data/lecturerVideos";
 
 const incentives = [
   {
@@ -65,16 +67,18 @@ const incentives = [
 ];
 
 function TopicCard({ incentive }) {
+  const video = getLecturerVideo(incentive.lecturer);
+
   return (
     <div className="flex flex-col items-center justify-center text-center p-6 pb-4 rounded-lg border border-white bg-gray-800/30 hover:bg-gray-800/50 transition-all duration-300 h-full relative overflow-hidden group">
       <div className="absolute inset-0 bg-gradient-to-br from-[#ff8d00]/10 via-orange-500/5 to-yellow-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-      <div className="relative z-10 flex flex-col items-center justify-center h-full">
+      <div className="relative z-10 flex flex-col items-center justify-center h-full w-full">
         <div className="shrink-0">
           <div className="h-20 w-20 flex items-center justify-center rounded-full bg-[#ff8d00]">
             <incentive.icon className="h-12 w-12 text-white" />
           </div>
         </div>
-        <div className="mt-8">
+        <div className="mt-8 w-full">
           {incentive.name ? (
             <>
               <h3 className="text-xl font-bold text-white leading-snug">
@@ -89,6 +93,9 @@ function TopicCard({ incentive }) {
               {incentive.lecturer}
             </h3>
           )}
+          {video ? (
+            <LecturerReel video={video} className="mt-5 mx-auto max-w-[220px]" />
+          ) : null}
         </div>
       </div>
     </div>

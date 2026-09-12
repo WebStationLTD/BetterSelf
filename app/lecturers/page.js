@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { getMembers } from "../../services/members";
 import { getConfirmedMembers } from "../../data/confirmedLecturers";
+import LecturerReel from "../../components/LecturerReel";
+import { getLecturerVideo } from "../../data/lecturerVideos";
 
 export const metadata = {
   title: "Лектори - BetterSelf",
@@ -109,6 +111,12 @@ export default async function Team() {
                     <p className="text-base/7 text-gray-600">
                       {member.position || ""}
                     </p>
+                    {getLecturerVideo(member.name) ? (
+                      <LecturerReel
+                        video={getLecturerVideo(member.name)}
+                        className="mt-4 max-w-[220px]"
+                      />
+                    ) : null}
                     <div
                       className="mt-2 text-base/7 text-gray-600 prose"
                       dangerouslySetInnerHTML={{

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { getMemberInfo } from "../../../services/members";
 import Image from "next/image";
+import LecturerReel from "../../../components/LecturerReel";
+import { getLecturerVideo } from "../../../data/lecturerVideos";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -71,6 +73,12 @@ export default async function MemberDetails({ params }) {
               Фотокредит: {member.photoCredit}
             </p>
           )}
+          {getLecturerVideo(member.name) ? (
+            <LecturerReel
+              video={getLecturerVideo(member.name)}
+              className="mt-4"
+            />
+          ) : null}
           <h2 className="text-xl font-semibold mb-2 mt-4">
             {member.name || "Член на екипа"}
           </h2>

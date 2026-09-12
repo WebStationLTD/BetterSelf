@@ -64,7 +64,7 @@ export const scheduleData = [
     time: "12:00 - 13:00",
     title: "Иновации и технологии",
     speaker:
-      "Мирослав Тошкин (MD CAPITAL), Gary Andrew Rhodes (Screen My Bones®), Биляна Маринова (Dr. Bastet), Зорница Трендафилова (Скай Запер), Gregor Sideris (A&G Luxury Boutique), Христо Балканов (Балканска застрахователно-брокерска къща)",
+      "Водеща: Лилия Стефанова | Мирослав Тошкин (MD CAPITAL), Gary Andrew Rhodes (Screen My Bones®), Биляна Маринова (Dr. Bastet), Зорница Трендафилова (Скай Запер), Gregor Sideris (A&G Luxury Boutique), Христо Балканов (Балканска застрахователно-брокерска къща)",
     location: "Главна зала",
     description:
       "Как да използваме изкуствения интелект и иновативни технологии за лично и професионално развитие",
@@ -95,6 +95,7 @@ export const scheduleData = [
     title: "Асертивност – качеството на уверените хора",
     speaker: "Иван Головацкий",
     location: "Главна зала",
+    video: "/videos/ivan-golovatskiy-reel.mp4",
     description:
       "Как да говориш уверено и да отстояваш себе си; практически упражнения за уверена и директна комуникация; как да разпознаваш личните си граници; как да отстояваш позицията си без агресия и без вина; как да заявяваш идеите, нуждите и чувствата си ясно и уважително",
     type: "presentation",
@@ -114,6 +115,7 @@ export const scheduleData = [
     title: "Сърдечно-съдово здраве и дълголетие",
     speaker: "Проф. д-р Иво Петров, дмн",
     location: "Главна зала",
+    video: "/videos/ivo-petrov-reel.mp4",
     description:
       "Кратка лекция за връзката между сърдечно-съдовото здраве и дълголетието",
     type: "presentation",
@@ -133,6 +135,7 @@ export const scheduleData = [
     title: "Как мислят шампионите?",
     speaker: "Моузес Налока",
     location: "Главна зала",
+    video: "/videos/moses-naloka-reel.mp4",
     description:
       "Психологически стратегии за постигане на върхови резултати и преодоляване на ограниченията",
     type: "presentation",
@@ -142,7 +145,7 @@ export const scheduleData = [
     time: "16:45 - 17:45",
     title: "Панел Longevity",
     speaker:
-      "Мариана Атанасова, Мария Варсанова (Biohacking.bg), Джулия Димитрова (Biohacking.bg), Д-р Гергана Иванова (екип на проф. Иво Петров), Ралица Узунова (Остеоестет • Фейс Фитнес), Д-р Мерилин Иванова (Mamaland Sofia), Венеса Мутафчиева (Touch & Care Center)",
+      "Водещ: Мариан Морфис | Мария Варсанова (Biohacking.bg), Джулия Димитрова (Biohacking.bg), Д-р Гергана Иванова (екип на проф. Иво Петров), Ралица Узунова (Остеоестет • Фейс Фитнес), Д-р Мерилин Иванова (Mamaland Sofia), Венеса Мутафчиева (Touch & Care Center)",
     location: "Главна зала",
     description: "Дискусия за стратегиите за дълголетие и здравословен живот",
     type: "panel",

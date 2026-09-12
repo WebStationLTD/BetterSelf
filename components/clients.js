@@ -246,6 +246,23 @@ export default function Clients() {
                   />
                 </Link>
               </div>
+              <div className="relative flex h-24 items-center justify-center sm:h-16">
+                <Link
+                  href="https://hopehealthandsafety.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative flex h-full w-full items-center justify-center transition-opacity duration-300 hover:opacity-75"
+                >
+                  <Image
+                    alt="Hope H&S"
+                    src="/hope-health-and-safety-logo.png"
+                    fill
+                    quality={100}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </Link>
+              </div>
               {/* ВРЕМЕННО СКРИТО
               <div className="relative flex h-24 items-center justify-center sm:h-16">
                 <Link href="https://drbastet.com/" target="_blank" rel="noopener noreferrer" className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300">

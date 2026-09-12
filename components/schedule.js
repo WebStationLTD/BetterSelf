@@ -332,6 +332,17 @@ export default function Schedule() {
                             {item.description}
                           </p>
 
+                          {item.video ? (
+                            <video
+                              className="mb-3 w-full max-h-56 rounded-lg bg-black object-contain"
+                              controls
+                              preload="metadata"
+                              playsInline
+                            >
+                              <source src={item.video} type="video/mp4" />
+                            </video>
+                          ) : null}
+
                           {item.type !== "panel" && (
                             <span
                               className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium ${styles.badge}`}
@@ -387,6 +398,17 @@ export default function Schedule() {
                         <p className="text-sm text-gray-600 leading-relaxed mb-4 flex-grow">
                           {item.description}
                         </p>
+
+                        {item.video ? (
+                          <video
+                            className="mb-4 w-full max-h-56 rounded-lg bg-black object-contain"
+                            controls
+                            preload="metadata"
+                            playsInline
+                          >
+                            <source src={item.video} type="video/mp4" />
+                          </video>
+                        ) : null}
 
                         {item.type !== "panel" && (
                           <div className="mt-auto">

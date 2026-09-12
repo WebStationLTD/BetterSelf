@@ -362,222 +362,69 @@ export default function TeamPage() {
         </div>
       </div>
 
-      {/* Event Host Section - Yavor Yanakiev */}
+      {/* Panel hosts */}
       <div className="bg-white py-12 sm:py-6">
         <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-16">
-          {/* Section Title */}
-          <div className="mx-auto max-w-2xl text-center mb-6">
+          <div className="mx-auto max-w-2xl text-center mb-10">
             <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-              Водещ на събитието
+              Модератори и водещи на панелите
             </h2>
+            <p className="mt-6 text-lg text-gray-600">
+              Водещите, които свързват разговора в двата панела на BetterSelf
+              2026
+            </p>
           </div>
-
-          {/* Yavor Section - Full Width */}
-          <div className="relative bg-white rounded-3xl shadow-xl overflow-hidden border-2 border-amber-100/50">
-            <div className="absolute inset-0 bg-gradient-to-br from-amber-50 via-white to-yellow-50"></div>
-
-            {/* Advanced gradient effects with amber/yellow theme */}
-            <div
-              className="absolute -bottom-24 -left-24 w-80 h-80 opacity-35 blur-2xl rounded-full animate-pulse"
-              style={{
-                background: "linear-gradient(135deg, #F59E0B, #FBBF24)",
-                animationDuration: "7s",
-              }}
-            ></div>
-            <div
-              className="absolute top-80 sm:top-20 left-1/2 -translate-x-1/2 w-64 h-64 opacity-20 blur-xl rounded-full animate-pulse"
-              style={{
-                background:
-                  "conic-gradient(from 0deg, #F59E0B, #FCD34D, #F59E0B)",
-                animationDuration: "14s",
-              }}
-            ></div>
-            <div
-              className="absolute bottom-1/3 right-16 w-48 h-48 opacity-25 blur-lg rounded-full animate-pulse"
-              style={{
-                background: "radial-gradient(ellipse, #FBBF24, transparent)",
-                animationDuration: "11s",
-              }}
-            ></div>
-
-            <div className="relative px-8 py-12 sm:px-16 sm:py-16">
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 items-center">
-                {/* Left side - Content */}
-                <div className="lg:col-span-2">
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
-                    <div className="flex items-center gap-4">
-                      <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-r from-amber-500 to-yellow-600 rounded-2xl flex items-center justify-center">
-                        <svg
-                          className="w-8 h-8 text-white"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
-                          />
-                        </svg>
-                      </div>
-                      <div>
-                        <h3 className="text-2xl font-bold text-gray-900">
-                          Майстор на церемонии
-                        </h3>
-                        <p className="font-medium text-amber-600">
-                          Водещ и координатор на събитието
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <h2 className="text-4xl font-bold tracking-tight text-gray-900 mb-6">
-                    Явор Янакиев
-                  </h2>
-                  <p className="text-xl text-gray-600 mb-6 leading-relaxed font-medium">
-                    Предприемач с повече от 17 години опит в продажбите и
-                    изграждането на бизнес процеси
-                  </p>
-
-                  <div className="space-y-4 text-gray-600">
-                    <p className="text-lg leading-relaxed">
-                      Явор e предприемач с повече от{" "}
-                      <strong className="text-amber-600">17 години опит</strong>{" "}
-                      в продажбите и изграждането на бизнес процеси.
-                    </p>
-                    <p className="text-lg leading-relaxed">
-                      Като търговец в САЩ е награждаван за влизане в{" "}
-                      <strong className="text-gray-900">топ 1%</strong> от над
-                      3000 души от цяла Европа.
-                    </p>
-                    <p className="text-lg leading-relaxed">
-                      Като лектор е водил{" "}
-                      <strong className="text-gray-900">
-                        стотици обучения
-                      </strong>{" "}
-                      по меки умения, лидерство и процеси, както и събития с
-                      групи от 6 до над 1200 души както в България, така и в
-                      редица държави в Европа.
-                    </p>
-                    <p className="text-lg leading-relaxed">
-                      В момента ръководи успешна компания в сферата на услугите,
-                      оперираща в няколко града в страната. Изградил я е
-                      самостоятелно от нула до{" "}
-                      <strong className="text-amber-600">
-                        шестцифрени обороти
-                      </strong>
-                      .
-                    </p>
-                    <p className="text-lg leading-relaxed">
-                      <strong className="text-gray-900">
-                        Явор обича процесите!
-                      </strong>
-                    </p>
-                    <p className="text-lg leading-relaxed">
-                      И вече е стартирал втория си бизнес{" "}
-                      <strong className="text-amber-600">
-                        "Систематизирай.ме"
-                      </strong>
-                      . Той помага на предприемачи с малък и среден бизнес да
-                      изграждат ефективни процеси, за да си освободят време, да
-                      са по-щастливи и удовлетворени от бизнеса си и да умножат
-                      многократно оборотите и печалбите си.
-                    </p>
-                  </div>
-
-                  {/* Services */}
-                  <div className="mt-8">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-4">
-                      Експертни области:
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {[
-                        "Продажби",
-                        "Бизнес процеси",
-                        "Лидерство",
-                        "Обучения",
-                        "Управление на събития",
-                        "Систематизация на бизнес",
-                        "Стратегическо планиране",
-                        "Скалиране на бизнес",
-                      ].map((service) => (
-                        <span
-                          key={service}
-                          className="px-3 py-1 bg-amber-100 rounded-full text-sm font-medium text-amber-700"
-                        >
-                          {service}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Right side - Photo */}
-                <div className="relative">
-                  <div className="relative">
-                    {/* Decorative elements behind photo */}
-                    <div className="absolute -top-4 -right-4 w-40 h-40 sm:w-56 sm:h-56 bg-amber-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse -z-10"></div>
-                    <div
-                      className="absolute -bottom-4 -left-4 w-40 h-40 sm:w-56 sm:h-56 bg-yellow-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse -z-10"
-                      style={{ animationDelay: "1s" }}
-                    ></div>
-
-                    <div className="relative aspect-[3/4] w-full max-w-sm mx-auto overflow-hidden rounded-2xl bg-gray-100 shadow-2xl z-10">
-                      <img
-                        src="/явор-янакиев.jpg"
-                        alt="Явор Янакиев"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Photo label - под снимката */}
-                  <div className="mt-4 text-center">
-                    <div className="inline-block bg-white px-4 py-2 rounded-full shadow-lg border border-amber-100">
-                      <p className="text-sm font-medium text-gray-700">
-                        Явор Янакиев
-                      </p>
-                    </div>
-                  </div>
-                </div>
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+            <div className="rounded-3xl border-2 border-purple-100 bg-white p-8 shadow-xl">
+              <div className="relative mx-auto mb-6 aspect-[3/4] w-full max-w-xs overflow-hidden rounded-2xl bg-gray-100">
+                <img
+                  src="/lilia-stefanova.jpg"
+                  alt="Лилия Стефанова"
+                  className="h-full w-full object-cover"
+                />
               </div>
-
-              {/* Bottom Section - Stats */}
-              <div className="mt-16">
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                  <div className="text-center p-4 bg-amber-50 rounded-xl">
-                    <div className="text-2xl font-bold text-amber-600">17+</div>
-                    <div className="text-sm text-gray-600 font-medium">
-                      Години опит
-                    </div>
-                  </div>
-                  <div className="text-center p-4 bg-amber-50 rounded-xl">
-                    <div className="text-2xl font-bold text-amber-600">
-                      TOP 1%
-                    </div>
-                    <div className="text-sm text-gray-600 font-medium">
-                      Търговски резултат
-                    </div>
-                  </div>
-                  <div className="text-center p-4 bg-amber-50 rounded-xl">
-                    <div className="text-2xl font-bold text-amber-600">
-                      100+
-                    </div>
-                    <div className="text-sm text-gray-600 font-medium">
-                      Обучения
-                    </div>
-                  </div>
-                  <div className="text-center p-4 bg-amber-50 rounded-xl">
-                    <div className="text-2xl font-bold text-amber-600">
-                      1200+
-                    </div>
-                    <div className="text-sm text-gray-600 font-medium">
-                      Участници в събития
-                    </div>
-                  </div>
-                </div>
+              <p className="text-sm font-semibold uppercase tracking-wide text-purple-700">
+                Водеща на панел „Иновации и технологии“
+              </p>
+              <h3 className="mt-2 text-2xl font-bold text-gray-900">
+                Лилия Стефанова
+              </h3>
+              <p className="mt-4 text-base leading-7 text-gray-600">
+                Психолог и терапевт, магистър по спортна психология, телевизионен
+                водещ и водещ на събития. Има над десет години практика, работа
+                с хиляди клиенти, корпоративни екипи и елитни спортисти, както и
+                опит като водеща на телевизионни предавания, семинари и
+                конференции.
+              </p>
+              <a
+                href="https://lilastefanova.bg/za-men/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-block font-medium text-[#ff8d00] hover:text-orange-600"
+              >
+                lilastefanova.bg
+              </a>
+            </div>
+            <div className="rounded-3xl border-2 border-purple-100 bg-white p-8 shadow-xl">
+              <div className="relative mx-auto mb-6 flex aspect-[3/4] w-full max-w-xs items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-purple-50 to-indigo-50">
+                <img
+                  src="/marian-morphis.jpg"
+                  alt="Мариан Морфис"
+                  className="h-full w-full object-cover"
+                />
               </div>
+              <p className="text-sm font-semibold uppercase tracking-wide text-purple-700">
+                Водещ на панел Longevity
+              </p>
+              <h3 className="mt-2 text-2xl font-bold text-gray-900">
+                Мариан Морфис
+              </h3>
+              <p className="mt-4 text-base leading-7 text-gray-600">
+                Основател на Mentor Space и водещ на дълбоки разговори с
+                предприемачи, иноватори и лидери. С опит в маркетинга,
+                креативните агенции и сценичното водене на събития, той връща
+                ролята си на водещ на Панел Longevity от BetterSelf 2025.
+              </p>
             </div>
           </div>
         </div>
@@ -1284,359 +1131,6 @@ export default function TeamPage() {
                       <p className="text-xs font-medium text-gray-700">
                         Max Group Events
                       </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* CreateX & wellConnected Ecosystem Section - FOURTH */}
-      <div className="bg-gray-50 py-12 sm:py-6">
-        <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-16">
-          {/* Section Title */}
-          <div className="mx-auto max-w-2xl text-center mb-20">
-            <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-              Meta Marketing
-            </h2>
-            <p className="mt-6 text-lg/8 text-gray-600">
-              AI автоматизации и интегрирани решения за дигитално развитие
-            </p>
-          </div>
-
-          {/* CreateX Section */}
-          <div className="relative bg-white rounded-3xl shadow-xl overflow-hidden border-2 border-cyan-100/50 mb-16">
-            <div className="absolute inset-0 bg-gradient-to-br from-cyan-50 via-white to-blue-50"></div>
-
-            {/* Advanced gradient effects with cyan/blue theme */}
-            <div
-              className="absolute -bottom-24 -left-24 w-80 h-80 opacity-35 blur-2xl rounded-full animate-pulse"
-              style={{
-                background: "linear-gradient(135deg, #06B6D4, #0EA5E9)",
-                animationDuration: "10s",
-              }}
-            ></div>
-            <div
-              className="absolute top-20 right-16 w-64 h-64 opacity-20 blur-xl rounded-full animate-pulse"
-              style={{
-                background:
-                  "conic-gradient(from 180deg, #06B6D4, #3B82F6, #06B6D4)",
-                animationDuration: "20s",
-              }}
-            ></div>
-            <div
-              className="absolute bottom-1/3 left-1/2 -translate-x-1/2 w-48 h-48 opacity-25 blur-lg rounded-full animate-pulse"
-              style={{
-                background: "radial-gradient(ellipse, #0EA5E9, transparent)",
-                animationDuration: "16s",
-              }}
-            ></div>
-
-            <div className="relative px-8 py-12 sm:px-16 sm:py-16">
-              {/* Header with icons */}
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-12">
-                <div className="flex items-center gap-4">
-                  <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center">
-                    <svg
-                      className="w-8 h-8 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M13 10V3L4 14h7v7l9-11h-7z"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-900">
-                      AI Иновации & Екосистема
-                    </h3>
-                    <p className="font-medium text-cyan-600">
-                      Интегрирани решения за дигитално развитие
-                    </p>
-                  </div>
-                </div>
-
-                {/* CreateX Logo */}
-                <div className="flex-shrink-0 self-start sm:self-center">
-                  <img
-                    src="/createx-logo.png"
-                    alt="CreateX Logo"
-                    className="h-16 w-auto"
-                  />
-                </div>
-              </div>
-
-              {/* Main Content */}
-              <h2 className="text-4xl font-bold tracking-tight text-gray-900 mb-8">
-                CreateX & wellConnected Ecosystem
-              </h2>
-
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 items-start">
-                {/* Left side - Main Description */}
-                <div className="lg:col-span-2">
-                  <p className="text-xl text-gray-600 mb-8 leading-relaxed font-medium">
-                    Екосистема за умно, бързо и устойчиво бизнес развитие
-                  </p>
-
-                  <div className="space-y-6 text-gray-600">
-                    <p className="text-lg leading-relaxed">
-                      <strong className="text-gray-900">CreateX</strong> е част
-                      от екосистемата{" "}
-                      <strong className="text-cyan-600">wellConnected</strong> –
-                      група компании, които заедно създават интегрирани решения
-                      за дигитално развитие.
-                    </p>
-                    <p className="text-lg leading-relaxed">
-                      Нашата мисия е да помагаме на бизнесите да растат{" "}
-                      <strong className="text-gray-900">
-                        по-умно, по-бързо и по-устойчиво
-                      </strong>
-                      , като комбинираме силата на AI автоматизациите с
-                      експертизата ни в дигиталния маркетинг.
-                    </p>
-                    <p className="text-lg leading-relaxed">
-                      Така, с един партньор, компаниите получават цялостен
-                      подход – от стратегия и маркетинг, до автоматизации и
-                      технологични решения, които{" "}
-                      <strong className="text-cyan-600">
-                        пестят време и увеличават ефективността
-                      </strong>
-                      .
-                    </p>
-                    <p className="text-lg leading-relaxed">
-                      <strong className="text-gray-900">wellConnected</strong> е
-                      повече от агенция – това е екосистема, в която CreateX е
-                      двигателят на иновациите в маркетинга и AI
-                      автоматизацията.
-                    </p>
-                  </div>
-
-                  {/* Services */}
-                  <div className="mt-10">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-6">
-                      В рамките на екосистемата предлагаме:
-                    </h4>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                      <div className="flex flex-col gap-3">
-                        <h5 className="font-semibold text-cyan-600">
-                          Дигитален маркетинг
-                        </h5>
-                        <div className="flex flex-wrap gap-2">
-                          {[
-                            "Кампании",
-                            "Съдържание",
-                            "Социални мрежи",
-                            "SEO",
-                            "Google & Meta реклама",
-                          ].map((service) => (
-                            <span
-                              key={service}
-                              className="px-3 py-1 bg-cyan-100 rounded-full text-sm font-medium text-cyan-700"
-                            >
-                              {service}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                      <div className="flex flex-col gap-3">
-                        <h5 className="font-semibold text-blue-600">
-                          AI автоматизации
-                        </h5>
-                        <div className="flex flex-wrap gap-2">
-                          {[
-                            "Чатботове",
-                            "Анализ на данни",
-                            "CRM интеграции",
-                            "Автоматизация процеси",
-                            "Генериране съдържание",
-                          ].map((service) => (
-                            <span
-                              key={service}
-                              className="px-3 py-1 bg-blue-100 rounded-full text-sm font-medium text-blue-700"
-                            >
-                              {service}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                      <div className="flex flex-col gap-3">
-                        <h5 className="font-semibold text-cyan-600">
-                          Creative & Production
-                        </h5>
-                        <div className="flex flex-wrap gap-2">
-                          {["Дизайн", "Видео", "Криейтив кампании"].map(
-                            (service) => (
-                              <span
-                                key={service}
-                                className="px-3 py-1 bg-cyan-100 rounded-full text-sm font-medium text-cyan-700"
-                              >
-                                {service}
-                              </span>
-                            )
-                          )}
-                        </div>
-                      </div>
-                      <div className="flex flex-col gap-3">
-                        <h5 className="font-semibold text-blue-600">
-                          Tech & Web
-                        </h5>
-                        <div className="flex flex-wrap gap-2">
-                          {[
-                            "Уебсайтове",
-                            "E-commerce",
-                            "Системи за управление",
-                          ].map((service) => (
-                            <span
-                              key={service}
-                              className="px-3 py-1 bg-blue-100 rounded-full text-sm font-medium text-blue-700"
-                            >
-                              {service}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Right side - Visual representation */}
-                <div className="relative hidden lg:block">
-                  <div className="aspect-square w-full max-w-sm mx-auto">
-                    {/* AI ecosystem visual */}
-                    <div className="relative w-full h-full">
-                      {/* Center AI icon */}
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-24 h-24 bg-white rounded-3xl shadow-lg flex items-center justify-center border-4 border-cyan-100">
-                          <svg
-                            className="w-12 h-12 text-cyan-600"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                            />
-                          </svg>
-                        </div>
-                      </div>
-
-                      {/* Orbiting elements */}
-                      <div
-                        className="absolute inset-0 animate-spin"
-                        style={{ animationDuration: "35s" }}
-                      >
-                        <div className="relative w-full h-full">
-                          {[
-                            {
-                              icon: "🤖",
-                              label: "AI",
-                              position: "top-0 left-1/2 -translate-x-1/2",
-                            },
-                            {
-                              icon: "📊",
-                              label: "Analytics",
-                              position: "top-1/4 right-0",
-                            },
-                            {
-                              icon: "🎯",
-                              label: "Marketing",
-                              position: "bottom-1/4 right-0",
-                            },
-                            {
-                              icon: "💻",
-                              label: "Tech",
-                              position: "bottom-0 left-1/2 -translate-x-1/2",
-                            },
-                            {
-                              icon: "🎨",
-                              label: "Creative",
-                              position: "bottom-1/4 left-0",
-                            },
-                            {
-                              icon: "⚡",
-                              label: "Automation",
-                              position: "top-1/4 left-0",
-                            },
-                          ].map((item, index) => (
-                            <div
-                              key={index}
-                              className={`absolute w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center border-2 border-cyan-100 ${item.position}`}
-                            >
-                              <span className="text-lg">{item.icon}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Bottom Section - Company Photo and Stats */}
-              <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                {/* Left - Company Photo */}
-                <div className="relative">
-                  <div className="relative">
-                    {/* Decorative elements above and below photo */}
-                    <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-40 h-40 sm:w-56 sm:h-56 bg-cyan-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse -z-10"></div>
-                    <div
-                      className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-40 h-40 sm:w-56 sm:h-56 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse -z-10"
-                      style={{ animationDelay: "1s" }}
-                    ></div>
-
-                    <div className="relative aspect-[16/9] w-full max-w-2xl mx-auto overflow-hidden rounded-2xl bg-gray-100 shadow-2xl z-10">
-                      <img
-                        src="/CreateX&wellConnected-Ecosystem.jpg"
-                        alt="CreateX & wellConnected Ecosystem"
-                        className="w-full h-full object-contain bg-white"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Photo label - под снимката */}
-                  <div className="mt-4 text-center">
-                    <div className="inline-block bg-white px-4 py-2 rounded-full shadow-lg border border-cyan-100">
-                      <p className="text-sm font-medium text-gray-700">
-                        CreateX & wellConnected Ecosystem
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Right - Company Stats */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="text-center p-4 bg-cyan-50 rounded-xl">
-                    <div className="text-2xl font-bold text-cyan-600">AI</div>
-                    <div className="text-sm text-gray-600 font-medium">
-                      Автоматизации
-                    </div>
-                  </div>
-                  <div className="text-center p-4 bg-blue-50 rounded-xl">
-                    <div className="text-2xl font-bold text-blue-600">360°</div>
-                    <div className="text-sm text-gray-600 font-medium">
-                      Дигитални решения
-                    </div>
-                  </div>
-                  <div className="text-center p-4 bg-cyan-50 rounded-xl">
-                    <div className="text-2xl font-bold text-cyan-600">∞</div>
-                    <div className="text-sm text-gray-600 font-medium">
-                      Възможности
-                    </div>
-                  </div>
-                  <div className="text-center p-4 bg-blue-50 rounded-xl">
-                    <div className="text-2xl font-bold text-blue-600">1</div>
-                    <div className="text-sm text-gray-600 font-medium">
-                      Партньор за всичко
                     </div>
                   </div>
                 </div>
