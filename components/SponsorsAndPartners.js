@@ -261,13 +261,6 @@ const partners = [
     description:
       "Академия за емоционална интелигентност - развиване на емоционалната интелигентност за по-щастлив и продуктивен живот чрез дълбоко себепознание и осъзнатост.",
   },
-  {
-    name: "Insurance.bg",
-    logo: "/insurance-logo.png",
-    link: "https://insurance.bg/",
-    description:
-      "Иновативна платформа за застрахователни услуги, предлагаща бързо и удобно сравняване на застрахователни продукти.",
-  },
 ];
 
 export default function SponsorsAndPartners({ children }) {
