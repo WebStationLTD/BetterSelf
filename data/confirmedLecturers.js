@@ -152,6 +152,10 @@ export const LOCAL_LECTURERS = [
     id: "local-moses-naloka",
     name: "Моузес Налока",
     slug: "моузес-налока",
+    slugs: [
+      "моузес-налока",
+      "%d0%bc%d0%be%d1%83%d0%b7%d0%b5%d1%81-%d0%bd%d0%b0%d0%bb%d0%be%d0%ba%d0%b0",
+    ],
     position: "Олимпийски треньор и основател на Reframance",
     profilepicture:
       "https://betterself.admin-panels.com/wp-content/uploads/2025/06/моузес-налока.jpg",
@@ -192,17 +196,58 @@ export const LOCAL_LECTURERS = [
   },
 ];
 
+function normalizeSlug(slug = "") {
+  let value = String(slug || "");
+  try {
+    value = decodeURIComponent(value);
+  } catch {
+    value = String(slug || "");
+  }
+  return value.normalize("NFC").trim().toLowerCase();
+}
+
+function lecturerSlugAliases(lecturer) {
+  return [lecturer.slug, ...(lecturer.slugs || [])].filter(Boolean);
+}
+
 export function getLocalLecturer(slug) {
-  return LOCAL_LECTURERS.find((lecturer) => lecturer.slug === slug) || null;
+  const normalized = normalizeSlug(slug);
+  if (!normalized) return null;
+
+  return (
+    LOCAL_LECTURERS.find((lecturer) =>
+      lecturerSlugAliases(lecturer).some(
+        (alias) => normalizeSlug(alias) === normalized,
+      ),
+    ) || null
+  );
+}
+
+export function getLocalLecturerByName(name = "") {
+  if (!name) return null;
+  return (
+    LOCAL_LECTURERS.find(
+      (lecturer) =>
+        name.includes(lecturer.name) || lecturer.name.includes(name),
+    ) || null
+  );
 }
 
 export function getConfirmedMembers(members = []) {
   const merged = [...LOCAL_LECTURERS];
 
   for (const member of members) {
-    const alreadyIncluded = merged.some(
-      (item) => item.slug && member.slug && item.slug === member.slug,
-    );
+    const alreadyIncluded = merged.some((item) => {
+      const sameSlug =
+        item.slug &&
+        member.slug &&
+        normalizeSlug(item.slug) === normalizeSlug(member.slug);
+      const sameName =
+        item.name &&
+        member.name &&
+        (item.name.includes(member.name) || member.name.includes(item.name));
+      return sameSlug || sameName;
+    });
     if (!alreadyIncluded) {
       merged.push(member);
     }

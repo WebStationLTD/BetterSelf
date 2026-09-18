@@ -1,6 +1,9 @@
 import { fetchAPI } from "./api";
 import { cache } from "react";
-import { getLocalLecturer } from "../data/confirmedLecturers";
+import {
+  getLocalLecturer,
+  getLocalLecturerByName,
+} from "../data/confirmedLecturers";
 
 /**
  * Get all members
@@ -68,13 +71,24 @@ export const getMemberInfo = cache(async (slug) => {
 
     if (!data || !Array.isArray(data) || data.length === 0) {
       console.error("API returned invalid member data for slug:", slug, data);
-      return null;
+      return getLocalLecturerByName(slug) || null;
     }
 
     // Ensure all properties are defined and not empty strings
     const memberData = data[0]?.acf || null;
 
     if (!memberData) return null;
+
+    const localOverride = getLocalLecturerByName(memberData.name || "");
+    if (localOverride) {
+      return {
+        ...localOverride,
+        profilepicture:
+          localOverride.profilepicture ||
+          memberData.profilepicture ||
+          "/placeholder.webp",
+      };
+    }
 
     return {
       name: memberData.name || null,
