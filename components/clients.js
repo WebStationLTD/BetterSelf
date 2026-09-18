@@ -263,6 +263,40 @@ export default function Clients() {
                   />
                 </Link>
               </div>
+              <div className="relative flex h-24 items-center justify-center sm:h-16">
+                <Link
+                  href="https://bulgarbiotic.bg/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative flex h-full w-full items-center justify-center transition-opacity duration-300 hover:opacity-75"
+                >
+                  <Image
+                    alt="Bactology"
+                    src="/bactology-logo.png"
+                    fill
+                    quality={100}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </Link>
+              </div>
+              <div className="relative flex h-24 items-center justify-center sm:h-16">
+                <Link
+                  href="https://alphalifesciences.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative flex h-full w-full items-center justify-center transition-opacity duration-300 hover:opacity-75"
+                >
+                  <Image
+                    alt="AlphaLife Sciences"
+                    src="/alphalife-sciences-logo.png"
+                    fill
+                    quality={100}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </Link>
+              </div>
               {/* ВРЕМЕННО СКРИТО
               <div className="relative flex h-24 items-center justify-center sm:h-16">
                 <Link href="https://drbastet.com/" target="_blank" rel="noopener noreferrer" className="relative w-full h-full flex items-center justify-center hover:opacity-75 transition-opacity duration-300">

@@ -55,7 +55,7 @@ const incentives = [
     icon: AcademicCapIcon,
   },
   {
-    name: "Как мислят шампионите?",
+    name: "От информация към трансформация: Как да изпълниш потенциала си",
     lecturer: "Моузес Налока",
     icon: TrophyIcon,
   },
