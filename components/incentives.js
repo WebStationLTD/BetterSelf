@@ -35,7 +35,7 @@ const incentives = [
     icon: FaceSmileIcon,
   },
   {
-    name: "Промените на кожата при жените в перименопауза и менопауза",
+    name: "Менопауза и стареене на кожата",
     lecturer: "Д-р Камелия Присадашка",
     icon: SparklesIcon,
   },
