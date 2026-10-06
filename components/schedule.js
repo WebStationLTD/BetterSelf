@@ -114,7 +114,7 @@ function AddToCalendarButton() {
       description="Направете следващата голяма крачка по пътя към своето ПО-ДОБРО АЗ"
       startDate="2026-11-01"
       endDate="2026-11-01"
-      startTime="09:00"
+      startTime="08:30"
       endTime="18:15"
       location="Grand Hotel Astoria, Sofia"
       options="['Apple','Google','iCal','Microsoft365','Outlook.com','Yahoo']"

@@ -282,6 +282,23 @@ export default function Clients() {
               </div>
               <div className="relative flex h-24 items-center justify-center sm:h-16">
                 <Link
+                  href="https://revita.bg/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative flex h-full w-full items-center justify-center transition-opacity duration-300 hover:opacity-75"
+                >
+                  <Image
+                    alt="Natural Factors"
+                    src="/natural-factors-logo.png"
+                    fill
+                    quality={100}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </Link>
+              </div>
+              <div className="relative flex h-24 items-center justify-center sm:h-16">
+                <Link
                   href="https://alphalifesciences.com/"
                   target="_blank"
                   rel="noopener noreferrer"

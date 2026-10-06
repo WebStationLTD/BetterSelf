@@ -10,6 +10,11 @@ export const LECTURER_VIDEOS = [
     title: "Кратко видео: Проф. д-р Иво Петров",
   },
   {
+    names: ["Христо Попов"],
+    src: "/videos/hristo-popov-reel.mp4",
+    title: "Кратко видео: Христо Попов",
+  },
+  {
     names: ["Моузес Налока"],
     src: "/videos/moses-naloka-reel.mp4",
     title: "Кратко видео: Моузес Налока",
