@@ -15,6 +15,7 @@ export const scheduleData = [
     title: "Медицината на бъдещето: От лечение на болести към програмиране на здраве",
     speaker: "Магдалена Николова",
     location: "Главна зала",
+    video: "/videos/magdalena-nikolova-reel.mp4",
     description:
       "Как съвременната наука измества фокуса от лечение на болести към програмиране на здраве",
     type: "presentation",
@@ -55,6 +56,7 @@ export const scheduleData = [
     title: "Правиш всичко „правилно“, но защо си изтощен?",
     speaker: "Десислава Дамянова",
     location: "Главна зала",
+    video: "/videos/desislava-damyanova-reel.mp4",
     description:
       "Как да разпознаваме, разбираме и управляваме емоциите за по-хармонични и удовлетворяващи взаимоотношения",
     type: "presentation",

@@ -1,5 +1,15 @@
 export const LECTURER_VIDEOS = [
   {
+    names: ["Магдалена Николова"],
+    src: "/videos/magdalena-nikolova-reel.mp4",
+    title: "Кратко видео: Магдалена Николова",
+  },
+  {
+    names: ["Десислава Дамянова"],
+    src: "/videos/desislava-damyanova-reel.mp4",
+    title: "Кратко видео: Десислава Дамянова",
+  },
+  {
     names: ["Иван Головацкий"],
     src: "/videos/ivan-golovatskiy-reel.mp4",
     title: "Кратко видео: Иван Головацкий",
