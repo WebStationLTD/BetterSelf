@@ -367,14 +367,59 @@ export default function TeamPage() {
         <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-16">
           <div className="mx-auto max-w-2xl text-center mb-10">
             <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-              Водеща на панелите
+              Водещи на панелите
             </h2>
             <p className="mt-6 text-lg text-gray-600">
-              Водещата, която свързва разговора в двата панела на BetterSelf
-              2026
+              Водещите на двата панела на BetterSelf 2026
             </p>
           </div>
-          <div className="mx-auto grid max-w-xl grid-cols-1 gap-8">
+          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 lg:grid-cols-2">
+            <div className="rounded-3xl border-2 border-purple-100 bg-white p-8 shadow-xl">
+              <div className="relative mx-auto mb-6 aspect-[3/4] w-full max-w-xs overflow-hidden rounded-2xl bg-gray-100">
+                <img
+                  src="/megi-dimcheva.jpg"
+                  alt="Меги Димчева"
+                  className="h-full w-full object-cover object-top"
+                />
+              </div>
+              <p className="text-sm font-semibold uppercase tracking-wide text-purple-700">
+                Водеща и модератор на панел „Иновации и технологии“
+              </p>
+              <h3 className="mt-2 text-2xl font-bold text-gray-900">
+                Меги Димчева
+              </h3>
+              <p className="mt-2 text-sm font-medium text-gray-500">
+                Автор и водещ на спектакъл-терапия „Чудесата в нас“
+              </p>
+              <div className="mt-4 space-y-3 text-base leading-7 text-gray-600">
+                <p>
+                  Меги е журналист с огромен опит в комуникацията с хора,
+                  емоционалните разговори, презентацията на личности, водене на
+                  корпоративни и лични събития. Тя вярва, че комуникацията има
+                  силата да лекува, да свързва хората и да отваря сетива към нови
+                  пътища.
+                </p>
+                <p>
+                  17 години от професионалния си път Меги Димчева беше една от
+                  водещите на любимото емоционално ток шоу „Търси се“.
+                </p>
+                <p>
+                  През 2024 година тя създава своя авторски спектакъл – терапия
+                  „Чудесата в нас“, където не просто е журналист и водещ, а
+                  създава пространство, в което отваря хората сами да потърсят
+                  отговори на най-важните житейски въпроси.
+                </p>
+                <p>
+                  В него тя съчетава практики за личностно и духовно развитие с
+                  българска музика, както и срещи с вдъхновяващи личности,
+                  психолози, ментори, хора от изкуството и спорта.
+                </p>
+                <p>
+                  Меги вярва, че най-силната история винаги е тази, която човек
+                  открива вътре в себе си.
+                </p>
+              </div>
+            </div>
             <div className="rounded-3xl border-2 border-purple-100 bg-white p-8 shadow-xl">
               <div className="relative mx-auto mb-6 aspect-[3/4] w-full max-w-xs overflow-hidden rounded-2xl bg-gray-100">
                 <img
@@ -384,7 +429,7 @@ export default function TeamPage() {
                 />
               </div>
               <p className="text-sm font-semibold uppercase tracking-wide text-purple-700">
-                Водеща на двата панела
+                Водеща на панел Longevity
               </p>
               <h3 className="mt-2 text-2xl font-bold text-gray-900">
                 Лилия Стефанова

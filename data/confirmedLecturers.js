@@ -1,3 +1,19 @@
+export const LECTURER_PHOTO_OVERRIDES = [
+  {
+    names: ["Камелия Присадашка"],
+    src: "/kamelia-prisadashka.jpg",
+  },
+];
+
+export function withLecturerPhoto(member) {
+  if (!member?.name) return member;
+  const match = LECTURER_PHOTO_OVERRIDES.find((item) =>
+    item.names.some((part) => member.name.includes(part)),
+  );
+  if (!match) return member;
+  return { ...member, profilepicture: match.src };
+}
+
 export const CONFIRMED_LECTURERS_2026 = [
   "Христо Попов",
   "Иво Петров",
@@ -254,6 +270,6 @@ export function getConfirmedMembers(members = []) {
   }
 
   return CONFIRMED_LECTURERS_2026.map((name) =>
-    merged.find((member) => member.name?.includes(name)),
+    withLecturerPhoto(merged.find((member) => member.name?.includes(name))),
   ).filter(Boolean);
 }

@@ -3,6 +3,7 @@ import { cache } from "react";
 import {
   getLocalLecturer,
   getLocalLecturerByName,
+  withLecturerPhoto,
 } from "../data/confirmedLecturers";
 
 /**
@@ -58,7 +59,7 @@ export const getMemberInfo = cache(async (slug) => {
 
     const localLecturer = getLocalLecturer(slug);
     if (localLecturer) {
-      return localLecturer;
+      return withLecturerPhoto(localLecturer);
     }
 
     // Fetch new data from API
@@ -71,7 +72,7 @@ export const getMemberInfo = cache(async (slug) => {
 
     if (!data || !Array.isArray(data) || data.length === 0) {
       console.error("API returned invalid member data for slug:", slug, data);
-      return getLocalLecturerByName(slug) || null;
+      return withLecturerPhoto(getLocalLecturerByName(slug) || null);
     }
 
     // Ensure all properties are defined and not empty strings
@@ -81,16 +82,16 @@ export const getMemberInfo = cache(async (slug) => {
 
     const localOverride = getLocalLecturerByName(memberData.name || "");
     if (localOverride) {
-      return {
+      return withLecturerPhoto({
         ...localOverride,
         profilepicture:
           localOverride.profilepicture ||
           memberData.profilepicture ||
           "/placeholder.webp",
-      };
+      });
     }
 
-    return {
+    return withLecturerPhoto({
       name: memberData.name || null,
       position: memberData.position || null,
       description: memberData.description || null,
@@ -102,7 +103,7 @@ export const getMemberInfo = cache(async (slug) => {
         target: memberData.linkedin?.target || "_blank",
       },
       profilepicture: memberData.profilepicture || "/placeholder.webp",
-    };
+    });
   } catch (error) {
     console.error("Error fetching member info:", error);
     return null;
