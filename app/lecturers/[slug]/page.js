@@ -82,7 +82,9 @@ export default async function MemberDetails({ params }) {
           <h2 className="text-xl font-semibold mb-2 mt-4">
             {member.name || "Член на екипа"}
           </h2>
-          <p className="text-gray-600 mb-4">{member.position || ""}</p>
+          {member.position ? (
+            <p className="text-gray-600 mb-4">{member.position}</p>
+          ) : null}
           <div className="text-gray-700">
             {/* {member.phonenumber && (
               <p className="mb-2">

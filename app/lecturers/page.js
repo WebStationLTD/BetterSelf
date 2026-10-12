@@ -108,9 +108,11 @@ export default async function Team() {
                     <h3 className="text-lg/8 font-semibold tracking-tight text-gray-900">
                       {member.name || "Член на екипа"}
                     </h3>
-                    <p className="text-base/7 text-gray-600">
-                      {member.position || ""}
-                    </p>
+                    {member.position ? (
+                      <p className="text-base/7 text-gray-600">
+                        {member.position}
+                      </p>
+                    ) : null}
                     {getLecturerVideo(member.name) ? (
                       <LecturerReel
                         video={getLecturerVideo(member.name)}

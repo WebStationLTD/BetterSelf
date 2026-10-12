@@ -2,6 +2,7 @@ export const LECTURER_PHOTO_OVERRIDES = [
   {
     names: ["Камелия Присадашка"],
     src: "/kamelia-prisadashka.jpg",
+    position: null,
   },
 ];
 
@@ -11,7 +12,11 @@ export function withLecturerPhoto(member) {
     item.names.some((part) => member.name.includes(part)),
   );
   if (!match) return member;
-  return { ...member, profilepicture: match.src };
+  const next = { ...member, profilepicture: match.src };
+  if (Object.prototype.hasOwnProperty.call(match, "position")) {
+    next.position = match.position;
+  }
+  return next;
 }
 
 export const CONFIRMED_LECTURERS_2026 = [
