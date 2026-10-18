@@ -25,6 +25,11 @@ export const LECTURER_VIDEOS = [
     title: "Кратко видео: Христо Попов",
   },
   {
+    names: ["Камелия Присадашка"],
+    src: "/videos/kamelia-prisadashka-reel.mp4",
+    title: "Кратко видео: Д-р Камелия Присадашка",
+  },
+  {
     names: ["Моузес Налока"],
     src: "/videos/moses-naloka-reel.mp4",
     title: "Кратко видео: Моузес Налока",

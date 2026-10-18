@@ -108,6 +108,7 @@ export const scheduleData = [
     title: "Менопауза и стареене на кожата",
     speaker: "Д-р Камелия Присадашка",
     location: "Главна зала",
+    video: "/videos/kamelia-prisadashka-reel.mp4",
     description:
       "Влиянието на хормоналните промени върху здравето и външния вид на кожата",
     type: "presentation",
