@@ -4,6 +4,10 @@ export const LECTURER_PHOTO_OVERRIDES = [
     src: "/kamelia-prisadashka.jpg",
     position: null,
   },
+  {
+    names: ["Константин Маламов"],
+    src: "/konstantin-malamov.jpg",
+  },
 ];
 
 export function withLecturerPhoto(member) {
