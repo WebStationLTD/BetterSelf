@@ -12,22 +12,22 @@ export const scheduleData = [
   {
     id: 2,
     time: "09:00 - 09:30",
+    title: "Енергията като капитал",
+    speaker: "Христо Попов",
+    location: "Главна зала",
+    video: "/videos/hristo-popov-reel.mp4",
+    description: "",
+    type: "presentation",
+  },
+  {
+    id: 3,
+    time: "09:30 - 10:00",
     title: "Медицината на бъдещето: От лечение на болести към програмиране на здраве",
     speaker: "Магдалена Николова",
     location: "Главна зала",
     video: "/videos/magdalena-nikolova-reel.mp4",
     description:
       "Как съвременната наука измества фокуса от лечение на болести към програмиране на здраве",
-    type: "presentation",
-  },
-  {
-    id: 3,
-    time: "09:30 - 10:00",
-    title: "Longevity Mindset: дълголетието като начин на мислене",
-    speaker: "Д-р Жасмина Маджид",
-    location: "Главна зала",
-    description:
-      "Дълголетието като начин на мислене",
     type: "presentation",
   },
   {
@@ -43,11 +43,11 @@ export const scheduleData = [
   {
     id: 5,
     time: "10:30 - 11:00",
-    title: "Можем ли да препрограмираме стареенето?",
-    speaker: "Д-р Константин Маламов",
+    title: "Longevity Mindset: дълголетието като начин на мислене",
+    speaker: "Д-р Жасмина Маджид",
     location: "Главна зала",
     description:
-      "Метаболитна медицина, хормонална оптимизация и новите инструменти за регенерация",
+      "Дълголетието като начин на мислене",
     type: "presentation",
   },
   {
@@ -66,7 +66,7 @@ export const scheduleData = [
     time: "11:30 - 12:30",
     title: "Иновации и технологии",
     speaker:
-      "Водеща: Меги Димчева | Мирослав Тошкин (MD CAPITAL), Биляна Маринова (Dr. Bastet), Зорница Трендафилова (Скай Запер), Gregor Sideris (A&G Luxury Boutique), Христо Балканов (Балканска застрахователно-брокерска къща)",
+      "Водеща: Меги Димчева | Мирослав Тошкин (MD CAPITAL), Биляна Маринова (Dr. Bastet), Зорница Трендафилова (Скай Запер), Gregor Sideris (A&G Luxury Boutique), Христо Балканов (Балканска застрахователно-брокерска къща), Мартин Димитров (Bare Care)",
     location: "Главна зала",
     description:
       "Как да използваме изкуствения интелект и иновативни технологии за лично и професионално развитие",
@@ -127,11 +127,11 @@ export const scheduleData = [
   {
     id: 13,
     time: "15:30 - 16:00",
-    title: "Енергията като капитал",
-    speaker: "Христо Попов",
+    title: "Можем ли да препрограмираме стареенето?",
+    speaker: "Д-р Константин Маламов",
     location: "Главна зала",
-    video: "/videos/hristo-popov-reel.mp4",
-    description: "",
+    description:
+      "Метаболитна медицина, хормонална оптимизация и новите инструменти за регенерация",
     type: "presentation",
   },
   {
