@@ -152,7 +152,7 @@ export default function Schedule() {
             <div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 text-base font-semibold text-gray-700">
               <div className="flex items-center gap-2">
                 <ClockIcon className="h-5 w-5 text-[#ff8d00]" />
-                <span>01 ноември 2026</span>
+                <span>01 ноември 2026, от 8:30</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPinIcon className="h-5 w-5 text-[#ff8d00]" />
