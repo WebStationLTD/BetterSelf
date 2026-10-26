@@ -101,7 +101,7 @@ export default function Hero() {
             {/* Event Details */}
             <div className="relative rounded-full px-6 py-3 text-lg font-medium text-white ring-2 ring-white ring-opacity-30 hover:ring-opacity-50 transition-all duration-300 inline-block">
               <span className="text-xl font-bold mr-4">
-                01.11.2026 от 8:30 – Гранд Хотел Астория
+                01.11.2026 от 8:00 – Гранд Хотел Астория
               </span>
               <Link
                 href="/tickets"

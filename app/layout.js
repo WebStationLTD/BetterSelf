@@ -135,9 +135,9 @@ export default function RootLayout({ children }) {
                 "Водещата конференция в България за здраве, дълголетие, биохакинг и личностно развитие. Присъединете се към най-иновативните специалисти и открийте пътя към по-доброто себе си.",
               url: "https://www.betterself.bg",
               image: "/betterself-hero-image.jpg",
-              startDate: "2026-11-01T08:30:00+02:00",
+              startDate: "2026-11-01T08:00:00+02:00",
               endDate: "2026-11-01T18:15:00+02:00",
-              doorTime: "2026-11-01T08:30:00+02:00",
+              doorTime: "2026-11-01T08:00:00+02:00",
               eventStatus: "https://schema.org/EventScheduled",
               eventAttendanceMode:
                 "https://schema.org/OfflineEventAttendanceMode",

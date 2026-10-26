@@ -2,7 +2,7 @@
 export const scheduleData = [
   {
     id: 1,
-    time: "08:30 - 09:00",
+    time: "08:00 - 09:00",
     title: "Регистрация и посрещане",
     speaker: "Организаторски екип",
     location: "Бална зала Опера, ет. R",

@@ -114,7 +114,7 @@ function AddToCalendarButton() {
       description="Направете следващата голяма крачка по пътя към своето ПО-ДОБРО АЗ"
       startDate="2026-11-01"
       endDate="2026-11-01"
-      startTime="08:30"
+      startTime="08:00"
       endTime="18:15"
       location="Grand Hotel Astoria, Sofia"
       options="['Apple','Google','iCal','Microsoft365','Outlook.com','Yahoo']"
@@ -152,7 +152,7 @@ export default function Schedule() {
             <div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 text-base font-semibold text-gray-700">
               <div className="flex items-center gap-2">
                 <ClockIcon className="h-5 w-5 text-[#ff8d00]" />
-                <span>01 ноември 2026, от 8:30</span>
+                <span>01 ноември 2026, от 8:00</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPinIcon className="h-5 w-5 text-[#ff8d00]" />

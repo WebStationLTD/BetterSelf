@@ -21,7 +21,7 @@ export const metadata = {
   openGraph: {
     title: "BetterSelf - Biohacking & Longevity Conference 2026",
     description:
-      "Еднодневна конференция за биохакинг и дълголетие на 01.11.2026 от 8:30",
+      "Еднодневна конференция за биохакинг и дълголетие на 01.11.2026 от 8:00",
     images: [
       {
         url: "/betterself-hero-image.jpg",
@@ -37,7 +37,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "BetterSelf - Biohacking & Longevity Conference 2026",
     description:
-      "Еднодневна конференция за биохакинг и дълголетие на 01.11.2026 от 8:30",
+      "Еднодневна конференция за биохакинг и дълголетие на 01.11.2026 от 8:00",
     images: ["/betterself-hero-image.jpg"],
   },
 };
