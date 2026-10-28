@@ -78,7 +78,8 @@ const panelsData = {
       {
         id: 107,
         name: "Кристина Давидова",
-        company: "Dermal & Longevity Health Center",
+        company: "Bactology",
+        companyLink: "https://bulgarbiotic.bg/",
         description:
           "Кристина Давидова, MSc, PhD (C) in Public Health, е докторант по социална медицина към Медицински университет – София и експерт по healthspan и икономиката на дълголетието. Предприемач е с над 15 години опит в здравния сектор и основател на Dermal & Longevity Health Center. Изучава „Политики, иновации и управление в здравеопазването“ в Нидерландия. Професионалният ѝ фокус е върху healthspan и икономиката на дълголетието и връзката между превенцията, годините живот в добро здраве и инвестициите в здраве.",
         image: "/kristina-davidova.jpg",
