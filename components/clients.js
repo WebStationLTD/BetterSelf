@@ -322,7 +322,7 @@ export default function Clients() {
                   className="relative flex h-full w-full items-center justify-center transition-opacity duration-300 hover:opacity-75"
                 >
                   <Image
-                    alt="Bare Care"
+                    alt="BareCare"
                     src="/bare-care-logo.png"
                     fill
                     quality={100}
