@@ -425,6 +425,132 @@ export default function SponsorsAndPartners({ children }) {
                   ) : null}
                 </div>
               ))}
+
+            <div
+              id="devin"
+              className="mx-auto mt-12 max-w-5xl rounded-3xl border-2 border-[#ff8d00]/30 bg-gradient-to-br from-orange-50 via-white to-yellow-50 px-6 py-10 shadow-xl sm:px-10"
+            >
+              <p className="text-center text-sm font-semibold uppercase tracking-[0.25em] text-[#ff8d00]">
+                Основен хидратиращ партньор
+              </p>
+              <h3 className="mt-4 text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                DEVIN
+              </h3>
+              <p className="mx-auto mt-4 max-w-3xl text-center text-lg leading-8 text-gray-700">
+                Основен хидратиращ партньор на BetterSelf Biohacking &amp;
+                Longevity Conference 2026.
+              </p>
+              <p className="mx-auto mt-4 max-w-3xl text-center text-base leading-7 text-gray-600">
+                DEVIN ще присъства на събитието с част от своето портфолио,
+                вдъхновено от активния и балансиран начин на живот.
+              </p>
+
+              <div className="mt-10 grid grid-cols-1 items-start gap-6 md:grid-cols-2">
+                <div className="overflow-hidden rounded-2xl bg-white shadow-md">
+                  <Image
+                    src="/devin-active-lineup.jpg"
+                    alt="Линията Devin Active"
+                    width={819}
+                    height={1024}
+                    quality={90}
+                    className="h-auto w-full"
+                  />
+                </div>
+                <div className="overflow-hidden rounded-2xl bg-white shadow-md">
+                  <Image
+                    src="/devin-active-ivan.jpg"
+                    alt="Devin Active подкрепя Иван Иванов"
+                    width={1024}
+                    height={767}
+                    quality={90}
+                    className="h-auto w-full"
+                  />
+                </div>
+              </div>
+
+              <div className="mx-auto mt-8 max-w-3xl overflow-hidden rounded-2xl bg-black shadow-lg">
+                <video
+                  controls
+                  playsInline
+                  preload="metadata"
+                  poster="/devin-active-poster.jpg"
+                  className="aspect-video w-full"
+                >
+                  <source src="/devin-active.mp4" type="video/mp4" />
+                </video>
+              </div>
+
+              <div className="mx-auto mt-10 max-w-3xl space-y-5 text-base leading-7 text-gray-600">
+                <p>
+                  От сърцето на Родопите идва естествената минерална вода Devin
+                  – вода с уникален минерален състав, формиран по естествен път
+                  на 1,2 км дълбочина. По пътя си тя преминава през девет вида
+                  скали, откъдето извлича ценни минерали и достига до нас чиста
+                  и балансирана – сила, невидима за очите, но осезаема за
+                  тялото.
+                </p>
+                <p>
+                  По време на събитието ще представим и новата
+                  функционална линия Devin Active – напитка на основата на
+                  естествена минерална вода Devin, създадена за хора с активен
+                  начин на живот. С 0 калории и 0 захар, серията комбинира
+                  чистата хидратация с внимателно подбрани съставки, които
+                  добавят функционална стойност и подкрепят тялото в движение.
+                </p>
+              </div>
+
+              <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
+                {[
+                  {
+                    name: "Devin Active Фибри",
+                    text: "С вкус на ябълка и череша, обогатена с фибри и постбиотик за подкрепа на храносмилането и вътрешния баланс.",
+                  },
+                  {
+                    name: "Devin Active Колаген",
+                    text: "С вкус на гуава и маракуя, създадена да подпомага ставите и усещането за лекота и еластичност в тялото.",
+                  },
+                  {
+                    name: "Devin Active Електролити",
+                    text: "С вкус на лимон и малина, създадена да подпомага организма при физическо и психическо натоварване и да подкрепя енергийния и електролитния баланс.",
+                  },
+                  {
+                    name: "Devin Active Антиоксиданти",
+                    text: "С вкус на боровинка, касис и бъз, която подпомага имунната система и помага на ума да остава свеж и концентриран.",
+                  },
+                ].map((product) => (
+                  <div
+                    key={product.name}
+                    className="rounded-2xl bg-white px-5 py-5 text-left shadow-sm"
+                  >
+                    <h4 className="text-base font-semibold text-gray-900">
+                      {product.name}
+                    </h4>
+                    <p className="mt-2 text-sm leading-6 text-gray-600">
+                      {product.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              <p className="mx-auto mt-8 max-w-3xl text-base leading-7 text-gray-600">
+                Вярваме, че малките ежедневни навици – движение, баланс и
+                правилна хидратация – са основата на по-дългия и активен живот.
+                Именно с тази идея Devin Минерална и Devin Active ще бъдат част
+                от събитието, за да предложат повече от обикновена хидратация –
+                грижа за тялото и енергия за следващото предизвикателство.
+              </p>
+              <p className="mt-8 text-center">
+                <Link
+                  href="https://www.devin.bg/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-semibold text-[#ff8d00] hover:text-orange-500"
+                >
+                  devin.bg <span aria-hidden="true">→</span>
+                </Link>
+              </p>
+            </div>
+
             <div className="mx-auto mt-8 grid max-w-4xl grid-cols-2 gap-4 sm:gap-6">
               {sponsors
                 .filter((sponsor) => sponsor.featuredAfterGeneral)
