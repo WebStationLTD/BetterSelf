@@ -202,6 +202,14 @@ const partners = [
       "IMEX Distribution е компания, специализирана в дистрибуцията на бързооборотни потребителски стоки (FMCG), с фокус върху международни брандове с добавена стойност. Компанията помага на перспективни марки да достигат до нови пазари, да разширяват присъствието си и да изграждат устойчиви връзки с потребителите в България. Сред брандовете в портфолиото ѝ са Compass Mints – пастили без захар, и Jimmy’s – готови за консумация пуканки. Със своя фокус върху качествените продукти, развитието на брандове и създаването на стойност за потребителите, IMEX Distribution допринася за по-богатия избор на съвременния пазар.",
   },
   {
+    name: "Avtovia",
+    logo: "/avtovia-logo.svg",
+    photo: "/avtovia-vinetka.jpg",
+    link: "https://www.avtovia.bg/",
+    description:
+      "Avtovia продава електронни винетки за леки автомобили до 3,5 т за България онлайн – дневна, уикенд, седмична, месечна, тримесечна и годишна. Нужни са само регистрационният номер, държавата на регистрация и периодът на валидност; плащането е с банкова карта, а винетката се свързва с регистрационния номер без стикер на стъклото. Avtovia.bg наследява информационния сайт Vinetka.bg и добавя възможност потребителите сами да си закупят винетка онлайн.",
+  },
+  {
     name: "Screen My Bones®",
     logo: "/screen-my-bones-logo.png",
     link: "https://www.screenmybones.com/",
@@ -656,6 +664,18 @@ export default function SponsorsAndPartners({ children }) {
                     </div>
                   </div>
                 )}
+                {partner.photo ? (
+                  <div className="relative mt-4 aspect-[3/2] w-full overflow-hidden rounded-2xl">
+                    <Image
+                      src={partner.photo}
+                      alt={partner.name}
+                      fill
+                      quality={85}
+                      loading="lazy"
+                      className="object-cover"
+                    />
+                  </div>
+                ) : null}
                 <p className="mt-6 text-sm leading-6 text-gray-400">
                   {partner.description}
                 </p>
