@@ -1515,6 +1515,83 @@ export default function TeamPage() {
         </div>
       </div>
 
+      {/* Social media team */}
+      <div className="bg-gray-50 py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center mb-12">
+            <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+              Социални медии
+            </h2>
+          </div>
+          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { name: "Георги Бадалов", image: "/georgi-badalov.jpg" },
+              { name: "Даниела Бадалова", image: "/daniela-badalova.jpg" },
+              { name: "Емил Доцев", image: "/emil-docev.jpg" },
+            ].map((member) => (
+              <div
+                key={member.name}
+                className="rounded-3xl border-2 border-orange-100 bg-white p-8 text-center shadow-xl"
+              >
+                <div className="relative mx-auto mb-6 aspect-[3/4] w-full max-w-xs overflow-hidden rounded-2xl bg-gray-100">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="h-full w-full object-cover object-top"
+                  />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">{member.name}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Event team added below the existing sections */}
+      <div className="bg-white py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                name: "Николай Карасъбев",
+                role: "Видеограф",
+                image: "/nikolay-karasabev.jpg",
+              },
+              {
+                name: "Георги Малев",
+                role: "Фотограф",
+                image: "/georgi-malev.jpg",
+                imageClass: "object-center",
+              },
+              {
+                name: "Михаил Митев",
+                role: "Мениджър социални медии",
+                image: "/mihail-mitev.jpg",
+              },
+            ].map((member) => (
+              <div
+                key={member.name}
+                className="rounded-3xl border-2 border-gray-100 bg-white p-8 text-center shadow-xl"
+              >
+                <div className="relative mx-auto mb-6 aspect-[3/4] w-full max-w-xs overflow-hidden rounded-2xl bg-gray-100">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className={`h-full w-full object-cover ${member.imageClass || "object-top"}`}
+                  />
+                </div>
+                <p className="text-sm font-semibold uppercase tracking-wide text-orange-600">
+                  {member.role}
+                </p>
+                <h3 className="mt-2 text-2xl font-bold text-gray-900">
+                  {member.name}
+                </h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* Call to Action */}
       <div className="bg-gradient-to-r from-orange-500 to-orange-600 py-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
