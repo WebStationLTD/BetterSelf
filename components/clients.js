@@ -34,27 +34,6 @@ export default function Clients() {
                 />
               </div>
             </div>
-            <Link
-              href="/sponsors#devin"
-              className="mb-10 block overflow-hidden rounded-3xl border-2 border-[#ff8d00]/30 bg-white shadow-sm transition-shadow hover:shadow-md"
-            >
-              <div className="relative mx-auto aspect-[4/5] w-full max-w-sm">
-                <Image
-                  alt="Devin Active"
-                  src="/devin-active-lineup.jpg"
-                  fill
-                  quality={90}
-                  loading="lazy"
-                  className="object-contain"
-                />
-              </div>
-              <div className="px-6 pb-6 text-center">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#ff8d00]">
-                  Основен хидратиращ партньор
-                </p>
-                <p className="mt-2 text-lg font-semibold text-gray-900">DEVIN</p>
-              </div>
-            </Link>
             <div className="mb-10 grid grid-cols-2 gap-4">
               <div className="rounded-3xl border-2 border-gray-200 bg-white px-3 py-6 shadow-sm sm:px-6 sm:py-8">
                 <div className="relative mx-auto h-28 w-full sm:h-20">
@@ -390,6 +369,47 @@ export default function Clients() {
               </div>
               */}
             </div>
+            <Link
+              href="https://mybears.bg/bg/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-10 block overflow-hidden rounded-3xl border-2 border-gray-200 bg-white px-6 py-6 shadow-sm transition-shadow hover:shadow-md"
+            >
+              <div className="relative mx-auto h-28 w-full max-w-sm sm:h-24">
+                <Image
+                  alt="MYBEARS"
+                  src="/mybears-logo.png"
+                  fill
+                  quality={100}
+                  loading="lazy"
+                  className="object-contain"
+                />
+              </div>
+              <p className="mt-4 text-center text-sm text-gray-600">
+                Желирани витамини мечета на пектинова основа
+              </p>
+            </Link>
+            <Link
+              href="/sponsors#devin"
+              className="mt-6 block overflow-hidden rounded-3xl border-2 border-[#ff8d00]/30 bg-white shadow-sm transition-shadow hover:shadow-md"
+            >
+              <div className="relative mx-auto aspect-[4/5] w-full max-w-sm">
+                <Image
+                  alt="Devin Active"
+                  src="/devin-active-lineup.jpg"
+                  fill
+                  quality={90}
+                  loading="lazy"
+                  className="object-contain"
+                />
+              </div>
+              <div className="px-6 pb-6 text-center">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#ff8d00]">
+                  Основен хидратиращ партньор
+                </p>
+                <p className="mt-2 text-lg font-semibold text-gray-900">DEVIN</p>
+              </div>
+            </Link>
           </div>
 
           {/* Партньори секция */}
